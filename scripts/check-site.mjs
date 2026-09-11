@@ -40,6 +40,10 @@ for(let position=1;position<=totalPages;position++){
  if(current.next!==(sequence.get(position+1)?.url||null))errors.push('Incorrect Next link at '+position);
 }
 if(sequence.get(1)?.url!==base+'/')errors.push('The sequence must begin on the homepage');
+const startPage=fs.readFileSync(path.join(root,'start/index.html'),'utf8');
+const embedPosition=startPage.indexOf('data-original-interview');
+if(embedPosition<startPage.indexOf('Ark or other artefacts.</p>')||embedPosition>startPage.indexOf('<section id="section-1"')||embedPosition<0)errors.push('Interview must follow the opening introduction on Start');
+if(!/src="https:\/\/www\.youtube-nocookie\.com\/embed\/K7Dy7MUw-G0\?autoplay=0/.test(startPage))errors.push('Missing original interview embed or no-autoplay setting');
 assert.equal(ADDRESS_COUNT,7*2*12*24);
 for(let i=0;i<24;i++){const p=hornPoint(i*Math.PI/12,Math.PI);assert.ok(Math.hypot(p.x,p.y,p.z)<1e-12,'Infinity point must meet at the origin')}
 if(built.some(f=>f.endsWith('.svg')))errors.push('SVG file in published output');

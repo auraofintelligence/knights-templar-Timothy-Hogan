@@ -2,6 +2,7 @@
 import Site from '../layouts/Site.astro';
 import SlideViewer from '../components/SlideViewer.astro';
 import Matrix from '../components/Matrix.astro';
+import InterviewEmbed from '../components/InterviewEmbed.astro';
 import {allPages,editorial,catalogue,findPage,repoURL,repositoryCopy} from '../data/content.mjs';
 import licence from '../../LICENCE.md?raw';
 import credits from '../../docs/image-provenance.json';
@@ -20,7 +21,7 @@ const timelines=[['2013','We Will Be Heard','An early expression of the core phi
  <div class:list={['article-shell',{'wide-content':['directory','library','gallery','matrix','sitemap'].includes(page.kind)}]}>
   {page.sections.length>2&&<aside class="contents"><p>On this page</p><nav aria-label="On this page">{page.sections.map((s,i)=><a href={`#section-${i}`}>{s.title}</a>)}</nav></aside>}
   <article class="article-body">
-   {page.sections.map((section,i)=><section id={`section-${i}`} class="essay-section"><h2>{section.title}</h2>{section.paragraphs.map(text=><p>{text}</p>)}</section>)}
+   {page.sections.map((section,i)=><section id={`section-${i}`} class="essay-section"><h2>{section.title}</h2>{section.paragraphs.map(text=><p>{text}</p>)}{page.slug==='start'&&i===0&&<InterviewEmbed/>}</section>)}
    {page.kind==='matrix'&&<Matrix/>}
    {['interview','transcript'].includes(page.kind)&&<section class="essay-section"><div class="section-heading"><h2>The conversation</h2><a class="button" href="https://www.youtube.com/watch?v=K7Dy7MUw-G0" target="_blank" rel="noopener">Watch the original ↗</a></div><p>The supplied transcript is divided into its 12 chapters. Timestamps open the original video at that moment. Speaker changes have not been guessed.</p><div class="chapter-list">{catalogue.chapters.map(ch=><a href={l(`interview/${ch.id}`)}><span>{String(ch.number).padStart(2,'0')}</span><h3>{ch.title}</h3><span>{ch.cues[0]?.time} ↗</span></a>)}</div></section>}
    {page.kind==='chapter'&&<section class="essay-section"><p class="source-note">Supplied interview transcript, chapter {page.chapter.number}. This is the conversation’s wording, not a statement by this website. Transcription errors and unclear speaker changes may remain.</p><div class="filter-bar"><label>Find words in this chapter<input type="search" data-filter-input placeholder="Search the transcript"/></label><p data-filter-count aria-live="polite"></p></div><div class="transcript">{page.chapter.cues.filter(c=>c.text).map((cue,i)=><div class="transcript-cue" id={`cue-${i}`} data-filter-item data-search={cue.text.toLowerCase()}><a href={`https://www.youtube.com/watch?v=K7Dy7MUw-G0&t=${cue.seconds}s`} target="_blank" rel="noopener" aria-label={`Watch at ${cue.time}`}>{cue.time}</a><p>{cue.text}</p></div>)}</div><nav class="previous-next" aria-label="Chapter navigation">{page.chapter.number>1&&<a href={l(`interview/chapter-${String(page.chapter.number-1).padStart(2,'0')}`)}>← Previous chapter</a>}{page.chapter.number<12&&<a href={l(`interview/chapter-${String(page.chapter.number+1).padStart(2,'0')}`)}>Next chapter →</a>}</nav></section>}
