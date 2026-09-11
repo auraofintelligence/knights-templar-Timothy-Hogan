@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calendar of Events | Aura of Intelligence</title>
+  <meta name="description" content="What's actually coming up: a live calendar of Aura of Intelligence events. Blank today, filling up soon.">
+  <meta name="theme-color" content="#0a1420">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" href="assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jetbrains-mono-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=4">
+  <style>
+    /* Calendar widget: page-specific, kept off the shared stylesheet. */
+    .cal { width: min(100%, 54rem); margin: 0 auto; }
+    .cal-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.2rem; }
+    .cal-top h2 { font-size: clamp(1.4rem, 3vw, 2.1rem); margin: 0; }
+    .cal-nav { display: inline-flex; gap: .5rem; }
+    .cal-nav button { min-height: 2.7rem; min-width: 2.7rem; padding: 0 1rem; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.06); color: #fff; font: inherit; font-weight: 800; cursor: pointer; transition: border-color .2s, background .2s; }
+    .cal-nav button:hover { border-color: rgba(43,227,194,.6); background: rgba(43,227,194,.1); }
+    .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: .35rem; }
+    .cal-dow { text-align: center; padding: .4rem 0; color: var(--muted); font-family: var(--font-mono); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }
+    .cal-cell { aspect-ratio: 1; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 10px; background: rgba(255,255,255,.03); color: var(--muted); font-weight: 700; font-size: clamp(.8rem, 2vw, 1rem); }
+    .cal-cell.is-empty { border-color: transparent; background: transparent; }
+    .cal-cell.is-today { border-color: var(--gold); color: var(--gold); box-shadow: inset 0 0 0 1px var(--gold); }
+    .cal-cell.has-event { background: rgba(124,77,255,.3); color: #fff; border-color: var(--violet); }
+    .cal-upcoming { margin-top: 2.6rem; }
+    .cal-upcoming h2 { margin-bottom: 1rem; }
+  </style>
+</head>
+<body data-page="calendar-of-events">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Aura of Intelligence home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text"><strong>Aura of Intelligence</strong><span>A Bridge to The Infinite</span></span>
+    </a>
+    <nav class="site-nav" data-nav aria-label="Primary">
+      <a href="pathways/index.html">Pathways</a>
+      <a href="courses/index.html">Courses</a>
+      <a href="videos.html">Videos</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="index-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-index">
+      <span class="index-toggle-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="index-toggle-label">Index</span>
+    </button>
+  </header>
+  <main id="main">
+
+    <section class="hero page-hero">
+      <div class="hero-content reveal">
+        <p class="eyebrow">Pathways / Events, music &amp; play</p>
+        <h1>Calendar of Events</h1>
+        <p class="hero-copy">What's actually coming up. Nothing's on the books just yet; this is where it will appear the moment it is.</p>
+      </div>
+    </section>
+
+    <section class="section" id="calendar">
+      <div class="cal reveal">
+        <div class="cal-top">
+          <h2 data-cal-month>Month</h2>
+          <div class="cal-nav">
+            <button type="button" data-cal-prev aria-label="Previous month">&lsaquo;</button>
+            <button type="button" data-cal-next aria-label="Next month">&rsaquo;</button>
+          </div>
+        </div>
+        <div class="cal-grid" data-cal-grid></div>
+        <div class="cal-upcoming">
+          <h2>Upcoming</h2>
+          <div data-cal-upcoming></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="explore-more">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">Keep exploring</p>
+          <h2>More of Events, Music &amp; Play</h2>
+        </div>
+      </div>
+      <div class="card-grid reveal">
+        <a class="card" href="aura-events.html"><h3>Events &amp; Event Management</h3><p>Craft the unforgettable.</p></a>
+        <a class="card" href="music.html"><h3>Music Creation</h3><p>Lyrics, music and videos.</p></a>
+        <a class="card" href="gamification.html"><h3>Gamification of Life</h3><p>Play your way to progress.</p></a>
+        <a class="card" href="pathways/index.html"><h3>All seventeen pathways</h3><p>See the whole constellation.</p></a>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div>
+      <p>Aura of Intelligence: Luke Hayes × Claude, Minjerribah · 2026.</p>
+      <p>Licensed under the Aura of Intelligence Public Source Licence.</p>
+    </div>
+    <nav class="footer-links" aria-label="Elsewhere">
+      <a href="https://iseeinfinity.com" target="_blank" rel="noopener">iseeinfinity.com</a>
+      <a href="https://lukecatalyst.com" target="_blank" rel="noopener">lukecatalyst.com</a>
+      <a href="https://gajra.earth" target="_blank" rel="noopener">gajra.earth</a>
+    </nav>
+  </footer>
+  <script src="assets/events-data.js" defer></script>
+  <script src="assets/site-nav.js" defer></script>
+  <script src="assets/core.js" defer></script>
+  <script defer>
+    window.addEventListener('DOMContentLoaded', function () {
+      var events = (window.AURA_EVENTS || []).filter(function (e) { return e && e.date && e.title; });
+      var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+      var DOW = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+      var elMonth = document.querySelector('[data-cal-month]');
+      var elGrid = document.querySelector('[data-cal-grid]');
+      var elUpcoming = document.querySelector('[data-cal-upcoming]');
+      var view = new Date();
+      view.setDate(1);
+
+      function pad(n) { return (n < 10 ? '0' : '') + n; }
+      function ymd(y, m, d) { return y + '-' + pad(m + 1) + '-' + pad(d); }
+      var now = new Date();
+      var todayStr = ymd(now.getFullYear(), now.getMonth(), now.getDate());
+
+      function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+
+      function render() {
+        var y = view.getFullYear(), m = view.getMonth();
+        elMonth.textContent = MONTHS[m] + ' ' + y;
+        var startDow = (new Date(y, m, 1).getDay() + 6) % 7;
+        var days = new Date(y, m + 1, 0).getDate();
+        var html = DOW.map(function (d) { return '<div class="cal-dow">' + d + '</div>'; }).join('');
+        for (var i = 0; i < startDow; i++) { html += '<div class="cal-cell is-empty"></div>'; }
+        for (var day = 1; day <= days; day++) {
+          var ds = ymd(y, m, day);
+          var cls = 'cal-cell';
+          if (ds === todayStr) { cls += ' is-today'; }
+          var dayEvents = events.filter(function (e) { return e.date === ds; });
+          var title = '';
+          if (dayEvents.length) {
+            cls += ' has-event';
+            title = ' title="' + esc(dayEvents.map(function (e) { return e.title; }).join(', ')) + '"';
+          }
+          html += '<div class="' + cls + '"' + title + '>' + day + '</div>';
+        }
+        elGrid.innerHTML = html;
+      }
+
+      function renderUpcoming() {
+        var upcoming = events.filter(function (e) { return e.date >= todayStr; })
+          .sort(function (a, b) { return a.date < b.date ? -1 : 1; });
+        if (!upcoming.length) {
+          elUpcoming.innerHTML = '<div class="empty-state"><strong>Nothing scheduled yet.</strong><p>Check back soon, or follow along as the calendar fills up.</p></div>';
+          return;
+        }
+        elUpcoming.innerHTML = '<div class="card-grid">' + upcoming.map(function (e) {
+          var link = e.link ? '<a href="' + esc(e.link) + '" target="_blank" rel="noopener">Details</a>' : '';
+          var desc = e.description ? ' &middot; ' + esc(e.description) : '';
+          return '<div class="card"><h3>' + esc(e.title) + '</h3><p>' + esc(e.date) + desc + '</p>' + link + '</div>';
+        }).join('') + '</div>';
+      }
+
+      document.querySelector('[data-cal-prev]').addEventListener('click', function () { view.setMonth(view.getMonth() - 1); render(); });
+      document.querySelector('[data-cal-next]').addEventListener('click', function () { view.setMonth(view.getMonth() + 1); render(); });
+      render();
+      renderUpcoming();
+    });
+  </script>
+</body>
+</html>

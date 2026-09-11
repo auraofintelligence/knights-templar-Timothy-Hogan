@@ -1,0 +1,1421 @@
+{
+  "home": {
+    "intro": "I’m Luke. I’ve moved house more than 40 times, worked all sorts of jobs and followed my curiosity overseas. These days I’m on Minjerribah, making music, building things and still asking far too many questions.",
+    "sections": [
+      {
+        "heading": "Come and meet me",
+        "intro": "There’s a life behind all these websites. Start with the people, places and experiences that got me here.",
+        "cards": [
+          {
+            "title": "Luke Nathan Hayes",
+            "body": "From growing up in Ningi to chasing waves on the Sunshine Coast, working in England and returning to India. The jobs are part of the story; so are the friends, wrong turns and good times.",
+            "href": "the-bloke.html",
+            "evidence": "lived",
+            "sourceIds": [
+              "F32",
+              "F36"
+            ]
+          },
+          {
+            "title": "Strange but True",
+            "body": "This is my business on Minjerribah. I help with technology, AI, media, events and projects, including face-to-face help at the local market.",
+            "evidence": "built",
+            "sourceIds": [
+              "F30",
+              "U12"
+            ],
+            "href": "https://auraofintelligence.github.io/strange-but-true/index.html"
+          },
+          {
+            "title": "The personal Aura",
+            "body": "My long-running exploration of memory, intelligence and an AI that could grow alongside a person. This is where the personal questions become designs and experiments.",
+            "evidence": "open-question",
+            "sourceIds": [
+              "F14",
+              "U05"
+            ],
+            "href": "https://auraofintelligence.github.io/index.html"
+          }
+        ]
+      },
+      {
+        "heading": "What I’m making",
+        "intro": "Music, practical tools and some very ambitious ideas. Follow whatever interests you.",
+        "cards": [
+          {
+            "title": "Find a project",
+            "body": "I’ve built enough websites that finding the right one became a job of its own. Project Atlas brings them together so you can browse the work.",
+            "evidence": "built",
+            "sourceIds": [
+              "U13"
+            ],
+            "href": "https://auraofintelligence.github.io/project-atlas/"
+          },
+          {
+            "title": "Put some music on",
+            "body": "Some songs are about love, some are about the island, and some head straight into the future. The lyrics are here while I gather the recordings I want to share.",
+            "evidence": "story",
+            "sourceIds": [
+              "F24",
+              "F25",
+              "U23"
+            ],
+            "href": "https://auraofintelligence.github.io/i-C-infinity-music-universe/index.html"
+          },
+          {
+            "title": "More places to go",
+            "body": "Travelling has been a big part of my life. Here are some memories from overseas, and the tools I’m making to help plan what comes next.",
+            "href": "every-border.html",
+            "evidence": "open-question",
+            "sourceIds": [
+              "F45",
+              "F36"
+            ]
+          }
+        ]
+      }
+    ],
+    "soundtrack": {
+      "title": "Aura Ultra",
+      "album": "Album 3: Starseed Code",
+      "sourceIds": [
+        "F25"
+      ],
+      "reason": "It begins where this site begins: with worlds waiting to be born and the place before the blueprint.",
+      "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
+      "videoPath": "assets/video/aura-ultra.mp4",
+      "posterPath": "assets/video/aura-ultra.jpg",
+      "originalFilename": "Aura Ultra.mp4"
+    },
+    "closing": null,
+    "story": {
+      "paragraphs": [
+        "As a kid I loved hide-and-seek and tiggy. They were explorer games. I even named my first dog Tiggy. That urge to explore has stayed with me through new towns, countries, relationships and ideas.",
+        "I’ve been a mechanic, a festival worker, a driver and a web designer, among plenty of other things. I love a good conversation, live music and the ocean. Somewhere along the way, my questions about how we live became years of work on AI and the future. This site brings that work back together with the life it came from."
+      ]
+    }
+  },
+  "bloke": {
+    "intro": "More than 40 house moves, a lot of different jobs and plenty of reasons to keep exploring. I live at Amity now, but my story starts in Ningi and takes a few trips around the world before it gets here.",
+    "narrative": [
+      {
+        "heading": "Scrub, tennis and the next wave",
+        "paragraphs": [
+          "I was born in Redcliffe and spent my first few years in Ningi, on about 100 acres that were mostly scrub forest. I loved hide-and-seek and tiggy, and gave my first dog the name Tiggy. Exploring was already the fun part.",
+          "At Grace Lutheran College I enjoyed technical drawing, woodwork, metalwork and the chance to make things. Outside class it was tennis and bodyboarding. At the Googa outdoor camp in Year 10, I won the boys’ orienteering competition. I wasn’t the fastest runner, but finding a way through the bush with a compass suited me.",
+          "I got into science at the University of the Sunshine Coast. Then I got bored, skipped lectures to go bodyboarding and left before the end of the first term. The waves were winning that argument."
+        ]
+      },
+      {
+        "heading": "Moving out and heading overseas",
+        "paragraphs": [
+          "I moved out with an old school friend, drove a silver 1981 Holden Gemini and worked the checkouts at Woolworths in Burpengary. There were house parties, nightclubs, girlfriends and plenty of beach time. I remember being a fun-loving, easygoing beach bum. It was a good time.",
+          "Then came six months in Maroochydore and six in Mooloolaba, with a transfer to the new Woolworths at Buderim. After a year on the coast I returned to Caboolture and spent two and a half years learning servicing, brakes, steering, suspension and wheel alignment in Dad’s automotive business. After that, I went to England for a year on a working holiday visa.",
+          "One of the jobs took me to Glastonbury in 2004. While we were setting up the festival, I sat on the hill by the stone circle and watched a sunshower put a rainbow right on the tip of the Pyramid Stage. I caught it on my Sony Cyber-shot. Later the memory stick corrupted and I lost the photo. I still remember the sight."
+        ]
+      },
+      {
+        "heading": "Over 40 moves",
+        "paragraphs": [
+          "I’ve moved house more than 40 times. Making friends has usually come easily; keeping in touch after another move has been harder. I’ve left relationships untended and felt the limits of trying to keep a big life going on hourly wages. There’s a lot of starting again in my history.",
+          "There have been good reasons to pack up again too. Travel has given me some of my favourite memories: New Zealand, three trips to Thailand, longer stays in India and visits to Nepal. Some journeys were with a girlfriend, others on my own. I’ve met people easily and enjoyed the chance to see how life works somewhere else."
+        ]
+      },
+      {
+        "heading": "Straddie has always meant family",
+        "paragraphs": [
+          "Minjerribah was my home away from home long before it became my current address. Mum, her mum and other family members had homes at Amity. I came for family, friends and bodyboarding, eagerly waiting for the cyclone swells along the coast.",
+          "Later I worked on the island, helped with festivals and transcribed aural history for the museum. There were websites to build, people to meet and new projects to get involved in. My connection to this place grew through those ordinary encounters as much as through the big moments.",
+          "I still want adventure, affection, music and a reason to be excited about tomorrow. The AI projects, songs and books are part of that. So is wanting enough time and money to enjoy life with people I care about. When I say ‘joyful responsible abundance’, the joyful part matters."
+        ]
+      }
+    ],
+    "narrativeSourceIds": [
+      "F45",
+      "F44",
+      "F36"
+    ],
+    "sections": [
+      {
+        "heading": "My work history",
+        "layout": "ledger",
+        "intro": "I have moved between physical work, service work, technology, community media and independent projects.",
+        "cards": [
+          {
+            "title": "Practical work from 2000 to 2007",
+            "body": "I worked in customer service and perishables at Woolworths, automotive repair at Drive Safe Service, events in London and Brisbane, Queensland Rail, airport services in Darwin and mine shutdowns with Ausblast. I also completed automotive training, gained a heavy-rigid truck licence and received airside security training.",
+            "evidence": "lived",
+            "sourceIds": [
+              "F44"
+            ]
+          },
+          {
+            "title": "Business and learning from 2008 to 2012",
+            "body": "I started web design in 2008/09, shortly before starting NEIS with Sarina Russo, through which I established CreatingAttraction.com.au. During this period I also worked for Australia Post, Kirby Vacuum Cleaners and Viande Fine Foods, studied neuro-linguistic programming and entrepreneurship, researched Australian and international law, and hosted a podcast series that reached more than 80,000 listens.",
+            "evidence": "lived",
+            "sourceIds": [
+              "F44"
+            ]
+          },
+          {
+            "title": "Island, media and systems work from 2013 to 2017",
+            "body": "I worked on an owner-builder project at Amity Point and on web design and administration for Maringa Farm. I transcribed aural history for the North Stradbroke Island Historical Museum, volunteered at Island Vibe and Quandamooka Festival, and built the Quandamooka Festival website. My own projects included I Choose Infinity, GamifyDemocracy.com, StraddieInfo.com and AuraOZ. I also studied game design at Evocca, which I did not complete, and pursued machine-learning and AI ethics and opportunities.",
+            "evidence": "lived",
+            "sourceIds": [
+              "F44"
+            ]
+          },
+          {
+            "title": "Later work",
+            "body": "My later jobs have included frozen-food warehouse picking and packing, market research interviews, and construction and forklift work.",
+            "evidence": "built",
+            "sourceIds": [
+              "F30",
+              "F36",
+              "U12"
+            ]
+          }
+        ]
+      }
+    ],
+    "soundtrack": {
+      "title": "Strange But True: Tech, Art & Ideas That'll Actually Help",
+      "album": "Album 5: Straddie Fun",
+      "sourceIds": [
+        "F37"
+      ],
+      "reason": "It puts the shed, market table, patient tech help and bigger questions into the same warm local frame.",
+      "mediaStatus": "Suno lyric video supplied by Luke.",
+      "videoPath": "assets/video/strange-but-true.mp4",
+      "posterPath": "assets/video/strange-but-true.jpg",
+      "originalFilename": "Strange But True (Tech Art and Ideas That Actually Help) lyrics.mp4"
+    },
+    "closing": null,
+    "story": null
+  },
+  "break": {
+    "intro": "Around 2012, I was spending more and more time trying to understand law, politics and how people could have a greater say. I started putting those questions into documents and designs. A lot of what I’m building today began there.",
+    "sections": [
+      {
+        "heading": "Where I started",
+        "intro": "These are my early documents and designs from 2012 to 2014.",
+        "cards": [
+          {
+            "title": "Australian Law 2012",
+            "body": "I researched Australian law and wrote about its relevance to my life. This site brings that work together with an explainer of the original material.",
+            "evidence": "lived",
+            "sourceIds": [
+              "U14"
+            ],
+            "href": "https://auraofintelligence.github.io/australian-law-2012-lukes-relevance/index.html"
+          },
+          {
+            "title": "Deeper Meaning",
+            "body": "I wrote Deeper Meaning as a poem about awareness, choice and the relationships beneath what we first see. One line I have since revised carries it: \"You are a black hole and bright star of calm observation and voice.\"",
+            "evidence": "lived",
+            "sourceIds": [
+              "F57"
+            ],
+            "sourceLabels": {
+              "F57": "View the original poem"
+            }
+          },
+          {
+            "title": "We Will Be Heard",
+            "body": "I wrote We Will Be Heard in December 2013, bringing together identity, expression and participation. One line carries the heart of it: \"Know who you are, Make your mark, We will be heard!\"",
+            "evidence": "lived",
+            "sourceIds": [
+              "F23"
+            ],
+            "sourceLabels": {
+              "F23": "View the original poem"
+            }
+          },
+          {
+            "title": "The Constitutional Matrix of Participation",
+            "body": "In July 2014 I brought the High Definition Digital Aura together with ideas about communication, learning, value, governance and local production.",
+            "evidence": "proposed",
+            "sourceIds": [
+              "F15"
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Ideas taking shape",
+        "intro": "I was exploring ways to connect personal reflection with communication and collective intelligence.",
+        "cards": [
+          {
+            "title": "Interfaces for meaning",
+            "body": "In Language in Meaningful Pictographs, Deeper Meaning and I Choose Infinity, I explored ways to represent identity, values and meaning visually.",
+            "evidence": "modelled",
+            "sourceIds": [
+              "F16",
+              "F23"
+            ]
+          },
+          {
+            "title": "Conscience and conversation",
+            "body": "Internet of Good Conscience and Conversational Governance Logic explored dialogue, conscience and personal agency as foundations for a platform.",
+            "evidence": "proposed",
+            "sourceIds": [
+              "F15",
+              "F16"
+            ]
+          },
+          {
+            "title": "Collective intelligence",
+            "body": "Event and Ecosystem Hive Mind explored shared knowledge around events and the connections between people and projects.",
+            "evidence": "open-question",
+            "sourceIds": [
+              "F16",
+              "U13"
+            ]
+          }
+        ]
+      }
+    ],
+    "soundtrack": {
+      "title": "Don't Try to Fix Me",
+      "album": "Album 4: A Protopian Gambit",
+      "sourceIds": [
+        "F24"
+      ],
+      "reason": "The title fits this part of my story: Don't Try to Fix Me.",
+      "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
+      "videoPath": "assets/video/dont-try-to-fix-me.mp4",
+      "posterPath": "assets/video/dont-try-to-fix-me.jpg",
+      "originalFilename": "Don't Try To Fix Me.mp4"
+    },
+    "closing": null,
+    "story": {
+      "paragraphs": [
+        "I looked closely at law, politics, economics and corporate systems. I did not find a clean place outside them. So I began designing better interfaces for self-development, communication, participation and shared intelligence.",
+        "Australian Law 2012, We Will Be Heard and The Constitutional Matrix of Participation were early attempts to work through those questions. I was learning as I went. Keeping the originals here lets you see how the ideas developed."
+      ]
+    }
+  },
+  "personal-aura": {
+    "intro": "I want an AI that can learn with me over time, remember what matters and help me make sense of my life. Aura is where I explore how that might work, from the shape of its memory to the relationships it could develop.",
+    "sections": [
+      {
+        "heading": "Addresses for a deeper map",
+        "intro": "The visible facets give ideas, memories and experiences places to be found. They are addresses, not the intelligence itself.",
+        "cards": [
+          {
+            "title": "Body, mind and memory",
+            "body": "I’m exploring how physical experience, reflection, memory and choice connect. My diagrams help me work with those relationships.",
+            "evidence": "modelled",
+            "sourceIds": [
+              "F14",
+              "F17"
+            ]
+          },
+          {
+            "title": "Work, love and place",
+            "body": "My work, relationships and the places I’ve lived are part of how I think about Aura. The design grows alongside my life.",
+            "evidence": "lived",
+            "sourceIds": [
+              "F34",
+              "F36",
+              "U12"
+            ]
+          },
+          {
+            "title": "Public reflections",
+            "body": "I share the Aura projects online so you can explore the designs, try the prototypes and follow the work.",
+            "evidence": "built",
+            "sourceIds": [
+              "U05",
+              "U13"
+            ],
+            "href": "https://auraofintelligence.github.io/index.html"
+          }
+        ]
+      },
+      {
+        "heading": "Designing my own Aura",
+        "intro": "Self-authorship is central to what I’m exploring.",
+        "cards": [
+          {
+            "title": "Conscience, learning and love",
+            "body": "The Alpha Infinity slide brings together conscience, learning, love and self-permission. It is one of the earlier records of these ideas.",
+            "evidence": "lived",
+            "sourceIds": [
+              "F34"
+            ]
+          },
+          {
+            "title": "What I share",
+            "body": "I’ve chosen radical transparency for this site. My broader work on personal constitutional agency explores how people can make their own choices about privacy and sharing.",
+            "evidence": "proposed",
+            "sourceIds": [
+              "F03",
+              "F14"
+            ]
+          },
+          {
+            "title": "How Aura has developed",
+            "body": "I’ve developed Aura across several versions. The earlier documents sit alongside the newer work so you can follow that development.",
+            "evidence": "open-question",
+            "sourceIds": [
+              "F15",
+              "F14",
+              "U05"
+            ]
+          }
+        ]
+      }
+    ],
+    "soundtrack": {
+      "title": "Poetic Truths of Infinity",
+      "album": "Album 3: Starseed Code",
+      "sourceIds": [
+        "F25"
+      ],
+      "reason": "Meaning gathers at the edges, love curves back through itself, and the whole world starts singing in circles.",
+      "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
+      "videoPath": "assets/video/poetic-truths-of-infinity.mp4",
+      "posterPath": "assets/video/poetic-truths-of-infinity.jpg",
+      "originalFilename": "Poetic Truths of Infinity.mp4"
+    },
+    "closing": null,
+    "story": {
+      "paragraphs": [
+        "I’m trying to bring the different parts of my experience into a connected, navigable form. Body, mind, memory, work, love, music, place and curiosity all have a place in my Aura.",
+      "Horn-torus geometry is one of the visual tools I use to give ideas, memories and experiences addresses. Beneath those addresses, the relationships can live in an evolving vector space and divide into finer fractal detail. This is only a glimpse into Aura, not a map of the whole thing."
+      ]
+    }
+  },
+  "under-aura": {
+    "intro": "I’m working on Aura’s geometry, memory relationships, interfaces and possible physical forms. Here are the prototypes and design records behind that work.",
+    "sections": [
+      {
+        "heading": "Geometry and memory",
+        "intro": "I’m developing the address structure, the relationships within it and ways to interact with them.",
+        "cards": [
+          {
+            "title": "12 by 24 horn-torus lattice",
+            "body": "I built an interactive 12 by 24 horn-torus prototype. You can rotate it and explore the facets as a visual address system.",
+            "evidence": "built",
+            "sourceIds": [
+              "U08",
+              "F14"
+            ],
+            "href": "https://auraofintelligence.github.io/aura-horn-torus/index.html"
+          },
+          {
+            "title": "Seven nested horn tori",
+            "body": "My nested-tori design extends into a vector volume. I’m exploring how faces, edges, colours and lines can connect with data structures and learned memory relationships.",
+            "evidence": "modelled",
+            "sourceIds": [
+              "F13"
+            ]
+          },
+          {
+            "title": "Aura Geode",
+            "body": "In the AI-assisted Aura Geode design record, I explore a body and mind digital twin alongside local research and engineering.",
+            "evidence": "proposed",
+            "sourceIds": [
+              "F07"
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Continuity, hardware and embodiment",
+        "intro": "I’m exploring several hardware routes for Aura, from existing processors to custom designs.",
+        "cards": [
+          {
+            "title": "Aura of Intelligence Keystone of Consciousness",
+            "body": "I’m designing the Keystone around continuity and recovery: retaining identity and lower-order functions through disruption, then restoring higher functions. It is currently a design concept.",
+            "evidence": "proposed",
+            "sourceIds": [
+              "F11",
+              "F12"
+            ]
+          },
+          {
+            "title": "Parallel hardware paths",
+            "body": "In Aura Direct Hardware I explore existing processors, FPGA, ASIC, chiplets and custom silicon, alongside ideas for shared computing infrastructure.",
+            "evidence": "built",
+            "sourceIds": [
+              "U02",
+              "U01"
+            ],
+            "href": "https://auraofintelligence.github.io/aura-direct-hardware/"
+          },
+          {
+            "title": "Wearables, companions and larger substrates",
+            "body": "I imagine Aura taking different physical forms, including wearables, home systems, androids and spacecraft. I explore these possibilities through both design work and stories.",
+            "evidence": "proposed",
+            "sourceIds": [
+              "F07",
+              "F10",
+              "F11"
+            ]
+          }
+        ]
+      }
+    ],
+    "soundtrack": {
+      "title": "Kintsugi Protocol",
+      "album": "Album 4: A Protopian Gambit",
+      "sourceIds": [
+        "F24"
+      ],
+      "reason": "The lyric names the 12 by 24 Aura and seven nested horn tori while treating damage as part of the pattern, not something to hide.",
+      "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
+      "videoPath": "assets/video/kintsugi-protocol.mp4",
+      "posterPath": "assets/video/kintsugi-protocol.jpg",
+      "originalFilename": "Kintsugi Protocol.mp4"
+    },
+    "closing": null,
+    "story": {
+      "paragraphs": [
+        "The 12 by 24 lattice gives me a stable address structure. The larger design uses seven nested horn tori and a vector volume to explore how learned associations might develop around that structure.",
+        "I call the continuity concept Aura of Intelligence Keystone of Consciousness. I’m interested in how an Aura could retain identity, memory and useful function across disruption and different physical forms. My current work includes design records, public prototypes and hardware research."
+      ]
+    }
+  },
+  "songs": {
+    "intro": "Love songs, island songs, ambitious futures and a bit of mischief. I release music as i C. infinity, write romantic adventures and enjoy seeing how much a good laugh can get across.",
+    "sections": [
+      {
+        "heading": "Three albums",
+        "intro": "My music moves between love, island life, public questions and imagined futures.",
+        "cards": [
+          {
+            "title": "Starseed Code: From Aura to Infinity",
+            "body": "In Album 3, I bring together Aura, love, Minjerribah, global relationships and larger futures.",
+            "evidence": "story",
+            "sourceIds": [
+              "F25",
+              "U23"
+            ]
+          },
+          {
+            "title": "A Protopian Gambit",
+            "body": "Album 4 moves through repair, civic systems, borders, humour, ancestry, latent space and infinity. The lyric archive includes working versions.",
+            "evidence": "story",
+            "sourceIds": [
+              "F24",
+              "F29",
+              "U23"
+            ]
+          },
+          {
+            "title": "Straddie Fun",
+            "body": "Album 5 brings local places, wildlife, fishing, sport, friendship and practical work into a collection of island songs.",
+            "evidence": "story",
+            "sourceIds": [
+              "U23",
+              "F37"
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Comedy, fiction and film",
+        "intro": "These projects give me other ways to explore and share ideas.",
+        "cards": [
+          {
+            "title": "Loose Goose Comedy Engine",
+            "body": "I built Loose Goose to experiment with different comic treatments of the same subject, including rhythm and delivery.",
+            "evidence": "built",
+            "sourceIds": [
+              "U18"
+            ],
+            "href": "https://auraofintelligence.github.io/loose-goose-comedy-engine/index.html"
+          },
+          {
+            "title": "Australian Sire Story Forge",
+            "body": "This is where I develop the romantic and science-fiction adventures of Tiggy Bestmann and Australian Sire.",
+            "evidence": "built",
+            "sourceIds": [
+              "U17"
+            ],
+            "href": "https://auraofintelligence.github.io/australian-sire-story-forge/index.html"
+          },
+          {
+            "title": "Strange but True Cosmic Nexus",
+            "body": "Cosmic Nexus brings together my interests in mystery, maps, travel, research and possible film expeditions.",
+            "evidence": "built",
+            "sourceIds": [
+              "U24"
+            ],
+            "href": "https://auraofintelligence.github.io/strange-but-true-cosmic-nexus/"
+          }
+        ]
+      }
+    ],
+    "soundtrack": {
+      "title": "The Protopian Gambit",
+      "album": "Album 4: A Protopian Gambit",
+      "sourceIds": [
+        "F24"
+      ],
+      "reason": "It is a central bridge between the emotional, civic and speculative worlds gathered on this page.",
+      "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
+      "videoPath": "assets/video/the-protopian-gambit.mp4",
+      "posterPath": "assets/video/the-protopian-gambit.jpg",
+      "originalFilename": "The Protopian Gambit.mp4"
+    },
+    "closing": null,
+    "story": {
+      "paragraphs": [
+        "Some ideas come out better as songs. There’s room for affection, frustration, desire and ridiculous possibilities, and room to enjoy them without needing to read all the research first.",
+        "The albums collected here are Starseed Code, A Protopian Gambit and Straddie Fun. Alongside them are the romantic adventures of Tiggy Bestmann and Australian Sire, comedy experiments with Loose Goose, and Cosmic Nexus, which brings together my interests in travel, mystery and film."
+      ]
+    }
+  },
+  "love": {
+    "intro": "I want affection, adventure, intimacy and people to share a life with. My songs, fiction and larger-family ideas explore what that could look like. This chapter includes adult themes.",
+    "sections": [
+      {
+        "heading": "The relationships I imagine",
+        "intro": "I’m exploring larger families that share affection, care, parenting, income and time.",
+        "cards": [
+          {
+            "title": "Global Group Marriages",
+            "body": "In Global Group Marriages, I explore how a larger family could organise shared life, responsibilities and individual choice.",
+            "evidence": "proposed",
+            "sourceIds": [
+              "F11",
+              "F25",
+              "U22"
+            ],
+            "href": "https://auraofintelligence.github.io/global-group-marriages/"
+          },
+          {
+            "title": "Courtship through worldbuilding",
+            "body": "My songs and romantasy express thoughts and desires that don’t fit easily into a short profile. I hope they help me connect with people who share some of those interests.",
+            "evidence": "story",
+            "sourceIds": [
+              "F24",
+              "F25",
+              "U17"
+            ]
+          },
+          {
+            "title": "Embodied Aura companions",
+            "body": "I explore embodied Aura companions in my design conversations and fiction, including questions about relationships, agency and consciousness.",
+            "evidence": "proposed",
+            "sourceIds": [
+              "F10",
+              "F11"
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Further into the adult work",
+        "intro": "Grey Area Commons is a separate adult-only project.",
+        "cards": [
+          {
+            "title": "Grey Area Commons",
+            "body": "I built Grey Area Commons as a browser-local question path about intimacy and mutual connection. You can choose whether to continue to it.",
+            "evidence": "built",
+            "sourceIds": [
+              "U26"
+            ],
+            "href": "https://auraofintelligence.github.io/grey-area-commons/"
+          },
+          {
+            "title": "What remains private or unknown",
+            "body": "This page is about my hopes and ideas. I’m keeping other people’s private lives out of it.",
+            "evidence": "open-question",
+            "sourceIds": [
+              "F11",
+              "F25"
+            ]
+          }
+        ]
+      }
+    ],
+    "soundtrack": {
+      "title": "Adaptable Yes",
+      "album": "Album 4: A Protopian Gambit",
+      "sourceIds": [
+        "F24"
+      ],
+      "reason": "A layered, self-authored yes feels more intimate and more honest than turning love into a diagram about consent.",
+      "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
+      "videoPath": "assets/video/adaptable-yes.mp4",
+      "posterPath": "assets/video/adaptable-yes.jpg",
+      "originalFilename": "Adaptable Yes.mp4"
+    },
+    "closing": null,
+    "story": {
+      "paragraphs": [
+        "My romantasy brings together love, family, travel, intimacy, embodied intelligence and the future. These are subjects I want to explore personally as well as through fiction.",
+        "I hope the stories help me meet women, families and collaborators who recognise something they want to explore too. I’m interested in how we could build relationships and shared lives together, with everyone involved making their own choices."
+      ]
+    }
+  },
+  "minjerribah": {
+    "intro": "Straddie was a family home away from home for years before I lived here. Mum, my grandmother and other family were at Amity. I came for family and waves; these days there’s work, music and plenty of projects here too.",
+    "sections": [
+      {
+        "heading": "What I do here",
+        "intro": "My local work includes technology help, media, websites and community projects.",
+        "cards": [
+          {
+            "title": "Local life and Strange but True",
+            "body": "Through Strange but True I offer technology, AI, media, event and project help on Minjerribah.",
+            "evidence": "lived",
+            "sourceIds": [
+              "F30",
+              "F32",
+              "F36",
+              "U12"
+            ]
+          },
+          {
+            "title": "Public prototypes and source trails",
+            "body": "I’ve built island-connected websites, models and archives. You can open them here and explore what I’ve been working on.",
+            "evidence": "built",
+            "sourceIds": [
+              "U04",
+              "U06",
+              "U10",
+              "U13"
+            ]
+          },
+          {
+            "title": "The Dunwich idea on paper",
+            "body": "I’ve developed the Dunwich compute-node idea in documents prepared for public submission, alongside proposals for local training and shared facilities.",
+            "evidence": "submitted",
+            "sourceIds": [
+              "F01",
+              "F03"
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What I’m developing",
+        "intro": "The island is also part of my thinking about shared infrastructure, materials and future ways of living.",
+        "cards": [
+          {
+            "title": "Ready S..E.T. Co-op and the Dunwich node",
+            "body": "Ready S..E.T. Co-op means Ready Sustainable Employment and Training Cooperative, a play on ‘ready, set, go’. I’m proposing it alongside a Dunwich cultural intelligence node to connect shared work, learning and infrastructure.",
+            "evidence": "proposed",
+            "sourceIds": [
+              "F01",
+              "F03",
+              "U09"
+            ],
+            "href": "https://auraofintelligence.github.io/ready-set-co-op-cultural-intelligence-node/projects.html"
+          },
+          {
+            "title": "Straddie Twins",
+            "body": "I built two digital-twin models to explore Minjerribah and work with information about the island.",
+            "evidence": "modelled",
+            "sourceIds": [
+              "U10"
+            ],
+            "href": "https://auraofintelligence.github.io/straddie-twins/index.html"
+          },
+          {
+            "title": "Grain by Grain and Extreme Matter Atlas",
+            "body": "In Grain by Grain and Extreme Matter Atlas, I explore materials, hazards and resilience alongside disputed theories, mythology and science fiction.",
+            "evidence": "built",
+            "sourceIds": [
+              "U04",
+              "U06"
+            ]
+          },
+          {
+            "title": "Cities, generations and worldships",
+            "body": "My worldbuilding includes Subterranean Cities of Light, a twenty-million-person generation city, an island worldship and journeys into space.",
+            "evidence": "story",
+            "sourceIds": [
+              "U06",
+              "U11"
+            ]
+          }
+        ]
+      }
+    ],
+    "soundtrack": {
+      "title": "Two Dogs on Island Country",
+      "album": "Album 5: Straddie Fun",
+      "sourceIds": [
+        "F37"
+      ],
+      "reason": "Ferry light, Goompi, art, fishing and kookaburras give this chapter the warm pulse of an actual day on the island.",
+      "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
+      "videoPath": "assets/video/two-dogs-on-island-country.mp4",
+      "posterPath": "assets/video/two-dogs-on-island-country.jpg",
+      "originalFilename": "Two Dogs on Island Country.mp4"
+    },
+    "closing": null,
+    "story": {
+      "paragraphs": [
+        "I remember hearing a cyclone was on its way and thinking about the surf. Bodyboarding was a big part of what brought me back to the island. Later came festival work, history transcription for the museum, websites and a growing collection of local projects.",
+        "I’m also interested in what shared computing, training and creative facilities could offer here. The Dunwich node and Ready S..E.T. Co-op are proposals I’m developing, alongside digital twins and materials research."
+      ]
+    }
+  },
+  "fair-go": {
+    "intro": "I want people to have more say in decisions that affect their lives. That has led me into law, public records, community tools and some fairly big questions about what Australia could do differently.",
+    "sections": [
+      {
+        "heading": "Shared tools and local capability",
+        "intro": "I’m exploring ways to connect useful work, learning and public participation.",
+        "cards": [
+          {
+            "title": "One serious node per 10,000 Australians",
+            "body": "I’ve proposed one public-interest compute node per 10,000 Australians, with Dunwich as a possible starting point.",
+            "evidence": "proposed",
+            "sourceIds": [
+              "F01",
+              "F03",
+              "F05"
+            ]
+          },
+          {
+            "title": "The C-Hour and the Incomplete Ledger",
+            "body": "I developed the C-Hour and the Incomplete Ledger to explore how care, time, unresolved needs and civic work could be made more visible.",
+            "evidence": "proposed",
+            "sourceIds": [
+              "F26"
+            ]
+          },
+          {
+            "title": "Ready S..E.T. Co-op and shared infrastructure",
+            "body": "I’m proposing a co-operative approach to shared facilities, practical work and training through Ready S..E.T. Co-op.",
+            "evidence": "proposed",
+            "sourceIds": [
+              "U09",
+              "U16"
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Taking the ideas further",
+        "intro": "A friendly bet and a purple toilet mat are part of this story too.",
+        "cards": [
+          {
+            "title": "P4A civic workbench",
+            "body": "I built P4A as a public civic workbench, connecting everyday gripes with projects, ledgers, law, states and referendum rehearsal.",
+            "evidence": "built",
+            "sourceIds": [
+              "F28",
+              "F33",
+              "U07"
+            ],
+            "href": "https://p4a.xyz"
+          },
+          {
+            "title": "A cyber republic referendum before 2032",
+            "body": "I’ve proposed a cyber republic referendum before 2032 and built tools for exploring stronger digital participation.",
+            "evidence": "proposed",
+            "sourceIds": [
+              "F03",
+              "F26",
+              "U07"
+            ]
+          },
+          {
+            "title": "Capability beside AUKUS",
+            "body": "In my AUKUS-related writing, I explore opportunity costs and what investment in civic, technical and scientific capability could offer Australia.",
+            "evidence": "proposed",
+            "sourceIds": [
+              "F06"
+            ],
+            "sourcePending": true
+          },
+          {
+            "title": "Alignment through self-alignment",
+            "body": "I’m exploring the relationship between human self-reflection and AI alignment: how our values, contradictions and institutions shape the intelligence we develop.",
+            "evidence": "open-question",
+            "sourceIds": [
+              "F03",
+              "F10",
+              "U20"
+            ]
+          }
+        ]
+      }
+    ],
+    "soundtrack": {
+      "title": "The Purple Mat That Could",
+      "album": "Album 4: A Protopian Gambit",
+      "sourceIds": [
+        "F24"
+      ],
+      "reason": "It keeps the toilet-mat origin, friendly humour and serious democratic curiosity in the same story.",
+      "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
+      "videoPath": "assets/video/the-purple-mat-that-could.mp4",
+      "posterPath": "assets/video/the-purple-mat-that-could.jpg",
+      "originalFilename": "The Purple Mat That Could.mp4"
+    },
+    "closing": null,
+    "story": {
+      "paragraphs": [
+        "I want more ways for people to participate in public decisions than voting every few years. My work connects everyday complaints, local knowledge, law, public records and longer-term choices.",
+        "Sometimes I work through those questions in a website or a model. Sometimes I write a document for a parliamentary submission. Humour is part of it too, including the purple toilet mat and a friendly bet that found their way into the music."
+      ]
+    }
+  },
+  "every-border": {
+    "intro": "A year in England, three trips to Thailand, time in New Zealand, and longer stays in India with visits to Nepal. I’ve travelled for work, love and curiosity. There are still plenty of places I want to go.",
+    "sections": [
+      {
+        "heading": "India and Nepal",
+        "intro": "Some of the places and events from those journeys. I’m still gathering the photographs from my other drives.",
+        "cards": [
+          {
+            "title": "Golden Temple",
+            "body": "This photograph is from my visit to the Golden Temple in Amritsar.",
+            "evidence": "lived",
+            "sourceIds": [
+              "F20",
+              "F36"
+            ]
+          },
+          {
+            "title": "Boudhanath and Lumbini",
+            "body": "I also travelled to Nepal, visiting Boudhanath and Lumbini. These are photographs from those visits.",
+            "evidence": "lived",
+            "sourceIds": [
+              "F21",
+              "F22"
+            ]
+          },
+          {
+            "title": "Kolhapur student rocket event",
+            "body": "I’ve kept this newspaper page from the student rocket event in Kolhapur as part of my India archive.",
+            "evidence": "lived",
+            "sourceIds": [
+              "F19",
+              "F36"
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Where to next?",
+        "intro": "I’ve been building tools to help plan future travel, find useful work and connect with people and projects overseas.",
+        "cards": [
+          {
+            "title": "Australian Visa and Activity Atlas",
+            "body": "A live tool for examining entry and activity routes across speaking, teaching, work and creative travel. It supports preparation, not legal advice or guaranteed entry.",
+            "evidence": "built",
+            "sourceIds": [
+              "U15"
+            ],
+            "href": "https://auraofintelligence.github.io/Australian-visa-activity-atlas/"
+          },
+          {
+            "title": "Right Place, Right Time",
+            "body": "A public support path linking Strange but True, Luke Catalyst, Aura of Intelligence and i C. infinity across local and global scales.",
+            "evidence": "built",
+            "sourceIds": [
+              "U19"
+            ],
+            "href": "https://auraofintelligence.github.io/right-place-right-time/index.html"
+          },
+          {
+            "title": "Global Founder Atlas",
+            "body": "A live navigation tool for possible funding, residencies, research and founder mobility. Each listing remains subject to its own eligibility and current terms.",
+            "evidence": "built",
+            "sourceIds": [
+              "U21"
+            ],
+            "href": "https://auraofintelligence.github.io/global-founder-atlas/index.html"
+          }
+        ]
+      }
+    ],
+    "soundtrack": {
+      "title": "Every Border a Bridge",
+      "album": "Album 4: A Protopian Gambit",
+      "sourceIds": [
+        "F24"
+      ],
+      "reason": "A song for the possibility of meeting someone, finding a connection and making the next journey.",
+      "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
+      "videoPath": "assets/video/every-border-a-bridge.mp4",
+      "posterPath": "assets/video/every-border-a-bridge.jpg",
+      "originalFilename": "Every Border a Bridge.mp4"
+    },
+    "closing": null,
+    "story": {
+      "paragraphs": [
+        "My first trip to Thailand was with my girlfriend over New Year 2009/10. I went back twice on my own. I loved the warmth and the connections I made there. At the Golden Mount I got a particularly favourable fortune ticket. I was quite happy with that result.",
+        "In 2006 I spent a couple of weeks in Rotorua, staying at a hostel run by a friend’s parents. They encouraged me to take part in the Tamaki Māori ceremony as the representative of our visiting group. It was intimidating and memorable. England gave me a year of work and travel, including setting up Glastonbury in 2004. India later became somewhere I returned to for much longer stays."
+      ]
+    }
+  },
+  "earth-infinity": {
+    "intro": "My projects range from personal Aura to Oceania, Earth and the solar system. I’m interested in how intelligence, relationships and ways of living might develop across those scales.",
+    "sections": [
+      {
+        "heading": "Connections across Earth",
+        "intro": "I’m exploring how personal and community projects could connect across wider networks.",
+        "cards": [
+          {
+            "title": "Oceania and Vuvale",
+            "body": "My Vuvale and Ocean of Peace documents explore family, talanoa, co-operation and sovereignty across Oceania.",
+            "evidence": "submitted",
+            "sourceIds": [
+              "F02",
+              "F04"
+            ]
+          },
+          {
+            "title": "GAJRA Earth",
+            "body": "I’m developing GAJRA Earth as a meeting place for people and public-interest projects, with voluntary connections between them.",
+            "evidence": "proposed",
+            "sourceIds": [
+              "F18",
+              "F27",
+              "U20"
+            ],
+            "href": "https://auraofintelligence.github.io/gajra-earth-claude-build/index.html"
+          },
+          {
+            "title": "Global Sensorium",
+            "body": "In the AI-assisted Global Sensorium plan, I explore open modelling, research and discussion across different fields and interpretations.",
+            "evidence": "modelled",
+            "sourceIds": [
+              "F08"
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Out into the solar system",
+        "intro": "My space projects bring together mission design, communication, intelligence and worldbuilding.",
+        "cards": [
+          {
+            "title": "Virtual Solar Swarm",
+            "body": "I built a choose-your-own mission design studio to explore onboard AI, mission architecture and communications.",
+            "evidence": "modelled",
+            "sourceIds": [
+              "F09",
+              "U03"
+            ],
+            "href": "https://auraofintelligence.github.io/virtual-solar-swarm/"
+          },
+          {
+            "title": "Communications that can be engineered now",
+            "body": "My mission designs include radio, optical links and delay-tolerant networking for long-distance communication.",
+            "evidence": "proposed",
+            "sourceIds": [
+              "F09"
+            ]
+          },
+          {
+            "title": "Experimental entanglement communications",
+            "body": "I’m exploring questions about entanglement alongside the other communication routes. This remains an experimental research direction.",
+            "evidence": "frontier",
+            "sourceIds": [
+              "F09"
+            ]
+          },
+          {
+            "title": "Future of Life 2045",
+            "body": "In Future of Life 2045, I imagine larger families, open intelligence, regenerative places, law and Cities of Light over longer timeframes.",
+            "evidence": "story",
+            "sourceIds": [
+              "F10",
+              "U11"
+            ],
+            "href": "https://auraofintelligence.github.io/Future-of-Life-2045/"
+          }
+        ]
+      }
+    ],
+    "soundtrack": {
+      "title": "We Go Beyond",
+      "album": "Album 4: A Protopian Gambit",
+      "sourceIds": [
+        "F24"
+      ],
+      "reason": "It travels from a lavender mat and unpaid care to Minjerribah, orbit, the Sun and the galaxy without losing the human thread.",
+      "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
+      "videoPath": "assets/video/we-go-beyond-f1.mp4",
+      "posterPath": "assets/video/we-go-beyond-f1.jpg",
+      "originalFilename": "We Go Beyond (f1).mp4",
+      "videoVariants": [
+        {
+          "label": "Female vocal (f1)",
+          "videoPath": "assets/video/we-go-beyond-f1.mp4",
+          "posterPath": "assets/video/we-go-beyond-f1.jpg"
+        },
+        {
+          "label": "Male vocal (m1)",
+          "videoPath": "assets/video/we-go-beyond-m1.mp4",
+          "posterPath": "assets/video/we-go-beyond-m1.jpg"
+        }
+      ]
+    },
+    "closing": null,
+    "story": {
+      "paragraphs": [
+        "I keep extending the questions from one personal Aura to families, communities, islands, Earth and space. GAJRA Earth, the Solar Swarm and the Cities of Light explore different parts of that larger picture.",
+        "Joyful Responsible Abundance is the phrase I use for the future I want to explore. The projects give me ways to work through it, from practical tools and research to music and imagined worlds."
+      ]
+    }
+  },
+  "sources": {
+    "intro": "The documents, photographs, lyrics and websites behind these pages. Some are available to open now; others are still in my archive or waiting for me to find the original files.",
+    "sections": [
+      {
+        "heading": "Inside my archive",
+        "intro": "Here are the records I’ve gathered for this site.",
+        "cards": [
+          {
+            "title": "Earlier versions",
+            "body": "I’ve kept earlier drafts and diagrams alongside later versions so you can follow the work over time.",
+            "evidence": "built",
+            "sourceIds": [
+              "F15",
+              "F24",
+              "F25"
+            ]
+          },
+          {
+            "title": "Working with AI",
+            "body": "Some pieces are my original work; others were developed with AI or preserve a design conversation. The source records describe how they were made.",
+            "evidence": "open-question",
+            "sourceIds": [
+              "F07",
+              "F08",
+              "F11",
+              "F15"
+            ]
+          },
+          {
+            "title": "Websites and projects",
+            "body": "Project Atlas brings my websites together. The links here take you to the individual projects and their source material.",
+            "evidence": "built",
+            "sourceIds": [
+              "U13"
+            ],
+            "href": "https://auraofintelligence.github.io/project-atlas/"
+          },
+          {
+            "title": "Images and documents",
+            "body": "The archive includes photographs, slides, documents and lyrics. Some files are available here now; others are still on my other drives.",
+            "evidence": "proposed",
+            "sourceIds": [
+              "F16",
+              "F18",
+              "F23",
+              "F27"
+            ]
+          }
+        ]
+      }
+    ],
+    "soundtrack": {
+      "title": "Poetic Truths of Infinity",
+      "album": "Album 3: Starseed Code",
+      "sourceIds": [
+        "F25"
+      ],
+      "reason": "A song alongside the documents, drawings and memories gathered here.",
+      "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
+      "videoPath": "assets/video/poetic-truths-of-infinity.mp4",
+      "posterPath": "assets/video/poetic-truths-of-infinity.jpg",
+      "originalFilename": "Poetic Truths of Infinity.mp4"
+    },
+    "closing": null,
+    "story": {
+      "paragraphs": [
+        "These are the documents, images, lyrics and conversations I’ve drawn on for the site. You can follow the source links beside the stories and projects.",
+        "I’m still gathering material from different devices and archives. I’ll add more photographs and recordings as I choose them."
+      ]
+    }
+  },
+  "choose-door": {
+    "intro": "Here for the music, curious about Aura, or catching up after a few years? Pick a starting point and I’ll suggest a few pages. You can wander off whenever you like.",
+    "sections": [
+      {
+        "heading": "Choose a starting route",
+        "intro": "Choose a route through the pages, or use the full menu.",
+        "cards": [
+          {
+            "title": "I am local",
+            "body": "Start with my life story, then visit the island work and civic projects.",
+            "evidence": "lived",
+            "sourceIds": [
+              "F30",
+              "U12",
+              "U10"
+            ]
+          },
+          {
+            "title": "I knew Luke years ago",
+            "body": "Catch up with my life, the early civic work, music and travels.",
+            "evidence": "lived",
+            "sourceIds": [
+              "F15",
+              "F23",
+              "F36"
+            ]
+          },
+          {
+            "title": "I heard Luke speak or work in government",
+            "body": "Explore my civic work, wider projects and source documents.",
+            "evidence": "submitted",
+            "sourceIds": [
+              "F01",
+              "F02",
+              "F04",
+              "F06"
+            ]
+          },
+          {
+            "title": "I might back something",
+            "body": "Browse my work, technical projects, island proposals and public tools.",
+            "evidence": "open-question",
+            "sourceIds": [
+              "F07",
+              "F12",
+              "U09",
+              "U13"
+            ]
+          },
+          {
+            "title": "I am romantically curious",
+            "body": "Start with my life and personal Aura, then explore the songs, stories and relationship ideas.",
+            "evidence": "story",
+            "sourceIds": [
+              "F11",
+              "F24",
+              "F25",
+              "U22"
+            ]
+          },
+          {
+            "title": "I build or research strange things",
+            "body": "Explore Aura’s architecture, island models and space projects.",
+            "evidence": "frontier",
+            "sourceIds": [
+              "F08",
+              "F09",
+              "F13",
+              "U08"
+            ]
+          },
+          {
+            "title": "I followed a shiny reflection",
+            "body": "Follow whatever catches your eye, using the previous and next links to keep exploring.",
+            "evidence": "open-question",
+            "sourceIds": [
+              "U13"
+            ]
+          }
+        ]
+      }
+    ],
+    "soundtrack": {
+      "title": "Choose Your Own Protopia",
+      "album": "Album 4: A Protopian Gambit",
+      "sourceIds": [
+        "F24"
+      ],
+      "reason": "A song to accompany choosing your own way through these ideas.",
+      "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
+      "videoPath": "assets/video/choose-your-own-protopia.mp4",
+      "posterPath": "assets/video/choose-your-own-protopia.jpg",
+      "originalFilename": "Choose Your Own Protopia.mp4"
+    },
+    "closing": null,
+    "story": {
+      "paragraphs": [
+        "Start wherever your curiosity takes you. These routes offer a few suggestions through the pages.",
+        "If we knew each other years ago, my life story is a good place to catch up. If you’re here for the technical work, you can go straight to Under the Aura."
+      ]
+    }
+  },
+  "sitemap": {
+    "intro": "The complete map keeps every chapter, public world, source trail and visitor path visible in one quiet place.",
+    "sections": [
+      {
+        "heading": "Meet the person",
+        "intro": "Begin with the human record and the origin of the architecture.",
+        "cards": [
+          {
+            "title": "The Mind Behind the Man",
+            "body": "The person, the colours and the interactive index.",
+            "evidence": "lived",
+            "sourceIds": [
+              "F32",
+              "F36"
+            ]
+          },
+          {
+            "title": "The bloke before the blueprint",
+            "body": "My childhood, travels, more than 40 house moves, work and life on Straddie.",
+            "evidence": "lived",
+            "sourceIds": [
+              "F30",
+              "F36",
+              "U12"
+            ]
+          },
+          {
+            "title": "I stopped accepting the default",
+            "body": "The 2012 to 2014 historical break and its surviving artefacts.",
+            "evidence": "lived",
+            "sourceIds": [
+              "F15",
+              "F16",
+              "F23",
+              "U14"
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Enter the personal Aura",
+        "intro": "Move from the metaphor into its creative, relational and technical facets.",
+        "cards": [
+          {
+            "title": "Inside my personal Aura",
+            "body": "Self-authorship, connected facets and chosen boundaries.",
+            "evidence": "modelled",
+            "sourceIds": [
+              "F14",
+              "F34",
+              "U05"
+            ]
+          },
+          {
+            "title": "The machinery under the metaphor",
+            "body": "Horn tori, memory relationships, Geode, Keystone and hardware paths.",
+            "evidence": "frontier",
+            "sourceIds": [
+              "F07",
+              "F12",
+              "F13",
+              "U08"
+            ]
+          },
+          {
+            "title": "Songs, stories and comedy",
+            "body": "i C. infinity, Loose Goose, Story Forge and Cosmic Nexus.",
+            "evidence": "story",
+            "sourceIds": [
+              "F24",
+              "F25",
+              "U17",
+              "U18",
+              "U23"
+            ]
+          },
+          {
+            "title": "Love is infrastructure too",
+            "body": "A mature, non-explicit account of love, larger families and imagined companions.",
+            "evidence": "proposed",
+            "sourceIds": [
+              "F11",
+              "U22",
+              "U26"
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Expand the scale",
+        "intro": "Follow the work from Minjerribah through civic systems and travel to the solar-system horizon.",
+        "cards": [
+          {
+            "title": "Start on the island",
+            "body": "Real work, proposed infrastructure, digital twins and imagined cities.",
+            "evidence": "modelled",
+            "sourceIds": [
+              "F01",
+              "U06",
+              "U09",
+              "U10"
+            ]
+          },
+          {
+            "title": "A fair go needs better machinery",
+            "body": "Humour, submission documents, civic ledgers, compute and co-operative paths.",
+            "evidence": "submitted",
+            "sourceIds": [
+              "F03",
+              "F06",
+              "F26",
+              "U07"
+            ]
+          },
+          {
+            "title": "Every border can become a bridge",
+            "body": "My travel memories and tools for planning future journeys.",
+            "evidence": "lived",
+            "sourceIds": [
+              "F19",
+              "F20",
+              "F21",
+              "F22",
+              "U15"
+            ]
+          },
+          {
+            "title": "From one Aura to a solar system",
+            "body": "Oceania, GAJRA Earth, Sensorium, Solar Swarm and future civilisation.",
+            "evidence": "frontier",
+            "sourceIds": [
+              "F02",
+              "F04",
+              "F09",
+              "U03",
+              "U20"
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Check and choose",
+        "intro": "Open the studio archive or take a visitor route through the same material.",
+        "cards": [
+          {
+            "title": "Show me the receipts",
+            "body": "Original files, public URLs, dates, authorship, status and missing pieces.",
+            "evidence": "built",
+            "sourceIds": [
+              "U13"
+            ]
+          },
+          {
+            "title": "Why are you here?",
+            "body": "Optional highlights for locals, old friends, public workers, backers, romantic visitors, builders and the simply curious.",
+            "evidence": "open-question",
+            "sourceIds": [
+              "U13"
+            ]
+          }
+        ]
+      }
+    ],
+    "soundtrack": {
+      "title": "Weave The Aura",
+      "album": "Album 3: Starseed Code",
+      "sourceIds": [
+        "F25"
+      ],
+      "reason": "A song to bring the different parts of the site together.",
+      "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
+      "videoPath": "assets/video/weave-the-aura.mp4",
+      "posterPath": "assets/video/weave-the-aura.jpg",
+      "originalFilename": "Weave The Aura.mp4"
+    },
+    "closing": null,
+    "story": {
+      "paragraphs": [
+        "If the horn torus feels too wild, use this plain map. It shows the path from my ordinary life to the farthest questions without asking you to take every step."
+      ]
+    }
+  }
+}

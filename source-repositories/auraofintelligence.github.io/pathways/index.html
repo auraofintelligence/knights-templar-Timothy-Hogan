@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Pathways | Aura of Intelligence</title>
+  <meta name="description" content="All seventeen pathways in one place: the tools of Aura of Intelligence, from mind and self to the far frontiers. Filter by family and step inside.">
+  <meta name="theme-color" content="#0a1420">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preload" href="../assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/jetbrains-mono-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../styles.css?v=4">
+  <style>
+    /* Pathways showcase: page-specific, kept off the shared stylesheet. */
+    .filter-bar { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.8rem; }
+    .filter-bar button { min-height: 2.7rem; padding: 0 1.05rem; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.06); color: #fff; font: inherit; font-weight: 700; cursor: pointer; transition: border-color .2s, background .2s; }
+    .filter-bar button:hover { border-color: rgba(43,227,194,.6); background: rgba(43,227,194,.1); }
+    .filter-bar button[aria-pressed="true"] { background: rgba(124,77,255,.32); border-color: var(--violet); }
+    .pathway-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: .9rem; }
+    .pathway-card { position: relative; display: block; min-height: 15rem; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; text-decoration: none; background: linear-gradient(150deg, rgba(124,77,255,.22), rgba(10,10,22,.8)); box-shadow: 0 20px 60px rgba(0,0,0,.32); animation: pathIn .5s var(--ease-out) both; transition: transform .3s var(--ease-out), border-color .2s; }
+    .pathway-card:hover { transform: translateY(-4px); border-color: rgba(43,227,194,.55); }
+    .pathway-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .5; transition: opacity .3s, transform .5s var(--ease-out); }
+    .pathway-card:hover img { opacity: .7; transform: scale(1.05); }
+    .pathway-card[data-noimg="1"]::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 30% 25%, rgba(255,207,110,.32), transparent 60%), radial-gradient(circle at 75% 72%, rgba(43,227,194,.26), transparent 55%); }
+    .pathway-body { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 15rem; padding: 1rem; background: linear-gradient(0deg, rgba(5,7,12,.92), rgba(5,7,12,.2) 60%, transparent); }
+    .pathway-body .fam { color: var(--gold); font-family: var(--font-mono); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; margin-bottom: .4rem; }
+    .pathway-body h3 { color: #fff; margin-bottom: .35rem; }
+    .pathway-body p { color: var(--muted); font-size: .9rem; margin: 0; }
+    .pathway-card.is-hidden { display: none; }
+    @keyframes pathIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .pathway-card { animation: none; } .pathway-card:hover { transform: none; } .pathway-card:hover img { transform: none; } }
+  </style>
+</head>
+<body data-page="pathways">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Aura of Intelligence home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text"><strong>Aura of Intelligence</strong><span>A Bridge to The Infinite</span></span>
+    </a>
+    <nav class="site-nav" data-nav aria-label="Primary">
+      <a href="../pathways/index.html">Pathways</a>
+      <a href="../courses/index.html">Courses</a>
+      <a href="../videos.html">Videos</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <button class="index-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-index">
+      <span class="index-toggle-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="index-toggle-label">Index</span>
+    </button>
+  </header>
+  <main id="main">
+
+    <section class="hero page-hero">
+      <div class="hero-content reveal">
+        <p class="eyebrow">The whole constellation</p>
+        <h1>The Pathways</h1>
+        <p class="hero-copy">Seventeen ways to think about the software your life could hold, and build your own version instead of renting big tech's. Walk them in any order, filter by family, and take from each one only what is genuinely right for you.</p>
+      </div>
+    </section>
+
+    <section class="section" id="constellation">
+      <div class="reveal">
+        <div class="filter-bar" role="group" aria-label="Filter pathways by family">
+          <button type="button" data-filter="all" aria-pressed="true">All seventeen</button>
+          <button type="button" data-filter="Mind &amp; self" aria-pressed="false">Mind &amp; self</button>
+          <button type="button" data-filter="Life &amp; living" aria-pressed="false">Life &amp; living</button>
+          <button type="button" data-filter="Events, music &amp; play" aria-pressed="false">Events, music &amp; play</button>
+          <button type="button" data-filter="Frontiers" aria-pressed="false">Frontiers</button>
+        </div>
+        <div class="pathway-grid" data-pathway-grid></div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div>
+      <p>Aura of Intelligence: Luke Hayes × Claude, Minjerribah · 2026.</p>
+      <p>Licensed under the Aura of Intelligence Public Source Licence.</p>
+    </div>
+    <nav class="footer-links" aria-label="Elsewhere">
+      <a href="https://iseeinfinity.com" target="_blank" rel="noopener">iseeinfinity.com</a>
+      <a href="https://lukecatalyst.com" target="_blank" rel="noopener">lukecatalyst.com</a>
+      <a href="https://gajra.earth" target="_blank" rel="noopener">gajra.earth</a>
+    </nav>
+  </footer>
+  <script src="../assets/pathways-data.js" defer></script>
+  <script src="../assets/site-nav.js" defer></script>
+  <script src="../assets/core.js" defer></script>
+  <script defer>
+    window.addEventListener('DOMContentLoaded', function () {
+      var data = window.AURA_PATHWAYS || [];
+      var grid = document.querySelector('[data-pathway-grid]');
+      if (!grid) { return; }
+      var ROOT = '../';
+      function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+      grid.innerHTML = data.map(function (p, i) {
+        var img = p.img ? '<img src="' + ROOT + 'assets/media/' + esc(p.img) + '" alt="" loading="lazy" width="' + p.w + '" height="' + p.h + '">' : '';
+        var noimg = p.img ? '' : ' data-noimg="1"';
+        return '<a class="pathway-card" href="' + ROOT + esc(p.href) + '" data-family="' + esc(p.family) + '"' + noimg + ' style="animation-delay:' + (i * 32) + 'ms">' +
+          img +
+          '<span class="pathway-body"><span class="fam">' + esc(p.family) + '</span><h3>' + esc(p.title) + '</h3><p>' + esc(p.pitch) + '</p></span>' +
+          '</a>';
+      }).join('');
+      var buttons = Array.prototype.slice.call(document.querySelectorAll('[data-filter]'));
+      buttons.forEach(function (b) {
+        b.addEventListener('click', function () {
+          var fam = b.getAttribute('data-filter');
+          buttons.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+          Array.prototype.slice.call(document.querySelectorAll('.pathway-card')).forEach(function (c) {
+            var show = fam === 'all' || c.getAttribute('data-family') === fam;
+            c.classList.toggle('is-hidden', !show);
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

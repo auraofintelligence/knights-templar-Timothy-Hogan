@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The scale : Virtual Solar Swarm</title>
+<meta name="description" content="The fleet total and the allocation policy as dials you set yourself, with the downstream numbers computed live: production pace, cost, coverage, traffic and data.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛰️</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header id="site-header"></header>
+<main>
+  <h1>The scale</h1>
+  <p class="lede">No rule fixes 200 targets, or four satellites to a picket, or 1,300 in the fleet; those are where this study started counting. On this page both the fleet total and the policy for spending it are dials in your hands. The page does the arithmetic and shows you what each setting changes; what any of it is worth is yours to weigh.</p>
+
+  <h2>Your fleet</h2>
+  <div class="controls">
+    <label style="flex:1; min-width:260px">Fleet total
+      <input type="range" id="F" min="0" max="1000" value="500" style="width:100%; max-width:520px">
+    </label>
+    <span class="stat" id="F-out" style="min-width:130px">·</span>
+  </div>
+  <div class="chip-row">
+    <button class="chip" data-f="150">150</button>
+    <button class="chip" data-f="1332">1,332 (the starting point)</button>
+    <button class="chip" data-f="8000">8,000</button>
+    <button class="chip" data-f="20000">20,000</button>
+  </div>
+
+  <h2>Your allocation policy</h2>
+  <p class="dim small">How the fleet is spent is a policy, not a law of the model. These are the same knobs the study's starting design chose one way; choose them your way. <button id="reset-policy" class="chip">Reset to the starting policy</button></p>
+  <div class="grid cols-3">
+    <div class="card"><p><label>Solar observatory <input type="range" id="p-obs" min="0" max="1500" step="10" value="100"></label> <strong id="p-obs-out"></strong></p><p class="faint">Satellites wrapped around the Sun, counted at the starting fleet.</p></div>
+    <div class="card"><p><label>Swarm strength <input type="range" id="p-swarm" min="4" max="200" value="50"></label> <strong id="p-swarm-out"></strong></p><p class="faint">Satellites at each of the seven priority worlds.</p></div>
+    <div class="card"><p><label>Enhanced picket strength <input type="range" id="p-enh" min="2" max="60" value="12"></label> <strong id="p-enh-out"></strong></p><p class="faint">Satellites at each of the fifteen enhanced targets.</p></div>
+    <div class="card"><p><label>Baseline picket strength <input type="range" id="p-picket" min="1" max="16" value="4"></label> <strong id="p-picket-out"></strong></p><p class="faint">Satellites per ordinary station; four gives all-angle coverage.</p></div>
+    <div class="card"><p><label>Interceptors held ready <input type="range" id="p-int" min="0" max="12" value="6"></label> <strong id="p-int-out"></strong></p><p class="faint">Fuelled and waiting for interstellar visitors.</p></div>
+    <div class="card">
+      <p><label>Fill order
+        <select id="p-order">
+          <option value="windows" selected>soonest on station (the windows decide)</option>
+          <option value="hazard">near-Earth rocks first</option>
+          <option value="nearest">nearest first</option>
+          <option value="largest">largest first</option>
+          <option value="shipped">as the study shipped: the original 200 first</option>
+        </select></label></p>
+      <p><label><input type="checkbox" id="p-grow" checked> stations grow with the fleet</label></p>
+      <p class="faint">By default the physics sets the queue: next launch window plus cruise, soonest first. The other orders are a priority vote, there to be re-taken whenever new technologies, new partners or black swans change the maths, the money or the science.</p>
+    </div>
+  </div>
+
+  <h2>What your settings build</h2>
+  <div class="grid cols-4">
+    <div class="card"><div class="stat" id="s-funded">·</div><div class="stat-label">bodies with dedicated watchers</div></div>
+    <div class="card"><div class="stat" id="s-repl">·</div><div class="stat-label">factory pace, satellites / year</div></div>
+    <div class="card"><div class="stat" id="s-cost">·</div><div class="stat-label">fleet hardware cost</div></div>
+    <div class="card"><div class="stat" id="s-data">·</div><div class="stat-label">observations home / day</div></div>
+  </div>
+  <p class="dim small" id="alloc-note"></p>
+
+  <h2>Who gets what</h2>
+  <p class="dim small">Click a tier to see exactly which bodies sit in it under your current settings; every name opens its dossier.</p>
+  <div class="chip-row" id="who-chips"></div>
+  <div class="card" id="who-panel" style="display:none"></div>
+
+  <div class="grid cols-2">
+    <div class="card">
+      <h3>Would it disturb the solar system? The numbers to weigh:</h3>
+      <dl class="kv" id="disturb-rows"></dl>
+      <p class="faint">The modelled design also carries two standing commitments at every scale: a funded end-of-life plan before any satellite activates, and orbit-only, sterilised operations at the ocean moons under planetary-protection rules.</p>
+    </div>
+    <div class="card">
+      <h3>What would it give back? The numbers to weigh:</h3>
+      <dl class="kv" id="give-rows"></dl>
+      <p class="faint">The source design argues that many solar vantage points would stretch storm warnings from about an hour toward days; that claim rides on the coverage number above and is theirs to defend.</p>
+    </div>
+  </div>
+
+  <p class="faint">Scaling laws here are pinned to the starting point and are teaching-grade, like everything on this site; the finer pages (<a href="fleet.html">fleet</a>, <a href="cadence.html">cadence</a>, <a href="convoys.html">convoys</a>, <a href="network.html">network</a>) currently run at the starting point.</p>
+</main>
+<footer id="site-footer"></footer>
+<script src="assets/astro.js"></script>
+<script src="data/objects-core.js"></script>
+<script src="data/objects-moons.js"></script>
+<script src="data/objects-asteroids.js"></script>
+<script src="data/objects-comets.js"></script>
+<script src="data/objects-tnos.js"></script>
+<script src="data/objects-moons-jupiter2.js"></script>
+<script src="data/objects-moons-saturn2.js"></script>
+<script src="data/objects-moons-un2.js"></script>
+<script src="data/objects-small2.js"></script>
+<script src="data/objects-tnos2.js"></script>
+<script src="data/objects-hypothesis.js"></script>
+<script src="data/objects.js"></script>
+<script src="data/sensors.js"></script>
+<script src="data/buses.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/scale.js"></script>
+<script>
+VSS.mountChrome("scale.html");
+(function () {
+  var S = window.VSS_SCALE;
+  var slider = document.getElementById("F");
+  var FMIN = Math.log(100), FMAX = Math.log(20000);
+
+  function sliderToF() {
+    var F = Math.round(Math.exp(FMIN + (slider.value / 1000) * (FMAX - FMIN)) / 10) * 10;
+    if (Math.abs(F - 1332) <= 20) F = 1332; // detent at the starting point
+    return F;
+  }
+  function fToSlider(F) { return Math.round(1000 * (Math.log(F) - FMIN) / (FMAX - FMIN)); }
+
+  function readPolicy() {
+    return {
+      obsN: +document.getElementById("p-obs").value,
+      swarmN: +document.getElementById("p-swarm").value,
+      enhN: +document.getElementById("p-enh").value,
+      picketN: +document.getElementById("p-picket").value,
+      interceptors: +document.getElementById("p-int").value,
+      scaleStations: document.getElementById("p-grow").checked,
+      order: document.getElementById("p-order").value
+    };
+  }
+  function writePolicy(p) {
+    document.getElementById("p-obs").value = p.obsN;
+    document.getElementById("p-swarm").value = p.swarmN;
+    document.getElementById("p-enh").value = p.enhN;
+    document.getElementById("p-picket").value = p.picketN;
+    document.getElementById("p-int").value = p.interceptors;
+    document.getElementById("p-grow").checked = p.scaleStations;
+    document.getElementById("p-order").value = p.order;
+  }
+
+  var lastAlloc = null, whoOpen = null;
+
+  function whoGroups(a) {
+    var objs = window.VSS_OBJECTS;
+    var fundedPickets = objs.filter(function (o) { return o.tier === "picket" && a.per[o.id]; });
+    var promoted = objs.filter(function (o) { return o.tier === "survey" && a.per[o.id]; });
+    var unfunded = objs.filter(function (o) { return o.tier === "picket" && !a.per[o.id]; });
+    return [
+      { key: "obs", label: "Solar observatory", n: a.per.sun ? 1 : 0, each: a.per.sun || 0, list: a.per.sun ? [window.VSS_BY_ID.sun] : [] },
+      { key: "swarm", label: "Priority swarms", each: a.tiers.swarm, list: objs.filter(function (o) { return o.tier === "swarm" && a.per[o.id]; }) },
+      { key: "enh", label: "Enhanced pickets", each: a.tiers.enhanced, list: objs.filter(function (o) { return o.tier === "enhanced" && a.per[o.id]; }) },
+      { key: "picket", label: "Baseline pickets", each: a.tiers.picket, list: fundedPickets },
+      { key: "promoted", label: "Promoted from the census", each: a.tiers.picket, list: promoted },
+      { key: "int", label: "Interceptors", each: a.tiers.intercept, list: objs.filter(function (o) { return o.tier === "intercept" && a.per[o.id]; }) },
+      { key: "unfunded", label: "Waiting for funding", each: 0, list: unfunded }
+    ];
+  }
+  function renderWho() {
+    if (!lastAlloc) return;
+    var groups = whoGroups(lastAlloc);
+    document.getElementById("who-chips").innerHTML = groups.map(function (g) {
+      return '<button class="chip" data-who="' + g.key + '" aria-pressed="' + (whoOpen === g.key) + '">' +
+        g.label + " · " + VSS.fmt(g.list.length) + "</button>";
+    }).join("");
+    document.querySelectorAll("#who-chips [data-who]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        whoOpen = whoOpen === b.dataset.who ? null : b.dataset.who;
+        renderWho();
+      });
+    });
+    var panel = document.getElementById("who-panel");
+    var g = groups.filter(function (x) { return x.key === whoOpen; })[0];
+    if (!g || !g.list.length) { panel.style.display = "none"; return; }
+    panel.style.display = "";
+    panel.innerHTML = "<h3>" + g.label +
+      (g.key === "unfunded" ? ' <span class="dim small">· starting pickets not covered by these settings</span>'
+        : ' <span class="dim small">· ' + (g.key === "obs" ? VSS.fmt(g.each) + " satellites" : VSS.fmt(g.each) + " satellites each") + "</span>") + "</h3>" +
+      '<div class="chip-row">' + g.list.map(function (o) {
+        return '<a class="chip" style="text-decoration:none" href="object.html?id=' + o.id + '">' + o.name + "</a>";
+      }).join("") + "</div>";
+  }
+
+  function render() {
+    var F = sliderToF();
+    var p = readPolicy();
+    document.getElementById("F-out").textContent = VSS.fmt(F) + " satellites";
+    document.getElementById("p-obs-out").textContent = VSS.fmt(p.obsN) + " satellites";
+    document.getElementById("p-swarm-out").textContent = p.swarmN + " each";
+    document.getElementById("p-enh-out").textContent = p.enhN + " each";
+    document.getElementById("p-picket-out").textContent = p.picketN + " each";
+    document.getElementById("p-int-out").textContent = String(p.interceptors);
+
+    var a = S.allocate(F, p);
+    lastAlloc = a;
+    var sys = S.systems(a);
+
+    document.getElementById("s-funded").textContent = VSS.fmt(a.funded) + " / 384";
+    document.getElementById("s-repl").textContent = VSS.fmt(sys.replPerYear, 0);
+    document.getElementById("s-cost").textContent = "A$" + VSS.fmt(sys.costUsdB * VSS.AUD_PER_USD, 1) + "b";
+    document.getElementById("s-data").textContent = VSS.fmt(sys.dataTBday, 0) + " TB";
+
+    var picketLine = a.unfundedPickets > 0 && a.promoted > 0
+      ? VSS.fmt(a.promoted) + " census bodies reach station sooner than " + VSS.fmt(a.unfundedPickets) + " of the starting pickets, and take their seats"
+      : a.unfundedPickets > 0
+        ? a.unfundedPickets + " of the starting picket targets wait for funding"
+        : a.promoted > 0
+          ? "all starting pickets funded, plus " + VSS.fmt(a.promoted) + " census bodies given watchers of their own"
+          : "exactly the starting line-up of funded targets";
+    document.getElementById("alloc-note").textContent =
+      "Under these settings: " + picketLine + ". " + (a.notes[0] || "") +
+      " Steady state needs a launch roughly every " +
+      (isFinite(sys.launchEveryDays) ? VSS.fmt(sys.launchEveryDays, 1) + " days" : "·") +
+      ", flying as about " + VSS.fmt(sys.convoys) + " convoys. Costs converted at 1 USD to A$1.55, August 2026, hardware only.";
+
+    document.getElementById("disturb-rows").innerHTML =
+      "<dt>Room taken</dt><dd>one satellite per " + (sys.kmCubedPerSat / 1e27).toExponential(1).replace("e+", " × 10^") + " cubic kilometres, across a 40 AU sphere</dd>" +
+      "<dt>Earth's doorstep</dt><dd>" + VSS.fmt(sys.inEarthSpace) + " satellites in Earth and Moon space, alongside roughly ten thousand active there today</dd>" +
+      "<dt>Ocean-moon traffic</dt><dd>" + VSS.fmt(sys.oceanWorlds) + " orbiters at Europa and Enceladus under these settings</dd>" +
+      "<dt>Hardware placed</dt><dd>" + VSS.fmt(a.fleet) + " satellites, " + VSS.fmt(sys.replPerYear, 0) + " replaced each year</dd>";
+
+    document.getElementById("give-rows").innerHTML =
+      "<dt>Eyes on the Sun</dt><dd>" + VSS.fmt(sys.sunN) + " vantage points" + (sys.sunN >= 12 ? ", enough for all sides of the Sun at once in this model" : "; below about twelve, this model still has blind sides") + "</dd>" +
+      "<dt>Near-Earth rocks watched</dt><dd>" + sys.neaFunded + " of the " + sys.neaTotal + " catalogued, continuously</dd>" +
+      "<dt>Bodies with watchers</dt><dd>" + VSS.fmt(a.funded) + " of 384 (" + VSS.fmt(a.funded / 384 * 100, 0) + " per cent of the catalogue)</dd>" +
+      "<dt>Open observations</dt><dd>about " + VSS.fmt(sys.dataTBday, 0) + " terabytes a day, published for anyone</dd>" +
+      "<dt>Visitor readiness</dt><dd>" + VSS.fmt(sys.interceptorsReady) + " interceptors fuelled for the next interstellar arrival</dd>";
+
+    renderWho();
+  }
+
+  slider.value = fToSlider(1332);
+  writePolicy(S.DEFAULT_POLICY);
+  ["F", "p-obs", "p-swarm", "p-enh", "p-picket", "p-int"].forEach(function (id) {
+    document.getElementById(id).addEventListener("input", render);
+  });
+  document.getElementById("p-order").addEventListener("change", render);
+  document.getElementById("p-grow").addEventListener("change", render);
+  document.getElementById("reset-policy").addEventListener("click", function () {
+    writePolicy(S.STARTING_POLICY); render();
+  });
+  document.querySelectorAll(".chip[data-f]").forEach(function (b) {
+    b.addEventListener("click", function () { slider.value = fToSlider(+b.dataset.f); render(); });
+  });
+  render();
+})();
+</script>
+</body>
+</html>

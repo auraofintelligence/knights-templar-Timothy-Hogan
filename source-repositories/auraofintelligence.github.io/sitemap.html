@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site map | Aura of Intelligence</title>
+  <meta name="description" content="Every page on Aura of Intelligence in one place: the pathways, all the courses, and every link out, clearly categorised.">
+  <meta name="theme-color" content="#0a1420">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" href="assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jetbrains-mono-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=4">
+  <style>
+    /* Site map: page-specific column layout. */
+    .smap-group { margin-bottom: 2.6rem; }
+    .smap-group > h2 { font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom: 1.1rem; }
+    .smap-cols { display: grid; grid-template-columns: repeat(auto-fill, minmax(14.5rem, 1fr)); gap: 1.3rem 1.6rem; }
+    .smap-cat h3 { font-family: var(--font-mono); font-size: .76rem; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin: 0 0 .55rem; padding-bottom: .4rem; border-bottom: 1px solid var(--line); }
+    .smap-cat ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .32rem; }
+    .smap-cat a { text-decoration: none; color: var(--muted); font-size: .93rem; }
+    .smap-cat a:hover, .smap-cat a:focus-visible { color: #fff; }
+    .smap-cat a.ext::after { content: " \2197"; color: var(--teal); font-size: .82em; }
+  </style>
+</head>
+<body data-page="sitemap">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Aura of Intelligence home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text"><strong>Aura of Intelligence</strong><span>A Bridge to The Infinite</span></span>
+    </a>
+    <nav class="site-nav" data-nav aria-label="Primary">
+      <a href="pathways/index.html">Pathways</a>
+      <a href="courses/index.html">Courses</a>
+      <a href="videos.html">Videos</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="index-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-index">
+      <span class="index-toggle-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="index-toggle-label">Index</span>
+    </button>
+  </header>
+  <main id="main">
+
+    <section class="hero page-hero">
+      <div class="hero-content reveal">
+        <p class="eyebrow">Everything, in one place</p>
+        <h1>Site map</h1>
+        <p class="hero-copy">Every page on the site, and every link out, clearly sorted. If you're hunting for something, it's here.</p>
+      </div>
+    </section>
+
+    <section class="section" id="pages">
+      <div class="smap-group reveal">
+        <h2>On this site</h2>
+        <div class="smap-cols">
+          <div class="smap-cat">
+            <h3>Start here</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="pathways/index.html">The Pathways</a></li>
+              <li><a href="courses/index.html">Courses</a></li>
+              <li><a href="videos.html">Videos</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="todo.html">Build log &amp; todo</a></li>
+              <li><a href="colophon.html">Colophon</a></li>
+              <li><a href="sitemap.html">Site map</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="smap-group reveal">
+        <h2>The Pathways</h2>
+        <div class="smap-cols" data-smap-pathways></div>
+      </div>
+
+      <div class="smap-group reveal">
+        <h2>The Courses</h2>
+        <div class="smap-cols" data-smap-courses></div>
+      </div>
+    </section>
+
+    <section class="section" id="links-out">
+      <div class="smap-group reveal">
+        <h2>Aura of Intelligence properties</h2>
+        <div class="smap-cols">
+          <div class="smap-cat">
+            <h3>The constellation</h3>
+            <ul>
+              <li><a class="ext" href="https://auraofintelligence.github.io/i-C-infinity-music-universe/" target="_blank" rel="noopener">i C. infinity: the music universe</a></li>
+              <li><a class="ext" href="https://auraofintelligence.github.io/strange-but-true/" target="_blank" rel="noopener">Strange but True: the live local engine</a></li>
+              <li><a class="ext" href="https://auraofintelligence.github.io/right-place-right-time/" target="_blank" rel="noopener">Right Place, Right Time: patronage</a></li>
+            </ul>
+          </div>
+          <div class="smap-cat">
+            <h3>P4A civic cinema</h3>
+            <ul>
+              <li><a class="ext" href="https://auraofintelligence.github.io/p4a-xyz-cinema/" target="_blank" rel="noopener">P4A: the civic workbench</a></li>
+              <li><a class="ext" href="https://auraofintelligence.github.io/p4a-oceania-cinema/" target="_blank" rel="noopener">P4A Oceania</a></li>
+              <li><a class="ext" href="https://auraofintelligence.github.io/p4a-native-nations-cinema/" target="_blank" rel="noopener">P4A Native Nations</a></li>
+            </ul>
+          </div>
+          <div class="smap-cat">
+            <h3>Elsewhere</h3>
+            <ul>
+              <li><a class="ext" href="https://gajra.earth" target="_blank" rel="noopener">GAJRA Earth: the Fair Go Future</a></li>
+              <li><a class="ext" href="https://iseeinfinity.com" target="_blank" rel="noopener">iseeinfinity.com</a></li>
+              <li><a class="ext" href="https://lukecatalyst.com" target="_blank" rel="noopener">lukecatalyst.com</a></li>
+              <li><a class="ext" href="https://github.com/auraofintelligence/auraofintelligence.github.io" target="_blank" rel="noopener">How this site is built</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="smap-group reveal">
+        <h2>Project labs &amp; repositories</h2>
+        <p class="page-copy" style="color: var(--muted); margin-bottom: 1.1rem;">The real, live projects each course is built on, sorted by the same tracks as the courses.</p>
+        <div class="smap-cols" data-smap-projectlinks></div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div>
+      <p>Aura of Intelligence: Luke Hayes × Claude, Minjerribah · 2026.</p>
+      <p>Licensed under the Aura of Intelligence Public Source Licence.</p>
+    </div>
+    <nav class="footer-links" aria-label="Elsewhere">
+      <a href="https://iseeinfinity.com" target="_blank" rel="noopener">iseeinfinity.com</a>
+      <a href="https://lukecatalyst.com" target="_blank" rel="noopener">lukecatalyst.com</a>
+      <a href="https://gajra.earth" target="_blank" rel="noopener">gajra.earth</a>
+    </nav>
+  </footer>
+  <script src="assets/pathways-data.js" defer></script>
+  <script src="assets/courses-data.js" defer></script>
+  <script src="assets/site-nav.js" defer></script>
+  <script src="assets/core.js" defer></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+      function group(arr, key) {
+        var order = [], map = {};
+        (arr || []).forEach(function (x) { var k = x[key]; if (!map[k]) { map[k] = []; order.push(k); } map[k].push(x); });
+        return { order: order, map: map };
+      }
+      function catBlock(title, items) {
+        return '<div class="smap-cat"><h3>' + esc(title) + '</h3><ul>' + items.join('') + '</ul></div>';
+      }
+
+      var pg = group(window.AURA_PATHWAYS, 'family');
+      var pmount = document.querySelector('[data-smap-pathways]');
+      if (pmount) {
+        pmount.innerHTML = pg.order.map(function (fam) {
+          return catBlock(fam, pg.map[fam].map(function (p) {
+            return '<li><a href="' + esc(p.href) + '">' + esc(p.title) + '</a></li>';
+          }));
+        }).join('');
+      }
+
+      var cg = group(window.AURA_COURSES, 'family');
+      var cmount = document.querySelector('[data-smap-courses]');
+      if (cmount) {
+        cmount.innerHTML = cg.order.map(function (fam) {
+          return catBlock(fam, cg.map[fam].map(function (c) {
+            return '<li><a href="courses/' + esc(c.id) + '.html">' + esc(c.title) + '</a></li>';
+          }));
+        }).join('');
+      }
+
+      var lmount = document.querySelector('[data-smap-projectlinks]');
+      if (lmount) {
+        lmount.innerHTML = cg.order.map(function (fam) {
+          var seen = {}, items = [];
+          cg.map[fam].forEach(function (c) {
+            (c.links || []).forEach(function (l) {
+              if (seen[l.href]) { return; }
+              seen[l.href] = true;
+              items.push('<li><a class="ext" href="' + esc(l.href) + '" target="_blank" rel="noopener">' + esc(l.label) + '</a></li>');
+            });
+          });
+          return items.length ? catBlock(fam, items) : '';
+        }).join('');
+      }
+    });
+  </script>
+</body>
+</html>

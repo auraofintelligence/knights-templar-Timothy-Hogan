@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Launch windows : Virtual Solar Swarm</title>
+<meta name="description" content="Interactive launch window model: dial in extra delta-v and watch cruise times, departure dates and arrival braking all move.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛰️</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header id="site-header"></header>
+<main>
+  <h1>Launch windows</h1>
+  <p class="lede">You cannot leave for another world whenever you like. The cheap path is a long curve that arrives where the target <em>will be</em>, so Earth and the target have to line up first, like merging into moving traffic. Each lining-up is a launch window. But the schedule is not fixed: buy more push and the whole timetable bends. Slide the dial and watch.</p>
+
+  <div class="controls">
+    <label>Target <select id="target"></select></label>
+    <span class="faint" id="moon-note"></span>
+  </div>
+  <div class="controls">
+    <label>Extra push beyond the cheapest path <input type="range" id="extra" min="0" max="80" value="0"></label>
+    <strong id="extra-out">+0.0 km/s</strong>
+    <span class="faint">the engines that buy this push live on <a href="rides.html">the rides page</a></span>
+  </div>
+
+  <div id="special" class="callout" style="display:none"></div>
+
+  <div class="grid cols-4" id="stats">
+    <div class="card"><div class="stat" id="s-syn">·</div><div class="stat-label">between windows</div></div>
+    <div class="card"><div class="stat" id="s-tof">·</div><div class="stat-label">cruise time</div></div>
+    <div class="card"><div class="stat" id="s-dv">·</div><div class="stat-label">departure push (km/s)</div></div>
+    <div class="card"><div class="stat" id="s-brake">·</div><div class="stat-label">arrival brake (km/s)</div></div>
+  </div>
+  <p class="dim small" id="budget-line">&nbsp;</p>
+
+  <div class="canvas-wrap" id="tl-wrap"><canvas id="tl" width="1160" height="120"></canvas></div>
+
+  <h2 id="win-head">Next departures</h2>
+  <div class="table-wrap">
+    <table><thead><tr><th>#</th><th>Depart Earth</th><th>Arrive</th><th class="num">Cruise</th></tr></thead>
+    <tbody id="win-rows"></tbody></table>
+  </div>
+
+  <h2>Campaign board: every target's next door</h2>
+  <p class="dim small">Every funded target sorted by who is reachable soonest, at the extra push currently on the dial (census entries ride their host system's convoy). This is what a deployment queue would actually look like: the solar system sets the schedule, the engine budget bends it.</p>
+  <div class="table-wrap">
+    <table><thead><tr><th>Target</th><th>Next window</th><th class="num">Cruise</th><th class="num">Push (km/s)</th><th>Window rhythm</th></tr></thead>
+    <tbody id="camp-rows"></tbody></table>
+  </div>
+  <p class="faint">Transfers are tangential-burn ellipses (hyperbolas when you push hard enough), coplanar and circular: teaching-grade. Bodies on very stretched orbits are met inbound at perihelion instead, and quasi-satellites sharing Earth's orbit have no clean windows at all.</p>
+</main>
+<footer id="site-footer"></footer>
+<script src="assets/astro.js"></script>
+<script src="data/objects-core.js"></script>
+<script src="data/objects-moons.js"></script>
+<script src="data/objects-asteroids.js"></script>
+<script src="data/objects-comets.js"></script>
+<script src="data/objects-tnos.js"></script>
+<script src="data/objects-moons-jupiter2.js"></script>
+<script src="data/objects-moons-saturn2.js"></script>
+<script src="data/objects-moons-un2.js"></script>
+<script src="data/objects-small2.js"></script>
+<script src="data/objects-tnos2.js"></script>
+<script src="data/objects-hypothesis.js"></script>
+<script src="data/objects.js"></script>
+<script src="data/sensors.js"></script>
+<script src="data/buses.js"></script>
+<script src="assets/core.js"></script>
+<script>
+VSS.mountChrome("windows.html");
+(function () {
+  var A = window.ASTRO;
+  var earth = window.VSS_BY_ID.earth.orbit;
+  var now = new Date();
+  var current = "mars";
+
+  var sel = document.getElementById("target");
+  var all = window.VSS_OBJECTS.filter(function (o) {
+    return o.id !== "earth" && o.id !== "moon" && o.cls !== "star" && o.cls !== "interstellar";
+  });
+  var groups = {};
+  all.forEach(function (o) { (groups[o.group] = groups[o.group] || []).push(o); });
+  Object.keys(groups).forEach(function (g) {
+    var og = document.createElement("optgroup"); og.label = g;
+    groups[g].forEach(function (o) {
+      var op = document.createElement("option"); op.value = o.id; op.textContent = o.name;
+      og.appendChild(op);
+    });
+    sel.appendChild(og);
+  });
+
+  function extraKms() { return +document.getElementById("extra").value / 10; }
+
+  function modelFor(o, extra) {
+    var ho = VSS.helioOrbitOf(o);
+    if (ho.e > 0.85) {
+      return { ho: ho, peri: true, wins: A.nextPerihelia(ho, now, 3), P: A.periodYearsOf(ho) };
+    }
+    var t = A.fastTransfer(earth.aAU, ho.aAU, extra);
+    var syn = A.synodicYears(1.0, A.periodYearsOf(ho));
+    var wins = A.windowsForTransfer(earth, ho, now, 8, t);
+    return { ho: ho, t: t, syn: syn, wins: wins };
+  }
+
+  /* braking from the arrival excess speed into a parked orbit at the target */
+  function brakeKms(o, vinf) {
+    if (o.parent) {
+      var parent = window.VSS_BY_ID[o.parent];
+      return A.insertionDv(A.gmOf(parent), vinf, o.orbit.aKm);
+    }
+    var gm = A.gmOf(o);
+    var ho = VSS.helioOrbitOf(o);
+    var bands = A.stableBands(o, A.GM_SUN, ho.aAU * A.AU_KM);
+    var rPark = Math.max(bands.minKm * 1.6, bands.progradeMaxKm / 2); // wide capture first; tighten later for free-ish
+    return A.insertionDv(gm, vinf, rPark);
+  }
+
+  function show(id) {
+    var o = window.VSS_BY_ID[id];
+    if (!o) return;
+    current = id;
+    sel.value = id;
+    var extra = extraKms();
+    document.getElementById("extra-out").textContent = "+" + VSS.fmt(extra, 1) + " km/s";
+    var note = document.getElementById("moon-note");
+    note.textContent = o.parent ? "Windows are to the " + window.VSS_BY_ID[o.parent].name + " system; the last hop to " + o.name + " happens on arrival." : "";
+    var m = modelFor(o, extra);
+
+    var cv = document.getElementById("tl"), ctx = cv.getContext("2d");
+    ctx.clearRect(0, 0, cv.width, cv.height);
+
+    if (m.peri) {
+      document.getElementById("s-syn").textContent = m.P > 5000 ? "once in an age" : "every " + VSS.fmtDur(m.P);
+      document.getElementById("s-tof").textContent = "meet it inbound";
+      document.getElementById("s-dv").textContent = "intercept";
+      document.getElementById("s-brake").textContent = "·";
+      document.getElementById("budget-line").innerHTML = "&nbsp;";
+      document.getElementById("win-head").textContent = "Next perihelion passes for " + o.name;
+      note.textContent = "This orbit is too stretched for the ferry-route maths; a mission launches to meet it as it swings close to the Sun. The push dial does not apply here.";
+      document.getElementById("win-rows").innerHTML = m.wins.filter(function (d) {
+        return d.getFullYear() < 12000;
+      }).map(function (d, i) {
+        var yr = d.getFullYear();
+        return "<tr><td>" + (i + 1) + "</td><td colspan='2'>perihelion around " + (yr > 3000 ? "the year " + VSS.fmt(yr) : VSS.fmtDate(d)) + "</td><td class='num'>·</td></tr>";
+      }).join("") || "<tr><td colspan='4' class='dim'>Its next visit is so far off that the date has no meaning; catch it on the way out, or wait an age.</td></tr>";
+    } else {
+      var brake = brakeKms(o, m.t.vinfArr);
+      document.getElementById("s-syn").textContent = isFinite(m.syn) ? VSS.fmtDur(m.syn) : "irregular";
+      document.getElementById("s-tof").textContent = VSS.fmtDur(m.t.tofYears);
+      document.getElementById("s-dv").textContent = VSS.fmt(m.t.dvDep, 1);
+      document.getElementById("s-brake").textContent = VSS.fmt(brake, 1);
+      document.getElementById("budget-line").innerHTML =
+        "Total shopping list: <strong>" + VSS.fmt(m.t.dvDep + brake, 1) + " km/s</strong> beyond Earth's orbit speed" +
+        (m.t.hyperbolic ? " · this push has gone <strong>hyperbolic</strong>: the craft would never come back without braking, New Horizons style" : "") +
+        ". More push means a shorter cruise but a hotter arrival; the brake grows with the hurry.";
+      document.getElementById("win-head").textContent = "Next departures for " + o.name + " at +" + VSS.fmt(extra, 1) + " km/s";
+
+      document.getElementById("win-rows").innerHTML = m.wins.map(function (d, i) {
+        var arr = new Date(d.getTime() + m.t.tofYears * 365.25 * 86400000);
+        return "<tr><td>" + (i + 1) + "</td><td>" + VSS.fmtDate(d) + "</td><td>" + VSS.fmtDate(arr) + "</td><td class='num'>" + VSS.fmtDur(m.t.tofYears) + "</td></tr>";
+      }).join("") || "<tr><td colspan='4' class='dim'>No regular windows: this target rides nearly the same orbit as Earth.</td></tr>";
+    }
+
+    // timeline
+    var years = 15, x0 = 40, x1 = cv.width - 20, y = 62;
+    ctx.strokeStyle = "#1c2942"; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(x0, y); ctx.lineTo(x1, y); ctx.stroke();
+    ctx.fillStyle = "#5c6a85"; ctx.font = "11px system-ui, sans-serif";
+    for (var k = 0; k <= years; k += 3) {
+      var x = x0 + (x1 - x0) * k / years;
+      ctx.fillRect(x, y - 4, 1, 8);
+      ctx.fillText(String(now.getFullYear() + k), x - 12, y + 22);
+    }
+    m.wins.forEach(function (d) {
+      var t = (d - now) / (86400000 * 365.25);
+      if (t > years || t < 0) return;
+      var x = x0 + (x1 - x0) * t / years;
+      ctx.fillStyle = "#4cc9f0";
+      ctx.beginPath(); ctx.arc(x, y, 6, 0, 7); ctx.fill();
+      if (!m.peri) {
+        ctx.fillStyle = "rgba(76,201,240,.25)";
+        var w = (x1 - x0) * (m.t.tofYears / years);
+        ctx.fillRect(x, y - 2, Math.min(w, x1 - x), 4);
+      }
+    });
+    ctx.fillStyle = "#8c9bb8"; ctx.font = "12px system-ui, sans-serif";
+    ctx.fillText(m.peri ? "dots: perihelion passes falling inside the next 15 years, if any" : "dots: departures over the next 15 years · trails: time spent cruising", x0, 20);
+  }
+
+  function rebuildCampaign() {
+    var extra = extraKms();
+    var rows = all.filter(function (o) { return o.tier !== "survey"; }).map(function (o) {
+      var m = modelFor(o, extra);
+      return { o: o, next: m.wins[0] || null, m: m };
+    }).filter(function (r) { return r.next && r.next.getFullYear() < 2200; });
+    rows.sort(function (a, b) { return a.next - b.next; });
+    document.getElementById("camp-rows").innerHTML = rows.map(function (r) {
+      if (r.m.peri) {
+        return "<tr><td><a href='object.html?id=" + r.o.id + "'>" + r.o.name + "</a></td>" +
+          "<td>" + VSS.fmtDate(r.next) + "</td>" +
+          "<td class='num'>perihelion pass</td><td class='num'>·</td>" +
+          "<td>" + (r.m.P > 5000 ? "once in an age" : "every " + VSS.fmtDur(r.m.P)) + "</td></tr>";
+      }
+      return "<tr><td><a href='object.html?id=" + r.o.id + "'>" + r.o.name + "</a></td>" +
+        "<td>" + VSS.fmtDate(r.next) + "</td>" +
+        "<td class='num'>" + VSS.fmtDur(r.m.t.tofYears) + "</td>" +
+        "<td class='num'>" + VSS.fmt(r.m.t.dvDep, 1) + "</td>" +
+        "<td>" + (isFinite(r.m.syn) ? "every " + VSS.fmtDur(r.m.syn) : "irregular") + "</td></tr>";
+    }).join("");
+  }
+
+  sel.addEventListener("change", function () { show(sel.value); });
+  document.getElementById("extra").addEventListener("input", function () { show(current); });
+  document.getElementById("extra").addEventListener("change", rebuildCampaign);
+
+  var want = VSS.qs("id");
+  if (want && (want === "sun" || want === "earth" || want === "moon" || (window.VSS_BY_ID[want] || {}).cls === "interstellar")) {
+    var sp = document.getElementById("special");
+    sp.style.display = "";
+    sp.innerHTML = "That target has no scheduled windows from Earth (see its <a href='object.html?id=" + want + "'>dossier</a> for why). Showing Mars instead.";
+    want = "mars";
+  }
+  show(want && window.VSS_BY_ID[want] ? want : "mars");
+  rebuildCampaign();
+})();
+</script>
+</body>
+</html>

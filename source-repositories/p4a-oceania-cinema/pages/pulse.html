@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oceania Pulse | P4A Oceania Expansion Lab</title>
+  <meta name="description" content="Live election clocks for Oceania: days since each polity last voted, due windows with follow-up flags, and what makes every electoral system different — receipts kept close.">
+  <meta name="theme-color" content="#102A4A">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../styles.css?v=20260707-atlasfix2">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="../index.html" aria-label="P4A Oceania home"><span class="brand-mark">P4O</span><span class="brand-text"><strong>P4A Oceania</strong><span>Expansion Lab</span></span></a>
+  <nav class="site-nav" data-nav aria-label="Primary">
+    <a href="../pages/gen-xyza.html">Gen XYZA</a>
+    <a href="../pages/oceania-map.html">Atlas</a>
+    <a href="../pages/shared-currents.html">Currents</a>
+    <a href="../pages/c-hours.html">C-Hours</a>
+    <a href="../pages/surge.html">Surge</a>
+    <a href="../pages/compliance.html">Trust</a>
+  </nav>
+  <button class="index-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-index"><span class="index-toggle-lines" aria-hidden="true"><i></i><i></i><i></i></span><span class="index-toggle-label">Index</span></button>
+</header>
+
+  <main id="main">
+    <section class="hero page-hero">
+      <div class="hero-image"><img loading="eager" fetchpriority="high" decoding="async" src="../assets/ocean-ripple-hero.svg" alt="Abstract ocean artwork with ripples spreading across a field of island nodes"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">The region / election clocks</p>
+        <h1>The pulse of the ocean.</h1>
+        <p class="hero-copy">Every polity in the region keeps its own democratic heartbeat: different systems, different cycles, different logic about who may stand and how votes count. This board runs live clocks since each last election, holds due windows loosely, and names what makes every system genuinely different.</p>
+        <div class="research-badge"><span>Research run</span><strong>2026-07-07</strong><small>Australia/Brisbane</small></div>
+        <div class="hero-actions"><a class="button button-primary" href="#board">Open the board</a><a class="button button-secondary" href="#method">How to read it</a></div>
+      </div>
+    </section>
+
+    <div class="notice-strip"><span>Clock status: research aid only. Election dates were checked once on the research-run date; due windows are structural estimates, not announcements. Follow-up flags mean exactly that.</span></div>
+
+    <section class="section" id="board">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow">Live board</p><h2>Days since the people spoke.</h2></div>
+        <p>Sort by most recent or longest-waiting, filter by bloc, and read each card's system line — the differences are the point. No two democracies in this ocean run the same machine.</p>
+      </div>
+      <div class="pulse-toolbar reveal">
+        <div class="region-buttons" role="group" aria-label="Filter pulse cards">
+          <button type="button" data-pulse-filter="all" class="is-active" aria-pressed="true">All</button>
+          <button type="button" data-pulse-filter="australasia" aria-pressed="false">Australasia</button>
+          <button type="button" data-pulse-filter="melanesia" aria-pressed="false">Melanesia</button>
+          <button type="button" data-pulse-filter="micronesia" aria-pressed="false">Micronesia</button>
+          <button type="button" data-pulse-filter="polynesia" aria-pressed="false">Polynesia</button>
+          <button type="button" data-pulse-filter="territories" aria-pressed="false">Territories</button>
+          <button type="button" data-pulse-filter="followup" aria-pressed="false">Needs follow-up</button>
+        </div>
+        <label class="pulse-sort-label">Sort
+          <select data-pulse-sort>
+            <option value="soonest">Soonest projected next</option>
+            <option value="recent">Most recent first</option>
+            <option value="longest">Longest since</option>
+            <option value="name">A to Z</option>
+          </select>
+        </label>
+      </div>
+      <p class="index-count" data-pulse-count aria-live="polite"></p>
+      <div class="pulse-grid reveal" data-pulse-board>
+        <noscript><p>The live clocks need JavaScript. The underlying dates live in <a href="../assets/oceania-pulse-data.js">assets/oceania-pulse-data.js</a> — readable by humans and agents alike.</p></noscript>
+      </div>
+    </section>
+
+    <section class="section" id="method">
+      <div class="source-panel reveal">
+        <span>Method and receipts</span>
+        <h2>How the clocks are framed.</h2>
+        <p><strong>Research run:</strong> 2026-07-07, Australia/Brisbane. Dates come from one checking pass and inherit the atlas rule: sources checked say, caveats stay close, follow-up is part of the work.</p>
+        <ul>
+          <li><strong>Days-since clocks</strong> count from each polity's last checked national or territorial election. They are solid history, not commentary.</li>
+          <li><strong>Projected countdowns</strong> appear only where the term length is a well-known fixed cycle and the last election is solid. The board computes last election plus term length and counts down to it live — always labelled a term-length estimate, never an announced date. Where that projection window has already opened, the clock switches to "window open" instead of running past zero.</li>
+          <li><strong>Due windows</strong> (shown instead of a countdown) are the same structural estimate in plain text, used wherever a live countdown would overstate confidence.</li>
+          <li><strong>Needs follow-up</strong> means the cycle is soft, contested, deferred or likely to have moved since the research run — these never get a projected countdown, only the honest days-since clock.</li>
+          <li><strong>System lines</strong> describe electoral machinery, which changes slowly. The board deliberately names no leaders and no parties: power maps belong to per-polity pages with their own receipts.</li>
+          <li>All dates and term lengths live in <a href="../assets/oceania-pulse-data.js">one data file</a> that future agents can refresh with permission — update the research run stamp when you do.</li>
+        </ul>
+      </div>
+      <nav class="next-trail" aria-label="Page navigation">
+        <a class="button button-secondary" href="shared-currents.html">Previous: Shared currents</a>
+        <a class="button button-primary" href="oceania-map.html">Next: Oceania atlas</a>
+      </nav>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div><p>The pulse board is a research aid: history in numbers, estimates held loosely, and every serious claim routed through follow-up.</p><nav class="footer-links" aria-label="Footer links"><a href="site-map.html">Site map</a><a href="../LICENCE.md">Licence</a></nav></div></footer>
+  <script src="../assets/oceania-pulse-data.js?v=20260707-pulse"></script>
+  <script src="../script.js?v=20260707-atlasfix2"></script>
+<script src="../assets/site-nav.js?v=20260707-atlasfix2"></script>
+</body>
+</html>

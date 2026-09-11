@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The map · GAJRA Earth</title>
+<meta name="description" content="One planet, photographed from space, no borders drawn on it. Groups appear here as they sign on.">
+<link rel="icon" href="assets/aura-heart-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/aura-heart-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/aura-heart-180.png">
+<link rel="stylesheet" href="assets/styles.css?v=16">
+<script>document.documentElement.classList.add('js')</script>
+<script defer src="assets/reveal.js"></script>
+<script defer src="assets/aurora.js"></script>
+<script defer src="assets/earth-map.js"></script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<div class="sky"></div>
+
+<header class="top" id="top">
+  <div class="top-in">
+    <a class="brand" href="index.html">
+      <img src="assets/aura-heart-192.png" width="26" height="26" alt="" style="border-radius:6px">
+
+      GAJRA Earth
+    </a>
+    <nav class="primary" aria-label="Primary">
+      <a href="trinity.html">Trinity</a>
+      <a href="questions.html">Questions</a>
+      <a href="sign-on.html">Sign on</a>
+      <a href="asking.html">Asking</a>
+      <a href="map.html" aria-current="page">Map</a>
+      <a href="watch.html">Watch</a>
+      <a href="ahead.html">Ahead</a>
+    </nav>
+  </div>
+</header>
+
+<main id="content">
+  <section class="hero still">
+    <div class="wrap">
+      <span class="kicker">The map</span>
+      <h1>One planet. No borders drawn on it.</h1>
+      <p class="lead">This is Earth as cameras actually see it: photographed from space, no lines added. Every border a bridge, every soul acclaimed. Groups appear here as they sign on, one flower at a time, at the scale of a town or an island, never an address.</p>
+    </div>
+  </section>
+
+  <section class="pad-s">
+    <div class="wrapw reveal">
+      <div data-earth-map data-src="data/groups.json" data-view="globe">
+        <noscript><div class="em-fallback"><img src="assets/earth-1600.jpg" alt="Earth photographed from space, the NASA Blue Marble composite, with no borders drawn"></div></noscript>
+      </div>
+      <p class="faint" style="margin-top:0.7rem">Drag to turn, scroll or pinch to zoom, toggle flat and globe at the top right. Reset returns it to Minjerribah and sets it turning again, and it will do that by itself after half a minute of being left alone. Imagery: NASA Blue Marble, public domain. NASA does not endorse this site.</p>
+    </div>
+  </section>
+
+  <section class="pad-s">
+    <div class="wrap reveal">
+      <h2>How a group appears here</h2>
+      <p><a class="chip invitation" href="licence.html#labels">Invitation</a></p>
+      <p>Sign on as a group, name a general location you are happy to share publicly, and it becomes one line in <a href="https://github.com/auraofintelligence/gajra-earth-claude-build/blob/main/data/groups.json" rel="noopener"><code>data/groups.json</code></a>: merged means visible. The map has exactly as many pins as the record has signatures, which today is a small number, and that is the honest state of things.</p>
+      <p>Locations are town-scale or island-scale by design. The map shows that you exist and roughly where, never where you sleep. <a href="sign-on.html">The mechanism.</a></p>
+    </div>
+  </section>
+</main>
+
+<div class="kintsugi-seam" aria-hidden="true">
+  <svg viewBox="0 0 1200 46" preserveAspectRatio="none" focusable="false">
+    <defs><linearGradient id="gsA" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FF5A5F"/><stop offset=".18" stop-color="#F2A93B"/><stop offset=".36" stop-color="#FFD166"/><stop offset=".54" stop-color="#5FE8A9"/><stop offset=".72" stop-color="#4FC3F7"/><stop offset=".86" stop-color="#A493F5"/><stop offset="1" stop-color="#E91E8C"/></linearGradient></defs>
+    <path class="seam-path" pathLength="1" stroke="url(#gsA)" d="M0 22 L110 26 L190 14 L275 28 L370 18 L440 30 L560 16 L650 24 L760 12 L850 26 L940 18 L1050 28 L1130 20 L1200 24"/>
+    <path class="seam-path seam-branch" pathLength="1" stroke="url(#gsA)" d="M190 14 L176 4"/>
+    <path class="seam-path seam-branch" pathLength="1" stroke="url(#gsA)" d="M440 30 L452 42"/>
+    <path class="seam-path seam-branch" pathLength="1" stroke="url(#gsA)" d="M760 12 L774 3"/>
+    <path class="seam-light" pathLength="1" d="M0 22 L110 26 L190 14 L275 28 L370 18 L440 30 L560 16 L650 24 L760 12 L850 26 L940 18 L1050 28 L1130 20 L1200 24"/>
+  </svg>
+</div>
+<footer class="end">
+  <nav class="end-nav" aria-label="Page order">
+    <a class="en-prev" href="asking.html"><span class="en-dir">Previous</span><span class="en-name">Asking</span></a>
+    <a class="en-next" href="past.html"><span class="en-dir">Next</span><span class="en-name">Past</span></a>
+  </nav>
+  <div class="end-top">
+    <a href="index.html">GAJRA Earth home</a>
+    <a class="totop" href="#top">Back to top</a>
+  </div>
+  <div class="end-in">
+    <div>
+      <h4>The argument</h4>
+      <ul>
+        <li><a href="trinity.html">Trinity</a></li>
+        <li><a href="scales.html">Scales</a></li>
+        <li><a href="questions.html">Questions</a></li>
+        <li><a href="past.html">Past</a></li>
+        <li><a href="present.html">Present</a></li>
+        <li><a href="future.html">Future</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Take part</h4>
+      <ul>
+        <li><a href="sign-on.html">Sign on</a></li>
+        <li><a href="asking.html">Asking</a></li>
+        <li><a href="map.html">Map</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="https://github.com/auraofintelligence/gajra-earth-claude-build" rel="noopener">Source repository</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Keeping track</h4>
+      <ul>
+        <li><a href="watch.html">The watch</a></li>
+        <li><a href="ahead.html">Ahead</a></li>
+        <li><a href="watch/index.html">The watch, kept</a></li>
+        <li><a href="where-it-stands.html">Where it stands</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="archive/ico-era/index.html">An earlier single-page site</a></li>
+        <li><a href="licence.html">Licence</a></li>
+        <li><a href="site-map.html">Site map</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Related work</h4>
+      <ul>
+        <li><a href="https://auraofintelligence.github.io/" rel="noopener">Aura of Intelligence</a></li>
+        <li><a href="https://auraofintelligence.github.io/gajra-earth-public-hub/" rel="noopener">GAJRA public build hub</a></li>
+        <li><a href="https://auraofintelligence.github.io/GAJRA_Earth-Space-AI_Summit/" rel="noopener">Brisbane summit, a working proposal</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="colophon">
+    GAJRA Earth: Global Association for Joyful Responsible Abundance on Earth.<br>
+    Strung on Minjerribah, Quandamooka Country, Australia. A Luke × Claude build, July 2026.<br>
+    No analytics, no cookies, no accounts. <a href="licence.html">Public Source Licence</a>: read, learn and adapt non-commercially with credit; commercial rights reserved.<br>
+    Sky: Aurora Australis from the International Space Station, 17 August 2022. Earth imagery: NASA Blue Marble. Courtesy NASA, public domain. NASA does not endorse this site.
+  </div>
+</footer>
+</body>
+</html>

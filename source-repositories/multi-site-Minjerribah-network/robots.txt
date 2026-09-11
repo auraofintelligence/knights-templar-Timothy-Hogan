@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://auraofintelligence.github.io/multi-site-Minjerribah-network/sitemap.xml

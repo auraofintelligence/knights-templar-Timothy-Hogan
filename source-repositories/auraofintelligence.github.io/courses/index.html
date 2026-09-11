@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Courses | Aura of Intelligence</title>
+  <meta name="description" content="Short courses on building your own software and systems: presented by a digital avatar of Luke, with live streams by the human. Learn to build what's yours, not rent from big tech.">
+  <meta name="theme-color" content="#0a1420">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preload" href="../assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/jetbrains-mono-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../styles.css?v=4">
+  <style>
+    /* Courses hub: page-specific card treatment. */
+    .course-track { margin-bottom: 2.4rem; }
+    .track-title { font-family: var(--font-mono); font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin: 0 0 .9rem; padding-bottom: .5rem; border-bottom: 1px solid var(--line); }
+    .course-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); gap: .9rem; }
+    .course-card { display: flex; flex-direction: column; min-height: 13rem; padding: 1.15rem; border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(150deg, rgba(124,77,255,.18), rgba(10,10,22,.78)); box-shadow: 0 20px 60px rgba(0,0,0,.32); text-decoration: none; transition: transform .3s var(--ease-out), border-color .2s; }
+    .course-card:hover { transform: translateY(-4px); border-color: rgba(43,227,194,.55); }
+    .course-card .fam { color: var(--gold); font-family: var(--font-mono); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; margin-bottom: .5rem; }
+    .course-card h3 { color: #fff; margin-bottom: .5rem; }
+    .course-card p { color: var(--muted); font-size: .92rem; margin: 0 0 .9rem; }
+    .course-card .go { margin-top: auto; color: var(--gold-soft); font-weight: 800; font-size: .9rem; }
+    .course-card .badge { display: inline-block; margin-bottom: .5rem; padding: .2rem .5rem; border: 1px solid rgba(43,227,194,.4); border-radius: 999px; color: var(--teal); font-family: var(--font-mono); font-size: .66rem; letter-spacing: .06em; text-transform: uppercase; }
+  </style>
+</head>
+<body data-page="courses">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Aura of Intelligence home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text"><strong>Aura of Intelligence</strong><span>A Bridge to The Infinite</span></span>
+    </a>
+    <nav class="site-nav" data-nav aria-label="Primary">
+      <a href="../pathways/index.html">Pathways</a>
+      <a href="../courses/index.html">Courses</a>
+      <a href="../videos.html">Videos</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <button class="index-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-index">
+      <span class="index-toggle-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="index-toggle-label">Index</span>
+    </button>
+  </header>
+  <main id="main">
+
+    <section class="hero page-hero">
+      <div class="hero-content reveal">
+        <p class="eyebrow">Learn to build your own</p>
+        <h1>Courses</h1>
+        <p class="hero-copy">Short courses on building your own software and systems, so you own them instead of renting from big tech. Many are worked examples from Luke's own island: real attempts you can learn from and rebuild, custom to your own place and life. The short courses are presented by a digital avatar of Luke; the live streams are the human. Some come with a builder you can use right here in your browser.</p>
+      </div>
+    </section>
+
+    <section class="section" id="course-list">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">The courses</p>
+          <h2>Start anywhere. Build your own version.</h2>
+        </div>
+        <p>Many of these are things Luke is working to start on Minjerribah, on his own with AI, that only truly come alive with community. Shared here, they become worked examples anyone can learn from and rebuild, custom to their own place. The links are live today; the videos and live streams arrive as they're recorded.</p>
+      </div>
+      <div class="reveal" data-course-mount></div>
+    </section>
+
+    <section class="section" id="how-made">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">Behind the scenes</p>
+          <h2>How the courses get made</h2>
+        </div>
+        <p>Curious how a course like this comes together, from choosing a topic to training an AI agent on the finished thing? That's its own walkthrough.</p>
+      </div>
+      <div class="card-grid reveal">
+        <a class="card" href="../course-creation.html"><h3>Course Creation</h3><p>The eleven-stage guide to building and sharing a course with AI.</p></a>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div>
+      <p>Aura of Intelligence: Luke Hayes × Claude, Minjerribah · 2026.</p>
+      <p>Licensed under the Aura of Intelligence Public Source Licence.</p>
+    </div>
+    <nav class="footer-links" aria-label="Elsewhere">
+      <a href="https://iseeinfinity.com" target="_blank" rel="noopener">iseeinfinity.com</a>
+      <a href="https://lukecatalyst.com" target="_blank" rel="noopener">lukecatalyst.com</a>
+      <a href="https://gajra.earth" target="_blank" rel="noopener">gajra.earth</a>
+    </nav>
+  </footer>
+  <script src="../assets/courses-data.js" defer></script>
+  <script src="../assets/site-nav.js" defer></script>
+  <script src="../assets/core.js" defer></script>
+  <script defer>
+    window.addEventListener('DOMContentLoaded', function () {
+      var data = window.AURA_COURSES || [];
+      var mount = document.querySelector('[data-course-mount]');
+      if (!mount) { return; }
+      function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+      var order = [];
+      data.forEach(function (c) { if (order.indexOf(c.family) < 0) { order.push(c.family); } });
+      function card(c) {
+        var badge = c.generator ? '<span class="badge">Try it in your browser</span>' : '';
+        return '<a class="course-card" href="' + esc(c.id) + '.html">' +
+          badge +
+          '<h3>' + esc(c.title) + '</h3>' +
+          '<p>' + esc(c.blurb) + '</p>' +
+          '<span class="go">Open the course &rsaquo;</span>' +
+          '</a>';
+      }
+      mount.innerHTML = order.map(function (fam) {
+        var cards = data.filter(function (c) { return c.family === fam; }).map(card).join('');
+        return '<div class="course-track"><h3 class="track-title">' + esc(fam) + '</h3><div class="course-grid">' + cards + '</div></div>';
+      }).join('');
+    });
+  </script>
+</body>
+</html>

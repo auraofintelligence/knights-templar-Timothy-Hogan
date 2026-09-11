@@ -1,0 +1,47 @@
+:root {
+  color-scheme: dark;
+  --night-1000: #02030a;
+  --night-950: #050611;
+  --night-900: #080b1d;
+  --night-850: #0c1230;
+  --night-800: #121943;
+  --sapphire-700: #173579;
+  --lagoon-500: #21d9d4;
+  --lagoon-300: #86fff2;
+  --orchid-500: #a96dff;
+  --hibiscus-500: #ff4f86;
+  --ruby-600: #b91f59;
+  --emerald-500: #23c995;
+  --solar-500: #f4c45c;
+  --solar-300: #ffe8aa;
+  --opal-100: #f8f7f2;
+  --opal-200: #e7edf0;
+  --opal-300: #ccd7df;
+  --ink-900: #071326;
+  --ink-700: #273a51;
+  --line-dark: rgba(225, 242, 255, 0.18);
+  --line-bright: rgba(255, 238, 187, 0.48);
+  --line-ink: rgba(7, 19, 38, 0.16);
+  --aurora: linear-gradient(110deg, var(--lagoon-500), var(--orchid-500) 32%, var(--hibiscus-500) 62%, var(--solar-500));
+  --opal-metal: linear-gradient(112deg, #fff7d5 0%, #88fff2 21%, #bfa1ff 43%, #ffc1d3 64%, #ffe7a2 84%, #ffffff 100%);
+  --black-pearl: linear-gradient(145deg, #121b31 0%, #03050d 38%, #0f1640 67%, #050611 100%);
+  --royal-shadow: 0 34px 110px rgba(0, 0, 0, 0.56), inset 0 1px rgba(255, 255, 255, 0.15);
+  --soft-shadow: 0 24px 70px rgba(2, 10, 25, 0.2);
+  --display: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  --body: "Segoe UI Variable", "Aptos", "Segoe UI", system-ui, sans-serif;
+  --wrap: min(1240px, calc(100vw - 48px));
+  --reading: min(760px, 100%);
+  --header-height: 96px;
+  --facet-small: 12px;
+  --facet-medium: 22px;
+  --facet-large: 40px;
+  --ease-royal: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@media (max-width: 760px) {
+  :root {
+    --wrap: min(100% - 28px, 1240px);
+    --header-height: 78px;
+    --facet-large: 26px;
+  }
+}

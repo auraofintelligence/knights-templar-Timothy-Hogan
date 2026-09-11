@@ -1,0 +1,9 @@
+---
+const {source}=Astro.props;
+const b=import.meta.env.BASE_URL.replace(/\/$/,'');
+---
+<section class="slide-viewer" data-gallery aria-label={`${source.title} image viewer`}>
+ <div class="slide-controls"><h3>{source.filename}</h3><div><button data-previous aria-label="Previous image">←</button><span data-slide-status aria-live="polite">1 / {source.previews.length}</span><button data-next aria-label="Next image">→</button></div></div>
+ <div class="slide-track" tabindex="0" aria-label="Scroll to browse images">{source.previews.map((preview,index)=><figure><a href={`${b}/${preview.src}`} target="_blank" rel="noopener"><img src={`${b}/${preview.src}`} width={preview.width} height={preview.height} loading="lazy" alt={`${source.title}, ${preview.label}`}/></a><figcaption>{preview.label} of {source.previews.length} · <a href={`${b}/${preview.src}`} target="_blank" rel="noopener">Open full image</a></figcaption></figure>)}</div>
+ <p class="small-copy">Original source content. <a href={`${b}/${source.download}`} download>Download {source.format}</a> · <a href={`${b}/library/${source.id}/`}>Source details and text</a></p>
+</section>

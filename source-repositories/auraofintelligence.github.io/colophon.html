@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Colophon | Aura of Intelligence</title>
+  <meta name="description" content="How this site is built: plain files, no build step, self-hosted fonts, and a build log that stays public.">
+  <meta name="theme-color" content="#0a1420">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" href="assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jetbrains-mono-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body data-page="colophon">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Aura of Intelligence home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text"><strong>Aura of Intelligence</strong><span>A Bridge to The Infinite</span></span>
+    </a>
+    <nav class="site-nav" data-nav aria-label="Primary">
+      <a href="pathways/index.html">Pathways</a>
+      <a href="courses/index.html">Courses</a>
+      <a href="videos.html">Videos</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="index-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-index">
+      <span class="index-toggle-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="index-toggle-label">Index</span>
+    </button>
+  </header>
+  <main id="main">
+
+    <section class="hero page-hero">
+      <div class="hero-content reveal">
+        <p class="eyebrow">The one page allowed to talk shop</p>
+        <h1>Colophon</h1>
+        <p class="hero-copy">Every other page on this site speaks in Luke's own voice. This one is the exception: how the site itself is put together, for anyone curious about the machinery.</p>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow">How it's built</p><h2>Plain files. No build step.</h2></div>
+        <p>Every page is an ordinary HTML file with one shared stylesheet and a couple of small
+        scripts, served by GitHub Pages exactly as they sit in the repository. There's nothing
+        to install and nothing to compile: any page opens straight from the folder.</p>
+      </div>
+      <div class="card-grid reveal">
+        <a class="card" href="https://github.com/auraofintelligence/auraofintelligence.github.io" target="_blank" rel="noopener">
+          <span class="card-tag">Source</span>
+          <h3>The repository</h3>
+          <p>Every file, every commit, in the open.</p>
+        </a>
+        <a class="card" href="https://github.com/auraofintelligence/auraofintelligence.github.io/blob/main/PLAN.md" target="_blank" rel="noopener">
+          <span class="card-tag">Plan</span>
+          <h3>The build plan</h3>
+          <p>The phased playbook this site is being built from, ground rules included.</p>
+        </a>
+        <a class="card" href="todo.html">
+          <span class="card-tag">Live</span>
+          <h3>Build log &amp; todo</h3>
+          <p>What's shipped, what's next, dated and public.</p>
+        </a>
+        <a class="card" href="https://github.com/auraofintelligence/auraofintelligence.github.io/blob/main/LICENCE.md" target="_blank" rel="noopener">
+          <span class="card-tag">Licence</span>
+          <h3>Aura of Intelligence Public Source Licence</h3>
+          <p>Non-commercial use free; commercial rights reserved.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="principles">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow">What it holds itself to</p><h2>Fast, honest, and yours.</h2></div>
+      </div>
+      <div class="card-grid reveal">
+        <div class="card">
+          <h3>Light by default</h3>
+          <p>Self-hosted fonts, lazy-loaded images, zero third-party requests on load. Videos never autoplay a live player; you choose when to load one.</p>
+        </div>
+        <div class="card">
+          <h3>Honest labelling</h3>
+          <p>Where something exists today, it's linked. Where it doesn't yet, the page simply describes it: no fake "coming soon" badges, no dead ends either.</p>
+        </div>
+        <div class="card">
+          <h3>Built in the open</h3>
+          <p>Published before it was finished, on purpose, so the build itself is visible rather than saved for one big reveal.</p>
+        </div>
+        <div class="card">
+          <h3>Self-sovereign in practice</h3>
+          <p>Where the site offers you a tool (like the markdown generators arriving with the Courses hub), it runs entirely in your browser. Nothing you make there is sent anywhere.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div>
+      <p>Aura of Intelligence: Luke Hayes × Claude, Minjerribah · 2026.</p>
+      <p>Licensed under the Aura of Intelligence Public Source Licence.</p>
+    </div>
+    <nav class="footer-links" aria-label="Elsewhere">
+      <a href="https://iseeinfinity.com" target="_blank" rel="noopener">iseeinfinity.com</a>
+      <a href="https://lukecatalyst.com" target="_blank" rel="noopener">lukecatalyst.com</a>
+      <a href="https://gajra.earth" target="_blank" rel="noopener">gajra.earth</a>
+    </nav>
+  </footer>
+  <script src="assets/site-nav.js" defer></script>
+  <script src="assets/core.js" defer></script>
+</body>
+</html>

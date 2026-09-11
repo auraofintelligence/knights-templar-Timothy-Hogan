@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title description">
+  <title id="title">Aura Direct Hardware orbital A</title>
+  <desc id="description">A gold letter A surrounded by aqua, gold and violet orbital paths on deep green.</desc>
+  <defs>
+    <radialGradient id="space" cx="40%" cy="34%" r="76%">
+      <stop offset="0" stop-color="#0d3a35"/>
+      <stop offset="0.58" stop-color="#05231f"/>
+      <stop offset="1" stop-color="#020f0e"/>
+    </radialGradient>
+    <linearGradient id="aura" x1="18" y1="20" x2="108" y2="106">
+      <stop offset="0" stop-color="#72ead4"/>
+      <stop offset="0.5" stop-color="#f4cf77"/>
+      <stop offset="1" stop-color="#b39aff"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3.4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="128" height="128" rx="29" fill="url(#space)"/>
+  <circle cx="64" cy="64" r="38" fill="none" stroke="#f4cf77" stroke-width="2.4" opacity="0.9"/>
+  <ellipse cx="64" cy="64" rx="53" ry="16" fill="none" stroke="#72ead4" stroke-width="2.6" transform="rotate(-18 64 64)" filter="url(#glow)"/>
+  <ellipse cx="64" cy="64" rx="49" ry="13" fill="none" stroke="#b39aff" stroke-width="1.8" transform="rotate(58 64 64)" opacity="0.82"/>
+  <circle cx="108" cy="47" r="4.2" fill="#f4cf77" filter="url(#glow)"/>
+  <circle cx="25" cy="77" r="2.7" fill="#72ead4"/>
+  <circle cx="64" cy="64" r="26" fill="#031817" stroke="url(#aura)" stroke-width="2"/>
+  <text x="64" y="82" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700" fill="#fff1bd">A</text>
+</svg>

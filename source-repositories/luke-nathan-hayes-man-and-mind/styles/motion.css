@@ -1,0 +1,50 @@
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-12px) rotate(-1deg); }
+}
+
+@keyframes slow-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes colour-breathe {
+  0%, 100% { box-shadow: 18px 18px 0 rgba(255, 59, 157, 0.12); }
+  50% { box-shadow: 18px 18px 0 rgba(22, 217, 210, 0.15); }
+}
+
+@keyframes phone-hover {
+  0%, 100% { transform: translateY(0) rotate(2deg); }
+  50% { transform: translateY(-8px) rotate(-1deg); }
+}
+
+.chapter-art {
+  animation: gentle-float 8s ease-in-out infinite;
+}
+
+.soundtrack-disc {
+  animation: slow-spin 22s linear infinite;
+}
+
+.torus-stage {
+  animation: colour-breathe 7s ease-in-out infinite;
+}
+
+.soundtrack-phone {
+  animation: phone-hover 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .story-card:hover,
+  .door-button:hover {
+    transform: none;
+  }
+}

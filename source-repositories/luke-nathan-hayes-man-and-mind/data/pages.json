@@ -1,0 +1,128 @@
+[
+  {
+    "id": "home",
+    "file": "index.html",
+    "title": "The Mind Behind the Man",
+    "shortTitle": "Home",
+    "chapter": "00",
+    "theme": "prismatic-horn",
+    "description": "I’m Luke. I’ve moved house more than 40 times, worked all sorts of jobs and followed my curiosity overseas. These days I’m on Minjerribah, making music, building things and still asking far too many questions."
+  },
+  {
+    "id": "bloke",
+    "file": "the-bloke.html",
+    "title": "The bloke before the blueprint",
+    "shortTitle": "The bloke",
+    "chapter": "01",
+    "theme": "warm-sand",
+    "description": "More than 40 house moves, a lot of different jobs and plenty of reasons to keep exploring. I live at Amity now, but my story starts in Ningi and takes a few trips around the world before it gets here."
+  },
+  {
+    "id": "break",
+    "file": "the-break.html",
+    "title": "I stopped accepting the default",
+    "shortTitle": "The break",
+    "chapter": "02",
+    "theme": "archive-violet",
+    "description": "Around 2012, I was spending more and more time trying to understand law, politics and how people could have a greater say. I started putting those questions into documents and designs. A lot of what I’m building today began there."
+  },
+  {
+    "id": "personal-aura",
+    "file": "personal-aura.html",
+    "title": "Inside my personal Aura",
+    "shortTitle": "Personal Aura",
+    "chapter": "03",
+    "theme": "prismatic-aura",
+    "description": "I want an AI that can learn with me over time, remember what matters and help me make sense of my life. Aura is where I explore how that might work, from the shape of its memory to the relationships it could develop."
+  },
+  {
+    "id": "under-aura",
+    "file": "under-the-aura.html",
+    "title": "The machinery under the metaphor",
+    "shortTitle": "Under the Aura",
+    "chapter": "04",
+    "theme": "torus-cyan",
+    "description": "I’m working on Aura’s geometry, memory relationships, interfaces and possible physical forms. Here are the prototypes and design records behind that work."
+  },
+  {
+    "id": "songs",
+    "file": "songs-stories-comedy.html",
+    "title": "Songs, stories and comedy",
+    "shortTitle": "Songs and stories",
+    "chapter": "05",
+    "theme": "protopian-gold",
+    "description": "Love songs, island songs, ambitious futures and a bit of mischief. I release music as i C. infinity, write romantic adventures and enjoy seeing how much a good laugh can get across."
+  },
+  {
+    "id": "love",
+    "file": "love-and-tribe.html",
+    "title": "Love is infrastructure too",
+    "shortTitle": "Love and tribe",
+    "chapter": "06",
+    "theme": "constellation-magenta",
+    "description": "I want affection, adventure, intimacy and people to share a life with. My songs, fiction and larger-family ideas explore what that could look like. This chapter includes adult themes."
+  },
+  {
+    "id": "minjerribah",
+    "file": "minjerribah.html",
+    "title": "Start on the island",
+    "shortTitle": "Minjerribah",
+    "chapter": "07",
+    "theme": "island-cyan",
+    "description": "Straddie was a family home away from home for years before I lived here. Mum, my grandmother and other family were at Amity. I came for family and waves; these days there’s work, music and plenty of projects here too."
+  },
+  {
+    "id": "fair-go",
+    "file": "a-fair-go.html",
+    "title": "A fair go needs better machinery",
+    "shortTitle": "A fair go",
+    "chapter": "08",
+    "theme": "civic-purple",
+    "description": "I want people to have more say in decisions that affect their lives. That has led me into law, public records, community tools and some fairly big questions about what Australia could do differently."
+  },
+  {
+    "id": "every-border",
+    "file": "every-border.html",
+    "title": "Every border can become a bridge",
+    "shortTitle": "Every border",
+    "chapter": "09",
+    "theme": "saffron-sky",
+    "description": "A year in England, three trips to Thailand, time in New Zealand, and longer stays in India with visits to Nepal. I’ve travelled for work, love and curiosity. There are still plenty of places I want to go."
+  },
+  {
+    "id": "earth-infinity",
+    "file": "from-earth-to-infinity.html",
+    "title": "From one Aura to a solar system",
+    "shortTitle": "Earth to infinity",
+    "chapter": "10",
+    "theme": "cosmic-aurora",
+    "description": "My projects range from personal Aura to Oceania, Earth and the solar system. I’m interested in how intelligence, relationships and ways of living might develop across those scales."
+  },
+  {
+    "id": "sources",
+    "file": "sources.html",
+    "title": "Show me the receipts",
+    "shortTitle": "Sources",
+    "chapter": "11",
+    "theme": "archive-light",
+    "description": "The documents, photographs, lyrics and websites behind these pages. Some are available to open now; others are still in my archive or waiting for me to find the original files."
+  },
+  {
+    "id": "choose-door",
+    "file": "choose-your-door.html",
+    "title": "Why are you here?",
+    "shortTitle": "Choose your door",
+    "chapter": "12",
+    "theme": "path-glow",
+    "description": "Here for the music, curious about Aura, or catching up after a few years? Pick a starting point and I’ll suggest a few pages. You can wander off whenever you like."
+  },
+  {
+    "id": "sitemap",
+    "file": "sitemap.html",
+    "title": "Complete site map",
+    "shortTitle": "Site map",
+    "chapter": "13",
+    "theme": "constellation-map",
+    "description": "The complete map keeps every chapter, public world, source trail and visitor path visible in one quiet place."
+  }
+]

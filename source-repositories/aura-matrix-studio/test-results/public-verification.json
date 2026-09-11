@@ -1,0 +1,74 @@
+[
+  {
+    "file": "index.html",
+    "status": 200,
+    "matches_commit": true,
+    "sha256": "ac64fa06c9cc31b62d6794de91819a6085ce4dec3668fa58462c1c140ab7c0a3"
+  },
+  {
+    "file": "inventory.html",
+    "status": 200,
+    "matches_commit": true,
+    "sha256": "88b35a39b417db34ef77fcf3b4ceb0101ce9122414e83df5ed9ebaae9abd7dec"
+  },
+  {
+    "file": "explainer.html",
+    "status": 200,
+    "matches_commit": true,
+    "sha256": "f2efc05fe4c739f4617fa6594682a5a2e47647cfc4fe16e17a707b2890241a56"
+  },
+  {
+    "file": "guide.html",
+    "status": 200,
+    "matches_commit": true,
+    "sha256": "67d6e980d3d7e691a38be2c540632c5c19e1eeb1be9b20703dfe061436bb2da8"
+  },
+  {
+    "file": "core.js",
+    "status": 200,
+    "matches_commit": true,
+    "sha256": "b707114b02cf5cc9795b6e6f0811678af738b44571fc1153d2b5e196dc8cd7a5"
+  },
+  {
+    "file": "app.js",
+    "status": 200,
+    "matches_commit": true,
+    "sha256": "1813f9cdb4ad38b8e7502876825117d7690ef2dd58bacf56adb73ac8e51373f8"
+  },
+  {
+    "file": "renderer.js",
+    "status": 200,
+    "matches_commit": true,
+    "sha256": "0d6dca90e2d79fec65c9124c0ee7db8e06db32e38fb45b19c480f8092f58c646"
+  },
+  {
+    "file": "styles.css",
+    "status": 200,
+    "matches_commit": true,
+    "sha256": "80ffaa489ee4f44c59a39bc52afe8ff69afb6768cefbbef415293155afcd2dd8"
+  },
+  {
+    "file": "vendor/three.min.js",
+    "status": 200,
+    "matches_commit": true,
+    "sha256": "9274bbcec8d96168626c732b5d31c775aa8cfb7eaa0599bec0c175908a2c1ce2"
+  },
+  {
+    "file": "assets/aura.png",
+    "status": 200,
+    "matches_commit": true,
+    "sha256": "82cd7d00c6d7249ce1e48473b16b01440616ae85d9bc16e48f558a539b4838b0"
+  },
+  {
+    "file": "tools/blender_import.py",
+    "status": 200,
+    "matches_commit": true,
+    "sha256": "2ae4d0eb21e697fb8a8f27ea2a429ce976a3c8105f91dbc8904653e0b53d9ede"
+  },
+  {
+    "file": "LICENCE.md",
+    "status": 200,
+    "matches_commit": true,
+    "sha256": "21d7ec38813b262a834a83ac75a8e84f5a1eb9e71d7af2456068a41354d4ad9a"
+  }
+]

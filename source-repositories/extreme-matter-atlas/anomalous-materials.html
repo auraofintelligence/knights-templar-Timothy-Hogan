@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Metaphysics of Metamaterials · Extreme Matter Atlas</title>
+<meta name="description" content="Build crystal lattices and stack 2D materials to explore how symmetry, interfaces and fields create properties no single element owns.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+body[data-page="anomalies"] { --accent: #67e8f9; --accent2: #fbbf24; }
+
+body[data-page="anomalies"] section { padding: 58px 0; }
+
+body[data-page="anomalies"] .lab-hero {
+  padding: 74px 0 52px;
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(rgba(103,232,249,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(103,232,249,.045) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+body[data-page="anomalies"] .lab-hero .display {
+  max-width: 13em;
+  font-size: clamp(38px, 6.4vw, 70px);
+}
+
+body[data-page="anomalies"] .lab-hero .lede { max-width: 54em; }
+
+body[data-page="anomalies"] .thesis-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 30px;
+}
+
+body[data-page="anomalies"] .thesis-cell {
+  min-height: 118px;
+  padding: 17px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(13,19,38,.92);
+}
+
+body[data-page="anomalies"] .thesis-cell b {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent);
+  font: 600 12px var(--font-mono);
+}
+
+body[data-page="anomalies"] .thesis-cell span {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+body[data-page="anomalies"] .section-intro {
+  max-width: 52em;
+  margin-bottom: 26px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+body[data-page="anomalies"] .structure-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0 16px;
+}
+
+body[data-page="anomalies"] .structure-button,
+body[data-page="anomalies"] .lab-button {
+  min-height: 44px;
+  padding: 9px 14px;
+  border: 1px solid var(--line-bright);
+  border-radius: 10px;
+  color: var(--ink);
+  background: var(--panel);
+  font: 600 13px var(--font-body);
+  cursor: pointer;
+}
+
+body[data-page="anomalies"] .structure-button:hover,
+body[data-page="anomalies"] .lab-button:hover { border-color: var(--accent); }
+
+body[data-page="anomalies"] .structure-button[aria-pressed="true"] {
+  border-color: var(--accent);
+  color: #04060c;
+  background: var(--accent);
+}
+
+body[data-page="anomalies"] .lattice-lab {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(300px, .75fr);
+  gap: 16px;
+  align-items: stretch;
+}
+
+body[data-page="anomalies"] .canvas-panel,
+body[data-page="anomalies"] .readout-panel {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: linear-gradient(155deg, var(--panel2), var(--panel));
+}
+
+body[data-page="anomalies"] .canvas-panel { min-width: 0; }
+
+body[data-page="anomalies"] #latticeCanvas {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.35 / 1;
+  background: #070b15;
+}
+
+body[data-page="anomalies"] .canvas-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  padding: 12px 16px 14px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font: 11px var(--font-mono);
+}
+
+body[data-page="anomalies"] .key-item { display: inline-flex; align-items: center; gap: 7px; }
+body[data-page="anomalies"] .key-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--dot); }
+
+body[data-page="anomalies"] .readout-panel { padding: 22px; }
+
+body[data-page="anomalies"] .formula {
+  display: inline-block;
+  margin: 3px 0 15px;
+  padding: 7px 10px;
+  border: 1px solid var(--line-bright);
+  border-radius: 8px;
+  color: var(--accent2);
+  background: #070b15;
+  font: 600 13px var(--font-mono);
+}
+
+body[data-page="anomalies"] .model-copy { color: var(--muted); font-size: 14.5px; }
+
+body[data-page="anomalies"] .parameter-control {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 9px 12px;
+  margin: 22px 0;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(7,11,21,.7);
+}
+
+body[data-page="anomalies"] .parameter-control label {
+  color: var(--muted);
+  font: 600 11px var(--font-mono);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+body[data-page="anomalies"] .parameter-control output {
+  color: var(--ink);
+  font: 600 12px var(--font-mono);
+}
+
+body[data-page="anomalies"] .parameter-control input { width: 100%; grid-column: 1 / -1; }
+
+body[data-page="anomalies"] .probe-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+body[data-page="anomalies"] .probe-control {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 7px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(7,11,21,.55);
+}
+
+body[data-page="anomalies"] .probe-control label {
+  color: var(--muted);
+  font: 600 10px var(--font-mono);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+body[data-page="anomalies"] .probe-control output { color: var(--ink); font: 600 10.5px var(--font-mono); }
+body[data-page="anomalies"] .probe-control input { width: 100%; grid-column: 1 / -1; }
+
+body[data-page="anomalies"] .property-list {
+  display: grid;
+  gap: 0;
+  margin-top: 18px;
+}
+
+body[data-page="anomalies"] .property-list div {
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+}
+
+body[data-page="anomalies"] .property-list dt {
+  color: var(--muted);
+  font: 600 10.5px var(--font-mono);
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+body[data-page="anomalies"] .property-list dd { color: var(--ink); font-size: 13.5px; }
+
+body[data-page="anomalies"] .lab-status {
+  min-height: 3.2em;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+body[data-page="anomalies"] .lab-status strong { color: var(--ink); }
+
+body[data-page="anomalies"] .concept-section {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(7,11,21,.58);
+}
+
+body[data-page="anomalies"] .scale-chain {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 28px;
+}
+
+body[data-page="anomalies"] .scale-node {
+  position: relative;
+  min-height: 164px;
+  padding: 17px 15px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel);
+}
+
+body[data-page="anomalies"] .scale-node:not(:last-child)::after {
+  content: "+";
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: -15px;
+  width: 21px;
+  height: 21px;
+  border: 1px solid var(--line-bright);
+  border-radius: 50%;
+  color: var(--accent2);
+  background: var(--bg);
+  font: 600 13px/19px var(--font-mono);
+  text-align: center;
+}
+
+body[data-page="anomalies"] .scale-index {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--accent);
+  font: 600 11px var(--font-mono);
+}
+
+body[data-page="anomalies"] .scale-node h3 { margin-bottom: 8px; font-size: 17px; }
+body[data-page="anomalies"] .scale-node p { color: var(--muted); font-size: 13px; line-height: 1.5; }
+
+body[data-page="anomalies"] .compiler-grid,
+body[data-page="anomalies"] .physics-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, .92fr);
+  gap: 16px;
+  align-items: start;
+}
+
+body[data-page="anomalies"] .stack-card,
+body[data-page="anomalies"] .compound-card,
+body[data-page="anomalies"] .thermal-card,
+body[data-page="anomalies"] .thermal-readout {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: linear-gradient(155deg, var(--panel2), var(--panel));
+}
+
+body[data-page="anomalies"] .stack-card,
+body[data-page="anomalies"] .compound-card,
+body[data-page="anomalies"] .thermal-card,
+body[data-page="anomalies"] .thermal-readout { padding: 22px; }
+
+body[data-page="anomalies"] .preset-row,
+body[data-page="anomalies"] .state-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0;
+}
+
+body[data-page="anomalies"] .preset-button,
+body[data-page="anomalies"] .state-button {
+  min-height: 42px;
+  padding: 8px 12px;
+  border: 1px solid var(--line-bright);
+  border-radius: 9px;
+  color: var(--ink);
+  background: rgba(7,11,21,.8);
+  font: 600 12px var(--font-body);
+  cursor: pointer;
+}
+
+body[data-page="anomalies"] .preset-button:hover,
+body[data-page="anomalies"] .state-button:hover,
+body[data-page="anomalies"] .preset-button[aria-pressed="true"],
+body[data-page="anomalies"] .state-button[aria-pressed="true"] {
+  border-color: var(--accent);
+  color: #04060c;
+  background: var(--accent);
+}
+
+body[data-page="anomalies"] .compiler-toolbar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+body[data-page="anomalies"] select,
+body[data-page="anomalies"] input[type="number"] {
+  min-height: 42px;
+  border: 1px solid var(--line-bright);
+  border-radius: 9px;
+  color: var(--ink);
+  background: #070b15;
+  font: 500 13px var(--font-body);
+}
+
+body[data-page="anomalies"] select { width: 100%; padding: 8px 10px; }
+body[data-page="anomalies"] option { color: var(--ink); background: #070b15; }
+
+body[data-page="anomalies"] .stack-list {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body[data-page="anomalies"] .stack-layer {
+  display: grid;
+  grid-template-columns: 8px minmax(140px, 1fr) 92px 54px auto;
+  gap: 9px;
+  align-items: center;
+  min-height: 50px;
+  padding: 7px 9px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: rgba(7,11,21,.72);
+}
+
+body[data-page="anomalies"] .layer-swatch {
+  width: 8px;
+  height: 34px;
+  border-radius: 5px;
+  background: var(--layer-colour);
+}
+
+body[data-page="anomalies"] .layer-name { font-size: 13px; font-weight: 600; }
+body[data-page="anomalies"] .layer-name small { display: block; margin-top: 2px; color: var(--muted); font: 10px var(--font-mono); }
+
+body[data-page="anomalies"] .thickness-field {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 4px;
+  color: var(--muted);
+  font: 10px var(--font-mono);
+}
+
+body[data-page="anomalies"] .thickness-field input {
+  width: 64px;
+  min-height: 34px;
+  padding: 5px 6px;
+  font: 11px var(--font-mono);
+}
+
+body[data-page="anomalies"] .bus-field {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: var(--muted);
+  font: 10px var(--font-mono);
+}
+body[data-page="anomalies"] .bus-field input { width: 16px; height: 16px; accent-color: var(--accent); }
+
+body[data-page="anomalies"] .layer-actions { display: flex; gap: 4px; }
+body[data-page="anomalies"] .layer-action {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid var(--line-bright);
+  border-radius: 7px;
+  color: var(--ink);
+  background: var(--panel2);
+  cursor: pointer;
+}
+
+body[data-page="anomalies"] .layer-action:hover { border-color: var(--accent); color: var(--accent); }
+body[data-page="anomalies"] .layer-action:disabled { opacity: .3; cursor: default; }
+
+body[data-page="anomalies"] .cross-section {
+  display: grid;
+  gap: 2px;
+  min-height: 120px;
+  margin-top: 16px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #070b15;
+}
+
+body[data-page="anomalies"] .stack-slice {
+  display: flex;
+  align-items: center;
+  min-height: 18px;
+  padding: 4px 8px;
+  border-left: 5px solid var(--layer-colour);
+  color: var(--ink);
+  background: color-mix(in srgb, var(--layer-colour) 13%, #070b15);
+  font: 10px var(--font-mono);
+}
+
+body[data-page="anomalies"] .interface-control {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  margin: 18px 0 20px;
+  padding: 13px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(7,11,21,.65);
+}
+
+body[data-page="anomalies"] .interface-control label { color: var(--muted); font: 600 11px var(--font-mono); }
+body[data-page="anomalies"] .interface-control output { color: var(--accent2); font: 600 11px var(--font-mono); }
+body[data-page="anomalies"] .interface-control input { width: 100%; grid-column: 1 / -1; }
+
+body[data-page="anomalies"] .metric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+body[data-page="anomalies"] .metric {
+  min-height: 94px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(7,11,21,.68);
+}
+
+body[data-page="anomalies"] .metric span { display: block; color: var(--muted); font: 10px var(--font-mono); }
+body[data-page="anomalies"] .metric strong { display: block; margin: 9px 0 3px; color: var(--accent); font: 700 17px var(--font-mono); }
+body[data-page="anomalies"] .metric small { color: var(--muted); font-size: 10px; }
+
+body[data-page="anomalies"] .role-map { display: grid; gap: 10px; margin-top: 14px; }
+body[data-page="anomalies"] .role-row { display: grid; grid-template-columns: 82px 1fr 34px; gap: 9px; align-items: center; }
+body[data-page="anomalies"] .role-label,
+body[data-page="anomalies"] .role-value { color: var(--muted); font: 10px var(--font-mono); }
+body[data-page="anomalies"] .role-value { color: var(--ink); text-align: right; }
+body[data-page="anomalies"] .role-track { height: 8px; overflow: hidden; border-radius: 5px; background: #070b15; }
+body[data-page="anomalies"] .role-fill { height: 100%; width: 0; border-radius: inherit; background: linear-gradient(90deg, var(--accent), var(--accent2)); }
+
+body[data-page="anomalies"] .synergy-list { display: grid; gap: 8px; margin: 18px 0 0; padding: 0; list-style: none; }
+body[data-page="anomalies"] .synergy-list li {
+  padding: 11px 12px;
+  border-left: 3px solid var(--accent2);
+  color: var(--muted);
+  background: rgba(251,191,36,.055);
+  font-size: 13px;
+}
+body[data-page="anomalies"] .synergy-list strong { color: var(--ink); }
+
+body[data-page="anomalies"] .equation-note {
+  margin-top: 16px;
+  padding: 13px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--muted);
+  background: #070b15;
+  font-size: 12px;
+}
+body[data-page="anomalies"] .equation-note code { display: block; margin: 5px 0; color: var(--accent2); font: 11px var(--font-mono); }
+
+body[data-page="anomalies"] .thermal-control {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  margin: 18px 0;
+}
+body[data-page="anomalies"] .thermal-control label { color: var(--muted); font: 600 11px var(--font-mono); }
+body[data-page="anomalies"] .thermal-control output { color: var(--accent2); font: 600 11px var(--font-mono); }
+body[data-page="anomalies"] .thermal-control input { width: 100%; grid-column: 1 / -1; }
+
+body[data-page="anomalies"] .thermal-number {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+  margin: 20px 0;
+}
+body[data-page="anomalies"] .thermal-number div { padding: 13px; border: 1px solid var(--line); border-radius: 10px; background: #070b15; }
+body[data-page="anomalies"] .thermal-number span { display: block; color: var(--muted); font: 10px var(--font-mono); }
+body[data-page="anomalies"] .thermal-number strong { display: block; margin-top: 9px; color: var(--accent); font: 700 17px var(--font-mono); }
+
+body[data-page="anomalies"] #phaseCanvas {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  margin: 14px 0 18px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: #070b15;
+}
+
+body[data-page="anomalies"] .emission-panel { margin: 22px 0 12px; }
+body[data-page="anomalies"] .emission-row { display: grid; grid-template-columns: 92px 1fr auto; gap: 9px; align-items: center; margin: 11px 0; }
+body[data-page="anomalies"] .emission-row span,
+body[data-page="anomalies"] .emission-row output { color: var(--muted); font: 10px var(--font-mono); }
+body[data-page="anomalies"] .emission-track { height: 15px; overflow: hidden; border-radius: 8px; background: #070b15; }
+body[data-page="anomalies"] .emission-fill { height: 100%; width: 0; background: var(--accent); }
+body[data-page="anomalies"] .emission-fill.reference { width: 100%; background: rgba(147,163,196,.55); }
+
+body[data-page="anomalies"] .catalogue-grid,
+body[data-page="anomalies"] .reading-grid,
+body[data-page="anomalies"] .horizon-grid,
+body[data-page="anomalies"] .sources-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+body[data-page="anomalies"] .material-card,
+body[data-page="anomalies"] .reading-card,
+body[data-page="anomalies"] .horizon-card,
+body[data-page="anomalies"] .source-card {
+  padding: 19px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel);
+}
+body[data-page="anomalies"] .material-card h3,
+body[data-page="anomalies"] .reading-card h3,
+body[data-page="anomalies"] .horizon-card h3 { margin-bottom: 9px; font-size: 18px; }
+body[data-page="anomalies"] .material-card p,
+body[data-page="anomalies"] .reading-card p,
+body[data-page="anomalies"] .horizon-card p,
+body[data-page="anomalies"] .source-card p { color: var(--muted); font-size: 13.5px; }
+body[data-page="anomalies"] .material-formula { display: block; margin-bottom: 12px; color: var(--accent); font: 600 11px var(--font-mono); }
+body[data-page="anomalies"] .property-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+body[data-page="anomalies"] .property-tags span { padding: 4px 7px; border: 1px solid var(--line-bright); border-radius: 6px; color: var(--muted); font: 9px var(--font-mono); }
+
+body[data-page="anomalies"] .architecture {
+  display: grid;
+  grid-template-columns: minmax(250px, .72fr) minmax(0, 1.28fr);
+  gap: 22px;
+  align-items: start;
+  margin-top: 30px;
+}
+body[data-page="anomalies"] .architecture-stack { display: grid; gap: 3px; padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: #070b15; }
+body[data-page="anomalies"] .architecture-layer { min-height: 42px; padding: 10px 12px; border-left: 5px solid var(--layer-colour); color: var(--ink); background: color-mix(in srgb, var(--layer-colour) 12%, #070b15); font: 11px var(--font-mono); }
+body[data-page="anomalies"] .architecture-copy { display: grid; gap: 11px; }
+body[data-page="anomalies"] .architecture-copy div { padding: 14px; border: 1px solid var(--line); border-radius: 11px; background: var(--panel); }
+body[data-page="anomalies"] .architecture-copy b { display: block; margin-bottom: 5px; color: var(--accent2); font: 600 11px var(--font-mono); }
+body[data-page="anomalies"] .architecture-copy span { color: var(--muted); font-size: 13px; }
+
+body[data-page="anomalies"] .observation-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin: 22px 0 28px;
+}
+body[data-page="anomalies"] .observation-cell {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: #070b15;
+}
+body[data-page="anomalies"] .observation-cell strong { display: block; margin-bottom: 6px; color: var(--accent); font: 700 16px var(--font-mono); }
+body[data-page="anomalies"] .observation-cell span { color: var(--muted); font-size: 12px; }
+
+body[data-page="anomalies"] .source-card a { display: inline-block; margin-top: 10px; color: var(--accent); font: 600 11px var(--font-mono); }
+body[data-page="anomalies"] .source-card a:hover { color: var(--accent2); }
+
+body[data-page="anomalies"] .section-note { margin-top: 22px; color: var(--muted); font-size: 12px; }
+body[data-page="anomalies"] .page-links { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 24px; }
+
+body[data-page="anomalies"] .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 900px) {
+  body[data-page="anomalies"] .thesis-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  body[data-page="anomalies"] .lattice-lab { grid-template-columns: 1fr; }
+  body[data-page="anomalies"] #latticeCanvas { aspect-ratio: 1.45 / 1; }
+  body[data-page="anomalies"] .scale-chain { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  body[data-page="anomalies"] .scale-node:nth-child(3)::after { display: none; }
+  body[data-page="anomalies"] .compiler-grid,
+  body[data-page="anomalies"] .physics-grid,
+  body[data-page="anomalies"] .architecture { grid-template-columns: 1fr; }
+  body[data-page="anomalies"] .catalogue-grid,
+  body[data-page="anomalies"] .reading-grid,
+  body[data-page="anomalies"] .horizon-grid,
+  body[data-page="anomalies"] .sources-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  body[data-page="anomalies"] .observation-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 540px) {
+  body[data-page="anomalies"] .lab-hero { padding: 46px 0 34px; }
+  body[data-page="anomalies"] .thesis-grid { grid-template-columns: 1fr; }
+  body[data-page="anomalies"] .structure-button { flex: 1 1 calc(50% - 8px); padding-inline: 8px; }
+  body[data-page="anomalies"] #latticeCanvas { aspect-ratio: .72 / 1; }
+  body[data-page="anomalies"] .property-list div { grid-template-columns: 86px 1fr; }
+  body[data-page="anomalies"] .probe-grid { grid-template-columns: 1fr; }
+  body[data-page="anomalies"] .scale-chain,
+  body[data-page="anomalies"] .catalogue-grid,
+  body[data-page="anomalies"] .reading-grid,
+  body[data-page="anomalies"] .horizon-grid,
+  body[data-page="anomalies"] .sources-grid { grid-template-columns: 1fr; }
+  body[data-page="anomalies"] .scale-node::after { display: none; }
+  body[data-page="anomalies"] .stack-layer { grid-template-columns: 7px minmax(120px, 1fr) auto; }
+  body[data-page="anomalies"] .thickness-field { grid-column: 2 / -1; grid-row: 2; justify-content: start; }
+  body[data-page="anomalies"] .bus-field { grid-column: 2; grid-row: 3; justify-content: start; }
+  body[data-page="anomalies"] .metric-grid,
+  body[data-page="anomalies"] .thermal-number { grid-template-columns: 1fr; }
+  body[data-page="anomalies"] .role-row { grid-template-columns: 70px 1fr 30px; }
+  body[data-page="anomalies"] .emission-row { grid-template-columns: 78px 1fr; }
+  body[data-page="anomalies"] .emission-row output { grid-column: 2; text-align: right; }
+  body[data-page="anomalies"] .observation-strip { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body data-page="anomalies">
+<div id="site-header"></div>
+<main>
+
+  <section class="lab-hero">
+    <div class="wrap">
+      <h1 class="display">Metaphysics of metamaterials</h1>
+      <p class="lede">Atoms provide the ingredients. <strong>Lattices set the rules.</strong> Interfaces couple those rules together. Fields select which state becomes active. The result is matter with properties no single element owns by itself.</p>
+      <p class="section-intro">This laboratory follows the material architecture wherever it leads: adaptive aerospace skins, alien craft fragments, pre-Younger Dryas devices and region-scale field boundaries.</p>
+      <div class="thesis-grid">
+        <div class="thesis-cell"><b>COMPOSITION</b><span>Which atoms are present and which bonds they offer.</span></div>
+        <div class="thesis-cell"><b>SYMMETRY</b><span>Which motions, bands and directions the lattice permits.</span></div>
+        <div class="thesis-cell"><b>INTERFACE</b><span>What appears when two materials exchange strain, charge, heat or spin.</span></div>
+        <div class="thesis-cell"><b>STATE</b><span>Which possibility is selected by temperature, twist, voltage, pressure or field.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="lattice-laboratory">
+    <div class="wrap">
+      <h2>Crystal lattice laboratory</h2>
+      <p class="section-intro">The same atoms behave differently when their spacing, symmetry or layer registry changes. The left side is an active-sublattice schematic, with a moiré registry map for the twisted bilayer. The right side calculates normalised scalar-wave geometric interference from representative site weights. It marks the direct beam separately and reports local diffracted peaks.</p>
+
+      <div class="structure-tabs" role="group" aria-label="Crystal structure">
+        <button class="structure-button" type="button" data-structure="honeycomb" aria-pressed="true">Graphene and h-BN</button>
+        <button class="structure-button" type="button" data-structure="kagome" aria-pressed="false">Kagome</button>
+        <button class="structure-button" type="button" data-structure="moire" aria-pressed="false">Twisted WSe<sub>2</sub></button>
+        <button class="structure-button" type="button" data-structure="bct" aria-pressed="false">Fe<sub>16</sub>N<sub>2</sub></button>
+        <button class="structure-button" type="button" data-structure="max" aria-pressed="false">Ti<sub>3</sub>SiC<sub>2</sub></button>
+        <button class="structure-button" type="button" data-structure="moo3" aria-pressed="false">alpha-MoO<sub>3</sub></button>
+      </div>
+
+      <div class="lattice-lab">
+        <div class="canvas-panel">
+          <canvas id="latticeCanvas" width="840" height="620" role="img" aria-describedby="latticeStatus">Interactive active-sublattice and scalar-wave interference diagram.</canvas>
+          <div class="canvas-key" id="canvasKey"></div>
+        </div>
+
+        <aside class="readout-panel">
+          <h3 id="modelTitle">Honeycomb sheet</h3>
+          <span class="formula" id="modelFormula">C / BN</span>
+          <p class="model-copy" id="modelCopy">A hexagonal network becomes either a conducting carbon sheet or a polar dielectric when the two sublattices carry different atoms.</p>
+
+          <div class="parameter-control">
+            <label for="structureParameter" id="parameterLabel">Sublattice contrast</label>
+            <output id="parameterValue" for="structureParameter">0%</output>
+            <input id="structureParameter" type="range" min="0" max="100" step="1" value="0">
+          </div>
+
+          <div class="probe-grid">
+            <div class="probe-control">
+              <label for="probeWavelength">Probe wavelength</label>
+              <output id="wavelengthValue" for="probeWavelength">2.4 a</output>
+              <input id="probeWavelength" type="range" min="0.7" max="6" step="0.1" value="2.4">
+            </div>
+            <div class="probe-control">
+              <label for="probeAngle">Incoming direction</label>
+              <output id="angleValue" for="probeAngle">20°</output>
+              <input id="probeAngle" type="range" min="0" max="180" step="1" value="20">
+            </div>
+            <div class="probe-control">
+              <label for="latticeOrder">Lattice order</label>
+              <output id="orderValue" for="latticeOrder">100%</output>
+              <input id="latticeOrder" type="range" min="0" max="100" step="1" value="100">
+            </div>
+          </div>
+
+          <dl class="property-list">
+            <div><dt>Unit cell</dt><dd id="unitCell">Two sites on a hexagonal Bravais lattice</dd></div>
+            <div><dt>Mechanism</dt><dd id="mechanism">Sublattice equivalence or contrast changes the allowed electronic bands.</dd></div>
+            <div><dt>Emergence</dt><dd id="emergence">High in-plane transport, heat spreading or electrical isolation.</dd></div>
+            <div><dt>Stack role</dt><dd id="stackRole">Conductive heat spreader beside an atomically flat dielectric separator.</dd></div>
+            <div><dt>Diffracted peaks</dt><dd id="strongestDirection">Calculating local peaks outside the direct beam.</dd></div>
+            <div><dt>Position order</dt><dd id="coherenceValue">100% wavelength-relative positional-order proxy.</dd></div>
+          </dl>
+          <p class="lab-status" id="latticeStatus" aria-live="polite"><strong>Graphene state:</strong> equivalent carbon sublattices preserve the honeycomb symmetry.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="concept-section" id="where-properties-live">
+    <div class="wrap">
+      <h2>Where the property lives</h2>
+      <p class="section-intro">The central question asks where a capability exists. In engineered matter, a property can live in a repeating relation, a boundary between unlike layers, a collective band state or the coupling between matter and an applied field.</p>
+      <div class="scale-chain">
+        <article class="scale-node"><span class="scale-index">01</span><h3>Atom</h3><p>Charge, mass, orbitals and bonding possibilities enter the design.</p></article>
+        <article class="scale-node"><span class="scale-index">02</span><h3>Lattice</h3><p>Spacing and symmetry decide which motion and exchange pathways are allowed.</p></article>
+        <article class="scale-node"><span class="scale-index">03</span><h3>Band</h3><p>Many atoms act collectively, creating gaps, flat bands, topology and directional transport.</p></article>
+        <article class="scale-node"><span class="scale-index">04</span><h3>Interface</h3><p>Strain, charge, spin, phonons and orbitals cross between materials and create new states.</p></article>
+        <article class="scale-node"><span class="scale-index">05</span><h3>Stack</h3><p>Each layer handles a different part of the job while its neighbours change what it can do.</p></article>
+        <article class="scale-node"><span class="scale-index">06</span><h3>Field</h3><p>Heat, voltage, light, pressure and magnetic flux select and steer the active state.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="stack-compiler">
+    <div class="wrap">
+      <h2>Layer stack compiler</h2>
+      <p class="section-intro">Build from the outside face down. Change the order, change each thickness and change the interface resistance. The model recomputes in-plane heat flow, through-plane heat flow and sheet conductance, then identifies interfaces where the material families reinforce one another.</p>
+
+      <div class="preset-row" role="group" aria-label="Layer stack presets">
+        <button class="preset-button" type="button" data-stack-preset="hull" aria-pressed="true">Extreme hull</button>
+        <button class="preset-button" type="button" data-stack-preset="moire" aria-pressed="false">Moiré quantum layer</button>
+        <button class="preset-button" type="button" data-stack-preset="thermal" aria-pressed="false">Thermal memory pixel</button>
+        <button class="preset-button" type="button" data-stack-preset="flux" aria-pressed="false">Flux toroid</button>
+      </div>
+
+      <div class="compiler-grid">
+        <div class="stack-card">
+          <h3>Outside to inside</h3>
+          <div class="compiler-toolbar">
+            <label class="sr-only" for="layerSelect">Material layer</label>
+            <select id="layerSelect">
+              <option value="rhea">Ta-Nb-Hf-Zr-Ti refractory alloy</option>
+              <option value="max">Ti3SiC2 MAX phase</option>
+              <option value="mxene">Mo2TiC2Tx MXene</option>
+              <option value="graphene">Graphene</option>
+              <option value="hbn">Hexagonal boron nitride</option>
+              <option value="borophene">Borophene</option>
+              <option value="wse2">WSe2 monolayer</option>
+              <option value="mose2">MoSe2 monolayer</option>
+              <option value="tio2">TiO2 nano-antenna array</option>
+              <option value="gst">GST phase-change layer</option>
+              <option value="aluminium">Aluminium backplane</option>
+              <option value="moo3">alpha-MoO3 layer</option>
+              <option value="fe16n2">Fe16N2 flux guide</option>
+              <option value="fese">FeSe monolayer</option>
+              <option value="sto">SrTiO3 interface layer</option>
+              <option value="rebco">REBCO steady-current layer</option>
+              <option value="mgb2">MgB2 current layer</option>
+              <option value="fetese">FeTeSe topological sensor layer</option>
+              <option value="silicon">Low-spin silicon resonator base</option>
+              <option value="ferrite">Ferrite and MXene absorber</option>
+              <option value="zirconia">ZrO2-SiO2 gradient</option>
+            </select>
+            <button class="lab-button" id="addLayer" type="button">Add layer</button>
+          </div>
+          <ol class="stack-list" id="stackList" aria-label="Current material stack"></ol>
+          <p class="lab-status" id="stackStatus" aria-live="polite"></p>
+          <div class="cross-section" id="stackCrossSection" aria-label="Scaled cross-section of current stack"></div>
+        </div>
+
+        <aside class="compound-card">
+          <h3>Compounded response</h3>
+          <div class="interface-control">
+            <label for="interfaceResistance">Thermal boundary resistance per interface</label>
+            <output id="interfaceValue" for="interfaceResistance">20 × 10<sup>-9</sup> m² K/W</output>
+            <input id="interfaceResistance" type="range" min="0" max="100" step="5" value="20">
+          </div>
+
+          <div class="metric-grid">
+            <div class="metric"><span>In-plane heat</span><strong id="parallelThermal">0</strong><small>k∥ W/mK</small></div>
+            <div class="metric"><span>Through-plane heat</span><strong id="perpendicularThermal">0</strong><small>k⊥ W/mK</small></div>
+            <div class="metric"><span>Selected bus</span><strong id="sheetConductance">0</strong><small>S/□ sheet conductance</small></div>
+          </div>
+
+          <h4>Relative roles</h4>
+          <div class="role-map" id="roleMap"></div>
+          <ul class="synergy-list" id="synergyList" aria-live="polite"></ul>
+          <div class="equation-note">
+            <strong>Transport model</strong>
+            <code>k∥ = Σ(k∥,i tᵢ) / Σtᵢ</code>
+            <code>k⊥ = t<sub>total</sub> / [Σ(tᵢ/k⊥,i) + ΣR<sub>K</sub>]</code>
+            <code>G□ = Σ(σᵢ tᵢ)</code>
+            Representative coefficients make stack order and thickness comparable inside this laboratory. Pair-specific boundary factors make neighbouring order visible in k⊥. G□ includes only layers ticked Bus and models external electrical connection across any separators. FeSe and MgB2 use normal-state conductivity proxies. Measured layer constants and interface data can replace these teaching values as the design matures. The relative role map runs from 0 to 5 and exposes its design rules in the active interface list.
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="concept-section" id="thermal-state-lab">
+    <div class="wrap">
+      <h2>Thermal state simulator</h2>
+      <p class="section-intro">A patterned resonator above a phase-change film and reflective backplane turns phase into emissivity. The surface can therefore change how much thermal radiation leaves it without changing its physical temperature by the same amount.</p>
+      <div class="physics-grid">
+        <div class="thermal-card">
+          <h3>GST resonant thermal pixel</h3>
+          <p class="model-copy">The phase buttons represent a stored state prepared by a separate set or reset pulse. The temperature control then calculates thermal radiation from that selected state.</p>
+          <div class="state-row" role="group" aria-label="Stored GST effective-emissivity preset">
+            <button class="state-button" type="button" data-emissivity="0.18" data-fraction="0" data-phase="Amorphous" aria-pressed="true">Amorphous</button>
+            <button class="state-button" type="button" data-emissivity="0.52" data-fraction="0.5" data-phase="Intermediate" aria-pressed="false">Intermediate</button>
+            <button class="state-button" type="button" data-emissivity="0.86" data-fraction="1" data-phase="Crystalline" aria-pressed="false">Crystalline</button>
+          </div>
+          <div class="thermal-control">
+            <label for="surfaceTemperature">Physical temperature</label>
+            <output id="temperatureValue" for="surfaceTemperature">420 K</output>
+            <input id="surfaceTemperature" type="range" min="250" max="800" step="5" value="420">
+          </div>
+          <div class="thermal-control">
+            <label for="surfaceEmissivity">Effective emissivity</label>
+            <output id="emissivityValue" for="surfaceEmissivity">0.18</output>
+            <input id="surfaceEmissivity" type="range" min="0.05" max="0.95" step="0.01" value="0.18">
+          </div>
+          <div class="equation-note">
+            <strong>Radiative model</strong>
+            <code>E = εσT⁴</code>
+            <code>T<sub>apparent</sub> = ε<sup>1/4</sup>T</code>
+            The apparent-temperature readout is the blackbody temperature that would produce the same total radiated power in this simplified model.
+          </div>
+        </div>
+
+        <aside class="thermal-readout">
+          <h3 id="thermalPhase">Amorphous state</h3>
+          <canvas id="phaseCanvas" width="700" height="350" role="img" aria-label="Simplified GST coordination changing between disordered and crystalline states"></canvas>
+          <div class="thermal-number">
+            <div><span>Radiated power</span><strong id="radiatedPower">0 W/m²</strong></div>
+            <div><span>Blackbody reference</span><strong id="blackbodyPower">0 W/m²</strong></div>
+            <div><span>Apparent temperature</span><strong id="apparentTemperature">0 K</strong></div>
+          </div>
+          <div class="emission-panel">
+            <div class="emission-row"><span>Selected surface</span><div class="emission-track"><div class="emission-fill" id="selectedEmission"></div></div><output id="selectedEmissionValue">18%</output></div>
+            <div class="emission-row"><span>Blackbody</span><div class="emission-track"><div class="emission-fill reference"></div></div><output>100%</output></div>
+          </div>
+          <p class="model-copy">The coordination drawing is schematic rather than a crystallographic cell. It connects a disordered, lower-coordination covalent network with a more ordered, higher-coordination crystalline network. In the larger architecture, nano-antennas set the resonance, GST or a Se-Te phase-change film stores the optical state, aluminium supplies the reflective backplane, and graphene can spread heat and carry control signals.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="material-architectures">
+    <div class="wrap">
+      <h2>Material architectures</h2>
+      <p class="section-intro">Each family contributes through its atomic order, dimensionality or interface, supplying a specific operation inside a larger architecture.</p>
+      <div class="catalogue-grid">
+        <article class="material-card">
+          <span class="material-formula">Ta-Nb-Hf-Zr-Ti / Mo-Nb-Ta-W-V</span>
+          <h3>Refractory high-entropy alloys</h3>
+          <p>Several principal metals share the same lattice. Local chemical disorder frustrates easy defect motion while high-melting constituents carry heat and load.</p>
+          <div class="property-tags"><span>HOT STRUCTURE</span><span>LOAD PATH</span><span>CHEMICAL COMPLEXITY</span></div>
+        </article>
+        <article class="material-card">
+          <span class="material-formula">Ti3SiC2 / Mo2TiC2Tx</span>
+          <h3>MAX and MXene transition</h3>
+          <p>Ti3SiC2 shows how a MAX phase joins stiff carbide slabs to more compliant atomic planes. Related Mo-Ti MAX precursors can be selectively etched into Mo2TiC2Tx; etching Ti3SiC2 instead leads to Ti3C2Tx.</p>
+          <div class="property-tags"><span>THERMAL SHOCK</span><span>CONDUCTION</span><span>SURFACE CONTROL</span></div>
+        </article>
+        <article class="material-card">
+          <span class="material-formula">B / C / BN</span>
+          <h3>Borophene, graphene and h-BN</h3>
+          <p>Atom-thin sheets divide jobs cleanly: borophene for directional stiffness, graphene for charge and heat spreading, and h-BN for an atomically flat electrical barrier.</p>
+          <div class="property-tags"><span>2D MECHANICS</span><span>HEAT SPREADING</span><span>ISOLATION</span></div>
+        </article>
+        <article class="material-card">
+          <span class="material-formula">WSe2 / MoSe2</span>
+          <h3>Moiré quantum bilayers</h3>
+          <p>A small twist or lattice mismatch creates a superlattice much larger than either atomic cell. That new periodicity can narrow bands, localise excitons and make voltage a geometric control.</p>
+          <div class="property-tags"><span>FLAT BANDS</span><span>EXCITONS</span><span>TWIST CONTROL</span></div>
+        </article>
+        <article class="material-card">
+          <span class="material-formula">Co3Sn2S2 / Fe3Sn2</span>
+          <h3>Magnetic Kagome layers</h3>
+          <p>Corner-sharing triangles organise interference and magnetic frustration. Their band geometry can connect magnetism to anomalous Hall transport and large magneto-optical rotation.</p>
+          <div class="property-tags"><span>BERRY CURVATURE</span><span>HALL FLOW</span><span>OPTICAL ROTATION</span></div>
+        </article>
+        <article class="material-card">
+          <span class="material-formula">alpha-MoO3</span>
+          <h3>Directional polariton crystal</h3>
+          <p>Its orthogonal crystal axes respond differently in the infrared, confining light-matter waves into steerable directions far below the free-space wavelength.</p>
+          <div class="property-tags"><span>HYPERBOLIC RESPONSE</span><span>IR ROUTING</span><span>SUBWAVELENGTH FLOW</span></div>
+        </article>
+        <article class="material-card">
+          <span class="material-formula">Fe16N2 / FeGe</span>
+          <h3>Ordered flux and spin textures</h3>
+          <p>Ordered nitrogen reshapes iron exchange in Fe16N2. Chiral magnets such as FeGe organise spins into skyrmions, allowing magnetic information to live in a stable collective texture.</p>
+          <div class="property-tags"><span>FLUX GUIDANCE</span><span>SPIN TEXTURE</span><span>MAGNETIC MEMORY</span></div>
+        </article>
+        <article class="material-card">
+          <span class="material-formula">FeSe / SrTiO3 / FeTeSe</span>
+          <h3>Interface quantum states</h3>
+          <p>A FeSe monolayer on SrTiO3 demonstrates that an interface can support a state unlike either material alone. Iron chalcogenides also connect superconductivity with topological surface behaviour.</p>
+          <div class="property-tags"><span>INTERFACE PAIRING</span><span>TOPOLOGY</span><span>QUANTUM PATH</span></div>
+        </article>
+        <article class="material-card">
+          <span class="material-formula">GST / VO2:W / Mg-MgH2</span>
+          <h3>Reversible state layers</h3>
+          <p>GST can store several non-volatile phase fractions. Tungsten-doped VO2 follows a driven electronic-structural transition, while Mg-MgH2 follows reversible hydrogenation. Each supplies a different route to switch optical and thermal response.</p>
+          <div class="property-tags"><span>PHASE MEMORY</span><span>EMISSIVITY</span><span>REVERSIBLE OPTICS</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="concept-section" id="compounded-skin">
+    <div class="wrap">
+      <h2>One compounded skin</h2>
+      <p class="section-intro">A field-responsive aerospace shell can be read as a mosaic of specialised surface zones. Hot-face tiles, optical windows, thermal pixels and RF regions use different local stacks, then meet a shared sensing and load shell underneath. Capability appears through the order of each stack and the channels passed between zones.</p>
+      <div class="architecture">
+        <div class="architecture-stack" aria-label="Example aerospace material stack from outside to inside">
+          <div class="architecture-layer" style="--layer-colour:#fb7185">Zoned outer face: C-C, SiC or ZrC hot tile, or an optical window</div>
+          <div class="architecture-layer" style="--layer-colour:#fbbf24">TiO2, Si, Te and alpha-MoO3 optical geometry</div>
+          <div class="architecture-layer" style="--layer-colour:#a78bfa">Mg-MgH2 optical switch, with gallium or europium sensing dopants</div>
+          <div class="architecture-layer" style="--layer-colour:#f472b6">GST resonant thermal memory cavity</div>
+          <div class="architecture-layer" style="--layer-colour:#cbd5e1">Graded ZrO2-SiO2 dielectric and impedance transition</div>
+          <div class="architecture-layer" style="--layer-colour:#60a5fa">Ferrite, carbonyl iron and MXene RF control</div>
+          <div class="architecture-layer" style="--layer-colour:#38bdf8">Silicon, selenium and europium sensor plane</div>
+          <div class="architecture-layer" style="--layer-colour:#67e8f9">Graphene and h-BN signal and isolation plane</div>
+          <div class="architecture-layer" style="--layer-colour:#34d399">MAX, RHEA, titanium or aluminium load transition</div>
+        </div>
+        <div class="architecture-copy">
+          <div><b>Heat enters</b><span>The hot face survives the first contact. Ceramic-to-metal gradients spread the strain instead of asking one abrupt interface to carry it.</span></div>
+          <div><b>Light is phased</b><span>Patterned dielectrics and anisotropic crystals set local optical path length, polarisation and direction.</span></div>
+          <div><b>Thermal appearance is selected</b><span>Phase-change cavities alter emissivity while a heat-spreading plane manages the physical temperature underneath.</span></div>
+          <div><b>Electromagnetic impedance is shaped</b><span>Ferrites, conductive 2D sheets and graded dielectrics distribute reflection, absorption and surface current across depth.</span></div>
+          <div><b>Sensors close the loop</b><span>Embedded junctions measure strain, light, temperature and field. A controller selects the local material state for each active zone.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="field-boundary">
+    <div class="wrap">
+      <h2>From lattice to field boundary</h2>
+      <p class="section-intro">The Ranch field observations can be treated as a boundary-material problem: several responses arriving together may be the macroscopic expression of one deeply layered system rather than one mysterious substance. The supplied field map places the active region across roughly 30 to 500 metres laterally and 90 to 1,500 metres in altitude.</p>
+      <div class="observation-strip" aria-label="Field observation markers">
+        <div class="observation-cell"><strong>near 1.6 GHz</strong><span>Recurring RF activity to compare with a driven plasma or resonant boundary.</span></div>
+        <div class="observation-cell"><strong>GPS displacement</strong><span>Position jumps paired with telemetry resets and interrupted links.</span></div>
+        <div class="observation-cell"><strong>LiDAR returns</strong><span>Spatially bounded returns that can be compared across repeated passes.</span></div>
+        <div class="observation-cell"><strong>Laser bloom</strong><span>Optical spreading or termination mapped against the same field geometry.</span></div>
+      </div>
+      <p class="section-note">Provenance: the working dimensions, altitude range and observation markers above are transcribed from the project research brief's field synthesis. They remain distinct from the primary materials papers in the source section below.</p>
+      <div class="reading-grid">
+        <article class="reading-card"><h3>Optical distortion</h3><p>Phase gradients, anisotropic polaritons and tunable-index layers can redirect different wavelengths along different paths.</p></article>
+        <article class="reading-card"><h3>Thermal switching</h3><p>Phase-change resonators can alter emissivity and apparent temperature while the underlying object follows a different heat path.</p></article>
+        <article class="reading-card"><h3>RF irregularity</h3><p>Conductive sheets, ferrites, graded dielectrics and surface geometry can move an electromagnetic boundary without moving the load shell.</p></article>
+        <article class="reading-card"><h3>Magnetic response</h3><p>Ordered magnets, superconducting paths and collective spin textures can guide, store and redirect magnetic flux through a larger structure.</p></article>
+        <article class="reading-card"><h3>Plasma cutoff</h3><p>A driven plasma supplies the first tunable cutoff, phase delay and charge reservoir at the field edge.</p></article>
+        <article class="reading-card"><h3>Stabilisation and sensing</h3><p>Directed phase interference can sit behind the plasma and refractive layers, while feedback sensing holds the larger boundary in registry.</p></article>
+      </div>
+      <div class="equation-note"><strong>Working boundary order</strong><code>plasma cutoff > dielectric and refractive gradient > directed phase interference > stabilisation and sensing</code>The sequence is a material architecture to simulate against repeated spatial, RF, optical and telemetry measurements.</div>
+    </div>
+  </section>
+
+  <section class="concept-section" id="reading-an-artefact">
+    <div class="wrap">
+      <h2>Reading an anomalous artefact</h2>
+      <p class="section-intro">When an artefact arrives without a manufacturing history, chemistry is only the first line. The deeper search is for designed order across scale.</p>
+      <div class="reading-grid">
+        <article class="reading-card"><h3>Composition</h3><p>Which elements, isotopes, vacancies and dopants are present, and where are they concentrated?</p></article>
+        <article class="reading-card"><h3>Crystal order</h3><p>Which unit cells, defects, grain orientations and superlattices repeat through the object?</p></article>
+        <article class="reading-card"><h3>Interfaces</h3><p>Which atomically sharp, graded or deliberately strained boundaries join unlike states?</p></article>
+        <article class="reading-card"><h3>Phase memory</h3><p>Which regions retain a state after heat, pressure, current, light or field has been removed?</p></article>
+        <article class="reading-card"><h3>Coupled channels</h3><p>Does changing one input alter several outputs: optical, thermal, electrical, magnetic or mechanical?</p></article>
+        <article class="reading-card"><h3>Scale hierarchy</h3><p>Does atomic ordering repeat into layers, cells, panels and a larger field boundary?</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="application-horizons">
+    <div class="wrap">
+      <h2>Application horizons</h2>
+      <p class="section-intro">The abundance pathway is a library of controllable structures that uses less mass and energy by putting each function at the scale where it works best.</p>
+      <div class="horizon-grid">
+        <article class="horizon-card"><h3>Adaptive civil aerospace</h3><p>Reusable heat shields, quiet thermal management, lighter power electronics and surfaces that repair or reroute around local damage.</p></article>
+        <article class="horizon-card"><h3>Toroidal field machines</h3><p>Structural hoops, electrical isolation, flux guides, superconducting paths and embedded field sensing treated as one co-designed material object.</p></article>
+        <article class="horizon-card"><h3>Water, shelter and energy</h3><p>Selective membranes, durable hot-zone components, passive cooling and high-efficiency conversion brought into ordinary infrastructure.</p></article>
+        <article class="horizon-card"><h3>Ancient engineering</h3><p>Pre-Younger Dryas artefacts can be examined for layered order, phase memory and field coupling even when their bulk chemistry looks familiar.</p></article>
+        <article class="horizon-card"><h3>Alien craft</h3><p>A recovered skin, fragment or residue can be read as part of a distributed field architecture rather than expected to display its whole purpose in isolation.</p></article>
+        <article class="horizon-card"><h3>Open materials discovery</h3><p>Simulation, robotic synthesis and shared measurement can search combinations faster while communities choose which capabilities serve care and repair.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="concept-section" id="research-sources">
+    <div class="wrap">
+      <h2>Research sources</h2>
+      <p class="section-intro">A starting set of primary research behind the material mechanisms used in the laboratories and architecture map.</p>
+      <div class="sources-grid">
+        <article class="source-card"><p>Twisted WSe2 can form moiré flat bands whose electronic structure changes with twist and reconstruction.</p><a href="https://www.nature.com/articles/s41467-021-25924-6" target="_blank" rel="noopener">Nature Communications, 2021</a></article>
+        <article class="source-card"><p>A one-unit-cell FeSe film on SrTiO3 shows interface-enhanced superconducting behaviour tied to the substrate and interfacial coupling.</p><a href="https://www.nature.com/articles/s41467-019-08560-z" target="_blank" rel="noopener">Nature Communications, 2019</a></article>
+        <article class="source-card"><p>Magnetic Kagome semimetal Co3Sn2S2 exhibits a large intrinsic anomalous Hall effect associated with its band topology.</p><a href="https://www.nature.com/articles/s41567-018-0234-5" target="_blank" rel="noopener">Nature Physics, 2018</a></article>
+        <article class="source-card"><p>alpha-MoO3 supports in-plane hyperbolic phonon-polaritons with strongly directional propagation.</p><a href="https://www.nature.com/articles/s41586-018-0618-9" target="_blank" rel="noopener">Nature, 2018</a></article>
+        <article class="source-card"><p>A GST metasurface can tune thermal emission through phase-dependent optical response.</p><a href="https://www.nature.com/articles/s41377-018-0038-5" target="_blank" rel="noopener">Light: Science and Applications, 2018</a></article>
+        <article class="source-card"><p>Layered Ti3SiC2 combines ceramic and metallic behaviours through its ordered MAX-phase crystal structure.</p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0167577X98002067" target="_blank" rel="noopener">Materials Letters, 1999</a></article>
+        <article class="source-card"><p>Ta-Nb-Hf-Zr-Ti refractory high-entropy alloys retain useful strength at elevated temperature through a chemically complex solid-solution structure.</p><a href="https://www.sciencedirect.com/science/article/pii/S0020740319341013" target="_blank" rel="noopener">International Journal of Refractory Metals and Hard Materials, 2020</a></article>
+        <article class="source-card"><p>NMR measurements probe the local magnetic moments and nitrogen ordering associated with the high-moment Fe16N2 phase.</p><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.54.51" target="_blank" rel="noopener">Physical Review B, 1996</a></article>
+        <article class="source-card"><p>GNoME combined graph-network prediction, density-functional-theory relaxation and an iterative data flywheel to expand the set of computationally stable crystal candidates.</p><a href="https://www.nature.com/articles/s41586-023-06735-9" target="_blank" rel="noopener">Nature, 2023</a></article>
+      </div>
+      <p class="section-note">The simulations are compact teaching models. They expose their equations and assumptions so a future version can accept measured constants, spectra and layer-specific interface data.</p>
+      <div class="page-links">
+        <a class="button primary" href="#lattice-laboratory">Return to the lattice lab</a>
+        <a class="button ghost" href="vimana.html">Previous: Vimana</a>
+        <a class="button ghost" href="beyond.html">Next: Beyond</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<div id="site-footer"></div>
+<script src="assets/nav.js"></script>
+<script src="assets/anomalous-materials.js"></script>
+</body>
+</html>

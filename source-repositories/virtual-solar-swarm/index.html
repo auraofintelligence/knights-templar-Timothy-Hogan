@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Virtual Solar Swarm : mission design studio</title>
+<meta name="description" content="An interactive studio for designing a solar-system-wide satellite swarm: 200 targets, their orbits, stable orbits around them, launch windows and replacement cadence.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛰️</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header id="site-header"></header>
+<main>
+  <h1>Design the swarm that would watch the whole solar system</h1>
+  <p class="lede">This studio models a single idea: a standing crew of satellites around every interesting body in the solar system, keeping watch. It starts counting at 200 targets and 1,300 spacecraft, but no rule says those numbers: on <a href="scale.html">the scale page</a> the fleet total and the policy for spending it are dials in your hands, with the downstream numbers computed for you to weigh. Every page is a working model you can pull on.</p>
+
+  <div class="family-row" id="band"></div>
+  <p class="faint" style="margin-top:.2rem">The Sun, the eight planets and our Moon, each wearing humanity's real map of it: NASA Blue Marble, Lunar Reconnaissance Orbiter, MESSENGER, Viking, Cassini and Voyager data. Bodies we have not mapped are drawn plain, in their measured colour, on the <a href="targets.html">catalogue</a>.</p>
+
+  <div class="callout warm">
+    This is a design study, not a mission. Nothing on this site has been built or launched. The maths is teaching-grade mechanics: right enough to compare options and plan shapes, not to fly a spacecraft. The <a href="about.html">about page</a> lists every approximation.
+  </div>
+
+  <h2>The idea in one breath</h2>
+  <p>At the starting setting: two hundred funded targets, about the number of countries on Earth, each with a standing crew: a baseline picket of four satellites, one over each pole and one over each side, rising to dense swarms of fifty at busy worlds and a hundred wrapped right around the Sun, so every side of our star is watched at once. Around the funded core rides the census: every named moon of the giant planets and a deeper sweep of small worlds, watched by the host swarms until the dial funds them too. At this setting the model builds about 1,300 spacecraft, and every one of them eventually wears out, which is why replacement gets its own pages.</p>
+
+  <div class="grid cols-4" id="live-stats">
+    <div class="card"><div class="stat" id="stat-objects">…</div><div class="stat-label">bodies in the catalogue</div></div>
+    <div class="card"><div class="stat" id="stat-funded">…</div><div class="stat-label">funded at the starting point</div></div>
+    <div class="card"><div class="stat" id="stat-fleet">…</div><div class="stat-label">satellites at the starting point</div></div>
+    <div class="card"><div class="stat" id="stat-moons">…</div><div class="stat-label">moons in the catalogue</div></div>
+  </div>
+
+  <h2>The tools</h2>
+  <div class="grid cols-3">
+    <div class="card link-card"><a class="cover" href="scale.html"><h3>The scale</h3><p class="dim small">The fleet total and the allocation policy as dials in your hands, with production, cost, coverage and traffic computed at every setting.</p></a></div>
+    <div class="card link-card"><a class="cover" href="targets.html"><h3>The catalogue</h3><p class="dim small">All 384 bodies: planets, every named giant-planet moon, asteroids, comets, ice worlds and three interstellar visitors. Search it, group it, argue with it.</p></a></div>
+    <div class="card link-card"><a class="cover" href="map.html"><h3>Orbit map</h3><p class="dim small">Every heliocentric target on one animated 3D map, positioned by real orbital elements. Drag to tilt and spin, scrub time forwards and back.</p></a></div>
+    <div class="card link-card"><a class="cover" href="gravity.html"><h3>Gravity lab</h3><p class="dim small">Gravity as a landscape: Lagrange points, tadpole and horseshoe orbits, and arrival insertions you brake by hand.</p></a></div>
+    <div class="card link-card"><a class="cover" href="orbit-lab.html"><h3>Orbit lab</h3><p class="dim small">Pick a body and design a stable orbit around it: how low is safe, how high is stable, and what a lap takes.</p></a></div>
+    <div class="card link-card"><a class="cover" href="windows.html"><h3>Launch windows</h3><p class="dim small">When the doors open, and how money bends the schedule: dial in extra push and watch every date move.</p></a></div>
+    <div class="card link-card"><a class="cover" href="builder.html"><h3>Satellite builder</h3><p class="dim small">Fit a bus with instruments and an engine, watch the budgets move, and see whether your design survives its destination.</p></a></div>
+    <div class="card link-card"><a class="cover" href="rides.html"><h3>The rides</h3><p class="dim small">Two fleets for two problems: chemical fire for the gravity well; ion, Neumann Drive, nuclear and sail for the road.</p></a></div>
+    <div class="card link-card"><a class="cover" href="sensors.html"><h3>Instruments</h3><p class="dim small">The kit of parts: fifteen modular instruments, each explained in plain words, with the recommended fit-out for every target class.</p></a></div>
+    <div class="card link-card"><a class="cover" href="convoys.html"><h3>Convoys</h3><p class="dim small">Nothing flies alone: batch missions ride-share to each system, then disperse. Deployment convoys, then renewal convoys on every window.</p></a></div>
+    <div class="card link-card"><a class="cover" href="network.html"><h3>Network</h3><p class="dim small">Data relays, light lag and control: who decides what, at every distance, when a command takes hours to arrive.</p></a></div>
+    <div class="card link-card"><a class="cover" href="fleet.html"><h3>Fleet</h3><p class="dim small">How 1,300 satellites spread across 200 targets. Drag the tier dials and watch the whole fleet re-total.</p></a></div>
+    <div class="card link-card"><a class="cover" href="cadence.html"><h3>Replacement cadence</h3><p class="dim small">Satellites die. This page models how fast, and what the factory line would need to produce to keep every picket whole.</p></a></div>
+    <div class="card link-card"><a class="cover" href="about.html"><h3>About</h3><p class="dim small">What this is, what it leans on, every approximation named, and the licence.</p></a></div>
+  </div>
+
+  <h2>How a mission threads through</h2>
+  <p class="dim">The tools chain together. Pick a target from <a href="targets.html">the 200</a>, and its dossier hands you onward: the <a href="windows.html">next launch window</a> to get there, a <a href="orbit-lab.html">stable orbit</a> to park in, a <a href="builder.html">satellite build</a> that suits the destination, and the <a href="cadence.html">replacement drumbeat</a> that keeps its picket alive. Try <a href="object.html?id=enceladus">Enceladus</a>, <a href="object.html?id=psyche">Psyche</a> or <a href="object.html?id=sedna">Sedna</a> to see a full dossier.</p>
+</main>
+<footer id="site-footer"></footer>
+<script src="assets/astro.js"></script>
+<script src="data/objects-core.js"></script>
+<script src="data/objects-moons.js"></script>
+<script src="data/objects-asteroids.js"></script>
+<script src="data/objects-comets.js"></script>
+<script src="data/objects-tnos.js"></script>
+<script src="data/objects-moons-jupiter2.js"></script>
+<script src="data/objects-moons-saturn2.js"></script>
+<script src="data/objects-moons-un2.js"></script>
+<script src="data/objects-small2.js"></script>
+<script src="data/objects-tnos2.js"></script>
+<script src="data/objects-hypothesis.js"></script>
+<script src="data/objects.js"></script>
+<script src="data/sensors.js"></script>
+<script src="data/buses.js"></script>
+<script src="assets/core.js"></script>
+<script src="data/maps.js"></script>
+<script src="assets/art.js"></script>
+<script>
+VSS.mountChrome("index.html");
+(function () {
+  var objs = window.VSS_OBJECTS || [];
+  document.getElementById("stat-objects").textContent = VSS.fmt(objs.length);
+  var fleet = 0, moons = 0, funded = 0;
+  objs.forEach(function (o) {
+    fleet += VSS.tierCount(o);
+    if (o.cls === "moon") moons++;
+    if (o.tier !== "survey") funded++;
+  });
+  document.getElementById("stat-funded").textContent = VSS.fmt(funded);
+  document.getElementById("stat-fleet").textContent = VSS.fmt(fleet);
+  document.getElementById("stat-moons").textContent = VSS.fmt(moons);
+
+  // the family: real maps, each face linking to its dossier
+  var lineup = ["sun", "mercury", "venus", "earth", "moon", "mars", "jupiter", "saturn", "uranus", "neptune"];
+  document.getElementById("band").innerHTML = lineup.map(function (id) {
+    var o = window.VSS_BY_ID[id];
+    if (!o) return "";
+    return '<a class="family-face" href="object.html?id=' + id + '" title="' + o.name + '">' +
+      '<canvas width="150" height="150" data-obj="' + id + '"></canvas>' +
+      '<span class="faint">' + o.name + "</span></a>";
+  }).join("");
+  document.querySelectorAll("#band canvas[data-obj]").forEach(function (c) {
+    window.VSS_ART.paint(c, window.VSS_BY_ID[c.dataset.obj]);
+  });
+})();
+</script>
+</body>
+</html>

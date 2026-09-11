@@ -1,0 +1,47 @@
+{
+  "format": "aura-explainer/1",
+  "lattice": "aura-lattice/1.0.0",
+  "rows": 12,
+  "columns": 24,
+  "shell": 0,
+  "cell": 97,
+  "face": "I",
+  "story": [
+    {
+      "preset": "flat",
+      "duration": 6,
+      "camera": "front",
+      "caption": "Start with twelve rows and twenty-four columns. Every cell is a place you can return to."
+    },
+    {
+      "preset": "tube",
+      "duration": 6,
+      "camera": "quarter",
+      "caption": "Curl the matrix into a cylinder. Your records keep their original cell addresses."
+    },
+    {
+      "preset": "ring",
+      "duration": 6,
+      "camera": "quarter",
+      "caption": "Bend the cylinder until its ends meet. The same matrix now forms a ring torus."
+    },
+    {
+      "preset": "horn",
+      "duration": 6,
+      "camera": "quarter",
+      "caption": "Bring the inner opening to one shared point. This is the horn torus."
+    },
+    {
+      "preset": "nested",
+      "duration": 6,
+      "camera": "quarter",
+      "caption": "Seven shells share the same twelve by twenty-four structure. Choose your own meanings."
+    },
+    {
+      "preset": "body",
+      "duration": 6,
+      "camera": "quarter",
+      "caption": "Spread the shells into a body arrangement. Follow relationships across the same addresses."
+    }
+  ]
+}

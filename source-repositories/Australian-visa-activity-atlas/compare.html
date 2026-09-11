@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Compare visa and work-authorisation pathways by country and proposed activity.">
+  <title>Compare pathways | Australian Visa & Activity Atlas</title>
+  <link rel="icon" href="assets/favicon.png?v=20260821-4" type="image/png"><link rel="stylesheet" href="assets/styles.css?v=20260821-6">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><nav class="nav-shell" aria-label="Main navigation"><a class="brand" href="index.html"><img class="brand-mark" src="assets/favicon.png?v=20260821-4" alt=""><span>Visa &amp; Activity Atlas</span></a><button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="main-menu">Menu</button><div class="nav-links" id="main-menu" data-nav-links><a href="index.html">Explore</a><a href="guides.html">Guides</a><a href="compare.html" aria-current="page">Compare</a><a href="activities.html">Activities</a><a href="coverage.html">World</a><a href="prepare.html">Prepare</a></div></nav></header>
+  <main id="main">
+    <header class="page-hero hero-exchange"><div class="shell hero-copy"><p class="eyebrow">Activity-by-country matrix</p><h1>Find the quickest credible route for the real activity.</h1><p class="lead">Filter the country guides researched in depth so far by the thing you actually want to do. Start with the cleanest key, then see what a host, permit or specialist program can unlock.</p></div></header>
+    <section class="section">
+      <div class="shell">
+        <div class="notice notice-info" style="margin-bottom:1.2rem"><strong>Route logic:</strong> Easy entry is the first door. Speaking, teaching, selling or performing can need a second key. The matrix maps both so the journey does not shrink to the tourist lane.</div>
+        <form class="filter-panel no-print" role="search" aria-label="Comparison filters" onsubmit="return false">
+          <div class="field"><label for="query">Search</label><input id="query" type="search" placeholder="Country, route or keyword" data-filter-query></div>
+          <div class="field"><label for="activity">Activity</label><select id="activity" data-filter-activity></select></div>
+          <div class="field"><label for="status">Planning signal</label><select id="status" data-filter-status><option value="all">All signals</option><option value="low">Lower setup</option><option value="conditional">Conditional</option><option value="specialist">Specialist route</option><option value="confirm">Clarify exact route</option><option value="not-fit">Route still mapping</option></select></div>
+          <button class="button button-small" type="button" data-filter-clear>Clear</button>
+        </form>
+        <p data-result-count aria-live="polite"></p>
+        <div class="table-wrap" role="region" aria-label="Activity pathway comparison" tabindex="0">
+          <table class="compare-table">
+            <thead><tr><th scope="col">Country</th><th scope="col">Activity</th><th scope="col">Signal</th><th scope="col">Route and boundary</th><th scope="col">Next check</th></tr></thead>
+            <tbody data-compare-body></tbody>
+          </table>
+        </div>
+        <div class="button-row no-print"><button class="button button-ghost" type="button" data-print>Print comparison</button><a class="button" href="playbook.html">Build the activity brief</a></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="shell footer-grid"><div><h2>Find the key and move</h2><p>Every difficult route becomes a preparation problem: host, paperwork, timing, money or a better-fit program.</p></div><div class="footer-links"><strong>Next</strong><a href="activities.html">Define the activity</a><a href="playbook.html">Prepare the pitch</a></div><div class="footer-links"><strong>Evidence</strong><a href="methodology.html">Read the method</a><a href="coverage.html">World scope</a></div></div></footer>
+  <button class="back-to-top" type="button" data-back-to-top aria-label="Back to top">↑</button>
+  <script src="assets/data.js?v=20260821-5"></script><script src="assets/render.js?v=20260821-5"></script><script src="assets/app.js?v=20260821-5"></script>
+</body>
+</html>

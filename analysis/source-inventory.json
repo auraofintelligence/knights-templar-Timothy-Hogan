@@ -1,0 +1,394 @@
+[
+  {
+    "path": "reference-files/additional-visual-context/WhatsApp Image 2026-09-06 at 11.00.39 AM (2).jpeg",
+    "bytes": 106412,
+    "sha256": "61c4e5af161d4f70b28664004b3ce72e2ccc386096701e285eee926034e29e74"
+  },
+  {
+    "path": "reference-files/additional-visual-context/WhatsApp Image 2026-09-06 at 11.00.41 AM (2).jpeg",
+    "bytes": 186378,
+    "sha256": "1a9a2b43233d715c43d59b00d86f3332f49227e65d9cc271ef418aad5ca2fdbb"
+  },
+  {
+    "path": "reference-files/D01-constitutional-matrix/03 The Constitutional Matrix of Participation 2.pdf",
+    "bytes": 126800,
+    "sha256": "422988511a83dbd301aa1374189f72ab8552087a7a3c01c7dcc877704268b932",
+    "extraction": "analysis/extracted/D01-constitutional-matrix__03 The Constitutional Matrix of Participation 2.pdf.txt",
+    "sections": 3,
+    "text_chars": 10595
+  },
+  {
+    "path": "reference-files/D01-constitutional-matrix/03 The Constitutional Matrix of Participation.docx.md",
+    "bytes": 8325,
+    "sha256": "26486743202e4bed63a47be08dd7a9376d3000e959be1bb1cc9114c4063bed24",
+    "extraction": "analysis/extracted/D01-constitutional-matrix__03 The Constitutional Matrix of Participation.docx.md.txt",
+    "sections": 1,
+    "text_chars": 8313
+  },
+  {
+    "path": "reference-files/D01-constitutional-matrix/03 The Constitutional Matrix of Participation.pdf",
+    "bytes": 126800,
+    "sha256": "422988511a83dbd301aa1374189f72ab8552087a7a3c01c7dcc877704268b932",
+    "extraction": "analysis/extracted/D01-constitutional-matrix__03 The Constitutional Matrix of Participation.pdf.txt",
+    "sections": 3,
+    "text_chars": 10595
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (0).png",
+    "bytes": 997828,
+    "sha256": "983137665507daf73b5cf4eb66f3d2322deac27dc9af6f1a9bcba31fe923d26e"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (1).png",
+    "bytes": 1640329,
+    "sha256": "ac021f0418a6050668813fbcf449e6c7e7df91ed9967642def8f8e0f6ed0f6e1"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (10).png",
+    "bytes": 1630726,
+    "sha256": "f0bc1ae330036133d66e2ab287ad380acffff9504485e49622589d4ad6a0a9c9"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (11).png",
+    "bytes": 1360795,
+    "sha256": "c3498c139ced22de65dc7e4a21d678cc77c5cf733bd8c634aa2719752d8645f5"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (12).png",
+    "bytes": 385523,
+    "sha256": "b466fa631cd5bed1e949cc378fceec4887fa72737e7502d72ea1d6e750834297"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (13).png",
+    "bytes": 429176,
+    "sha256": "171542da57d50e0b6329cadb2568fce120efd832c998d9d7033d97a3e72b0b9a"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (14).png",
+    "bytes": 209244,
+    "sha256": "8dcb7714d8b4e06e7b1ef90d00c47543bc277937530d98a160ca16f331b83fac"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (15).png",
+    "bytes": 240424,
+    "sha256": "6df5c10bdecc6c114db257abcddb12f67d19228ccd9b1b93645096f77a38547f"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (16).png",
+    "bytes": 326921,
+    "sha256": "4540347c90b41e93683c4c1e82beced7df7ee6f3d90bfac6bcaf0ac9e42210fe"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (17).png",
+    "bytes": 549735,
+    "sha256": "8366658bf749e0d15ddb5c5fe612c42bd21864e5fc1837e720ef76963362eeec"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (18).png",
+    "bytes": 748876,
+    "sha256": "67fb6b298c103c382b7117a978dde3344eff48eabbe18437364327cdec110c77"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (19).png",
+    "bytes": 130552,
+    "sha256": "b560ccea4a06d324e325b4423008b781e977444ec2cedf713b5b1ecb73734983"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (2).png",
+    "bytes": 431478,
+    "sha256": "0547ef1edfd30053ec58daa3c3a58cac4feac5bf6abd2bcabc17f4fa0da32b00"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (20).png",
+    "bytes": 435558,
+    "sha256": "2dfe13599d82b1229d623f3d4dc1be607fc670284e5eb24486db388ac746dd46"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (21).png",
+    "bytes": 1295827,
+    "sha256": "085b874fb7fa3f4f2ec45c616352018db0d460dfe36fbb058f0d0ea508b23615"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (22).png",
+    "bytes": 763855,
+    "sha256": "9d1ad02b0814709dd8e5f31480e735560cc98fd6b4f397c69b7614d600e375c4"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (23).png",
+    "bytes": 1011515,
+    "sha256": "54440655b37c51b3468a06f2af02ee455b4f3d8904afc911fa350ef877604ac3"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (24).png",
+    "bytes": 314999,
+    "sha256": "838a6c7909617605e61d9fbd1c79d0cf2e40f4102a8a6fff1d4781c6b829dadb"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (25).png",
+    "bytes": 2186546,
+    "sha256": "098eff685e6c62d3039fee4535eced54571b6e92c6b0336f520c05e9da556926"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (26).png",
+    "bytes": 688265,
+    "sha256": "7ada1858be5b00c5882ddd58c3eaf37f2ef4cab039b9e7f9e2d39f193373371e"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (3).png",
+    "bytes": 413248,
+    "sha256": "01e7c92859016ea6d06f6c6d913adb1b034f0c91c6adeb072561ae908d57b618"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (4).png",
+    "bytes": 309706,
+    "sha256": "7f929dd644af0ed9f6846c50a0586daac39e20a4f21005755820a5e971965c4a"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (5).png",
+    "bytes": 118713,
+    "sha256": "5e7b98d97be36dfabda478c8bfc3b59117eb865cff0173dddcf02e287dc31e69"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (6).png",
+    "bytes": 435525,
+    "sha256": "4a27fbe5f70c27e24fda0b6603439e42d7d452cf9af065653b32558c75af0ef7"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (7).png",
+    "bytes": 432806,
+    "sha256": "3ab318d2a1e4308d0f67739ed2000bac61ccdd71442f5f023886c7b6f4434633"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (8).png",
+    "bytes": 293566,
+    "sha256": "cc6e4ccb8a68de322e07c9423332dbf16cbae1fae8a93aa8e0266cc16effa1e2"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/slide-renders/Version7 Aura of Intelligence 2023 July.pptx (9).png",
+    "bytes": 333284,
+    "sha256": "9143abcc02d02b3d9fa0653d5ca1d1988bf6ec781ecf2b003339b9a7339a1656"
+  },
+  {
+    "path": "reference-files/D02-aura-deck/Version7 Aura of Intelligence 2023 July.pdf",
+    "bytes": 5258366,
+    "sha256": "65945eb96e4857b53506ee661d44e24b66b2522d889eb7f8429628f1d7bca052",
+    "extraction": "analysis/extracted/D02-aura-deck__Version7 Aura of Intelligence 2023 July.pdf.txt",
+    "sections": 28,
+    "text_chars": 9002
+  },
+  {
+    "path": "reference-files/D02-aura-deck/Version7_Aura_of_Intelligence_2023_July.md",
+    "bytes": 15092,
+    "sha256": "2d26c259d8ef049bd2909e68028daf329650d38ca3b73fdafa670645a4ed0e6d",
+    "extraction": "analysis/extracted/D02-aura-deck__Version7_Aura_of_Intelligence_2023_July.md.txt",
+    "sections": 1,
+    "text_chars": 14631
+  },
+  {
+    "path": "reference-files/D03-work-and-education/Luke Work and Education.pdf",
+    "bytes": 1161639,
+    "sha256": "02cc2108dd4c3f2ed0e3ee51d33a79779ab2d5d49bf8e5b43d78f9dc934f474a",
+    "extraction": "analysis/extracted/D03-work-and-education__Luke Work and Education.pdf.txt",
+    "sections": 2,
+    "text_chars": 429
+  },
+  {
+    "path": "reference-files/D04-aura-geode-to-macro/AURA_GEODE_to_MACRO.md",
+    "bytes": 101300,
+    "sha256": "582ab951dd7f3f592dfca9ec4b256a271ac33acd466357186591a352f955537b",
+    "extraction": "analysis/extracted/D04-aura-geode-to-macro__AURA_GEODE_to_MACRO.md.txt",
+    "sections": 1,
+    "text_chars": 100101
+  },
+  {
+    "path": "reference-files/D05-fair-go-ai-age/A Fair Go for the AI Age_ Federated Sovereign Compute for Australian Communities.docx",
+    "bytes": 37106,
+    "sha256": "7c9cd07ab21c7805b89f1423ebf4dd81af0bd8b3b26eb81d8c3a7b817726cd6f",
+    "extraction": "analysis/extracted/D05-fair-go-ai-age__A Fair Go for the AI Age_ Federated Sovereign Compute for Australian Communities.docx.txt",
+    "sections": 1,
+    "text_chars": 56669
+  },
+  {
+    "path": "reference-files/D05-fair-go-ai-age/A Fair Go for the AI Age_ Postcode-Level Sovereign Compute as Shared National Infrastructure.docx",
+    "bytes": 44117,
+    "sha256": "ccc0b69b4044892cbd5a50eed16e1c47656db8db03b6630d62a96836967d2c8d",
+    "extraction": "analysis/extracted/D05-fair-go-ai-age__A Fair Go for the AI Age_ Postcode-Level Sovereign Compute as Shared National Infrastructure.docx.txt",
+    "sections": 1,
+    "text_chars": 53125
+  },
+  {
+    "path": "reference-files/D06-eggs-in-one-basket/Do Not Put All Our Eggs in One Basket.docx",
+    "bytes": 56346,
+    "sha256": "5950f977902111ce78741934fb7f2f4477f92465f0553d8e3b30fb19a369f7e6",
+    "extraction": "analysis/extracted/D06-eggs-in-one-basket__Do Not Put All Our Eggs in One Basket.docx.txt",
+    "sections": 1,
+    "text_chars": 63479
+  },
+  {
+    "path": "reference-files/D06-eggs-in-one-basket/Do Not Put All Our Eggs in One Basket.md",
+    "bytes": 65731,
+    "sha256": "7eeff1db456c09da15e7737252891a60482308b81987f5b9637cef0be3151dfc",
+    "extraction": "analysis/extracted/D06-eggs-in-one-basket__Do Not Put All Our Eggs in One Basket.md.txt",
+    "sections": 1,
+    "text_chars": 65586
+  },
+  {
+    "path": "reference-files/D07-vuvale-union/Fiji_Australia_Vuvale_Union_Submission_Luke_Nathan_Hayes_2026.docx",
+    "bytes": 52947,
+    "sha256": "f62ae877f90e437583d9ecc2db29f3b11f20253c05b6feda573d7e694c3e8af0",
+    "extraction": "analysis/extracted/D07-vuvale-union__Fiji_Australia_Vuvale_Union_Submission_Luke_Nathan_Hayes_2026.docx.txt",
+    "sections": 1,
+    "text_chars": 35050
+  },
+  {
+    "path": "reference-files/D08-ocean-of-peace/Ocean_of_Peace_Alliance_Veitacini_Treaty_Submission_Luke_Nathan_Hayes_2026.docx",
+    "bytes": 40964,
+    "sha256": "71532df9fdd542df9a77506608746f187f71c82ed01b35ffee3e7f25c500060a",
+    "extraction": "analysis/extracted/D08-ocean-of-peace__Ocean_of_Peace_Alliance_Veitacini_Treaty_Submission_Luke_Nathan_Hayes_2026.docx.txt",
+    "sections": 1,
+    "text_chars": 13699
+  },
+  {
+    "path": "reference-files/D09-space-weather-ifttt/Space Weather Data IFTTT.pdf",
+    "bytes": 128327,
+    "sha256": "9a7546bcb44d156158dd9d2c52bbb608d92dba3c7621e46363c5cd78b99ab55b",
+    "extraction": "analysis/extracted/D09-space-weather-ifttt__Space Weather Data IFTTT.pdf.txt",
+    "sections": 13,
+    "text_chars": 26630
+  },
+  {
+    "path": "reference-files/D09-space-weather-ifttt/Space_Weather_Data_IFTTT.md",
+    "bytes": 21138,
+    "sha256": "136bb65105c9bd7725116a4dbdfba11098ac946cc94e4a15c4df4d24d249cd5f",
+    "extraction": "analysis/extracted/D09-space-weather-ifttt__Space_Weather_Data_IFTTT.md.txt",
+    "sections": 1,
+    "text_chars": 20837
+  },
+  {
+    "path": "reference-files/D10-super-alignment/Super Alignment of Artificial Super Intelligence.docx",
+    "bytes": 2195018,
+    "sha256": "f7396039ad33a6333d36637b7b386c50f17c9eaabcc163fb1ce63b7078459f3f",
+    "extraction": "analysis/extracted/D10-super-alignment__Super Alignment of Artificial Super Intelligence.docx.txt",
+    "sections": 1,
+    "text_chars": 17422
+  },
+  {
+    "path": "reference-files/D11-aura-of-dementia/Clinical_Research_Path_for_Aura_of_Dementia.md",
+    "bytes": 74290,
+    "sha256": "41f9c3083a6a8db2121c86627a6217cf57a772a51f868a2585da98a051c74bea",
+    "extraction": "analysis/extracted/D11-aura-of-dementia__Clinical_Research_Path_for_Aura_of_Dementia.md.txt",
+    "sections": 1,
+    "text_chars": 73840
+  },
+  {
+    "path": "reference-files/D12-local-government-funding/Local_Government_Funding_Inquiry_Submission.md",
+    "bytes": 36631,
+    "sha256": "ac71b14806220ac4c06b3b7fc8c74a050e9ead1a9fb09dd4054eeee31550ea74",
+    "extraction": "analysis/extracted/D12-local-government-funding__Local_Government_Funding_Inquiry_Submission.md.txt",
+    "sections": 1,
+    "text_chars": 36396
+  },
+  {
+    "path": "reference-files/I01-deeper-meaning/WhatsApp Image 2026-09-06 at 4.25.50 PM (1).jpeg",
+    "bytes": 283830,
+    "sha256": "be3c44c8028504492c7e9d73598865098a1dae3b584cdf17c09928c82cd41259"
+  },
+  {
+    "path": "reference-files/I01-deeper-meaning/WhatsApp Image 2026-09-06 at 4.25.50 PM.jpeg",
+    "bytes": 221685,
+    "sha256": "ed0be9ff6540f6c3fa02b68cb6a80e694c461ee3af7bb17b0ce85b1354df2d0c"
+  },
+  {
+    "path": "reference-files/I02-internet-of-good-conscience/WhatsApp Image 2026-09-06 at 4.25.50 PM (2).jpeg",
+    "bytes": 249602,
+    "sha256": "43e851d758880735c550d8dd3297480095eb8e8d91946a2cb118a50bb5845308"
+  },
+  {
+    "path": "reference-files/I03-alpha-infinity/WhatsApp Image 2026-09-06 at 11.00.42 AM (2).jpeg",
+    "bytes": 117287,
+    "sha256": "4675020e03bb0bd82611d5fdb07e45169ecbb81e8af3a113c908290e0dd11c92"
+  },
+  {
+    "path": "reference-files/provided-analysis/Aura_Conversation_and_Ecosystem_Analysis_2026-09-11.md",
+    "bytes": 106430,
+    "sha256": "d8b43461ece522cc0486f4e41756c50656c20f018e4fc3ac5ce88bd0f8ed3890",
+    "extraction": "analysis/extracted/provided-analysis__Aura_Conversation_and_Ecosystem_Analysis_2026-09-11.md.txt",
+    "sections": 1,
+    "text_chars": 106006
+  },
+  {
+    "path": "reference-files/provided-analysis/Evolution_of_a_Sovereign_Ecosystem.png",
+    "bytes": 5218127,
+    "sha256": "fdd6ba49d6535bd0e7a092b51f20003874e6687fbcc09ef58c9628a99fb1323b"
+  },
+  {
+    "path": "reference-files/Queens-Venture/500 Female Founder Start-ups.pptx",
+    "bytes": 14933231,
+    "sha256": "783a953460c0446e6905749ee9eb22c7969b7070fa9e4b544d59a8e9e6642167",
+    "embedded_media": 18,
+    "extraction": "analysis/extracted/Queens-Venture__500 Female Founder Start-ups.pptx.txt",
+    "sections": 16,
+    "text_chars": 5450
+  },
+  {
+    "path": "reference-files/Queens-Venture/500 Queens facts and figures.pptx",
+    "bytes": 4578927,
+    "sha256": "5d48d9168f183e12ef7496b9486efef548fff1ec6dc3ead8c2661339d4b0e573",
+    "embedded_media": 22,
+    "extraction": "analysis/extracted/Queens-Venture__500 Queens facts and figures.pptx.txt",
+    "sections": 15,
+    "text_chars": 8684
+  },
+  {
+    "path": "reference-files/Queens-Venture/500 Queens Profiling.pptx",
+    "bytes": 4596111,
+    "sha256": "0dbfd0959fc15eb50b0b69002edfa9ced06ff4fe042af1e46cf0be8a7e459610",
+    "embedded_media": 24,
+    "extraction": "analysis/extracted/Queens-Venture__500 Queens Profiling.pptx.txt",
+    "sections": 19,
+    "text_chars": 10272
+  },
+  {
+    "path": "reference-files/Queens-Venture/500 Queens VC NEW Long.pptx",
+    "bytes": 7686277,
+    "sha256": "56c91230a9474c54c7cbc15371a776c968048a045c7ae7554717a10aea22f854",
+    "embedded_media": 30,
+    "extraction": "analysis/extracted/Queens-Venture__500 Queens VC NEW Long.pptx.txt",
+    "sections": 20,
+    "text_chars": 11242
+  },
+  {
+    "path": "reference-files/Queens-Venture/500 Queens.pptx",
+    "bytes": 5076999,
+    "sha256": "cb5d48bc30d9d9361c76d7f450413ebd91ff9a1376e13267726df3b653ff4256",
+    "embedded_media": 24,
+    "extraction": "analysis/extracted/Queens-Venture__500 Queens.pptx.txt",
+    "sections": 15,
+    "text_chars": 5104
+  },
+  {
+    "path": "reference-files/Queens-Venture/Luke’s 2022 Toolbox.pptx",
+    "bytes": 9390530,
+    "sha256": "93bdc394605578cbfca2c4603dde85fa8e1e7b9cf84b3ec0bdea6ef51aa3ea99",
+    "embedded_media": 15,
+    "extraction": "analysis/extracted/Queens-Venture__Luke’s 2022 Toolbox.pptx.txt",
+    "sections": 12,
+    "text_chars": 3765
+  },
+  {
+    "path": "reference-files/Queens-Venture/What Would You Choose 2023.pdf",
+    "bytes": 1608716,
+    "sha256": "585951355461b897f4d7f2a20d1f420ce01588ced2b8163afb54dce86cd779bf",
+    "extraction": "analysis/extracted/Queens-Venture__What Would You Choose 2023.pdf.txt",
+    "sections": 20,
+    "text_chars": 6553
+  },
+  {
+    "path": "reference-files/T01-tim-hogan-interview/Pasted markdown(1).md",
+    "bytes": 176206,
+    "sha256": "a223455685b7d9981e19d34df868e2efd46de16b6b7d1f99c292492153c7382f",
+    "extraction": "analysis/extracted/T01-tim-hogan-interview__Pasted markdown(1).md.txt",
+    "sections": 1,
+    "text_chars": 135129
+  }
+]

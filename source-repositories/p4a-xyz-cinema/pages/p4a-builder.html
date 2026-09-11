@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>P4A Markdown Builder | P4A</title>
+  <meta name="description" content="A browser-local P4A Markdown builder for self-sovereign civic twin, project, ledger, legal and place records.">
+  <meta name="theme-color" content="#3F0F75">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../styles.css?v=20260707-cinema">
+</head>
+<body data-theme="royal" data-page="builder">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+  <a class="brand" href="../index.html" aria-label="P4A home"><span class="brand-mark">P4A</span><span class="brand-text"><strong>Purple Party</strong><span>for Australia</span></span></a>
+  <nav class="site-nav" data-nav aria-label="Primary">
+    <a href="../pages/rabbit-hole.html">Map</a>
+    <a href="../pages/architecture.html">System</a>
+    <a href="../pages/twinkle.html">Twinkle</a>
+    <a href="../pages/states.html">States</a>
+    <a href="../pages/starter-field-kit.html">Start local</a>
+    <a href="../pages/deployment-gear.html">Gear</a>
+  </nav>
+  <button class="index-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-index"><span class="index-toggle-lines" aria-hidden="true"><i></i><i></i><i></i></span><span class="index-toggle-label">Index</span></button>
+</header>
+  <main id="main" class="builder-main">
+    <section class="hero page-hero builder-hero compact-builder-hero">
+      <div class="hero-image"><img loading="eager" fetchpriority="high" decoding="async" src="../assets/p4a-map-card.webp" alt="Purple civic map for the P4A Markdown builder"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow" data-builder-eyebrow>Markdown builder</p>
+        <h1 data-builder-title>P4A Markdown Builder</h1>
+        <p class="hero-copy">Create a browser-local Markdown draft that the record holder controls. It can help authorised agents act with context, but sharing, publishing or changing the record stays with the person or group that owns it.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#builder">Open builder</a>
+          <a class="button button-secondary" href="civic-twin-builders.html">Builder suite</a>
+          <a class="button button-secondary" href="markdown-with-ai.html">Markdown with AI</a>
+        </div>
+        <nav class="builder-nav-strip" aria-label="Builder sequence">
+          <a href="civic-twin-builders.html" data-builder-prev>Previous: suite</a>
+          <a href="civic-twin-builders.html">All builders</a>
+          <a href="civic-twin-builders.html" data-builder-next>Next: suite</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section builder-section" id="builder">
+      <div class="builder-layout">
+        <form class="builder-form feature-panel reveal" data-p4a-builder="private-noticeboard" data-p4a-dynamic-builder>
+          <p class="eyebrow"><span data-builder-file>builder-output.md</span></p>
+          <h2 data-builder-title>P4A Markdown Builder</h2>
+          <p class="builder-form-note">Source pattern: <span data-builder-source>selected builder route</span>.</p>
+          <p class="builder-form-note" data-builder-guidance hidden></p>
+          <p class="builder-form-note">All fields are optional. You can skip any field for any reason, without needing to state the reason.</p>
+
+          <label data-builder-field="record_title">Private board name
+            <input name="record_title" type="text" placeholder="What life area, project, routine or private board needs a name?">
+          </label>
+          <label data-builder-field="boundary_label">Private board boundary
+            <input name="boundary_label" type="text" placeholder="Is this about self, home, study, health, care, repairs, admin, habits or another life area?">
+          </label>
+          <label data-builder-field="boundary_kind">Board boundary type
+            <select name="boundary_kind">
+              <option value="private-home">Private home or person</option>
+              <option value="fractal">Fractal / context dependent</option>
+              <option value="person_or_group">Person or group</option>
+              <option value="project_or_event">Project or event</option>
+              <option value="community">Community</option>
+              <option value="council_or_electorate">Council or electorate</option>
+              <option value="bioregion_or_catchment">Bioregion or catchment</option>
+              <option value="living_boundary">Living boundary</option>
+              <option value="jurisdiction_or_project">Jurisdiction or project</option>
+            </select>
+          </label>
+          <label data-builder-field="purpose">What the board helps with
+            <textarea name="purpose" rows="3" placeholder="What should this board help you notice, sort, remember, plan or ask an agent to do?"></textarea>
+          </label>
+          <fieldset class="builder-checks" data-builder-fieldset="focus_areas">
+            <legend data-builder-legend="focus_areas">Private board lanes</legend>
+            <div class="builder-check-grid" data-builder-focus-options>
+              <label><input type="checkbox" name="focus_areas" value="public_summary"> public summary</label>
+              <label><input type="checkbox" name="focus_areas" value="private_boundary"> private boundary</label>
+              <label><input type="checkbox" name="focus_areas" value="human_review"> human review</label>
+            </div>
+          </fieldset>
+          <label data-builder-field="public_summary">Optional shareable summary
+            <textarea name="public_summary" rows="3" placeholder="If a trusted helper saw only one safe summary, what could it say?"></textarea>
+          </label>
+          <label data-builder-field="private_boundary">Private board limits
+            <textarea name="private_boundary" rows="4" placeholder="What should stay private, off-limits to agents, or separate from any shared support lane?"></textarea>
+          </label>
+          <label data-builder-field="evidence_notes">Signals and reminders
+            <textarea name="evidence_notes" rows="4" placeholder="What dates, recurring signals, receipts, notes or context might help the board stay useful?"></textarea>
+          </label>
+          <label data-builder-field="reviewer">Trusted helper, if any
+            <input name="reviewer" type="text" placeholder="Who, if anyone, is allowed to help review this private board?">
+          </label>
+          <label data-builder-field="next_handoff">Agent actions from board
+            <textarea name="next_handoff" rows="3" placeholder="What can an agent remind, draft, organise or prepare, and what needs approval first?"></textarea>
+          </label>
+          <label data-builder-field="consent_scope">Sharing rules
+            <textarea name="consent_scope" rows="3" placeholder="What stays private, what could be shared with a helper, and what needs fresh permission?"></textarea>
+          </label>
+          <label data-builder-field="correction_path">Owner cleanup path
+            <textarea name="correction_path" rows="3" placeholder="How should stale items, wrong notes, withdrawals or changed priorities be cleaned up?"></textarea>
+          </label>
+          <div class="builder-control-grid">
+            <label data-builder-field="visibility">Visibility
+              <select name="visibility">
+                <option value="private">Private</option>
+                <option value="permissioned">Permissioned</option>
+                <option value="public_draft">Public draft</option>
+              </select>
+            </label>
+            <label data-builder-field="consent_model">Consent model
+              <select name="consent_model">
+                <option value="plain-language-purpose-bound-revocable">Purpose-bound and revocable</option>
+                <option value="owner_review_required">Owner review required</option>
+                <option value="local_steward_review">Local steward review</option>
+                <option value="collective_authority_required">Collective authority required</option>
+              </select>
+            </label>
+            <label data-builder-field="review_status">Review status
+              <select name="review_status">
+                <option value="needs_human_review">Needs human review</option>
+                <option value="locally_reviewed">Locally reviewed</option>
+                <option value="source_checked">Source checked</option>
+                <option value="ready_for_public_summary">Ready for public summary</option>
+              </select>
+            </label>
+            <label data-builder-field="confidence">Confidence
+              <select name="confidence">
+                <option value="draft">Draft</option>
+                <option value="medium">Medium</option>
+                <option value="high_after_review">High after review</option>
+              </select>
+            </label>
+          </div>
+        </form>
+
+        <aside class="builder-output-panel feature-panel reveal" aria-label="Markdown output">
+          <p class="eyebrow">Markdown output</p>
+          <h2 data-builder-file>builder-output.md</h2>
+          <p data-builder-guardrail>This preview is generated in your browser. Downloading it creates a local file; it does not publish anything.</p>
+          <p>New to .md files? <a href="markdown-with-ai.html">Open the P4A Markdown with AI page</a>. It links out to the fuller external guide when you want the slow version.</p>
+          <textarea class="builder-output" data-builder-output readonly rows="26" aria-label="Generated Markdown"></textarea>
+          <div class="builder-actions">
+            <button class="button button-primary" type="button" data-copy-builder>Copy Markdown</button>
+            <button class="button button-secondary" type="button" data-download-builder>Download .md</button>
+            <button class="button button-secondary" type="button" data-clear-builder>Clear draft</button>
+          </div>
+          <p class="builder-status" data-builder-status aria-live="polite">Ready.</p>
+        </aside>
+      </div>
+
+      <nav class="builder-nav-strip builder-nav-bottom" aria-label="Builder sequence">
+        <a href="civic-twin-builders.html" data-builder-prev>Previous: suite</a>
+        <a href="civic-twin-builders.html">All builders</a>
+        <a href="civic-twin-builders.html" data-builder-next>Next: suite</a>
+      </nav>
+    </section>
+  </main>
+  <footer class="site-footer"><div><p>P4A is currently a proposed movement and drafting project. Content is exploratory unless explicitly marked as adopted policy.</p><p>p4a.xyz - Less splash, more class.</p></div><nav class="footer-links" aria-label="Footer links"><a href="site-map.html">Site map</a></nav></footer>
+  <script src="../script.js?v=20260707-cinema"></script>
+  <script src="../assets/p4a-builders.js?v=20260609-md-ai-p4a"></script>
+<script src="../assets/site-nav.js?v=20260707-cinema"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+# Preserve byte-for-byte source records, including their original line endings.
+reference-files/** -text
+source-repositories/** -text
+public/downloads/** -text

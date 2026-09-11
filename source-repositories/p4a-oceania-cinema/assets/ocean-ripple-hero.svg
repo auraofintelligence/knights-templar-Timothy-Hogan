@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Abstract ocean artwork: ripples spreading from an island point on Australia's east coast across a field of glowing island nodes">
+  <defs>
+    <radialGradient id="sea" cx="27%" cy="66%" r="115%">
+      <stop offset="0%" stop-color="#0d2b4c"/>
+      <stop offset="38%" stop-color="#0a1c38"/>
+      <stop offset="72%" stop-color="#071226"/>
+      <stop offset="100%" stop-color="#030811"/>
+    </radialGradient>
+    <radialGradient id="aurora" cx="72%" cy="12%" r="70%">
+      <stop offset="0%" stop-color="#6430bb" stop-opacity=".34"/>
+      <stop offset="45%" stop-color="#32115f" stop-opacity=".16"/>
+      <stop offset="100%" stop-color="#32115f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="reefglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9be9ff" stop-opacity=".95"/>
+      <stop offset="45%" stop-color="#21d6ff" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#21d6ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="goldglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff7d6" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#ffe07a" stop-opacity=".8"/>
+      <stop offset="100%" stop-color="#ffe07a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="violetglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e4c9ff" stop-opacity=".95"/>
+      <stop offset="45%" stop-color="#9f49ff" stop-opacity=".5"/>
+      <stop offset="100%" stop-color="#9f49ff" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .ring { fill: none; stroke: #21d6ff; }
+      .pulse-a, .pulse-b, .pulse-c { transform-box: fill-box; transform-origin: center; }
+      .pulse-a { animation: breathe 9s ease-in-out infinite; }
+      .pulse-b { animation: breathe 12s ease-in-out 2.2s infinite; }
+      .pulse-c { animation: breathe 15s ease-in-out 4.6s infinite; }
+      .origin-halo { animation: halo 6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      @keyframes breathe { 0%, 100% { opacity: .16; } 50% { opacity: .52; } }
+      @keyframes halo { 0%, 100% { opacity: .5; transform: scale(1); } 50% { opacity: .9; transform: scale(1.18); } }
+      @media (prefers-reduced-motion: reduce) { .pulse-a, .pulse-b, .pulse-c, .origin-halo { animation: none; } }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sea)"/>
+  <rect width="1600" height="900" fill="url(#aurora)"/>
+
+  <!-- faint graticule -->
+  <g stroke="#97ceff" stroke-opacity=".06" fill="none">
+    <path d="M 0 150 Q 800 110 1600 150"/>
+    <path d="M 0 330 Q 800 290 1600 330"/>
+    <path d="M 0 510 Q 800 470 1600 510"/>
+    <path d="M 0 690 Q 800 650 1600 690"/>
+    <path d="M 260 0 Q 300 450 260 900"/>
+    <path d="M 620 0 Q 660 450 620 900"/>
+    <path d="M 980 0 Q 1020 450 980 900"/>
+    <path d="M 1340 0 Q 1380 450 1340 900"/>
+  </g>
+
+  <!-- scattered stars -->
+  <g fill="#dff4ff" fill-opacity=".32">
+    <circle cx="180" cy="70" r="1.4"/><circle cx="520" cy="40" r="1.1"/><circle cx="880" cy="110" r="1.5"/>
+    <circle cx="1180" cy="60" r="1.2"/><circle cx="1420" cy="140" r="1.6"/><circle cx="1520" cy="60" r="1.1"/>
+    <circle cx="1300" cy="240" r="1.2"/><circle cx="1500" cy="330" r="1.4"/><circle cx="1360" cy="560" r="1.2"/>
+    <circle cx="1480" cy="720" r="1.5"/><circle cx="1150" cy="800" r="1.2"/><circle cx="960" cy="640" r="1.1"/>
+    <circle cx="120" cy="300" r="1.2"/><circle cx="60" cy="140" r="1.3"/><circle cx="720" cy="180" r="1.1"/>
+  </g>
+
+  <!-- Australia, deliberately off-centre and cropped at the left edge -->
+  <path d="M -180 470 L -60 430 L 40 425 L 120 440 L 190 462 L 255 480 L 320 500 L 385 528 L 425 552 L 432 585 L 405 625 L 370 668 L 320 715 L 250 748 L 160 752 L 60 730 L -30 690 L -120 640 L -180 600 Z"
+        fill="#071a30" fill-opacity=".85" stroke="#21d6ff" stroke-opacity=".22" stroke-width="2"/>
+  <!-- island off the coast, unnamed -->
+  <ellipse cx="446" cy="566" rx="9" ry="4.5" fill="#0a2440" stroke="#ffe07a" stroke-opacity=".4" stroke-width="1"/>
+
+  <!-- ripples from the unnamed island -->
+  <g class="ring" stroke-width="1.6">
+    <circle cx="446" cy="566" r="46" stroke-opacity=".5"/>
+    <circle cx="446" cy="566" r="96" stroke-opacity=".4"/>
+    <circle class="pulse-a" cx="446" cy="566" r="158" stroke-opacity=".34"/>
+    <circle cx="446" cy="566" r="232" stroke-opacity=".26"/>
+    <circle class="pulse-b" cx="446" cy="566" r="318" stroke-opacity=".2"/>
+    <circle cx="446" cy="566" r="416" stroke-opacity=".15"/>
+    <circle class="pulse-c" cx="446" cy="566" r="526" stroke-opacity=".11"/>
+    <circle cx="446" cy="566" r="648" stroke-opacity=".08"/>
+    <circle cx="446" cy="566" r="782" stroke-opacity=".055"/>
+    <circle cx="446" cy="566" r="928" stroke-opacity=".04"/>
+    <circle cx="446" cy="566" r="1086" stroke-opacity=".028"/>
+    <circle cx="446" cy="566" r="1256" stroke-opacity=".018"/>
+  </g>
+  <!-- one violet accent ring -->
+  <circle cx="446" cy="566" r="372" fill="none" stroke="#9f49ff" stroke-opacity=".14" stroke-width="1.2"/>
+
+  <!-- connection arcs, whisper-quiet -->
+  <g fill="none" stroke="#21d6ff" stroke-opacity=".1" stroke-width="1.1">
+    <path d="M 446 566 Q 350 400 330 285"/>
+    <path d="M 446 566 Q 480 380 470 250"/>
+    <path d="M 446 566 Q 540 440 565 350"/>
+    <path d="M 446 566 Q 590 430 680 330"/>
+    <path d="M 446 566 Q 660 480 745 415"/>
+    <path d="M 446 566 Q 660 350 810 295"/>
+    <path d="M 446 566 Q 600 260 780 150"/>
+    <path d="M 446 566 Q 430 320 420 105"/>
+    <path d="M 446 566 Q 800 240 1090 330"/>
+    <path d="M 446 566 Q 720 620 905 370"/>
+    <path d="M 446 566 Q 560 760 660 845"/>
+    <path d="M 446 566 Q 950 180 1010 60"/>
+    <path d="M 446 566 Q 980 560 1420 430"/>
+  </g>
+
+  <!-- island nodes: reef, with violet and gold accents -->
+  <g>
+    <circle cx="330" cy="285" r="26" fill="url(#reefglow)" opacity=".5"/><circle cx="330" cy="285" r="5.5" fill="#bfe9ff"/>
+    <circle cx="470" cy="250" r="20" fill="url(#reefglow)" opacity=".45"/><circle cx="470" cy="250" r="4.5" fill="#bfe9ff"/>
+    <circle cx="565" cy="350" r="18" fill="url(#reefglow)" opacity=".45"/><circle cx="565" cy="350" r="4" fill="#bfe9ff"/>
+    <circle cx="525" cy="425" r="16" fill="url(#violetglow)" opacity=".5"/><circle cx="525" cy="425" r="3.8" fill="#e4c9ff"/>
+    <circle cx="680" cy="330" r="22" fill="url(#reefglow)" opacity=".5"/><circle cx="680" cy="330" r="5" fill="#bfe9ff"/>
+    <circle cx="745" cy="415" r="17" fill="url(#reefglow)" opacity=".45"/><circle cx="745" cy="415" r="4" fill="#bfe9ff"/>
+    <circle cx="810" cy="295" r="17" fill="url(#reefglow)" opacity=".45"/><circle cx="810" cy="295" r="4" fill="#bfe9ff"/>
+    <circle cx="745" cy="300" r="12" fill="url(#violetglow)" opacity=".4"/><circle cx="745" cy="300" r="3" fill="#e4c9ff"/>
+    <circle cx="665" cy="235" r="14" fill="url(#reefglow)" opacity=".4"/><circle cx="665" cy="235" r="3.4" fill="#bfe9ff"/>
+    <circle cx="780" cy="150" r="18" fill="url(#reefglow)" opacity=".45"/><circle cx="780" cy="150" r="4.2" fill="#bfe9ff"/>
+    <circle cx="505" cy="175" r="12" fill="url(#reefglow)" opacity=".4"/><circle cx="505" cy="175" r="3" fill="#bfe9ff"/>
+    <circle cx="420" cy="105" r="16" fill="url(#reefglow)" opacity=".4"/><circle cx="420" cy="105" r="3.8" fill="#bfe9ff"/>
+    <circle cx="255" cy="100" r="13" fill="url(#violetglow)" opacity=".4"/><circle cx="255" cy="100" r="3.2" fill="#e4c9ff"/>
+    <circle cx="565" cy="80" r="14" fill="url(#reefglow)" opacity=".4"/><circle cx="565" cy="80" r="3.4" fill="#bfe9ff"/>
+    <circle cx="300" cy="55" r="11" fill="url(#reefglow)" opacity=".35"/><circle cx="300" cy="55" r="2.8" fill="#bfe9ff"/>
+    <circle cx="800" cy="235" r="11" fill="url(#reefglow)" opacity=".35"/><circle cx="800" cy="235" r="2.8" fill="#bfe9ff"/>
+    <circle cx="795" cy="390" r="11" fill="url(#reefglow)" opacity=".35"/><circle cx="795" cy="390" r="2.8" fill="#bfe9ff"/>
+    <circle cx="905" cy="370" r="16" fill="url(#violetglow)" opacity=".45"/><circle cx="905" cy="370" r="3.8" fill="#e4c9ff"/>
+    <circle cx="1090" cy="330" r="20" fill="url(#violetglow)" opacity=".5"/><circle cx="1090" cy="330" r="4.6" fill="#e4c9ff"/>
+    <circle cx="1010" cy="60" r="14" fill="url(#reefglow)" opacity=".35"/><circle cx="1010" cy="60" r="3.4" fill="#bfe9ff"/>
+    <circle cx="1420" cy="430" r="12" fill="url(#violetglow)" opacity=".35"/><circle cx="1420" cy="430" r="3" fill="#e4c9ff"/>
+    <circle cx="660" cy="845" r="24" fill="url(#reefglow)" opacity=".5"/><circle cx="660" cy="845" r="5.2" fill="#bfe9ff"/>
+    <circle cx="505" cy="520" r="10" fill="url(#reefglow)" opacity=".35"/><circle cx="505" cy="520" r="2.6" fill="#bfe9ff"/>
+  </g>
+
+  <!-- the origin: a small gold point, unnamed -->
+  <circle class="origin-halo" cx="446" cy="566" r="26" fill="url(#goldglow)"/>
+  <circle cx="446" cy="566" r="5" fill="#fff3bd"/>
+</svg>

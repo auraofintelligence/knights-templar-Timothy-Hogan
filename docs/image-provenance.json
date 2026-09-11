@@ -1,0 +1,58 @@
+[
+  {
+    "name": "meeting",
+    "prompt": "Use case: stylized-concept. Asset type: full-width cinematic website hero, 16:9 landscape. Create an exquisitely detailed, boldly optimistic imagined meeting place where a dark mineral-and-brass archive opens onto a luminous Australian coastal dawn. A tall simple architectural opening occupies the right half, polished dark stone floor with subtle gold reflections, distant turquoise sea and sunlit eucalyptus headland beyond, a restrained contemporary research worktable with a closed unlettered journal and quartz specimen near the opening. Dark spacious left half with elegant atmospheric depth for a large HTML headline. Refined editorial art direction, warm gold and aurora teal against blue-black, realistic materials and beautiful shafts of light, humble human-scale invitation, not an epic battle or fantasy temple. Visually rich yet restrained, photographic concept-art quality. No people, no actual artefact claims, no specific real vault, no crests, no crosses, no text, no letters, no numbers, no watermark, no UI. It should feel like curiosity, possibility and joyful responsible abundance.",
+    "method": "Built-in image generation",
+    "date": "2026-09-11",
+    "purpose": "Imagined concept artwork, not documentary evidence",
+    "original": "media-originals/generated/meeting.png"
+  },
+  {
+    "name": "conversation",
+    "prompt": "An exquisite cinematic close view of two empty chairs across a dark timber archive table, a closed old journal, a modern blank notebook and subtle recording microphone, warm morning light coming through a tall window, deep blue shadow with champagne gold reflections, genuine invitation to listen and exchange ideas. Atmospheric, humble, optimistic, tactile contemporary editorial photography as concept artwork. Wide 16:9, balanced horizontal composition with calm dark left area for real HTML copy. No people, no lettering, no text, no legible manuscript, no religious insignia, no UI, no watermark.",
+    "method": "Built-in image generation",
+    "date": "2026-09-11",
+    "purpose": "Imagined concept artwork, not documentary evidence",
+    "original": "media-originals/generated/conversation.png"
+  },
+  {
+    "name": "matter",
+    "prompt": "An exquisite cinematic macro landscape of quartz crystal, polished copper, layered silver and a dark basalt surface with subtle optical light interference, emerald teal and warm gold glints, black-blue laboratory-like backdrop, extreme tactile detail and an elegant photographic composition. An imagined materials study, wonder and curiosity without depicting a claimed historical artefact or actual results. Wide 16:9, large beautiful crystal detail mainly right, calm depth on left for HTML copy. No text, no logos, no numbers, no diagram, no watermark.",
+    "method": "Built-in image generation",
+    "date": "2026-09-11",
+    "purpose": "Imagined concept artwork, not documentary evidence",
+    "original": "media-originals/generated/matter.png"
+  },
+  {
+    "name": "network",
+    "prompt": "Use case: stylized-concept. Asset type: wide 16:9 website hero. An uplifting photorealistic concept scene of an imagined Australian coastal collaboration space at golden hour: open modern timber and glass workspaces, a long communal table with unlettered papers and contemporary computers, plants, a few diverse adult collaborators seen small in the middle distance in natural conversation, women visibly at the centre of collaborative work, lush green terraces flowing towards a coastal city and turquoise sea. Joyful responsible abundance, human agency, optimistic and grounded, not corporate stock imagery. Filmic refined editorial detail, dark blue foreground, warm gold highlights, teal coastal light. Wide view with calm negative space on left for HTML headline, focal depth on right. No legible text, no logos, no brand marks, no claimed real building or partner organisation, no watermark.",
+    "method": "Built-in image generation",
+    "date": "2026-09-11",
+    "purpose": "Imagined concept artwork, not documentary evidence",
+    "original": "media-originals/generated/network.png"
+  },
+  {
+    "name": "horizons",
+    "prompt": "Wide 16:9 cinematic concept artwork of an imagined Australian coastal future at twilight, a rich eucalyptus headland and turquoise bay, subtle beautiful architecture nestled into the landscape and below a cutaway rock terrace, a small observatory above, distant stars and a luminous atmospheric sky. Human-scale warmth in tiny windows, deep navy, gold and teal, material realism, optimistic ecological abundance, not dystopia or a claimed actual construction. Main landscape right, dark beautiful sky and foreground left for HTML headline. No donut torus, no text, no insignia, no logos, no watermark.",
+    "method": "Built-in image generation",
+    "date": "2026-09-11",
+    "purpose": "Imagined concept artwork, not documentary evidence",
+    "original": "media-originals/generated/horizons.png"
+  },
+  {
+    "name": "culture",
+    "prompt": "Wide 16:9 cinematic editorial concept artwork: an intimate creative studio at night overlooking the ocean, an open unlettered journal, a simple piano keyboard, headphones and a guitar in softly reflected golden light, delicate colourful light traces across the dark room suggesting music and imagination, rich teal glass, brass and dark timber. A warm joyful atmosphere, generous breathing room, refined realistic materials, not neon sci-fi clutter. No people, no torus, no legible text or musical notation, no logos, no watermark.",
+    "method": "Built-in image generation",
+    "date": "2026-09-11",
+    "purpose": "Imagined concept artwork, not documentary evidence",
+    "original": "media-originals/generated/culture.png"
+  },
+  {
+    "name": "library",
+    "prompt": "Wide 16:9 cinematic editorial concept artwork of a beautiful archive worktable with many unlettered handwritten-style journals closed or with indistinct marks, old presentation folders, photographs face down, contemporary storage and a blank-screen tablet, organised thoughtfully in a richly detailed dark timber library with warm sunlight and teal glass. Express a lifetime of ideas before and with AI, an invitation to explore a much larger archive. No legible text, no recognisable faces, no logos, no watermark. Composition dark left negative space with table depth and objects mostly right. Photographic material realism, humble optimistic warmth.",
+    "method": "Built-in image generation",
+    "date": "2026-09-11",
+    "purpose": "Imagined concept artwork, not documentary evidence",
+    "original": "media-originals/generated/library.png"
+  }
+]

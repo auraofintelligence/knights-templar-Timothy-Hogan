@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://auraofintelligence.github.io/grain-by-grain-documentary/sitemap.xml

@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A source-led map from Apple A12 and its peers to realistic Arm, RISC-V, FPGA and custom-silicon pathways for Aura.">
+  <meta name="theme-color" content="#031817">
+  <link rel="icon" href="assets/aura-navicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/aura-navicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/aura-navicon-180.png">
+  <link rel="manifest" href="site.webmanifest">
+  <title>Silicon possibilities: Aura Direct Hardware</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the work</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">A</span><span>Aura Direct Hardware</span></a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Explore all pages">Explore</button>
+    <nav class="site-nav" id="site-nav" data-site-nav aria-label="Main navigation">
+      <a href="index.html">Overview</a><a href="silicon.html" aria-current="page">Silicon</a><a href="harness.html">Harness</a><a href="learning.html">Learning</a><a href="applications.html">Applications</a><a href="commons.html">Commons</a><a href="place.html">Place</a><a href="governance.html">Governance</a><a href="sources.html">Sources</a>
+    </nav>
+  </div></header>
+
+  <main id="main">
+    <header class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Overview</a><span aria-hidden="true">/</span><span aria-current="page">Silicon</span></nav>
+        <p class="eyebrow">Reference chips, open possibility</p>
+        <h1>From A12 to an Aura chip.</h1>
+        <p class="lede">Many routes stay live together: simulation, current-hardware modification, FPGA experiments, mature-node shuttles, chiplets and advanced SoCs. Self-sovereign people begin anywhere, combine branches and change direction as information and needs evolve.</p>
+        <div class="page-meta"><span>Evidence review: 9 August 2026</span><span>Primary sources prioritised</span><span>All displayed costs in Australian dollars</span></div>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container grid-2">
+        <article class="card gold">
+          <p class="kicker">The short answer</p>
+          <h2 style="font-size: clamp(2rem, 4vw, 3rem)">How many process steps?</h2>
+          <p><strong>Not seven.</strong> “7 nm” names a process generation. Modern node names are performance, density and design-rule labels, not a single measured transistor dimension.</p>
+          <p>Intel says an advanced wafer undergoes <strong>thousands of processing steps</strong>. Its manufacturing guide records <strong>more than 50 masks</strong> across all chip layers. ASML describes hundreds of manufacturing operations and repeated lithography cycles.</p>
+          <p class="muted">The exact A12, Snapdragon, Dimensity and Kirin mask counts and recipes remain commercial secrets. Public evidence reaches the foundry’s published process family.</p>
+          <p><a href="https://newsroom.intel.com/tech101/how-silicon-die-become-chip-packages">Intel: thousands of wafer steps ↗</a><br><a href="https://download.intel.com/newsroom/2023/tech101/manufacturing-101-what-are-semiconductors/what-are-semiconductors.pdf">Intel: more than 50 masks (PDF) ↗</a><br><a href="https://www.asml.com/en/technology/all-about-microchips/how-microchips-are-made">ASML: how chips are made ↗</a></p>
+        </article>
+        <div>
+          <p class="eyebrow">Three different counts</p>
+          <div class="timeline">
+            <article class="timeline-item"><span class="tag">Node</span><h3 style="margin-top: .7rem">7 nm, 5 nm, 3 nm, 2 nm</h3><p class="muted">A foundry generation. Smaller labels usually signal higher density or efficiency, but labels are not directly comparable between foundries.</p></article>
+            <article class="timeline-item"><span class="tag">Masks</span><h3 style="margin-top: .7rem">Patterned layers</h3><p class="muted">Reticles transfer different device and interconnect patterns. Multiple patterning and EUV choices change the total.</p></article>
+            <article class="timeline-item"><span class="tag">Operations</span><h3 style="margin-top: .7rem">Thousands of fab steps</h3><p class="muted">Deposition, coating, exposure, etch, implantation, cleaning, polishing, inspection and metrology recur across the wafer flow.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="landscape">
+      <div class="container section-head">
+        <div><p class="eyebrow">Who is at that level?</p><h2>The mobile SoC field.</h2></div>
+        <div><p class="lede">Nominal node is one column among CPU architecture, NPU, GPU, modem, memory, packaging, software, power and volume.</p><p>The buttons reveal the A12-era cohort and the current leading cohort separately or together. “Current” means publicly launched by 9 August 2026; Australian availability varies by device.</p></div>
+      </div>
+      <div class="container">
+        <div class="filter-bar" aria-label="Filter chip table">
+          <button class="filter-button" type="button" data-chip-filter="all" aria-pressed="true">All</button>
+          <button class="filter-button" type="button" data-chip-filter="a12-era" aria-pressed="false">A12 era</button>
+          <button class="filter-button" type="button" data-chip-filter="current" aria-pressed="false">Current leading</button>
+          <button class="filter-button" type="button" data-chip-filter="opaque" aria-pressed="false">Node not officially stated</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <caption>Selected A12-era and current mobile system-on-chip reference points</caption>
+            <thead><tr><th>Designer / chip</th><th>Launch</th><th>Published process</th><th>Position</th><th>What the comparison really says</th></tr></thead>
+            <tbody>
+              <tr data-chip-era="a12-era"><td><strong>Apple A12 Bionic</strong></td><td>2018</td><td>7 nm; 6.9B transistors</td><td>Flagship phone</td><td>Apple’s reference point: custom CPU/GPU plus an eight-core Neural Engine. Closed Apple IP.</td></tr>
+              <tr data-chip-era="a12-era"><td><strong>Huawei HiSilicon Kirin 980</strong></td><td>2018</td><td>TSMC 7 nm; 6.9B</td><td>Flagship phone</td><td>The closest nominal A12-era peer: same published node and transistor count, different architecture and ecosystem.</td></tr>
+              <tr data-chip-era="a12-era"><td><strong>Qualcomm Snapdragon 855</strong></td><td>2018 announcement / 2019 devices</td><td>7 nm</td><td>Flagship phone</td><td>A commercial platform supplied to device makers; its register-transfer-level design and modem IP remain closed.</td></tr>
+              <tr data-chip-era="a12-era"><td><strong>Samsung Exynos 9825</strong></td><td>2019</td><td>7 nm EUV</td><td>Flagship phone</td><td>Samsung combines silicon design and foundry capability; device use has largely been internal.</td></tr>
+              <tr data-chip-era="a12-era"><td><strong>MediaTek Dimensity 1000</strong></td><td>2019</td><td>7 nm</td><td>Flagship 5G phone</td><td>MediaTek became a full flagship competitor after the A12’s launch year.</td></tr>
+              <tr data-chip-era="current"><td><strong>Apple A19 / A19 Pro</strong></td><td>2025</td><td>Third-generation 3 nm</td><td>Flagship phone</td><td>Leading vertically integrated reference; still not a licensable Aura design.</td></tr>
+              <tr data-chip-era="current"><td><strong>Qualcomm Snapdragon 8 Elite Gen 5</strong></td><td>2025</td><td>3 nm</td><td>Flagship Android</td><td>Custom Oryon CPU and a broad modem/XR ecosystem make Qualcomm a practical platform partner before custom silicon.</td></tr>
+              <tr data-chip-era="current"><td><strong>MediaTek Dimensity 9500</strong></td><td>2025</td><td>TSMC N3P</td><td>Flagship Android</td><td>A leading 3 nm-class alternative with CPU, GPU, NPU, imaging and modem integration.</td></tr>
+              <tr data-chip-era="current"><td><strong>Samsung Exynos 2600</strong></td><td>2026</td><td>Samsung 2 nm GAA</td><td>Flagship phone</td><td>A different foundry label and transistor architecture; “2 nm” alone does not prove it beats every 3 nm product.</td></tr>
+              <tr data-chip-era="current"><td><strong>Xiaomi XRING O1</strong></td><td>2025</td><td>3 nm; 19B transistors</td><td>Flagship phone / tablet</td><td>Shows another device company entering clean-sheet mobile SoC design, backed by major capital and supply-chain support.</td></tr>
+              <tr data-chip-era="current opaque"><td><strong>Huawei HiSilicon Kirin 9030</strong></td><td>2025, reported</td><td>Not published in an official source identified in this review</td><td>Reported flagship phone</td><td>This register treats it as third-party reporting; node and detailed capability remain unverified in Huawei sources.</td></tr>
+              <tr data-chip-era="current opaque"><td><strong>Google Tensor G5</strong></td><td>2025</td><td>Not published on Google’s product pages</td><td>Flagship phone</td><td>Google optimises for its own AI and camera experience; that workload-specific thinking is more useful than copying a benchmark.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="muted" style="margin-top: 1rem">Adjacent leaders span NVIDIA in high-power AI and robotics modules, AMD and Intel in CPUs, FPGAs and edge compute, plus NXP, Renesas, STMicroelectronics, Texas Instruments and Microchip in industrial, automotive, safety and long-life embedded systems. They are highly capable, but not direct flagship-phone equivalents.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container section-head">
+        <div><p class="eyebrow">Architecture choice</p><h2>Arm is a licence. RISC‑V is an open instruction set.</h2></div>
+        <p class="lede">Neither one is a finished Aura chip. A usable SoC brings together verified cores, memory, interconnect, security, debug, analogue blocks, interfaces, package, software, test and manufacturing.</p>
+      </div>
+      <div class="container grid-3">
+        <article class="card"><span class="evidence build">Working experiment</span> <span class="tag">Current modules</span><h3 style="margin-top: 1rem">Present compute modules</h3><p>Arm routes such as Snapdragon, NXP and NVIDIA sit beside AMD and other x86 systems, FPGAs and specialised accelerators. Aura’s software and surrounding board remain open to ownership, alteration and replacement.</p><p><a href="https://www.arm.com/products/licensing">How Arm licensing works ↗</a></p></article>
+        <article class="card gold"><span class="evidence research">Research</span> <span class="tag">Arm design route</span><h3 style="margin-top: 1rem">Arm building blocks</h3><p>Cortex, Ethos, Mali, CoreLink and security IP are one available design vocabulary. Apple-style custom CPU cores use a deeper architecture licence and larger engineering effort.</p><p><a href="https://www.arm.com/products/flexible-access">Arm Flexible Access ↗</a></p></article>
+        <article class="card violet"><span class="evidence research">Research</span> <span class="tag">Open path</span><h3 style="margin-top: 1rem">RISC‑V foundations</h3><p>The instruction-set architecture is open and royalty-free. Specific core implementations, peripherals and physical IP carry open, restricted or commercial licences, each with its own terms.</p><p><a href="https://riscv.org/about/">RISC‑V International ↗</a><br><a href="https://openroad.readthedocs.io/en/latest/">OpenROAD register-transfer level to chip-layout flow ↗</a></p></article>
+      </div>
+    </section>
+
+    <section class="section" id="branches">
+      <div class="container section-head">
+        <div><p class="eyebrow">Choose your own silicon adventure</p><h2>Experiment branches in every direction.</h2></div>
+        <p>Every card is an entry point. Several sit together, old ideas reopen and entirely new branches appear as people acquire information and their needs evolve.</p>
+      </div>
+      <div class="container grid-3">
+        <article class="card"><span class="tag">Use what exists</span><h3 style="margin-top: .7rem">Existing-silicon exploration</h3><p>Aura models and sensor flows run on available hardware. Public measurements support comparison; private experiments stay with their builders.</p></article>
+        <article class="card coral"><span class="tag">Clean sheet</span><h3 style="margin-top: .7rem">Complete-SoC design</h3><p>Mature and advanced nodes, licensed and open cores, chiplets and clean-sheet designs remain in view. Scale is one reason for this branch; sovereignty, resilience, curiosity and discovery are others.</p></article>
+        <article class="card violet"><span class="tag">Reconfigurable</span><h3 style="margin-top: .7rem">FPGA rewiring</h3><p>Sensor fusion, image processing, inference, new processor ideas and architectures nobody has named yet all find room here, beside software comparisons and curiosity-led experiments.</p></article>
+        <article class="card gold"><span class="tag">Fabrication</span><h3 style="margin-top: .7rem">Small-batch ASIC fabrication</h3><p>MPW shuttles and other accessible foundry routes carry one block, many blocks or a strange new architecture into silicon. A batch serves learning, teaching, physical tests, art, products or purposes its builders discover along the way.</p></article>
+        <article class="card"><span class="tag">Physical system</span><h3 style="margin-top: .7rem">Owned boards and interfaces</h3><p>Carrier boards, power, sensors, radios, local storage and controls take whatever mix of open, salvaged, commercial and home-built modules fits the question.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container section-head">
+        <div><p class="eyebrow">Inside a chosen tape-out</p><h2>Fabrication has physical dependencies.</h2></div>
+        <p class="lede">A chosen design becomes working silicon through linked engineering states. AI explores and optimises across the chain while people choose the architecture, evidence threshold and consequences carried by each experiment.</p>
+      </div>
+      <div class="container grid-2">
+        <ol class="step-list">
+          <li>Versioned design intent for this tape-out.</li>
+          <li>Architecture partition across CPU, NPU, DSP, FPGA, MCU and fixed logic.</li>
+          <li>Foundry, process, package, PDK and design-partner choices.</li>
+          <li>Recorded licences for hardware and software intellectual property.</li>
+          <li>Executable reference models and a corresponding software stack.</li>
+          <li>Integrated digital and analogue or mixed-signal design.</li>
+          <li>Simulation, formal verification, emulation and coverage evidence.</li>
+          <li>FPGA prototypes for uncertain logic.</li>
+          <li>Synthesis, design-for-test insertion and equivalence evidence.</li>
+        </ol>
+        <ol class="step-list" start="10" style="counter-reset: step 9">
+          <li>Floorplan, placement, clock-tree construction and routing.</li>
+          <li>Timing, power, integrity, IR-drop and thermal convergence.</li>
+          <li>DRC, LVS and foundry sign-off evidence.</li>
+          <li>Signed-off GDSII or OASIS for tape-out.</li>
+          <li>Computationally corrected mask data derived from the design.</li>
+          <li>Wafer fabrication, process characterisation and yield observations.</li>
+          <li>Wafer probe, packaging, final test, burn-in and reliability evidence.</li>
+          <li>Key provisioning, board and firmware validation, plus certification evidence associated with the chosen use.</li>
+          <li>One device, ten or thousands, followed by yield learning and another design choice.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="cost">
+      <div class="container grid-2">
+        <div>
+          <p class="eyebrow">Scale reality</p>
+          <h2>Advanced nodes cost a lot. Cost is one input among many.</h2>
+          <p>A 2023 SIA/BCG industry model, converted at the Reserve Bank of Australia’s 7 August 2026 reference rate, gives total design costs of about <strong>AUD 41 million for 65 nm</strong>, <strong>AUD 73 million for 28 nm</strong>, <strong>AUD 424 million for 7 nm</strong>, <strong>AUD 771 million for 5 nm</strong> and <strong>more than AUD 1.42 billion for 3 nm</strong>.</p>
+          <p class="muted">Those are broad converted industry estimates, not a quote, mask-set price, inflation adjustment or forecast for Aura. Conversion formula: AUD = reported foreign-currency amount ÷ 0.7029, using the RBA reference rate for 7 August 2026. Mature-node MPW prototypes are often vastly cheaper. Builders weigh commercial efficiency beside learning, sovereignty and discovery, then select the route that fits their own values.</p>
+          <p><a href="https://www.semiconductors.org/wp-content/uploads/2024/01/SIA-Design-Slides-June-2023.pdf">SIA/BCG design-cost model, page 11 (PDF) ↗</a> · <a href="https://www.rba.gov.au/statistics/frequency/exchange-rates.html">RBA conversion reference ↗</a></p>
+        </div>
+        <article class="card gold">
+          <p class="kicker">Decision information</p>
+          <h3>What trade-offs does this batch carry?</h3>
+          <p><code>break-even units = total custom-silicon NRE ÷ per-unit saving</code></p>
+          <p>For commercial-scale questions, this equation sits beside yield, packaging, respins and support. It gives commercial context while every idea keeps its own purpose and value.</p>
+          <div class="callout aqua"><p><strong>Open fabrication starts small.</strong> Open PDKs, Tiny Tapeout and MPW shuttles support learning through real silicon. A first batch teaches, challenges an architecture, builds local capability, creates art, begins a product or opens another question.</p></div>
+        </article>
+      </div>
+      <div class="narrow">
+        <nav class="page-nav" aria-label="Related branches">
+          <a href="index.html"><small>Overview branch</small>← Open the full map</a>
+          <a href="harness.html"><small>Harness branch</small>Explore the modelling harness →</a>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-grid">
+    <p><strong>Aura Direct Hardware</strong><br>Node names and vendor performance claims are not cross-vendor guarantees. See the source register for evidence and caveats.</p>
+    <div class="footer-links"><a href="sources.html">Sources</a><a href="governance.html">Governance</a><a href="https://github.com/auraofintelligence/aura-direct-hardware">GitHub</a></div>
+  </div></footer>
+  <button class="back-to-top" type="button" data-back-to-top aria-label="Back to top">↑</button>
+</body>
+</html>

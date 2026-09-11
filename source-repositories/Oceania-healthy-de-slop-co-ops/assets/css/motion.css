@@ -1,0 +1,107 @@
+@keyframes hero-breathe {
+  0% { transform: translate3d(0, var(--hero-parallax, 0), 0) scale(1.025); }
+  100% { transform: translate3d(0, var(--hero-parallax, 0), 0) scale(1.055); }
+}
+
+@keyframes royal-current {
+  0% { background-position: 0 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+@keyframes facet-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+}
+
+@keyframes prism-turn {
+  0%, 100% { filter: hue-rotate(0deg) drop-shadow(0 0 36px rgba(33, 217, 212, 0.28)); }
+  50% { filter: hue-rotate(18deg) drop-shadow(0 0 48px rgba(169, 109, 255, 0.34)); }
+}
+
+@keyframes pressure-pulse {
+  0%, 100% { opacity: 0.42; transform: scale(0.96); }
+  50% { opacity: 1; transform: scale(1.04); }
+}
+
+.hero-image {
+  animation: hero-breathe 18s ease-in-out infinite alternate;
+}
+
+.hero-veil::after {
+  animation: royal-current 16s ease-in-out infinite alternate;
+}
+
+.hero-facets span:nth-child(1) {
+  animation: facet-float 8s ease-in-out infinite;
+}
+
+.hero-facets span:nth-child(2) {
+  animation: facet-float 6.5s 1s ease-in-out infinite reverse;
+}
+
+.hero-facets span:nth-child(3) {
+  animation: facet-float 5s 0.5s ease-in-out infinite;
+}
+
+.evidence-prism,
+.agreement-prism {
+  animation: prism-turn 9s ease-in-out infinite;
+}
+
+.pressure-rings {
+  animation: pressure-pulse 4s ease-in-out infinite;
+}
+
+.pressure-rings span:nth-child(1) { animation: pressure-pulse 3.5s 0.4s ease-in-out infinite; }
+.pressure-rings span:nth-child(2) { animation: pressure-pulse 3.2s 0.8s ease-in-out infinite reverse; }
+.pressure-rings span:nth-child(3) { animation: pressure-pulse 2.8s 1.1s ease-in-out infinite; }
+
+.portrait-song-screen::after {
+  animation: phone-sweep 5.5s 1s var(--ease-royal) infinite;
+}
+
+@keyframes phone-sweep {
+  0%, 20% { transform: translateX(-75%); }
+  55%, 100% { transform: translateX(75%); }
+}
+
+.reveal-ready {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 720ms var(--ease-royal) var(--reveal-delay, 0ms), transform 720ms var(--ease-royal) var(--reveal-delay, 0ms);
+}
+
+.reveal-ready.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-tilt] {
+  transform-style: preserve-3d;
+  transition: transform 260ms ease;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal-ready {
+    opacity: 1;
+    transform: none;
+  }
+
+  .constellation-field {
+    display: none;
+  }
+}

@@ -1,0 +1,269 @@
+import { access, readFile, readdir, stat } from 'node:fs/promises';
+import { dirname, extname, relative, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const loadJson = async (path) => JSON.parse(await readFile(resolve(root, path), 'utf8'));
+const [pages, content, controversies, sources, facets] = await Promise.all([
+  loadJson('data/pages.json'),
+  loadJson('data/site-content.json'),
+  loadJson('data/controversies.json'),
+  loadJson('sources/register.json'),
+  loadJson('data/facets.json')
+]);
+
+const errors = [];
+const addError = (message) => errors.push(message);
+const sourceIds = new Set(sources.map((source) => source.id));
+const sourceById = new Map(sources.map((source) => [source.id, source]));
+const pageIds = new Set(pages.map((page) => page.id));
+const pageFiles = new Set(pages.map((page) => page.file));
+
+if (pages.length !== 14) addError(`Expected 14 pages, found ${pages.length}.`);
+if (pageIds.size !== pages.length) addError('Page IDs are not unique.');
+if (pageFiles.size !== pages.length) addError('Page filenames are not unique.');
+if (!sources.length) addError('The source register is empty.');
+if (sourceIds.size !== sources.length) addError('Source IDs are not unique.');
+
+for (const requiredSource of ['F24', 'F25', 'F29', 'F37', 'F38', 'U08', 'U17']) {
+  if (!sourceIds.has(requiredSource)) addError(`Required source ${requiredSource} is missing.`);
+}
+
+const referencedSources = new Set();
+for (const [pageId, pageContent] of Object.entries(content)) {
+  if (!pageIds.has(pageId)) addError(`Content exists for unknown page ${pageId}.`);
+  const prose = [pageContent.intro, pageContent.closing, ...(pageContent.story?.paragraphs || []), ...(pageContent.sections || []).flatMap(section => [section.intro, ...(section.cards || []).map(card => card.body)])].filter(Boolean).join(' ');
+  if (/Luke(?:['’]s| wants| will| kept)|his projects|he can name|allowed to be|has to be earned|false lone-genius|not a recruitment demand/i.test(prose)) addError(`${pageId}: editorial or third-person narration has returned.`);
+  if ('firstPerson' in pageContent || 'thirdPerson' in pageContent) addError(`${pageId}: discarded split voice remains in content.`);
+  if (pageContent.story !== null && (!Array.isArray(pageContent.story?.paragraphs) || !pageContent.story.paragraphs.length)) addError(`${pageId}: story opening must contain paragraphs or be explicitly omitted with null.`);
+  for (const section of pageContent.sections || []) {
+    for (const card of section.cards || []) {
+      for (const sourceId of card.sourceIds || []) referencedSources.add(sourceId);
+      const hasAccessibleSource = (card.sourceIds || []).some((sourceId) => {
+        const source = sourceById.get(sourceId);
+        return source && (source.publicPath || source.url || (source.availability === 'public-link' && source.location));
+      });
+      if ((card.sourceIds || []).length && !hasAccessibleSource && !card.sourcePending) {
+        addError(`${pageId}: ${card.title} references sources but none can be opened.`);
+      }
+    }
+  }
+  for (const sourceId of pageContent.soundtrack?.sourceIds || []) referencedSources.add(sourceId);
+  for (const mediaPath of [pageContent.soundtrack?.videoPath, pageContent.soundtrack?.posterPath, ...(pageContent.soundtrack?.videoVariants || []).flatMap(version => [version.videoPath, version.posterPath])].filter(Boolean)) {
+    try { await access(resolve(root, mediaPath)); } catch { addError(`${pageId}: missing song media ${mediaPath}.`); }
+  }
+  for (const sourceId of pageContent.narrativeSourceIds || []) referencedSources.add(sourceId);
+  for (const scene of pageContent.narrative || []) {
+    if (!scene.heading || !Array.isArray(scene.paragraphs) || !scene.paragraphs.length) addError(`${pageId}: incomplete narrative scene.`);
+  }
+}
+
+for (const item of controversies) {
+  if (!pageIds.has(item.page)) addError(`Controversy uses unknown page ${item.page}.`);
+  for (const sourceId of item.sourceIds || []) referencedSources.add(sourceId);
+  for (const key of ['idea', 'meaning', 'care', 'exists', 'notYet', 'change']) {
+    if (!item[key]) addError(`${item.title}: missing ${key}.`);
+  }
+}
+
+for (const sourceId of referencedSources) {
+  if (!sourceIds.has(sourceId)) addError(`Unknown source reference ${sourceId}.`);
+}
+
+for (const source of sources) {
+  if (source.availability === 'published-source') {
+    if (!source.publicPath) addError(`${source.id}: connected source has no file.`);
+    else { try { await access(resolve(root, source.publicPath)); } catch { addError(`${source.id}: missing source file ${source.publicPath}.`); } }
+  }
+  if (['website', 'video'].includes(source.type) && source.id !== 'U10' && !source.iconPath) {
+    addError(`${source.id}: public web thread has no raster favicon.`);
+  }
+  if (source.iconPath) {
+    try {
+      await access(resolve(root, source.iconPath));
+    } catch {
+      addError(`${source.id}: raster favicon is missing at ${source.iconPath}.`);
+    }
+  }
+}
+
+if (facets.length !== 288) addError(`Expected 288 horn-torus facets, found ${facets.length}.`);
+const facetAddresses = new Set();
+const facetCoverage = new Map(sources.map((source) => [source.id, 0]));
+const contentRows = new Set([0, 1, 2, 3, 8, 9, 10, 11]);
+const expectedTypeNumbers = new Map();
+for (const type of ['document', 'image']) {
+  sources.filter((source) => source.type === type).forEach((source, index) => {
+    expectedTypeNumbers.set(source.id, index + 1);
+  });
+}
+let interactiveFacetCount = 0;
+facets.forEach((facet, index) => {
+  if (facet.number !== index + 1) addError(`Facet ${index} has non-contiguous number ${facet.number}.`);
+  if (!Number.isInteger(facet.row) || facet.row < 0 || facet.row >= 12) addError(`Facet ${facet.number}: invalid row.`);
+  if (!Number.isInteger(facet.column) || facet.column < 0 || facet.column >= 24) addError(`Facet ${facet.number}: invalid column.`);
+  const address = `${facet.row}:${facet.column}`;
+  if (facetAddresses.has(address)) addError(`Duplicate facet address ${address}.`);
+  facetAddresses.add(address);
+  const shouldBeInteractive = contentRows.has(facet.row);
+  if (facet.interactive !== shouldBeInteractive) addError(`Facet ${facet.number}: interactive state does not match its row.`);
+  if (!shouldBeInteractive) {
+    if (facet.sourceId || facet.href || facet.iconPath || facet.previewPath) addError(`Facet ${facet.number}: a quiet horn row carries source data.`);
+    return;
+  }
+  interactiveFacetCount += 1;
+  if (!sourceIds.has(facet.sourceId)) {
+    addError(`Facet ${facet.number}: unknown source ${facet.sourceId}.`);
+    return;
+  }
+  facetCoverage.set(facet.sourceId, facetCoverage.get(facet.sourceId) + 1);
+  const source = sourceById.get(facet.sourceId);
+  if (facet.type !== source.type) addError(`Facet ${facet.number}: source type does not match ${facet.sourceId}.`);
+  if (facet.availability !== source.availability) addError(`Facet ${facet.number}: availability does not match ${facet.sourceId}.`);
+  if (['document', 'image'].includes(source.type) && facet.typeNumber !== expectedTypeNumbers.get(source.id)) {
+    addError(`Facet ${facet.number}: ${source.type} sequence does not match ${facet.sourceId}.`);
+  }
+  if (!['document', 'image'].includes(source.type) && facet.typeNumber !== null) {
+    addError(`Facet ${facet.number}: a website or video received an archive number.`);
+  }
+  const expectedHref = source.url || source.publicPath || '';
+  if (facet.href !== expectedHref) addError(`Facet ${facet.number}: source link does not match ${facet.sourceId}.`);
+  const expectedIconPath = source.iconPath || '';
+  if (facet.iconPath !== expectedIconPath) addError(`Facet ${facet.number}: favicon does not match ${facet.sourceId}.`);
+  const expectedPreviewPath = source.type === 'image' ? (source.publicPath || '') : '';
+  if (facet.previewPath !== expectedPreviewPath) addError(`Facet ${facet.number}: image preview does not match ${facet.sourceId}.`);
+  if (source.availability === 'public-link' && !/^https:\/\//i.test(facet.href)) addError(`Facet ${facet.number}: public source needs an HTTPS link.`);
+  if (!source.url && !source.publicPath && facet.href) addError(`Facet ${facet.number}: private archive location became a link.`);
+});
+
+if (interactiveFacetCount !== 192) addError(`Expected 192 marked outer facets, found ${interactiveFacetCount}.`);
+
+for (const [sourceId, count] of facetCoverage) {
+  if (!count) addError(`Source ${sourceId} does not appear on the horn torus.`);
+}
+const coverageCounts = [...facetCoverage.values()];
+if (coverageCounts.length && Math.max(...coverageCounts) - Math.min(...coverageCounts) > 1) {
+  addError('Facet source distribution is not balanced.');
+}
+
+const localTarget = (href) => {
+  const clean = href.split('#')[0].split('?')[0];
+  if (!clean || clean.startsWith('mailto:') || clean.startsWith('tel:') || clean.startsWith('javascript:')) return null;
+  if (/^https?:\/\//i.test(clean)) return null;
+  return clean;
+};
+
+for (const page of pages) {
+  const filePath = resolve(root, page.file);
+  let html;
+  try {
+    html = await readFile(filePath, 'utf8');
+  } catch {
+    addError(`${page.file}: generated page is missing.`);
+    continue;
+  }
+
+  if (!html.includes('<html lang="en-AU">')) addError(`${page.file}: missing Australian language declaration.`);
+  if (content[page.id]?.soundtrack?.videoPath && (!html.includes('<video controls playsinline preload="none"') || !html.includes(content[page.id].soundtrack.videoPath))) addError(`${page.file}: song video or non-autoplay controls missing.`);
+  if (/Questions with their sleeves rolled up|These ideas are allowed|earned in silicon|what might make Luke change/i.test(html)) addError(`${page.file}: removed editorial commentary has returned.`);
+  const documentIds = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
+  if (new Set(documentIds).size !== documentIds.length) addError(`${page.file}: duplicate element IDs.`);
+  if (!documentIds.includes('story')) addError(`${page.file}: chapter entry has no story destination.`);
+  if (page.id === 'bloke') {
+    if ((html.match(/What each name means/g) || []).length !== 1 || html.includes('The names I use')) addError('the-bloke.html: repeated names explanation.');
+    if (!html.includes('class="life-story"') || !html.includes('class="work-ledger"')) addError('the-bloke.html: flowing narrative or expandable work history is missing.');
+  }
+  if (!/<main\s+id="top"(?:\s|>)/.test(html)) addError(`${page.file}: missing main#top.`);
+  if (!html.includes('rel="icon"') || !html.includes('assets/favicon.jpg')) addError(`${page.file}: raster favicon is missing.`);
+  if (/data-perspective|perspective-control|First-person draft|Third person/i.test(html)) addError(`${page.file}: discarded split voice remains.`);
+  if (/evidence-bar|evidence-toggle|evidence-chip/i.test(html)) addError(`${page.file}: clinical evidence controls remain.`);
+  if (/mirror[ -]ball/i.test(html)) addError(`${page.file}: discarded mirror-ball language remains.`);
+  if (/[–—]/u.test(html)) addError(`${page.file}: contains an en dash or em dash.`);
+  if (/<svg\b|data:image\/svg\+xml|\.svg(?:[?#"']|$)/i.test(html)) addError(`${page.file}: contains a forbidden vector image reference.`);
+  if (/ready SET|Ready S\.E\.T\./i.test(html)) addError(`${page.file}: contains an outdated Ready S..E.T. Co-op name.`);
+  if (page.id === 'home' && (!html.includes('data-horn-torus') || !html.includes('marked outer facets'))) addError('index.html: 288-facet horn torus is missing.');
+  if (content[page.id]?.soundtrack?.title && (!html.includes('class="soundtrack-phone"') || html.includes('class="media-slot"'))) {
+    addError(`${page.file}: smartphone soundtrack placeholder is missing.`);
+  }
+
+  const anchors = html.match(/<a\b[^>]*>/gi) || [];
+  for (const anchor of anchors) {
+    const href = anchor.match(/\bhref="([^"]+)"/i)?.[1];
+    if (!href) continue;
+    if (/^https?:\/\//i.test(href)) {
+      if (!/\btarget="_blank"/i.test(anchor)) addError(`${page.file}: external link lacks target=_blank: ${href}`);
+      if (!/\brel="noopener noreferrer"/i.test(anchor)) addError(`${page.file}: external link lacks safe rel: ${href}`);
+      continue;
+    }
+    const target = localTarget(href);
+    if (!target) continue;
+    try {
+      await access(resolve(root, target));
+    } catch {
+      addError(`${page.file}: broken local link ${href}`);
+    }
+  }
+
+  const resources = [...html.matchAll(/<(?:link|script|img)\b[^>]*(?:href|src)="([^"]+)"[^>]*>/gi)].map((match) => match[1]);
+  for (const resource of resources) {
+    const target = localTarget(resource);
+    if (!target) continue;
+    try {
+      await access(resolve(root, target));
+    } catch {
+      addError(`${page.file}: missing resource ${resource}`);
+    }
+  }
+}
+
+const torusScript = await readFile(resolve(root, 'scripts/horn-torus.js'), 'utf8');
+const navigationScript = await readFile(resolve(root, 'scripts/navigation.js'), 'utf8');
+const minimumCamera = Number(torusScript.match(/MIN_CAMERA_DISTANCE\s*=\s*([\d.]+)/)?.[1]);
+if (!Number.isFinite(minimumCamera) || minimumCamera <= 4.1) addError('Horn-torus camera can cross the outside safety boundary.');
+if (!torusScript.includes('const ROWS = 12;') || !torusScript.includes('const COLUMNS = 24;')) addError('Horn-torus lattice is not fixed at 12 by 24.');
+if (!torusScript.includes('const CONTENT_ROWS = [0, 1, 2, 3, 8, 9, 10, 11];')) addError('Horn-torus content is not limited to the eight broad outer rows.');
+if (/fillText\(String\(polygon\.index \+ 1\)/.test(torusScript)) addError('Global facet numbers still appear on the horn torus.');
+if (!torusScript.includes('context.rotate(frame.angle)') || !torusScript.includes('context.clip()')) {
+  addError('Torus marks are not clipped and aligned to their projected facets.');
+}
+const releasePointerBody = torusScript.match(/const releasePointer = \(event\) => \{([\s\S]*?)\n  \};/)?.[1] || '';
+if (releasePointerBody.includes('openSource(')) addError('Clicking a torus facet still opens the source dialog.');
+if (!navigationScript.includes('button, canvas, input')) addError('Site-wide arrow navigation can still steal the torus keyboard controls.');
+
+async function walk(directory) {
+  const entries = await readdir(directory, { withFileTypes: true });
+  const files = [];
+  for (const entry of entries) {
+    if (entry.name === '.git' || entry.name === 'node_modules') continue;
+    const path = resolve(directory, entry.name);
+    if (entry.isDirectory()) files.push(...await walk(path));
+    else files.push(path);
+  }
+  return files;
+}
+
+const files = await walk(root);
+for (const file of files) {
+  const extension = extname(file).toLowerCase();
+  if (extension === '.svg') addError(`Forbidden vector image file: ${relative(root, file)}`);
+  const details = await stat(file);
+  if (details.size > 20 * 1024 * 1024) addError(`File exceeds 20 MB: ${relative(root, file)}`);
+  if (['.html', '.css', '.js', '.json'].includes(extension) && !file.endsWith('check-site.mjs')) {
+    const text = await readFile(file, 'utf8');
+    if (/data:image\/svg\+xml|\.svg(?:[?#"']|$)|createElementNS\([^)]*svg/i.test(text)) {
+      addError(`Forbidden vector image reference: ${relative(root, file)}`);
+    }
+  }
+}
+
+for (const discarded of ['scripts/mirror-ball.js', 'scripts/perspective.js', 'scripts/evidence-lens.js']) {
+  if (files.includes(resolve(root, discarded))) addError(`Discarded interface file remains: ${discarded}`);
+}
+
+if (errors.length) {
+  console.error(`Site checks failed with ${errors.length} problem${errors.length === 1 ? '' : 's'}:`);
+  errors.forEach((error) => console.error(`- ${error}`));
+  process.exitCode = 1;
+} else {
+  console.log(`Site checks passed: ${pages.length} pages, ${sources.length} source threads, 192 marked outer facets and 96 quiet cusp facets.`);
+}

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Extreme Matter Atlas</title>
+<meta name="description" content="An interactive atlas of matter at its limits: all 118 elements, the record holders, predicted crystals, lattices you can sketch, and the questions still open.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚛️</text></svg>">
+<style>
+body[data-page="index"] .ribbon-wrap {
+  margin: 34px 0 8px;
+  border: 1px solid var(--line-bright);
+  border-radius: 18px;
+  background: radial-gradient(120% 140% at 50% 0%, var(--bg2), var(--bg));
+  padding: 16px 14px 12px;
+  box-shadow: inset 0 0 70px -34px color-mix(in srgb, var(--accent) 45%, transparent);
+}
+body[data-page="index"] .ribbon {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(46px, 1fr));
+  gap: 5px;
+}
+body[data-page="index"] .ribbon a {
+  aspect-ratio: 1 / 1;
+  border-radius: 7px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 1px;
+  font-size: 15px; font-weight: 800; color: #04060c;
+  text-decoration: none; line-height: 1;
+  transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
+}
+body[data-page="index"] .ribbon a .num {
+  font-size: 9px; font-weight: 600; opacity: .7;
+}
+@media (min-width: 900px) {
+  body[data-page="index"] .ribbon {
+    grid-template-columns: repeat(auto-fill, minmax(52px, 1fr));
+    gap: 6px;
+  }
+  body[data-page="index"] .ribbon a { font-size: 16px; }
+}
+body[data-page="index"] .ribbon a:hover,
+body[data-page="index"] .ribbon a:focus-visible {
+  transform: scale(1.9); z-index: 6;
+  filter: brightness(1.2);
+  box-shadow: 0 6px 20px -4px rgba(0,0,0,.9);
+}
+body[data-page="index"] .ribbon-cap {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: 12px; flex-wrap: wrap; margin-top: 12px;
+  font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+}
+body[data-page="index"] #ribbon-read { color: var(--ink); font-weight: 600; }
+body[data-page="index"] .door-glyph { font-size: 30px; }
+body[data-page="index"] .door-group {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 20px; margin: 44px 0 4px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+body[data-page="index"] .door-blurb { color: var(--muted); font-size: 15px; margin-bottom: 16px; }
+body[data-page="index"] .door-grid { margin-bottom: 6px; }
+body[data-page="index"] .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+body[data-page="index"] .why-grid { margin-top: 26px; }
+body[data-page="index"] .why-grid .card p { color: var(--muted); }
+</style>
+</head>
+<body data-page="index">
+<div id="site-header"></div>
+<main>
+
+  <section class="hero">
+    <div class="orbs"><span class="orb3"></span></div>
+    <div class="wrap">
+      <span class="kicker">Field guide to matter at its limits</span>
+      <h1 class="display">Extreme Matter Atlas</h1>
+      <p class="lede">
+        Everything you have ever held is built from the same short list of ingredients: <strong>118 elements</strong>,
+        and only 94 of them turn up in nature. Some of them are show-offs. One is so heavy a soft drink can of it
+        would be a struggle to lift. One stays liquid no matter how cold the room gets. One holds onto its
+        electrons so tightly that almost nothing can talk it out of them.
+      </p>
+      <p class="lede" style="margin-top:16px;">
+        Pick a door and go looking. There is no right order.
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="periodic-table.html">Meet all 118</a>
+        <a class="btn ghost" href="extremes.html">Straight to the records</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>The whole shelf, <span class="hue">in one strip</span></h2>
+      <p>
+        Every element, in order, coloured by family. Tap any one to open its card on the full chart.
+      </p>
+      <div class="ribbon-wrap">
+        <div class="ribbon" id="ribbon"></div>
+        <div class="ribbon-cap">
+          <span id="ribbon-read">Tap or hover an element</span>
+          <span>1 to 118, in order</span>
+        </div>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat">
+          <span class="num">118</span>
+          <span class="lbl">Elements confirmed so far. The list has not changed since 2016.</span>
+        </div>
+        <div class="stat">
+          <span class="num">94</span>
+          <span class="lbl">Turn up in nature. The rest are made in labs, and most vanish in moments.</span>
+        </div>
+        <div class="stat">
+          <span class="num">2.2 million</span>
+          <span class="lbl">New crystal recipes a computer model put forward in 2023. Predictions, not finished materials: close to one for every person in Perth, a city that passed 2.4 million in 2025.</span>
+        </div>
+        <div class="stat">
+          <span class="num">17 days</span>
+          <span class="lbl">A robot lab took that long to cook 41 recipes it had never made before.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section>
+    <div class="wrap">
+      <h2>Choose <span class="hue">your door</span></h2>
+      <p>
+        Eighteen ways in, grouped by subject.
+        Plenty of what is on the shelf now arrived as somebody's wild idea, so the arguments
+        sit in the same drawers as the answers.
+      </p>
+
+      <h3 class="door-group">Elements</h3>
+      <p class="door-blurb">The shelf everything is built from, and the pieces people argue about.</p>
+      <div class="grid door-grid">
+        <a class="card-link reveal" href="periodic-table.html"><article class="card">
+          <span class="card-glyph door-glyph">&#129482;</span><h3>The Table</h3>
+          <p>Meet all 118 and colour them by any property you like: weight, heat, size, how common they are.</p>
+        </article></a>
+        <a class="card-link reveal" href="extremes.html"><article class="card">
+          <span class="card-glyph door-glyph">&#127942;</span><h3>Records</h3>
+          <p>The heaviest, hottest, rarest and strangest, with numbers you can picture.</p>
+        </article></a>
+        <a class="card-link reveal" href="claimed-elements.html"><article class="card">
+          <span class="card-glyph door-glyph">&#10067;</span><h3>Claimed Elements</h3>
+          <p>Every element named in a strange story, and what it actually does when you measure it.</p>
+        </article></a>
+      </div>
+
+      <h3 class="door-group">Patterns</h3>
+      <p class="door-blurb">Structure, vibration, responsive matter and the shapes waves leave behind.</p>
+      <div class="grid door-grid">
+        <a class="card-link reveal" href="crystal-lab.html"><article class="card">
+          <span class="card-glyph door-glyph">&#129704;</span><h3>Crystal Lab</h3>
+          <p>Sketch a flat pattern, stack it, twist it, break it on purpose, and watch it vibrate.</p>
+        </article></a>
+        <a class="card-link reveal" href="metamaterials.html"><article class="card">
+          <span class="card-glyph door-glyph">&#128376;</span><h3>Metamaterials</h3>
+          <p>Shapes that change what a material does without changing the ingredients.</p>
+        </article></a>
+        <a class="card-link reveal" href="anomalous-materials.html"><article class="card">
+          <span class="card-glyph door-glyph">&#9678;</span><h3>Anomalous Metamaterials</h3>
+          <p>Build crystal lattices and 2D stacks for adaptive skins, alien craft and pre-Younger Dryas engineering.</p>
+        </article></a>
+        <a class="card-link reveal" href="cymatics.html"><article class="card">
+          <span class="card-glyph door-glyph">&#127900;</span><h3>Cymatics</h3>
+          <p>Drive a plate with a note and watch sand find the places that hold still.</p>
+        </article></a>
+        <a class="card-link reveal" href="resonance.html"><article class="card">
+          <span class="card-glyph door-glyph">&#128225;</span><h3>Resonance</h3>
+          <p>One idea from a playground swing to a hospital scanner to a single atom.</p>
+        </article></a>
+      </div>
+
+      <h3 class="door-group">Engines</h3>
+      <p class="door-blurb">Ways of moving, from old stories to open physics.</p>
+      <div class="grid door-grid">
+        <a class="card-link reveal" href="vimana.html"><article class="card">
+          <span class="card-glyph door-glyph">&#128760;</span><h3>Vimana</h3>
+          <p>Old sky-craft stories read as a design brief, on a bench that does the sums.</p>
+        </article></a>
+        <a class="card-link reveal" href="red-mercury.html"><article class="card">
+          <span class="card-glyph door-glyph">&#127777;</span><h3>Red Mercury</h3>
+          <p>Mercury engines from the old texts, and the mercury ion drives that really flew.</p>
+        </article></a>
+        <a class="card-link reveal" href="element-115.html"><article class="card">
+          <span class="card-glyph door-glyph">&#9883;</span><h3>Element 115</h3>
+          <p>Moscovium, the island of stability, and what bending gravity would actually cost.</p>
+        </article></a>
+        <a class="card-link reveal" href="zero-point.html"><article class="card">
+          <span class="card-glyph door-glyph">&#9889;</span><h3>Zero Point</h3>
+          <p>Empty space pushes on two mirrors, and it has been measured. Now what?</p>
+        </article></a>
+      </div>
+
+      <h3 class="door-group">Making</h3>
+      <p class="door-blurb">Finding new materials and building with them.</p>
+      <div class="grid door-grid">
+        <a class="card-link reveal" href="gnome.html"><article class="card">
+          <span class="card-glyph door-glyph">&#128302;</span><h3>GNoME</h3>
+          <p>The model that guessed millions of new crystals, and the robot kitchen cooking them.</p>
+        </article></a>
+        <a class="card-link reveal" href="engineering.html"><article class="card">
+          <span class="card-glyph door-glyph">&#128736;</span><h3>Engineering</h3>
+          <p>Records put to work: your phone screen, a hospital scanner, a jet engine, a deep-sea sub.</p>
+        </article></a>
+        <a class="card-link reveal" href="sci-fi-lab.html"><article class="card">
+          <span class="card-glyph door-glyph">&#128640;</span><h3>Sci-Fi Lab</h3>
+          <p>Warp drives, tractor beams and replicators, each given a spec sheet and a real nearest thing.</p>
+        </article></a>
+        <a class="card-link reveal" href="frontiers.html"><article class="card">
+          <span class="card-glyph door-glyph">&#127756;</span><h3>Frontiers</h3>
+          <p>Where the search could head next, and what it would change at your place.</p>
+        </article></a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section>
+    <div class="wrap">
+      <h2>Why the <span class="hue">extremes</span> matter</h2>
+      <p>
+        A record is not a trophy. It is a door to a job nothing ordinary can do. The metal with the highest melting
+        point is the one you line a fusion reactor with. The metal that carries electricity best is the one you would
+        wire a city with, if it were not so dear. The element that pulls hardest on shared electrons is the reason a
+        non-stick pan shrugs off a fried egg.
+      </p>
+      <p>
+        Push any property to its limit and you find an engineer waiting there with a problem that needs exactly that.
+      </p>
+      <div class="grid why-grid">
+        <article class="card reveal">
+          <h3>Every record has a use</h3>
+          <p>Hardest, lightest, hottest, coldest: each one is already load-bearing in something you own or something that keeps you alive.</p>
+        </article>
+        <article class="card reveal">
+          <h3>The shelf is fixed, the arrangements are not</h3>
+          <p>Nobody is adding a new element to the shopping list any time soon. The room to move is in how you arrange what is already there.</p>
+        </article>
+        <article class="card reveal">
+          <h3>The search got faster</h3>
+          <p>For most of history, new materials came from slow cooking and luck. Pattern-finding software changed the pace, and the results are free to browse.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+<div id="site-footer"></div>
+<script src="assets/elements.js"></script>
+<script src="assets/nav.js"></script>
+<script>
+(function () {
+  var els = window.ELEMENTS || [];
+  var host = document.getElementById("ribbon");
+  var read = document.getElementById("ribbon-read");
+  if (!host || !els.length) return;
+
+  var CAT_LABEL = {
+    alkali: "Alkali metal", alkaline: "Alkaline earth metal", transition: "Transition metal",
+    "post-transition": "Post-transition metal", metalloid: "Metalloid", nonmetal: "Non-metal",
+    halogen: "Halogen", noble: "Noble gas", lanthanide: "Lanthanide", actinide: "Actinide",
+    unknown: "Properties still being pinned down"
+  };
+
+  var frag = document.createDocumentFragment();
+  els.forEach(function (el) {
+    var a = document.createElement("a");
+    a.href = "periodic-table.html#el-" + el.sym;
+    a.className = "el-tile " + (window.EMA ? window.EMA.catClass(el.cat) : "cat-" + el.cat);
+    a.innerHTML = '<span class="num">' + el.z + "</span>" + el.sym;
+    a.setAttribute("title", el.z + " " + el.name);
+    a.setAttribute("aria-label", el.name + ", atomic number " + el.z);
+    a.addEventListener("mouseenter", function () { show(el); });
+    a.addEventListener("focus", function () { show(el); });
+    a.addEventListener("touchstart", function () { show(el); }, { passive: true });
+    frag.appendChild(a);
+  });
+  host.appendChild(frag);
+
+  function show(el) {
+    var extra = (el.records && el.records.length) ? " · " + el.records[0] : "";
+    read.textContent = el.z + " · " + el.name + " · " + (CAT_LABEL[el.cat] || el.cat) + extra;
+  }
+
+  host.addEventListener("mouseleave", function () { read.textContent = "Tap or hover an element"; });
+})();
+</script>
+</body>
+</html>

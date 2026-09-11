@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What would settle it | Micronova and Excursions</title>
+  <meta name="description" content="Twenty tests that would move the argument either way, most of them data exercises on free public archives rather than funded missions. Plus the ones that settle nothing, which includes waiting.">
+  <meta name="theme-color" content="#0b1220">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" href="assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="test">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Micronova and Excursions home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text"><strong>Micronova and Excursions</strong><span>Civilisation of Sand &middot; Evidence ledger</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="building.html">Building</a>
+      <a href="calm.html">The calm</a>
+      <a href="settled.html">Settled</a>
+      <a href="excursions.html">Record</a>
+      <a href="micronova.html">Claim</a>
+      <a href="galaxy.html">Galaxy</a>
+      <a href="dismissals.html">Dismissals</a>
+      <a href="objections.html">Objections</a>
+      <a href="watch.html">Watch</a>
+    </nav>
+  </header>
+  <main id="main">
+
+    <section class="hero page-hero">
+      <div class="hero-content reveal">
+        <p class="eyebrow">Tests, not verdicts</p>
+        <h1>How anyone checks any of it</h1>
+        <p class="hero-copy">Both sides of this argument mostly assert. The move that costs something is to name the observation that would change a mind, then say whether instruments that already exist can reach it. Three of these have been run, and the output is printed below, including the parts that went the wrong way.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">The method</p>
+          <h2>Nobody has to be trusted.</h2>
+        </div>
+        <div>
+          <p>A claim earns a stronger label when someone turns it into a calculation anyone can re-run against the same public numbers, and then runs it.</p>
+        </div>
+      </div>
+      <p class="reveal">That is available here because the inputs are free: ice cores, tree-ring catalogues, neutron monitor counts, earthquake and eruption records, spacecraft telemetry. Each tool below is one Python file, standard library only, working set out in the docstring, fixed seed where anything is random.</p>
+      <p class="pull reveal">The frontier says the mainstream will not test this. The mainstream says there is nothing to test. Both positions are cheaper than doing the sums and publishing what comes out.</p>
+    </section>
+
+    <div class="kintsugi-seam" aria-hidden="true">
+      <svg viewBox="0 0 1200 46" preserveAspectRatio="none" focusable="false">
+        <defs><linearGradient id="ts1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff8a3d"/><stop offset=".45" stop-color="#ffcf6e"/><stop offset="1" stop-color="#fff3d6"/></linearGradient></defs>
+        <path class="seam-path" pathLength="1" stroke="url(#ts1)" d="M0 20 L95 26 L185 15 L285 28 L390 20 L455 32 L575 16 L660 24 L770 12 L860 28 L950 20 L1060 30 L1140 18 L1200 24"/>
+        <path class="seam-path seam-branch" pathLength="1" stroke="url(#ts1)" d="M185 15 L172 4"/>
+        <path class="seam-light" pathLength="1" d="M0 20 L95 26 L185 15 L285 28 L390 20 L455 32 L575 16 L660 24 L770 12 L860 28 L950 20 L1060 30 L1140 18 L1200 24"/>
+      </svg>
+    </div>
+
+    <section class="section">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">Run, with the output</p>
+          <h2>Three calculations and what came back.</h2>
+        </div>
+        <div>
+          <p>Each links to the file. The derivation lives in the docstring; here is the result.</p>
+        </div>
+      </div>
+      <p class="reveal"><strong><a href="https://github.com/auraofintelligence/micronova-and-excursions/blob/main/tools/cadence_test.py" rel="noopener"><code>tools/cadence_test.py</code></a> asks whether the excursion dates fall on a beat.</strong> Rayleigh test on circular phase over the seven proposed excursions of the last 41,000 years, unconfirmed rungs included, because dropping them would stack the test. Clustering comes out at 0.07 for a 6,000-year period and 0.14 for 12,000, on a scale where zero is a scatter and one is a perfect stack. Let the search hunt any rhythm between 2,000 and 25,000 years and it finds a handsome one at 7,660. The same hunt across 20,000 sets of invented dates found something equally handsome about one time in six. Seven dates spread over 41,000 years will fit some rhythm, which is a fact about seven dates.</p>
+      <p class="reveal"><strong><a href="https://github.com/auraofintelligence/micronova-and-excursions/blob/main/tools/coin_toss.py" rel="noopener"><code>tools/coin_toss.py</code></a> asks how often the Sun is pointed at us.</strong> A large eruption leaves from wherever its active region sits. The Earth-reaching band is about eighty degrees of solar longitude, a fifth of the face, and roughly three in five of the full-halo events launched from inside it arrive: about one in eight per big eruption, with the band coming round again every month as the Sun turns. Folded into the published Carrington-class storm rate of ten to twelve per cent per decade, the chance of at least one direct hit inside a century is 65 to 72 per cent. Nothing contested enters at any step. Held as an order of magnitude, because the window is longitude only and latitude moves with cycle phase; at the low published end a century still lands near one in twenty.</p>
+      <p class="reveal"><strong><a href="https://github.com/auraofintelligence/micronova-and-excursions/blob/main/tools/shed_mass_bound.py" rel="noopener"><code>tools/shed_mass_bound.py</code></a> asks how much the Sun can have shed before the orbits say no.</strong> Mass lost slowly, as now, simply widens the orbits. Mass lost in far less than one lap leaves the planet carrying a speed too fast for a lighter Sun to hold in a circle, so the circle becomes an oval, and a bigger shed makes a longer oval. Earth's orbit already stretches and relaxes on its own over tens of thousands of years, so the question is how large a shed could hide inside that wobble. About five per cent of the Sun, which is some eighteen thousand Earths of material. At half the Sun the planet leaves for good.</p>
+      <p class="reveal">Two riders on the last one. The imposed oval does not heal, since tides at this distance are far too weak and the gas that rounded the planets off has been gone for four billion years, so five per cent is a budget for the whole of history rather than an allowance per event. And running it caught an arithmetic error in wide circulation: the orbital widening from present-day slow loss comes to about 62,000 km over the Sun's life, not the seven thousand miles usually printed beside the 1.5 cm a year it is derived from.</p>
+      <div class="chips reveal"><span class="chip known">Known</span><span class="chip modelled">Modelled</span><span class="chip disputed">Disputed</span></div>
+      <div class="verdict reveal">
+        <h3>Two of the three came back partly against the case they were built for</h3>
+        <p>The cadence found nothing, and the shed bound turned out to be a ceiling on all of history rather than on one event. The cadence is the rung the argument needs least, which is set out on <a href="micronova.html">the claim page</a>.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">Not yet run</p>
+          <h2>Five that would strengthen it.</h2>
+        </div>
+        <div>
+          <p>Each is a data exercise on archives that already exist. None needs a new instrument, and none has been published from either direction.</p>
+        </div>
+      </div>
+      <div class="table-scroll reveal"><table class="data-table">
+        <caption class="visually-hidden">Five unrun tests whose results would strengthen the case, with the observation each turns on</caption>
+        <thead><tr><th>The test</th><th>What a result would do</th><th>Standing</th></tr></thead>
+        <tbody>
+          <tr><td>A third excursion dated blind, by people not told the expected answer, at the spacing the ladder predicts</td><td>Moves the cadence from asserted to arguable. Ordinary palaeomagnetism</td><td><span class="chip disputed">Disputed</span></td></tr>
+          <tr><td>Whether the confirmed radiocarbon spikes cluster on the low points of the field or scatter across them</td><td>Two independent catalogues, both improving. One coincidence so far, and a checkable one</td><td><span class="chip known">Known</span></td></tr>
+          <tr><td>A published accumulation rate and energy budget for the shed layer, tested against the dust spacecraft already measure near the Sun</td><td>Survives contact or dies on it. The highest-value single piece of work available, and its absence is conspicuous</td><td><span class="chip unsupported">Unsupported</span></td></tr>
+          <tr><td>Iron-60 arrival curves lined up against the modelled heliosphere-compression episodes near 2 and 7 million years</td><td>Two unrelated methods returning the same two dates is either coincidence or one event seen twice</td><td><span class="chip modelled">Modelled</span></td></tr>
+          <tr><td>The eruption record inside those two compression windows, read through beryllium-10</td><td>The proposed volcanic trigger runs on cosmic ray flux and the crossing tracer is itself a cosmic ray proxy, so one dataset tests both</td><td><span class="chip speculative">Speculative</span></td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <div class="kintsugi-seam" aria-hidden="true">
+      <svg viewBox="0 0 1200 46" preserveAspectRatio="none" focusable="false">
+        <defs><linearGradient id="ts2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff8a3d"/><stop offset=".45" stop-color="#ffcf6e"/><stop offset="1" stop-color="#fff3d6"/></linearGradient></defs>
+        <path class="seam-path" pathLength="1" stroke="url(#ts2)" d="M0 24 L88 14 L190 28 L300 16 L400 30 L505 18 L610 28 L700 14 L800 26 L905 16 L1010 28 L1120 18 L1200 26"/>
+        <path class="seam-path seam-branch" pathLength="1" stroke="url(#ts2)" d="M700 14 L688 3"/>
+        <path class="seam-light" pathLength="1" d="M0 24 L88 14 L190 28 L300 16 L400 30 L505 18 L610 28 L700 14 L800 26 L905 16 L1010 28 L1120 18 L1200 26"/>
+      </svg>
+    </div>
+
+    <section class="section">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">The other direction</p>
+          <h2>Four that would weaken it.</h2>
+        </div>
+        <div>
+          <p>A position worth holding names these too. Where none can be stated, what is being held is not a hypothesis.</p>
+        </div>
+      </div>
+      <div class="table-scroll reveal"><table class="data-table">
+        <caption class="visually-hidden">Four unrun tests whose results would weaken the case, with the observation each turns on</caption>
+        <thead><tr><th>The test</th><th>What a result would do</th><th>Standing</th></tr></thead>
+        <tbody>
+          <tr><td>The decay staying straight: the field falling near five per cent a century and the pole continuing to slow through the 2030s</td><td>The claim needs acceleration, and the best current model of the core has the decline continuing at about the present rate. A straight line runs the "happening now" case out of instrument readings</td><td><span class="chip known">Known</span></td></tr>
+          <tr><td>An audit of the misses: nearby stars towards the galactic centre that did not flare, Solar System bodies that showed no change</td><td>Gives coincidence-counting a denominator. If the reported hits sit inside what a growing search turns up by chance, that argument goes</td><td><span class="chip unsupported">Unsupported</span></td></tr>
+          <tr><td>The disputed spherules on an oxygen isotope plot, with the reservoir split as the discriminator</td><td>Genesis found the Sun about four per cent enriched in oxygen-16 against rocky bodies. Asymmetric: a planetary answer settles little because impact melt is the default, a solar-reservoir answer would be hard to explain. It places material in a reservoir, cannot date it, and needs the settling corrections carried openly</td><td><span class="chip modelled">Modelled</span></td></tr>
+          <tr><td>The sky the petroglyphs imply, checked in the archives that already carry the radiocarbon spikes</td><td>A solar wind one to two orders of magnitude above present, sustained, is not subtle in ice and tree rings. Either the signature is there or it is not</td><td><span class="chip speculative">Speculative</span></td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">And three that settle nothing</p>
+          <h2>Worth naming anyway.</h2>
+        </div>
+      </div>
+      <div class="verdict caution reveal">
+        <h3>Not tests</h3>
+        <p><strong>Waiting.</strong> The event arriving and the event not having arrived are both consistent with the claim as it stands, so time passing is not testing it.</p>
+        <p><strong>Counting subscribers, citations or credentials.</strong> On either side.</p>
+        <p><strong>Another documentary, or another rebuttal video.</strong> The argument is not short of rhetoric.</p>
+      </div>
+      <p class="reveal">Two further tests are set out where they belong: the 27-day coronal hole stack and the lunar-phase discriminator sit with the earthquake work, because that is what they are inputs to. The citation audit, six references pulled and read against the use made of them, has its own page.</p>
+      <p><a href="earthquake.html">The earthquake tests &rarr;</a></p>
+      <p><a href="citations.html">Reading the footnotes &rarr;</a></p>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div>
+      <p>An evidence ledger for one contested argument. Not a verdict, and not an endorsement: the corrections run in both directions on purpose.</p>
+      <p><a href="LICENCE.md">Strange But True Public Source Licence</a> &middot; Luke Hayes &times; Claude, Minjerribah.</p>
+    </div>
+    <nav class="footer-links" aria-label="Related sites">
+      <a href="for-models.html">If you are asking an AI</a>
+      <a href="sources.html">Sources</a>
+      <a href="citations.html">Reading the footnotes</a>
+      <a href="https://auraofintelligence.github.io/grain-by-grain/" rel="noopener">Grain by Grain</a>
+      <a href="https://www.spaceweathernews.com/" rel="noopener">Space Weather News</a>
+      <a href="https://p4a.xyz/" rel="noopener">P4A</a>
+      <a href="https://auraofintelligence.github.io/" rel="noopener">Aura of Intelligence</a>
+    </nav>
+  </footer>
+  <script src="assets/js/cinematic.js" defer></script>
+</body>
+</html>

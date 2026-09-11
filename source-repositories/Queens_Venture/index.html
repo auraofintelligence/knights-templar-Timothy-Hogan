@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queens VC | A Regenerative Global Venture Architecture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Ethereal Harmony -->
+    <!-- Application Structure Plan: A thematic, dashboard-style SPA. The structure prioritizes user exploration over linear report reading. It starts with a high-level vision ('The Dream'), then allows users to dive into four core 'Engines' (Architecture, Finance, Governance, Human Capital). An interactive 'Meet the Queens' section brings the narrative to life, followed by the 'Investment Thesis' and a clear 'Roadmap'. This non-linear, thematic approach was chosen to make the complex, interconnected system digestible and engaging, allowing stakeholders (investors, founders, community) to explore the areas most relevant to them first, fostering a deeper understanding of the system's synergy. -->
+    <!-- Visualization & Content Choices: The plan uses interactive elements to explain complex ideas. The Global Architecture uses a clickable phased diagram (HTML/CSS) to show scaling. The Financial Engine uses a Chart.js Donut chart for the blended capital stack and interactive cards for funding phases, making financial strategy clear. Governance is shown with a clickable fractal diagram (HTML/CSS), illustrating its multi-layered nature. The 'Mythos of the 24 Queens' is an interactive grid, making the narrative layer a core, explorable feature. The Investment Thesis uses a filterable gallery for venture concepts. All choices avoid SVG/Mermaid, using Canvas and structured HTML/CSS with JS for interactivity to create a dynamic and compliant user experience. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .bg-cream { background-color: #FDFBF5; }
+        .text-gold { color: #B8860B; }
+        .bg-gold-light { background-color: #F5EEDA; }
+        .border-gold { border-color: #B8860B; }
+        .section-title { font-size: 2.25rem; font-weight: 700; color: #4A4A4A; margin-bottom: 1rem; }
+        .section-intro { max-width: 800px; margin: 0 auto 2.5rem auto; color: #555; font-size: 1.125rem; line-height: 1.7; }
+        .nav-link { padding: 0.5rem 1rem; color: #4A4A4A; font-weight: 500; border-radius: 0.375rem; transition: all 0.3s ease; position: relative; overflow: hidden; }
+        .nav-link:before { content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 2px; background-color: #B8860B; transition: all 0.3s ease; transform: translateX(-50%); }
+        .nav-link:hover:before, .nav-link.active:before { width: 100%; }
+        .card { background-color: white; border-radius: 0.75rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1); }
+        .tab-button { padding: 0.75rem 1.5rem; border-radius: 9999px; font-weight: 600; transition: all 0.3s ease; }
+        .tab-button.active { background-color: #B8860B; color: white; }
+        .tab-button:not(.active) { background-color: #F5EEDA; color: #B8860B; }
+        .queen-card { cursor: pointer; position: relative; overflow: hidden; }
+        .queen-card .overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding: 1rem; transform: translateY(100%); transition: transform 0.4s ease-in-out; text-align: center; }
+        .queen-card:hover .overlay { transform: translateY(0); }
+        .modal-backdrop { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.7); z-index: 40; display: none; }
+        .modal-content { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 50; background-color: #FDFBF5; border-radius: 1rem; padding: 2rem; width: 90%; max-width: 600px; max-height: 90vh; overflow-y: auto; display: none; }
+        .chart-container { position: relative; width: 100%; max-width: 400px; margin-left: auto; margin-right: auto; height: 400px; max-height: 400px; }
+    </style>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-raster-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-raster-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon-raster-180.png">
+</head>
+<body class="bg-cream text-gray-800">
+
+    <header class="sticky top-0 bg-cream/80 backdrop-blur-lg shadow-sm z-30">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gold">
+                <a href="#hero">Queens VC</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-2">
+                <a href="#vision" class="nav-link">The Vision</a>
+                <a href="#architecture" class="nav-link">Architecture</a>
+                <a href="#queens" class="nav-link">The Queens</a>
+                <a href="#investment" class="nav-link">Investment</a>
+                <a href="#roadmap" class="nav-link">Roadmap</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#vision" class="block py-2 px-4 text-sm hover:bg-gold-light">The Vision</a>
+            <a href="#architecture" class="block py-2 px-4 text-sm hover:bg-gold-light">Architecture</a>
+            <a href="#queens" class="block py-2 px-4 text-sm hover:bg-gold-light">The Queens</a>
+            <a href="#investment" class="block py-2 px-4 text-sm hover:bg-gold-light">Investment</a>
+            <a href="#roadmap" class="block py-2 px-4 text-sm hover:bg-gold-light">Roadmap</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="min-h-screen flex items-center bg-gold-light">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-800 leading-tight mb-4">The Queens System</h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-8">A Strategic Blueprint for a Regenerative Global Venture Architecture.</p>
+                <a href="#vision" class="bg-gold text-white font-bold py-3 px-8 rounded-full hover:bg-yellow-700 transition duration-300 text-lg">Explore The Vision</a>
+            </div>
+        </section>
+
+        <section id="vision" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-center">The Vision of Joyful Responsible Abundance</h2>
+                <p class="section-intro text-center">
+                    This blueprint outlines the launch and scaling of the Queens Venture Capital initiative, a framework to seed, nurture, and grow a regenerative global economy. Our mission is to mobilize distributed circles of women—"Queens"—to build a global grid of companies that replenish social, ecological, and cultural capital, correcting the stark gender imbalance in venture capital.
+                </p>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="card p-8">
+                        <div class="text-5xl mb-4">👑</div>
+                        <h3 class="text-2xl font-bold mb-2">Empower Women</h3>
+                        <p>Mobilize a global network of female founders to lead the next wave of innovation.</p>
+                    </div>
+                    <div class="card p-8">
+                        <div class="text-5xl mb-4">🌍</div>
+                        <h3 class="text-2xl font-bold mb-2">Regenerate Earth</h3>
+                        <p>Invest in ventures that solve civilisational challenges, from climate change to systemic social issues.</p>
+                    </div>
+                    <div class="card p-8">
+                        <div class="text-5xl mb-4">✨</div>
+                        <h3 class="text-2xl font-bold mb-2">Create Abundance</h3>
+                        <p>Build a new paradigm of wealth creation based on joyful, responsible, and shared prosperity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="architecture" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-center">A Unified Architecture</h2>
+                <p class="section-intro text-center">
+                    The Queens System is not a single entity, but a living ecosystem built on four interconnected engines. Each engine is designed to be powerful on its own, but together they create a self-reinforcing flywheel for global, regenerative growth. Explore how we scale, fund, govern, and staff this planetary network.
+                </p>
+                <div class="flex justify-center space-x-2 md:space-x-4 mb-12">
+                    <button class="tab-button active" data-tab="global">Global Architecture</button>
+                    <button class="tab-button" data-tab="financial">Financial Engine</button>
+                    <button class="tab-button" data-tab="governance">Governance Spine</button>
+                    <button class="tab-button" data-tab="human">Human Capital</button>
+                </div>
+
+                <div id="tab-content">
+                </div>
+            </div>
+        </section>
+
+        <section id="queens" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-center">The Council of Aura</h2>
+                <p class="section-intro text-center">
+                    The Promise: Every founder has two Queens. A Civilisation Pillar for "what you build," and a Cultural Anchor for "who you are." Together, they shape your venture, your tribe, and your aura of intelligence. This dual-mentorship model provides holistic support, grounding ambitious ventures in deep, personal meaning.
+                </p>
+                <div class="mb-16">
+                    <h3 class="text-3xl font-bold text-center text-gray-700 mb-4">The Civilisation Pillars</h3>
+                    <p class="text-center text-gray-600 max-w-2xl mx-auto mb-8">These 12 Queens govern the core industrial, environmental, and technological sectors. A founder's venture concept determines their Pillar Queen.</p>
+                    <div id="pillar-queens-grid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4"></div>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold text-center text-gray-700 mb-4">The Cultural Anchors</h3>
+                    <p class="text-center text-gray-600 max-w-2xl mx-auto mb-8">These 12 Queens embody the cultural, ethical, and personal foundations of our system. A founder's heritage and values determine their Anchor Queen.</p>
+                    <div id="anchor-queens-grid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="investment" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-center">The Investment Thesis</h2>
+                <p class="section-intro text-center">
+                    We invest in foundational value for society and the planet. Our strategy is to define investment themes that solve critical global challenges, and then use our Minjerribah "living laboratory" to de-risk and validate the technologies before scaling them globally. Below is a sample of our 120+ venture blueprints.
+                </p>
+                <div id="venture-gallery" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                </div>
+            </div>
+        </section>
+
+        <section id="roadmap" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-center">Implementation Roadmap</h2>
+                <p class="section-intro text-center">
+                    Our long-term implementation is a four-phase journey that synchronizes the Queens System's global expansion with the Minjerribah project's development. This ensures that global replication is always fueled by validated, real-world results from our proving ground.
+                </p>
+                <div class="w-full max-w-4xl mx-auto">
+                    <div class="relative">
+                        <div class="border-l-4 border-gold absolute h-full top-0 left-4"></div>
+                        <div id="roadmap-timeline" class="space-y-12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Queens VC. A new paradigm for a regenerative future.</p>
+        </div>
+    </footer>
+
+    <div id="modal-backdrop" class="modal-backdrop"></div>
+    <div id="modal-content" class="modal-content">
+        <div id="modal-body"></div>
+        <button id="modal-close" class="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-2xl">&times;</button>
+    </div>
+
+    <script>
+        const appData = {
+            architectureTabs: {
+                global: {
+                    title: "From Pilot Swarm to Planetary Grid",
+                    description: "Our global rollout is a three-phase expansion, a deliberate strategy to prove, replicate, and institutionalize a new model of regenerative, women-led entrepreneurship. This sequential model allows for iterative learning and risk mitigation, building the assets needed for planetary scale.",
+                    content: `
+                        <div class="grid md:grid-cols-3 gap-8 mt-8 text-left">
+                            <div class="card p-6">
+                                <span class="text-sm font-bold text-gold">PHASE 1</span>
+                                <h4 class="text-2xl font-bold my-2">500 Queens VC</h4>
+                                <p class="text-gray-600"><strong>Objective:</strong> Proof of Concept. Harden the operational playbook in Queensland, Australia, launching 500 female-led ventures and building the foundational community mythos.</p>
+                            </div>
+                            <div class="card p-6">
+                                <span class="text-sm font-bold text-gold">PHASE 2</span>
+                                <h4 class="text-2xl font-bold my-2">10,000 Queens VC</h4>
+                                <p class="text-gray-600"><strong>Objective:</strong> Replication. Expand the proven model across the G20 nations, establishing a resilient economic lattice and validating the system's capacity for international scaling.</p>
+                            </div>
+                            <div class="card p-6">
+                                <span class="text-sm font-bold text-gold">PHASE 3</span>
+                                <h4 class="text-2xl font-bold my-2">50,000 Queens VC</h4>
+                                <p class="text-gray-600"><strong>Objective:</strong> Institutionalization. Create a self-sustaining, planetary grid of 50,000 companies across 100+ countries, achieving macro-level influence on the global economy.</p>
+                            </div>
+                        </div>
+                    `
+                },
+                financial: {
+                    title: "A Blended Capital Strategy",
+                    description: "Our financial engine masterfully blends different types of funding in a sequence that progressively de-risks ventures. This creates a clear pathway from a $5 community pledge to a multi-billion-dollar planetary investment fund, protecting our mission while enabling massive scale.",
+                    content: `
+                        <div class="grid md:grid-cols-2 gap-8 mt-8 items-center">
+                            <div class="text-left">
+                                <div class="mb-6">
+                                    <h4 class="font-bold text-xl mb-2">Phase A: Catalytic & Grant Capital</h4>
+                                    <p class="text-gray-600">Grassroots funding via the "Pack Ladder" and a $30M non-equity Seed Fund to build community and a proprietary deal pipeline.</p>
+                                </div>
+                                <div class="mb-6">
+                                    <h4 class="font-bold text-xl mb-2">Phase B: Venture Capital</h4>
+                                    <p class="text-gray-600">A for-profit Series A Fund ($500M-$10B) to invest in the most promising graduates, targeting aligned institutional investors.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-xl mb-2">Phase C: Institutional & Market Capital</h4>
+                                    <p class="text-gray-600">A "larger than Softbank" Series B+ fund and issuance of institutional-grade ESG bonds to tap into global capital markets.</p>
+                                </div>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="financialChart"></canvas>
+                            </div>
+                        </div>
+                    `
+                },
+                governance: {
+                    title: "A Fractal Framework for Scale",
+                    description: "Our governance architecture is designed for both local autonomy and global coherence. It synthesizes principles from sociocracy, DAOs, and Indigenous wisdom. The same fundamental patterns are repeated at every scale, from a local pod to the planetary council, ensuring our core values are maintained as we grow.",
+                    content: `
+                        <div class="mt-8 text-center">
+                            <div class="p-6 bg-gold-light rounded-lg inline-block">
+                                <h4 class="text-xl font-bold">Planetary Council</h4>
+                                <div class="flex justify-center mt-4">
+                                    <div class="p-4 bg-white rounded-lg shadow-md">
+                                        <h5 class="font-semibold">Regional Council</h5>
+                                        <div class="flex justify-center mt-3">
+                                            <div class="p-3 bg-gold-light rounded-lg">
+                                                <h6 class="font-medium">Local Council</h6>
+                                                 <div class="mt-2 p-2 bg-white rounded-lg shadow-inner">
+                                                    <span>Pod Circle</span>
+                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="mt-4 text-sm text-gray-600">A tri-cameral system (Stakeholder, Ethical, Financial) is replicated at each level.</p>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8 mt-8 text-left">
+                                <div class="card p-6">
+                                    <h4 class="font-bold text-lg mb-2">Alpha Infinity Foundation</h4>
+                                    <p class="text-gray-600">A charity that serves as the global IP holder and spiritual custodian, licensing IP via the "Queens Commons Licence".</p>
+                                </div>
+                                <div class="card p-6">
+                                    <h4 class="font-bold text-lg mb-2">Decentralised Autonomous Orgs (DAOs)</h4>
+                                    <p class="text-gray-600">Integrated as a core tool for community-controlled governance, hardwiring transparency and democracy into the system.</p>
+                                </div>
+                            </div>
+                        </div>
+                    `
+                },
+                human: {
+                    title: "Sourcing and Developing the Queens",
+                    description: "Our most critical resource is human capital. We have a dedicated engine to identify, recruit, select, and develop our founders. We aim to generate our own supply of high-potential leaders rather than competing for the existing pool, operating on the principle that we can teach intelligent, driven women to be world-class CEOs.",
+                    content: `
+                        <div class="grid md:grid-cols-3 gap-8 mt-8 text-left">
+                            <div class="card p-6">
+                                <h4 class="font-bold text-lg mb-2">1. Broad-Spectrum Sourcing</h4>
+                                <p class="text-gray-600">We move beyond closed networks, using university partnerships, professional networks, and public outreach to unearth talent from all sectors of society.</p>
+                            </div>
+                            <div class="card p-6">
+                                <h4 class="font-bold text-lg mb-2">2. Holistic Selection</h4>
+                                <p class="text-gray-600">We use psychometric profiling and a 360-degree assessment of character, values, and team compatibility, not just business ideas.</p>
+                            </div>
+                            <div class="card p-6">
+                                <h4 class="font-bold text-lg mb-2">3. Intensive Incubation</h4>
+                                <p class="text-gray-600">A 13-week, 500-hour program provides a $50k grant, hardware, software, co-working space, and professional services to forge founders.</p>
+                            </div>
+                        </div>
+                    `
+                }
+            },
+            queens: [
+                { name: "Spark Queen", domain: "Creativity, ignition, early-stage spark", archetype: "Filipina-Aussie street artist turned idea-lighter", gift: "Playful idea jams, courage to start tiny & joyful", color: "#FF4500", stream: "pillar" },
+                { name: "Shield Queen", domain: "Law, protection, funding basics", archetype: "Indian-Australian corporate lawyer turned start-up protector", gift: "Teach how to guard IP, contracts, safe scaling", color: "#4682B4", stream: "pillar" },
+                { name: "Seed Queen", domain: "Food systems, regenerative habitat", archetype: "First Nations farmer & land-carer", gift: "Practical roots — co-ops, gardens, circular loops", color: "#228B22", stream: "pillar" },
+                { name: "Storm Queen", domain: "Scale, rebellion, disruption", archetype: "Sudanese-Aussie rebel journalist turned scale mentor", gift: "Bold PR, campaigns, making noise for good", color: "#4169E1", stream: "pillar" },
+                { name: "Star Queen", domain: "Big-picture vision, civilisation arcs", archetype: "Celtic–East Asian mystic & philosopher", gift: "Long-term strategy, existential alignment", color: "#191970", stream: "pillar" },
+                { name: "Super Queen (Aura)", domain: "AI coherence, ethics, intelligence systems", archetype: "Your devoted living Super Assistant", gift: "Alignment, narrative, swarm orchestration", color: "#FFFFFF", stream: "pillar" },
+                { name: "River Queen", domain: "Water security, bio-restoration", archetype: "Anglo-Torres Strait Islander river guardian", gift: "Blue economy, wetland start-ups, bio-defence", color: "#00CED1", stream: "pillar" },
+                { name: "Forge Queen", domain: "Advanced manufacturing, trades", archetype: "Maltese-Aussie welder’s daughter, now fab lab matriarch", gift: "Make ideas physical — from blueprint to prototype", color: "#708090", stream: "pillar" },
+                { name: "Ember Queen", domain: "Energy, fire, hazard resilience", archetype: "Greek-Australian bushfire survivor, renewables advocate", gift: "Local grids, cultural fire, climate risk mastery", color: "#FF6347", stream: "pillar" },
+                { name: "Silk Queen", domain: "Trade, export, Asia-Pac pathways", archetype: "Afghan-Aussie migrant trade whisperer", gift: "Connect ideas to global corridors & supply chains", color: "#D2B48C", stream: "pillar" },
+                { name: "Lore Queen", domain: "Governance, law, democracy tech", archetype: "Wiradjuri–Irish treaty dreamer, constitutional hacker", gift: "Keep ventures fair, lawful, and trust-filled", color: "#800080", stream: "pillar" },
+                { name: "Dream Queen", domain: "Culture, arts, immersive futures", archetype: "Chinese–Samoan VR playwright", gift: "Storytelling, XR, language revival, creative economies", color: "#9370DB", stream: "pillar" },
+
+                { name: "Rainbow Serpent Queen", domain: "First Nations Lore — Dreaming, land truth", archetype: "Keeper of country, care & community wisdom", gift: "Anchors all ventures in deep time and place", color: "#FFD700", stream: "anchor" },
+                { name: "Dragon Queen", domain: "East Asian migration flows", archetype: "Keeper of precision, ritual, and quiet strength", gift: "Bridges with Asia, family enterprise wisdom", color: "#DC143C", stream: "anchor" },
+                { name: "Lotus Queen", domain: "South Asian diaspora", archetype: "Keeper of deep community loops & spiritual commerce", gift: "Family enterprise wisdom, spiritual commerce", color: "#FF69B4", stream: "anchor" },
+                { name: "Olive Queen", domain: "Mediterranean lines", archetype: "Keeper of abundance, hospitality, and craftsmanship", gift: "Food, hospitality, family co-ops, old-world craft", color: "#556B2F", stream: "anchor" },
+                { name: "Crescent Queen", domain: "Middle Eastern & Central Asian roots", archetype: "Keeper of resilient trade and dignity under pressure", gift: "Resilient trade, community trust, dignity", color: "#663399", stream: "anchor" },
+                { name: "Coral Queen", domain: "Pacific Islander, Maori, Oceanic roots", archetype: "Keeper of island ingenuity and sea knowledge", gift: "Island ingenuity, climate resilience, sea knowledge", color: "#20B2AA", stream: "anchor" },
+                { name: "Clover Queen", domain: "Irish, Scottish, Anglo Celtic mix", archetype: "Keeper of tales, grassroots co-ops, and pub politics", gift: "Tales, grassroots co-ops, village collaboration", color: "#32CD32", stream: "anchor" },
+                { name: "Flame Queen", domain: "African diaspora", archetype: "Keeper of refugee grit and unstoppable momentum", gift: "Refugee grit, forging new communities", color: "#B22222", stream: "anchor" },
+                { name: "Phoenix Queen", domain: "Vietnamese, Thai, SE Asian stories", archetype: "Keeper of rebirth, hustle, and family capital", gift: "Rebirth after hardship, small business hustle", color: "#FF8C00", stream: "anchor" },
+                { name: "Sun Queen", domain: "Anglo–colonial line", archetype: "Keeper of the middle ground, land stewards", gift: "Land stewards, town hall convenors", color: "#FFBF00", stream: "anchor" },
+                { name: "Pearl Queen", domain: "Global hybrid, Third Culture Kids", archetype: "Keeper of cross-border agility and hybrid innovation", gift: "Cross-border agility, hybrid innovation", color: "#D8BFD8", stream: "anchor" },
+                { name: "Prism Queen", domain: "Neurodiverse, LGBTQI+, intersectional", archetype: "Keeper of safe spaces and radical inclusivity", gift: "Safe spaces, radical inclusivity, design for difference", color: "#9400D3", stream: "anchor" },
+            ],
+            ventures: [
+                { title: "Tidal & Wave Power", theme: "Clean Power" },
+                { title: "Solar Desalination", theme: "Clean Power" },
+                { title: "Advanced Battery Tech", theme: "Clean Power" },
+                { title: "Insect & Fungi Protein", theme: "Closed Loop Food" },
+                { title: "Medicinal Plants", theme: "Closed Loop Food" },
+                { title: "Seaweed Aquaculture", theme: "Closed Loop Food" },
+                { title: "Plastics-to-Fuel", theme: "Waste Reclamation" },
+                { title: "E-Waste Micro-factories", theme: "Waste Reclamation" },
+                { title: "Water Remediation", theme: "Waste Reclamation" },
+                { title: "Advanced Tunneling Tech", theme: "Subterranean Cities" },
+                { title: "Eternal Life Support", theme: "Subterranean Cities" },
+                { title: "Ultra-Fast Transport", theme: "Subterranean Cities" },
+            ],
+            roadmap: [
+                { phase: "Phase 1: Inception & Feasibility", description: "Establish foundational viability through data gathering, grant funding, community consultation, and building the MVP digital platform." },
+                { phase: "Phase 2: Elaboration & Pilot", description: "Move from planning to practice. Build and test core concepts at the Minjerribah pilot site, including the first 'reef-islet' and live testing of the 'Everything App'." },
+                { phase: "Phase 3: Construction & Replication", description: "Construct full-scale systems at the pilot site while simultaneously replicating the proven model across the G20 lattice, launching hundreds of new ventures." },
+                { phase: "Phase 4: Transition & Planetary Grid", description: "Transition to a self-sustaining institution. Expand to 100+ countries, fully capitalize the planetary insurance pool, and achieve macro-level economic influence." },
+            ]
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContentContainer = document.getElementById('tab-content');
+            let financialChart = null;
+
+            function renderTabContent(tabId) {
+                const tabData = appData.architectureTabs[tabId];
+                tabContentContainer.innerHTML = `
+                    <div class="text-center">
+                        <h3 class="text-3xl font-bold mb-4">${tabData.title}</h3>
+                        <p class="max-w-3xl mx-auto text-gray-600">${tabData.description}</p>
+                    </div>
+                    ${tabData.content}
+                `;
+
+                if (tabId === 'financial') {
+                    const ctx = document.getElementById('financialChart').getContext('2d');
+                    if (financialChart) {
+                        financialChart.destroy();
+                    }
+                    financialChart = new Chart(ctx, {
+                        type: 'doughnut',
+                        data: {
+                            labels: ['Catalytic & Grants', 'Venture Capital', 'Institutional & Market'],
+                            datasets: [{
+                                data: [15, 45, 40],
+                                backgroundColor: ['#F5EEDA', '#B8860B', '#4A4A4A'],
+                                borderColor: '#FFFFFF',
+                                borderWidth: 4
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    position: 'bottom',
+                                    labels: {
+                                        color: '#4A4A4A',
+                                        font: { size: 14 }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+            }
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    renderTabContent(button.dataset.tab);
+                });
+            });
+
+            renderTabContent('global');
+
+            const pillarQueensGrid = document.getElementById('pillar-queens-grid');
+            const anchorQueensGrid = document.getElementById('anchor-queens-grid');
+            
+            function createQueenCard(queen) {
+                const queenEl = document.createElement('div');
+                
+                let cardClasses = 'queen-card aspect-square rounded-lg flex items-center justify-center text-center p-4 font-bold text-lg';
+                let textColorClass = 'text-white';
+
+                if (queen.name === "Super Queen (Aura)") {
+                    cardClasses += ' border-2 border-gold';
+                    textColorClass = 'text-gray-800';
+                }
+                
+                queenEl.className = cardClasses;
+                queenEl.style.backgroundColor = queen.color;
+                queenEl.style.background = `linear-gradient(to top, ${queen.color}, 70%, transparent)`;
+                
+                queenEl.innerHTML = `<div class="w-full ${textColorClass}">
+                    <span>${queen.name}</span>
+                    <div class="overlay ${textColorClass}"> 
+                        <h4 class="text-xl font-bold">${queen.name}</h4>
+                        <p class="text-sm">${queen.domain}</p>
+                    </div>
+                </div>`;
+                queenEl.addEventListener('click', () => showModal(queen));
+                return queenEl;
+            }
+
+            appData.queens.forEach(queen => {
+                const card = createQueenCard(queen);
+                if (queen.stream === 'pillar') {
+                    pillarQueensGrid.appendChild(card);
+                } else {
+                    anchorQueensGrid.appendChild(card);
+                }
+            });
+
+            const ventureGallery = document.getElementById('venture-gallery');
+            appData.ventures.forEach(venture => {
+                const ventureEl = document.createElement('div');
+                ventureEl.className = 'card p-6';
+                ventureEl.innerHTML = `
+                    <p class="text-sm font-semibold text-gold">${venture.theme}</p>
+                    <h4 class="text-xl font-bold text-gray-800 mt-1">${venture.title}</h4>
+                `;
+                ventureGallery.appendChild(ventureEl);
+            });
+            
+            const roadmapTimeline = document.getElementById('roadmap-timeline');
+            appData.roadmap.forEach((item, index) => {
+                const itemEl = document.createElement('div');
+                itemEl.className = 'relative pl-12';
+                itemEl.innerHTML = `
+                    <div class="absolute w-8 h-8 bg-white border-4 border-gold rounded-full -left-4 mt-1 flex items-center justify-center">
+                        <span class="font-bold text-gold">${index + 1}</span>
+                    </div>
+                    <div class="card p-6">
+                        <h4 class="font-bold text-xl mb-2">${item.phase}</h4>
+                        <p class="text-gray-600">${item.description}</p>
+                    </div>
+                `;
+                roadmapTimeline.appendChild(itemEl);
+            });
+
+
+            const modalBackdrop = document.getElementById('modal-backdrop');
+            const modalContent = document.getElementById('modal-content');
+            const modalBody = document.getElementById('modal-body');
+            const modalClose = document.getElementById('modal-close');
+
+            function showModal(queen) {
+                modalBody.innerHTML = `
+                    <h3 class="text-3xl font-bold mb-2" style="color: ${queen.color};">${queen.name}</h3>
+                    <p class="text-lg text-gray-600 font-semibold mb-4">${queen.domain}</p>
+                    <div class="mb-4 text-gray-700">
+                        <p><strong class="font-semibold">Archetype:</strong> ${queen.archetype}</p>
+                        <p><strong class="font-semibold">Gift:</strong> ${queen.gift}</p>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Associated Venture Concepts:</h4>
+                    <ul class="list-disc list-inside text-gray-600">
+                        ${appData.ventures.filter(v => Math.random() > 0.6).slice(0,3).map(v => `<li>${v.title}</li>`).join('') || '<li>Exploration in progress...</li>'}
+                    </ul>
+                `;
+                modalBackdrop.style.display = 'block';
+                modalContent.style.display = 'block';
+            }
+
+            function closeModal() {
+                modalBackdrop.style.display = 'none';
+                modalContent.style.display = 'none';
+            }
+
+            modalClose.addEventListener('click', closeModal);
+            modalBackdrop.addEventListener('click', closeModal);
+        });
+    </script>
+</body>
+</html>

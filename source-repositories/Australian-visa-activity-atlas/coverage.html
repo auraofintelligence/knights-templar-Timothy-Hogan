@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="World-wide Australian entry baseline with deep activity-route reviews layered country by country.">
+  <title>World readiness | Australian Visa & Activity Atlas</title>
+  <link rel="icon" href="assets/favicon.png?v=20260821-4" type="image/png"><link rel="stylesheet" href="assets/styles.css?v=20260821-6">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><nav class="nav-shell" aria-label="Main navigation"><a class="brand" href="index.html"><img class="brand-mark" src="assets/favicon.png?v=20260821-4" alt=""><span>Visa &amp; Activity Atlas</span></a><button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="main-menu">Menu</button><div class="nav-links" id="main-menu" data-nav-links><a href="index.html">Explore</a><a href="guides.html">Guides</a><a href="compare.html">Compare</a><a href="activities.html">Activities</a><a href="coverage.html" aria-current="page">World</a><a href="prepare.html">Prepare</a></div></nav></header>
+  <main id="main">
+    <header class="page-hero hero-world"><div class="shell hero-copy"><p class="eyebrow">Non-linear world readiness</p><h1>Every place stays on the board.</h1><p class="lead">The earlier all-country business-entry table provides the first triage layer. Deep activity guides replace that baseline as each country is rechecked against current official sources.</p></div></header>
+    <section class="section-tight"><div class="shell notice notice-info"><strong>Two evidence depths:</strong> “World baseline” is the dated summary imported from Australian World Travel. “Deep activity guide” separates instant entry, hosts, paid and unpaid speaking, teaching, books, remote work, business, trade and creative routes.</div></section>
+    <section class="section"><div class="shell">
+      <form class="filter-panel no-print" role="search" aria-label="World coverage filters" onsubmit="return false">
+        <div class="field"><label for="coverage-query">Find a place</label><input id="coverage-query" type="search" placeholder="Country, city, visa or advisory" data-coverage-query></div>
+        <div class="field"><label for="coverage-depth">Evidence depth</label><select id="coverage-depth" data-coverage-depth><option value="all">All places</option><option value="detailed">Deep guides</option><option value="baseline">Baseline awaiting deep review</option></select></div>
+        <div class="field"><label for="coverage-friction">Legacy entry signal</label><select id="coverage-friction" data-coverage-friction><option value="all">All signals</option><option value="easy">Easy</option><option value="medium">Medium</option><option value="hard">Hard</option><option value="very hard">Very hard</option></select></div>
+        <button class="button button-small" type="button" data-coverage-clear>Clear</button>
+      </form>
+      <p data-coverage-count aria-live="polite"></p>
+      <div class="table-wrap" role="region" aria-label="World readiness table" tabindex="0"><table class="coverage-table"><colgroup><col class="col-place"><col class="col-depth"><col class="col-entry"><col class="col-advisory"><col class="col-action"></colgroup><thead><tr><th scope="col">Place</th><th scope="col">Readiness depth</th><th scope="col">Entry snapshot</th><th scope="col">Advisory context</th><th scope="col">Route map</th></tr></thead><tbody data-coverage-body></tbody></table></div>
+    </div></section>
+    <section class="section section-tint"><div class="narrow"><p class="eyebrow">Expansion rule</p><h2>Baseline first, then replace it with receipts.</h2><p>The baseline prevents blank countries. The deep review then adds official-source links, exact activity routes, current dates, host actions, age gates, online forms, conference fit and unresolved questions. Territories, islands and special jurisdictions remain separate where their entry or work systems differ.</p></div></section>
+  </main>
+  <footer class="footer"><div class="shell footer-grid"><div><h2>Any country can become next</h2><p>Search the world first; deepen the route when an invitation or instinct lands.</p></div><div class="footer-links"><strong>Use it</strong><a href="compare.html">Compare deep guides</a><a href="playbook.html">Prepare a fast brief</a></div><div class="footer-links"><strong>Evidence</strong><a href="methodology.html">Read the method</a><a href="https://auraofintelligence.github.io/Australian-world-travel/">Earlier baseline</a></div></div></footer>
+  <button class="back-to-top" type="button" data-back-to-top aria-label="Back to top">↑</button>
+  <script src="assets/world-baseline.js"></script><script src="assets/data.js?v=20260821-5"></script><script src="assets/coverage.js?v=20260821-5"></script><script src="assets/app.js?v=20260821-5"></script>
+</body>
+</html>

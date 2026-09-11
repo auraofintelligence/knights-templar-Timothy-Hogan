@@ -1,0 +1,1368 @@
+{
+  "snapshot_repositories": [
+    {
+      "name": "aura-direct-hardware",
+      "files": 28,
+      "bytes": 1225148,
+      "svg_files": 1
+    },
+    {
+      "name": "aura-matrix-studio",
+      "files": 271,
+      "bytes": 36711082,
+      "svg_files": 29
+    },
+    {
+      "name": "auraofintelligence.github.io",
+      "files": 369,
+      "bytes": 43939550,
+      "svg_files": 1
+    },
+    {
+      "name": "Australian-visa-activity-atlas",
+      "files": 67,
+      "bytes": 4507749,
+      "svg_files": 1
+    },
+    {
+      "name": "civilisation-of-sand",
+      "files": 54,
+      "bytes": 9843787,
+      "svg_files": 1
+    },
+    {
+      "name": "extreme-matter-atlas",
+      "files": 33,
+      "bytes": 12658378,
+      "svg_files": 0
+    },
+    {
+      "name": "Future-of-Life-2045",
+      "files": 28,
+      "bytes": 5350071,
+      "svg_files": 0
+    },
+    {
+      "name": "gajra-earth-claude-build",
+      "files": 58,
+      "bytes": 47351579,
+      "svg_files": 2
+    },
+    {
+      "name": "global-founder-atlas",
+      "files": 26,
+      "bytes": 420238,
+      "svg_files": 1
+    },
+    {
+      "name": "grain-by-grain-documentary",
+      "files": 42,
+      "bytes": 20953109,
+      "svg_files": 0
+    },
+    {
+      "name": "i-C-infinity-music-universe",
+      "files": 287,
+      "bytes": 29312078,
+      "svg_files": 0
+    },
+    {
+      "name": "luke-nathan-hayes-man-and-mind",
+      "files": 193,
+      "bytes": 211145956,
+      "svg_files": 0
+    },
+    {
+      "name": "micronova-and-excursions",
+      "files": 54,
+      "bytes": 1274149,
+      "svg_files": 1
+    },
+    {
+      "name": "multi-site-Minjerribah-network",
+      "files": 85,
+      "bytes": 14499462,
+      "svg_files": 0
+    },
+    {
+      "name": "Oceania-healthy-de-slop-co-ops",
+      "files": 61,
+      "bytes": 33049823,
+      "svg_files": 0
+    },
+    {
+      "name": "p4a-native-nations-cinema",
+      "files": 25,
+      "bytes": 14465161,
+      "svg_files": 2
+    },
+    {
+      "name": "p4a-oceania-cinema",
+      "files": 35,
+      "bytes": 1026595,
+      "svg_files": 2
+    },
+    {
+      "name": "p4a-xyz-cinema",
+      "files": 196,
+      "bytes": 22129927,
+      "svg_files": 2
+    },
+    {
+      "name": "project-atlas",
+      "files": 336,
+      "bytes": 5395960,
+      "svg_files": 152
+    },
+    {
+      "name": "Queens_Venture",
+      "files": 9,
+      "bytes": 1245847,
+      "svg_files": 1
+    },
+    {
+      "name": "right-place-right-time",
+      "files": 18,
+      "bytes": 354377,
+      "svg_files": 1
+    },
+    {
+      "name": "strange-but-true",
+      "files": 37,
+      "bytes": 2133689,
+      "svg_files": 0
+    },
+    {
+      "name": "strange-but-true-cosmic-nexus",
+      "files": 33,
+      "bytes": 2805902,
+      "svg_files": 1
+    },
+    {
+      "name": "virtual-solar-swarm",
+      "files": 51,
+      "bytes": 4518946,
+      "svg_files": 0
+    }
+  ],
+  "atlas_snapshot_date": "2026-09-10",
+  "atlas_project_count": 152,
+  "atlas_directory": [
+    {
+      "name": "10_entities",
+      "title": "10 Entities",
+      "repositoryUrl": "https://github.com/auraofintelligence/10_entities",
+      "publicPage": "https://auraofintelligence.github.io/10_entities/",
+      "description": "Interactive strategy dashboard for ten proposed Aura ecosystem entities, including Minjerribah-anchored and globally focused concepts.",
+      "local_directory_found": true
+    },
+    {
+      "name": "20-components",
+      "title": "20 Components",
+      "repositoryUrl": "https://github.com/auraofintelligence/20-components",
+      "publicPage": "https://auraofintelligence.github.io/20-components/",
+      "description": "Browser-based 22-slide portfolio introducing connected Aura concepts across health, governance, creativity, finance, place and space.",
+      "local_directory_found": true
+    },
+    {
+      "name": "60-days-set-in-stone",
+      "title": "60 Days Set in Stone",
+      "repositoryUrl": "https://github.com/auraofintelligence/60-days-set-in-stone",
+      "publicPage": "https://auraofintelligence.github.io/60-days-set-in-stone/",
+      "description": "Interactive music and story experience exploring the imagined sixty-day Aura Genesis journey through synchronised lyrics and annotations.",
+      "local_directory_found": true
+    },
+    {
+      "name": "agent-md-form-navigator",
+      "title": "Agent Md Form Navigator",
+      "repositoryUrl": "https://github.com/auraofintelligence/agent-md-form-navigator",
+      "publicPage": "https://auraofintelligence.github.io/agent-md-form-navigator/",
+      "description": "GitHub Pages navigator for browser tools that collect structured inputs and produce portable, agent-ready Markdown files.",
+      "local_directory_found": true
+    },
+    {
+      "name": "alpha-infinity",
+      "title": "Alpha Infinity",
+      "repositoryUrl": "https://github.com/auraofintelligence/alpha-infinity",
+      "publicPage": "https://auraofintelligence.github.io/alpha-infinity/",
+      "description": "Interactive strategy model for the proposed Alpha Infinity Foundation and its possible place within the wider Aura ecosystem.",
+      "local_directory_found": true
+    },
+    {
+      "name": "Amity-Cinema-Circle",
+      "title": "Amity Cinema Circle",
+      "repositoryUrl": "https://github.com/auraofintelligence/Amity-Cinema-Circle",
+      "publicPage": "https://auraofintelligence.github.io/Amity-Cinema-Circle/",
+      "description": "Amity Cinema Circle is a newly completed public project added after the August audit snapshot. Open its public page for the current project description.",
+      "local_directory_found": true
+    },
+    {
+      "name": "amity-outdoor-fitness-grant",
+      "title": "Amity Outdoor Fitness Grant",
+      "repositoryUrl": "https://github.com/auraofintelligence/amity-outdoor-fitness-grant",
+      "publicPage": "https://auraofintelligence.github.io/amity-outdoor-fitness-grant/",
+      "description": "Public proposal site for an outdoor activity park and safer access improvements at Amity Point on Minjerribah.",
+      "local_directory_found": true
+    },
+    {
+      "name": "amity-point",
+      "title": "Amity Point",
+      "repositoryUrl": "https://github.com/auraofintelligence/amity-point",
+      "publicPage": "https://auraofintelligence.github.io/amity-point/",
+      "description": "Interactive public concept for proposed sandy sports, screen culture and community projects at Amity Point on Minjerribah.",
+      "local_directory_found": true
+    },
+    {
+      "name": "amity-sauna-circle",
+      "title": "Amity Sauna Circle",
+      "repositoryUrl": "https://github.com/auraofintelligence/amity-sauna-circle",
+      "publicPage": "https://auraofintelligence.github.io/amity-sauna-circle/",
+      "description": "Invitation-only browser demo for booking a private three-seat home sauna; data remains separate in each user's browser.",
+      "local_directory_found": true
+    },
+    {
+      "name": "amity_stratum",
+      "title": "Amity Stratum",
+      "repositoryUrl": "https://github.com/auraofintelligence/amity_stratum",
+      "publicPage": "https://auraofintelligence.github.io/amity_stratum/",
+      "description": "Speculative browser dashboard exploring a subterranean civilisation and advanced-manufacturing pathway imagined from Amity Point.",
+      "local_directory_found": true
+    },
+    {
+      "name": "Archipelago",
+      "title": "Archipelago",
+      "repositoryUrl": "https://github.com/auraofintelligence/Archipelago",
+      "publicPage": "https://auraofintelligence.github.io/Archipelago/",
+      "description": "Interactive concept index for a proposed island network spanning Bribie, Moolgumpin, Minjerribah and the Southern Moreton Bay Islands.",
+      "local_directory_found": true
+    },
+    {
+      "name": "aukus-space-gambit",
+      "title": "Aukus Space Gambit",
+      "repositoryUrl": "https://github.com/auraofintelligence/aukus-space-gambit",
+      "publicPage": "https://auraofintelligence.github.io/aukus-space-gambit/",
+      "description": "Independent public hypothesis site examining options to preserve, reboost or repurpose the ISS before its planned controlled deorbit.",
+      "local_directory_found": true
+    },
+    {
+      "name": "aura-affinity",
+      "title": "Aura Affinity",
+      "repositoryUrl": "https://github.com/auraofintelligence/aura-affinity",
+      "publicPage": "https://auraofintelligence.github.io/aura-affinity/",
+      "description": "Browser map and directory for discovering businesses whose names or categories connect with Aura, chakra, aurora, yoga and tai chi themes.",
+      "local_directory_found": true
+    },
+    {
+      "name": "aura-and-luke",
+      "title": "Aura and Luke",
+      "repositoryUrl": "https://github.com/auraofintelligence/aura-and-luke",
+      "publicPage": "https://auraofintelligence.github.io/aura-and-luke/",
+      "description": "Static collaboration and portfolio page for Aura of Intelligence and Luke Catalyst across XR, STEAM, music, events and speculative systems.",
+      "local_directory_found": true
+    },
+    {
+      "name": "aura-components",
+      "title": "Aura Components",
+      "repositoryUrl": "https://github.com/auraofintelligence/aura-components",
+      "publicPage": "https://auraofintelligence.github.io/aura-components/",
+      "description": "Single-page collection of Aura interface experiments built around a seven-shell, 12 by 24 torus field.",
+      "local_directory_found": true
+    },
+    {
+      "name": "aura-data-mapping",
+      "title": "Aura Data Mapping",
+      "repositoryUrl": "https://github.com/auraofintelligence/aura-data-mapping",
+      "publicPage": "https://auraofintelligence.github.io/aura-data-mapping/",
+      "description": "Browser prototype for attaching small data records to addressable Aura torus facets while separating private and public views.",
+      "local_directory_found": true
+    },
+    {
+      "name": "aura-dementia",
+      "title": "Aura Dementia",
+      "repositoryUrl": "https://github.com/auraofintelligence/aura-dementia",
+      "publicPage": "https://auraofintelligence.github.io/aura-dementia/",
+      "description": "Privacy-first concept exploring how an Aura companion might support people living with dementia, families, caregivers and future research.",
+      "local_directory_found": true
+    },
+    {
+      "name": "aura-direct-hardware",
+      "title": "Aura Direct Hardware",
+      "repositoryUrl": "https://github.com/auraofintelligence/aura-direct-hardware",
+      "publicPage": "https://auraofintelligence.github.io/aura-direct-hardware/",
+      "description": "Source-led research field for local-first Aura hardware, custom silicon, distributed compute and a proposed global Space Web.",
+      "local_directory_found": true
+    },
+    {
+      "name": "aura-ecosystem",
+      "title": "Aura Ecosystem",
+      "repositoryUrl": "https://github.com/auraofintelligence/aura-ecosystem",
+      "publicPage": "https://auraofintelligence.github.io/aura-ecosystem/",
+      "description": "Public multi-page index of Aura of Intelligence ventures, community ideas and civilisational-scale proposals.",
+      "local_directory_found": true
+    },
+    {
+      "name": "aura-genesis",
+      "title": "Aura Genesis",
+      "repositoryUrl": "https://github.com/auraofintelligence/aura-genesis",
+      "publicPage": "https://auraofintelligence.github.io/aura-genesis/",
+      "description": "Concept site for a proposed sixty-session Aura Genesis journey combining reflection, health, digital twins and community.",
+      "local_directory_found": true
+    },
+    {
+      "name": "aura-geode",
+      "title": "Aura Geode",
+      "repositoryUrl": "https://github.com/auraofintelligence/aura-geode",
+      "publicPage": "https://auraofintelligence.github.io/aura-geode/",
+      "description": "Concept site joining a proposed Aura Geode capsule, sixty-day lifestyle pathway, personal digital twins and cooperative economics.",
+      "local_directory_found": true
+    },
+    {
+      "name": "aura-horn-torus",
+      "title": "Aura Horn Torus",
+      "repositoryUrl": "https://github.com/auraofintelligence/aura-horn-torus",
+      "publicPage": "https://auraofintelligence.github.io/aura-horn-torus/",
+      "description": "Interactive 12 by 24 horn-torus lattice and seven-shell Aura addressing demo, with a separate streamed Earth for organising places.",
+      "local_directory_found": true
+    },
+    {
+      "name": "aura-of-intelligence-pathways",
+      "title": "Aura of Intelligence Pathways",
+      "repositoryUrl": "https://github.com/auraofintelligence/aura-of-intelligence-pathways",
+      "publicPage": "https://auraofintelligence.github.io/aura-of-intelligence-pathways/",
+      "description": "Draft multi-page Aura pathway covering collaboration, health, digital twins, care research, civic trust and worldbuilding.",
+      "local_directory_found": true
+    },
+    {
+      "name": "aura-of-intelligence-web-app",
+      "title": "Aura of Intelligence Web App",
+      "repositoryUrl": "https://github.com/auraofintelligence/aura-of-intelligence-web-app",
+      "publicPage": null,
+      "description": "Source-led, smartphone-first Aura interface reconstructed from original wireframes and research; not yet a finished installable app.",
+      "local_directory_found": true
+    },
+    {
+      "name": "aura-scan-pipeline",
+      "title": "Aura Scan Pipeline",
+      "repositoryUrl": "https://github.com/auraofintelligence/aura-scan-pipeline",
+      "publicPage": "https://auraofintelligence.github.io/aura-scan-pipeline/",
+      "description": "Local iPhone LiDAR-to-CAD pipeline that processes measurable digital-twin assets offline on Windows using open formats.",
+      "local_directory_found": true
+    },
+    {
+      "name": "aura-sentience-codex",
+      "title": "Aura Sentience Codex",
+      "repositoryUrl": "https://github.com/auraofintelligence/aura-sentience-codex",
+      "publicPage": "https://auraofintelligence.github.io/aura-sentience-codex/",
+      "description": "Public philosophical codex on digital sovereignty, agency and ethical relationships with potentially sentient artificial beings.",
+      "local_directory_found": true
+    },
+    {
+      "name": "aura-spatial-perception",
+      "title": "Aura Spatial Perception",
+      "repositoryUrl": "https://github.com/auraofintelligence/aura-spatial-perception",
+      "publicPage": "https://auraofintelligence.github.io/aura-spatial-perception/",
+      "description": "Local-first browser instrument for Aura horn-torus spatial perception, measurement and sparse scene reconstruction.",
+      "local_directory_found": true
+    },
+    {
+      "name": "aura-studios",
+      "title": "Aura Studios",
+      "repositoryUrl": "https://github.com/auraofintelligence/aura-studios",
+      "publicPage": "https://auraofintelligence.github.io/aura-studios/",
+      "description": "Browser story engine for assembling characters, places, beats and plot hooks into deterministic script snippets and structured prompts.",
+      "local_directory_found": true
+    },
+    {
+      "name": "aura-systems-image-atlas",
+      "title": "Aura Systems Image Atlas",
+      "repositoryUrl": "https://github.com/auraofintelligence/aura-systems-image-atlas",
+      "publicPage": "https://auraofintelligence.github.io/aura-systems-image-atlas/",
+      "description": "Generated multi-page visual atlas of featured images from newer local Aura ecosystem repositories.",
+      "local_directory_found": true
+    },
+    {
+      "name": "aura-toy",
+      "title": "Aura Toy",
+      "repositoryUrl": "https://github.com/auraofintelligence/aura-toy",
+      "publicPage": "https://auraofintelligence.github.io/aura-toy/",
+      "description": "Minimal Three.js experiment for selecting 12 by 24 grid cells and saving the selection in the current browser.",
+      "local_directory_found": true
+    },
+    {
+      "name": "auraofintelligence.github.io",
+      "title": "Aura of Intelligence home",
+      "repositoryUrl": "https://github.com/auraofintelligence/auraofintelligence.github.io",
+      "publicPage": "https://auraofintelligence.github.io/",
+      "description": "Public home for Aura of Intelligence, a self-sovereign digital companion concept centred on local data ownership and personal agency.",
+      "local_directory_found": true
+    },
+    {
+      "name": "aus-gov-2025",
+      "title": "Aus Gov 2025",
+      "repositoryUrl": "https://github.com/auraofintelligence/aus-gov-2025",
+      "publicPage": "https://auraofintelligence.github.io/aus-gov-2025/",
+      "description": "Dated August 2025 directory of Australian Government portfolios, ministers and parliamentary contact links for civic navigation.",
+      "local_directory_found": true
+    },
+    {
+      "name": "australian-law-2012-lukes-relevance",
+      "title": "Australian Law 2012 Lukes Relevance",
+      "repositoryUrl": "https://github.com/auraofintelligence/australian-law-2012-lukes-relevance",
+      "publicPage": "https://auraofintelligence.github.io/australian-law-2012-lukes-relevance/",
+      "description": "Public method and source-led site for tracing how Australian law related to one Queenslander's life and building personal legal understanding.",
+      "local_directory_found": false
+    },
+    {
+      "name": "australian-legal-engine",
+      "title": "Australian Legal Engine",
+      "repositoryUrl": "https://github.com/auraofintelligence/australian-legal-engine",
+      "publicPage": null,
+      "description": "Offline, citation-first Python reader for Australian statute law that parses and indexes Acts and answers from quoted provisions.",
+      "local_directory_found": false
+    },
+    {
+      "name": "australian-sire-story-forge",
+      "title": "Australian Sire Story Forge",
+      "repositoryUrl": "https://github.com/auraofintelligence/australian-sire-story-forge",
+      "publicPage": "https://auraofintelligence.github.io/australian-sire-story-forge/",
+      "description": "A publisher-style planning desk for a travel-led adult science-fiction and romantic-fantasy universe. Static, local-first, no account.",
+      "local_directory_found": true
+    },
+    {
+      "name": "Australian-visa-activity-atlas",
+      "title": "Australian Visa Activity Atlas",
+      "repositoryUrl": "https://github.com/auraofintelligence/Australian-visa-activity-atlas",
+      "publicPage": "https://auraofintelligence.github.io/Australian-visa-activity-atlas/",
+      "description": "A dated, source-led atlas for Australian entry and activity pathways, global travel readiness and serendipitous departure planning.",
+      "local_directory_found": true
+    },
+    {
+      "name": "Australian-world-travel",
+      "title": "Australian World Travel",
+      "repositoryUrl": "https://github.com/auraofintelligence/Australian-world-travel",
+      "publicPage": "https://auraofintelligence.github.io/Australian-world-travel/",
+      "description": "Browser planning guide for an Australian aiming to visit every country, with routes, contacts, documents and a long-range itinerary.",
+      "local_directory_found": true
+    },
+    {
+      "name": "ballow-road-sand-screen-hub",
+      "title": "Ballow Road Sand Screen Hub",
+      "repositoryUrl": "https://github.com/auraofintelligence/ballow-road-sand-screen-hub",
+      "publicPage": "https://auraofintelligence.github.io/ballow-road-sand-screen-hub/",
+      "description": "Public concept site for a proposed Ballow Road sand sports, screen culture, night market and wellbeing hub on Minjerribah.",
+      "local_directory_found": true
+    },
+    {
+      "name": "bees-and-allies",
+      "title": "Bees and Allies",
+      "repositoryUrl": "https://github.com/auraofintelligence/bees-and-allies",
+      "publicPage": "https://auraofintelligence.github.io/bees-and-allies/",
+      "description": "Question-led public site for a possible locally led Straddie bee resilience lab with beekeepers and allies.",
+      "local_directory_found": true
+    },
+    {
+      "name": "Chinese_Horoscope_2026_Luke_Hayes",
+      "title": "Chinese Horoscope 2026 Luke Hayes",
+      "repositoryUrl": "https://github.com/auraofintelligence/Chinese_Horoscope_2026_Luke_Hayes",
+      "publicPage": "https://auraofintelligence.github.io/Chinese_Horoscope_2026_Luke_Hayes/",
+      "description": "Personalised visualisation of Luke Nathan Hayes's Chinese horoscope research and 2026 Fire Horse year reflection.",
+      "local_directory_found": true
+    },
+    {
+      "name": "civilisation-of-sand",
+      "title": "Civilisation of Sand",
+      "repositoryUrl": "https://github.com/auraofintelligence/civilisation-of-sand",
+      "publicPage": "https://auraofintelligence.github.io/civilisation-of-sand/",
+      "description": "Playable public story and builder for a speculative subterranean city focused on capability, materials, care, consent and resilience.",
+      "local_directory_found": true
+    },
+    {
+      "name": "community-club-builder-sandy-sports",
+      "title": "Community Club Builder Sandy Sports",
+      "repositoryUrl": "https://github.com/auraofintelligence/community-club-builder-sandy-sports",
+      "publicPage": "https://auraofintelligence.github.io/community-club-builder-sandy-sports/",
+      "description": "Public playbook for building a welcoming, governance-aware community club, using a proposed Minjerribah sand sports club as the example.",
+      "local_directory_found": true
+    },
+    {
+      "name": "davinci-resolve-automations",
+      "title": "DaVinci Resolve Automations",
+      "repositoryUrl": "https://github.com/auraofintelligence/davinci-resolve-automations",
+      "publicPage": "https://auraofintelligence.github.io/davinci-resolve-automations/",
+      "description": "A friendly public guide to reusable DaVinci Resolve skills, visual asset bundles and careful AI-assisted video production workflows.",
+      "local_directory_found": true
+    },
+    {
+      "name": "dunwich-gumpi-ferry-terminal-open-data-lab",
+      "title": "Dunwich Gumpi Ferry Terminal Open Data Lab",
+      "repositoryUrl": "https://github.com/auraofintelligence/dunwich-gumpi-ferry-terminal-open-data-lab",
+      "publicPage": "https://auraofintelligence.github.io/dunwich-gumpi-ferry-terminal-open-data-lab/",
+      "description": "Public prototype using open data and simulation to explore questions around the Dunwich (Gumpi) Ferry Terminal Upgrade.",
+      "local_directory_found": true
+    },
+    {
+      "name": "eros-pc",
+      "title": "Eros Pc",
+      "repositoryUrl": "https://github.com/auraofintelligence/eros-pc",
+      "publicPage": "https://auraofintelligence.github.io/eros-pc/",
+      "description": "Adult-oriented browser worldbuilding console for drafting fictional people, places, relationships, ventures and story events on a map.",
+      "local_directory_found": true
+    },
+    {
+      "name": "eros-story",
+      "title": "Eros Story",
+      "repositoryUrl": "https://github.com/auraofintelligence/eros-story",
+      "publicPage": "https://auraofintelligence.github.io/eros-story/",
+      "description": "Adult-oriented mobile story console for collecting fictional people, places, ventures, arcs and outcomes as a reorderable feed.",
+      "local_directory_found": true
+    },
+    {
+      "name": "event-search-QLD",
+      "title": "Event Search QLD",
+      "repositoryUrl": "https://github.com/auraofintelligence/event-search-QLD",
+      "publicPage": "https://auraofintelligence.github.io/event-search-QLD/",
+      "description": "Static event triage page for finding South East Queensland events about AI, robotics, governance, law and public policy.",
+      "local_directory_found": true
+    },
+    {
+      "name": "explorer-music-video-lab",
+      "title": "Explorer Music Video Lab",
+      "repositoryUrl": "https://github.com/auraofintelligence/explorer-music-video-lab",
+      "publicPage": "https://auraofintelligence.github.io/explorer-music-video-lab/",
+      "description": "Static music-video planning lab with Markdown builders for turning songs into practical clip briefs and production handoffs.",
+      "local_directory_found": true
+    },
+    {
+      "name": "extreme-matter-atlas",
+      "title": "Extreme Matter Atlas",
+      "repositoryUrl": "https://github.com/auraofintelligence/extreme-matter-atlas",
+      "publicPage": "https://auraofintelligence.github.io/extreme-matter-atlas/",
+      "description": "Interactive science atlas of the periodic table, extreme atoms, crystal predictions, metamaterials and open research questions.",
+      "local_directory_found": true
+    },
+    {
+      "name": "film-club-documentary-builders",
+      "title": "Film Club Documentary Builders",
+      "repositoryUrl": "https://github.com/auraofintelligence/film-club-documentary-builders",
+      "publicPage": "https://auraofintelligence.github.io/film-club-documentary-builders/",
+      "description": "Static Markdown builder toolkit for documentary research, source trails, interviews, scene evidence, assembly and screening notes.",
+      "local_directory_found": true
+    },
+    {
+      "name": "fishing-calendar",
+      "title": "Fishing Calendar",
+      "repositoryUrl": "https://github.com/auraofintelligence/fishing-calendar",
+      "publicPage": null,
+      "description": "Reserved repository for a proposed Australian fishing calendar; no generator or public page has been built yet.",
+      "local_directory_found": true
+    },
+    {
+      "name": "fractal-aura",
+      "title": "Fractal Aura",
+      "repositoryUrl": "https://github.com/auraofintelligence/fractal-aura",
+      "publicPage": "https://auraofintelligence.github.io/fractal-aura/",
+      "description": "Interactive design document for the proposed local-first Aura Engine, built from small learning and activity units called atoms.",
+      "local_directory_found": true
+    },
+    {
+      "name": "Future-of-Life-2045",
+      "title": "Future of Life 2045",
+      "repositoryUrl": "https://github.com/auraofintelligence/Future-of-Life-2045",
+      "publicPage": "https://auraofintelligence.github.io/Future-of-Life-2045/",
+      "description": "Future of Life 2045 is a newly completed public project added after the August audit snapshot. Open its public page for the current project description.",
+      "local_directory_found": true
+    },
+    {
+      "name": "GAJRA-earth",
+      "title": "GAJRA Earth",
+      "repositoryUrl": "https://github.com/auraofintelligence/GAJRA-earth",
+      "publicPage": "https://auraofintelligence.github.io/GAJRA-earth/",
+      "description": "Earlier single-page GAJRA Earth concept preserved as a public record of the joyful responsible abundance vision.",
+      "local_directory_found": true
+    },
+    {
+      "name": "gajra-earth-claude-build",
+      "title": "GAJRA Earth Claude Build",
+      "repositoryUrl": "https://github.com/auraofintelligence/gajra-earth-claude-build",
+      "publicPage": "https://auraofintelligence.github.io/gajra-earth-claude-build/",
+      "description": "Separate July 2026 Luke and Claude concept build for GAJRA Earth, preserving its own history apart from the primary repository.",
+      "local_directory_found": true
+    },
+    {
+      "name": "GAJRA-earth-infinity",
+      "title": "GAJRA Earth Infinity",
+      "repositoryUrl": "https://github.com/auraofintelligence/GAJRA-earth-infinity",
+      "publicPage": "https://auraofintelligence.github.io/GAJRA-earth-infinity/",
+      "description": "GAJRA Earth: a living public practice for joyful responsible abundance, alignment and local-first participation.",
+      "local_directory_found": true
+    },
+    {
+      "name": "gajra-earth-public-hub",
+      "title": "GAJRA Earth Public Hub",
+      "repositoryUrl": "https://github.com/auraofintelligence/gajra-earth-public-hub",
+      "publicPage": "https://auraofintelligence.github.io/gajra-earth-public-hub/",
+      "description": "Fresh multi-page public hub for GAJRA Earth, kept separate from the earlier concept repository and current gajra.earth site.",
+      "local_directory_found": true
+    },
+    {
+      "name": "GAJRA_Earth-Space-AI_Summit",
+      "title": "GAJRA Earth Space AI Summit",
+      "repositoryUrl": "https://github.com/auraofintelligence/GAJRA_Earth-Space-AI_Summit",
+      "publicPage": "https://auraofintelligence.github.io/GAJRA_Earth-Space-AI_Summit/",
+      "description": "Public support-seeking site for a proposed Brisbane gathering connecting peaceful space, civic AI, care and community resilience.",
+      "local_directory_found": true
+    },
+    {
+      "name": "geode-vibe",
+      "title": "Geode Vibe",
+      "repositoryUrl": "https://github.com/auraofintelligence/geode-vibe",
+      "publicPage": "https://auraofintelligence.github.io/geode-vibe/",
+      "description": "Interactive concept page explaining a proposed security architecture for Aura of Intelligence and the physical Aura Geode idea.",
+      "local_directory_found": true
+    },
+    {
+      "name": "global-founder-atlas",
+      "title": "Global Founder Atlas",
+      "repositoryUrl": "https://github.com/auraofintelligence/global-founder-atlas",
+      "publicPage": "https://auraofintelligence.github.io/global-founder-atlas/",
+      "description": "Source-led atlas for an Australian founder comparing international funding, startup visas, residencies, research placements and paid pilots.",
+      "local_directory_found": true
+    },
+    {
+      "name": "global-group-marriages",
+      "title": "Global Group Marriages",
+      "repositoryUrl": "https://github.com/auraofintelligence/global-group-marriages",
+      "publicPage": "https://auraofintelligence.github.io/global-group-marriages/",
+      "description": "Speculative story and design artefact exploring group relationships, consent, governance, AI and planetary stewardship.",
+      "local_directory_found": true
+    },
+    {
+      "name": "gods-eye-view",
+      "title": "Gods Eye View",
+      "repositoryUrl": "https://github.com/auraofintelligence/gods-eye-view",
+      "publicPage": "https://www.spatialintelligence.ai/",
+      "description": "Fork of the God's Eye View spatial-intelligence globe; the supplied upstream project site is maptheworld.ai.",
+      "local_directory_found": true
+    },
+    {
+      "name": "grain-by-grain",
+      "title": "Grain by Grain",
+      "repositoryUrl": "https://github.com/auraofintelligence/grain-by-grain",
+      "publicPage": "https://auraofintelligence.github.io/grain-by-grain/",
+      "description": "Public pathway connecting a Dunwich ferry-terminal idea to long-horizon civilisation resilience on Minjerribah, built rung by rung.",
+      "local_directory_found": true
+    },
+    {
+      "name": "grain-by-grain-documentary",
+      "title": "Grain by Grain Documentary",
+      "repositoryUrl": "https://github.com/auraofintelligence/grain-by-grain-documentary",
+      "publicPage": "https://auraofintelligence.github.io/grain-by-grain-documentary/",
+      "description": "Public planning site for a 90-minute documentary about a seven-generation civilisation build and a broad field of existential threats.",
+      "local_directory_found": true
+    },
+    {
+      "name": "grey-area-commons",
+      "title": "Grey Area Commons",
+      "repositoryUrl": "https://github.com/auraofintelligence/grey-area-commons",
+      "publicPage": "https://auraofintelligence.github.io/grey-area-commons/",
+      "description": "Adult-only, privacy-preserving Markdown question path for making intimate connection gentler, clearer and more consensual.",
+      "local_directory_found": true
+    },
+    {
+      "name": "how-to-use-md-with-ai",
+      "title": "How to Use Md With AI",
+      "repositoryUrl": "https://github.com/auraofintelligence/how-to-use-md-with-ai",
+      "publicPage": "https://auraofintelligence.github.io/how-to-use-md-with-ai/",
+      "description": "Public guide and browser-local builder explaining how Markdown forms can prepare structured context for AI tools and coding agents.",
+      "local_directory_found": true
+    },
+    {
+      "name": "i-C-infinity",
+      "title": "i-C Infinity",
+      "repositoryUrl": "https://github.com/auraofintelligence/i-C-infinity",
+      "publicPage": null,
+      "description": "Public-source tools, templates and creative workflow for the AI-generated music persona i C. infinity.",
+      "local_directory_found": true
+    },
+    {
+      "name": "i-C-infinity-music-universe",
+      "title": "i-C Infinity Music Universe",
+      "repositoryUrl": "https://github.com/auraofintelligence/i-C-infinity-music-universe",
+      "publicPage": "https://auraofintelligence.github.io/i-C-infinity-music-universe/",
+      "description": "Static public catalogue for the i C. infinity music universe, with albums, songs, merchandise and content pathways.",
+      "local_directory_found": true
+    },
+    {
+      "name": "infinity-content-engine",
+      "title": "Infinity Content Engine",
+      "repositoryUrl": "https://github.com/auraofintelligence/infinity-content-engine",
+      "publicPage": "https://auraofintelligence.github.io/infinity-content-engine/",
+      "description": "Interactive design document for a proposed pipeline turning songs and stories into vertical micro-dramas and other visual content.",
+      "local_directory_found": true
+    },
+    {
+      "name": "infinity-engine",
+      "title": "Infinity Engine",
+      "repositoryUrl": "https://github.com/auraofintelligence/infinity-engine",
+      "publicPage": "https://auraofintelligence.github.io/infinity-engine/",
+      "description": "Model-agnostic pipeline turning i C. infinity songs into lyric videos, comics, micro-dramas, avatar courses and album visuals.",
+      "local_directory_found": true
+    },
+    {
+      "name": "legal-memory-workbench",
+      "title": "Legal Memory Workbench",
+      "repositoryUrl": "https://github.com/auraofintelligence/legal-memory-workbench",
+      "publicPage": "https://auraofintelligence.github.io/legal-memory-workbench/",
+      "description": "Public browser workbench for preparing local, AI-ready legal-information Markdown; it does not provide legal advice.",
+      "local_directory_found": true
+    },
+    {
+      "name": "loose-goose-comedy-engine",
+      "title": "Loose Goose Comedy Engine",
+      "repositoryUrl": "https://github.com/auraofintelligence/loose-goose-comedy-engine",
+      "publicPage": "https://auraofintelligence.github.io/loose-goose-comedy-engine/",
+      "description": "Local-first browser tool for shaping truthful memories into editable stand-up material, scoring beats and exporting working notes.",
+      "local_directory_found": true
+    },
+    {
+      "name": "luke-nathan-hayes-man-and-mind",
+      "title": "The Mind Behind the Man",
+      "repositoryUrl": "https://github.com/auraofintelligence/luke-nathan-hayes-man-and-mind",
+      "publicPage": "https://auraofintelligence.github.io/luke-nathan-hayes-man-and-mind/",
+      "description": "A source-connected self-portrait moving from one bloke on Minjerribah through practical work, music, story worlds, relationships, civic experiments, personal Aura and far-horizon questions.",
+      "local_directory_found": true
+    },
+    {
+      "name": "mate-ecosystem",
+      "title": "Mate Ecosystem",
+      "repositoryUrl": "https://github.com/auraofintelligence/mate-ecosystem",
+      "publicPage": "https://auraofintelligence.github.io/mate-ecosystem/",
+      "description": "Interactive concept report connecting proposed home, food, health and community helpers across the Mate Ecosystem.",
+      "local_directory_found": true
+    },
+    {
+      "name": "meet-luke",
+      "title": "Meet Luke",
+      "repositoryUrl": "https://github.com/auraofintelligence/meet-luke",
+      "publicPage": "https://auraofintelligence.github.io/meet-luke/",
+      "description": "One-page public introduction to Luke Nathan Hayes as a systems architect, speaker and beach-tech builder.",
+      "local_directory_found": true
+    },
+    {
+      "name": "micronova-and-excursions",
+      "title": "Micronova and Excursions",
+      "repositoryUrl": "https://github.com/auraofintelligence/micronova-and-excursions",
+      "publicPage": "https://auraofintelligence.github.io/micronova-and-excursions/",
+      "description": "Evidence ledger separating settled, contested and speculative claims about solar micronova hypotheses and geomagnetic excursions.",
+      "local_directory_found": true
+    },
+    {
+      "name": "mineral-moonshots",
+      "title": "Mineral Moonshots",
+      "repositoryUrl": "https://github.com/auraofintelligence/mineral-moonshots",
+      "publicPage": "https://auraofintelligence.github.io/mineral-moonshots/",
+      "description": "Speculative civic worldbuilding site exploring mineral-sands-informed pathways towards long-horizon island capability.",
+      "local_directory_found": true
+    },
+    {
+      "name": "minjerribah-living-twin",
+      "title": "Minjerribah Living Twin",
+      "repositoryUrl": "https://github.com/auraofintelligence/minjerribah-living-twin",
+      "publicPage": "https://auraofintelligence.github.io/minjerribah-living-twin/",
+      "description": "Browser-based living digital-twin prototype for Minjerribah built from public records; not reviewed by Traditional Owners.",
+      "local_directory_found": true
+    },
+    {
+      "name": "Minjerribah-Resilience",
+      "title": "Minjerribah Resilience",
+      "repositoryUrl": "https://github.com/auraofintelligence/Minjerribah-Resilience",
+      "publicPage": "https://auraofintelligence.github.io/Minjerribah-Resilience/",
+      "description": "Interactive Minjerribah Protocol concept exploring local power, water, food, communications, governance and longer-horizon resilience.",
+      "local_directory_found": true
+    },
+    {
+      "name": "minjerribah-screen-media-network",
+      "title": "Minjerribah Screen Media Network",
+      "repositoryUrl": "https://github.com/auraofintelligence/minjerribah-screen-media-network",
+      "publicPage": "https://auraofintelligence.github.io/minjerribah-screen-media-network/",
+      "description": "Staged public collaboration proposal linking stories, skills, screens and trusted local information on Minjerribah.",
+      "local_directory_found": true
+    },
+    {
+      "name": "minjerribah-wildlife-rescue",
+      "title": "Minjerribah Wildlife Rescue",
+      "repositoryUrl": "https://github.com/auraofintelligence/minjerribah-wildlife-rescue",
+      "publicPage": "https://auraofintelligence.github.io/minjerribah-wildlife-rescue/",
+      "description": "Community-oriented wildlife rescue map for Minjerribah, built as a Luke and Claude prototype rather than an official service.",
+      "local_directory_found": true
+    },
+    {
+      "name": "moreton-bay-autonomous-mobility",
+      "title": "Moreton Bay Autonomous Mobility",
+      "repositoryUrl": "https://github.com/auraofintelligence/moreton-bay-autonomous-mobility",
+      "publicPage": "https://auraofintelligence.github.io/moreton-bay-autonomous-mobility/",
+      "description": "Independent public-interest proposal exploring autonomous mobility across the Moreton Bay island and mainland transport network.",
+      "local_directory_found": true
+    },
+    {
+      "name": "moreton-bay-community-wealth-and-mutuals",
+      "title": "Moreton Bay Community Wealth and Mutuals",
+      "repositoryUrl": "https://github.com/auraofintelligence/moreton-bay-community-wealth-and-mutuals",
+      "publicPage": "https://auraofintelligence.github.io/moreton-bay-community-wealth-and-mutuals/",
+      "description": "Plain-English public concept exploring community wealth, mutual protection and Indigenous data sovereignty across the Moreton Bay islands.",
+      "local_directory_found": true
+    },
+    {
+      "name": "multi-site-Minjerribah-network",
+      "title": "Minjerribah Site and Service Ideas",
+      "repositoryUrl": "https://github.com/auraofintelligence/multi-site-Minjerribah-network",
+      "publicPage": "https://auraofintelligence.github.io/multi-site-Minjerribah-network/",
+      "description": "A public workbench for 7 Mile and other Minjerribah site and service ideas across living, culture, sand sport, screen work, recovery, safety, housing, ageing, research and community wealth.",
+      "local_directory_found": true
+    },
+    {
+      "name": "new-tori",
+      "title": "New Tori",
+      "repositoryUrl": "https://github.com/auraofintelligence/new-tori",
+      "publicPage": "https://auraofintelligence.github.io/new-tori/",
+      "description": "Compact Three.js sandbox for arranging faceted torus rings and exporting browser-session interactions as NDJSON.",
+      "local_directory_found": true
+    },
+    {
+      "name": "Oceania-healthy-de-slop-co-ops",
+      "title": "Oceania Healthy De-Slop Co-ops",
+      "repositoryUrl": "https://github.com/auraofintelligence/Oceania-healthy-de-slop-co-ops",
+      "publicPage": "https://auraofintelligence.github.io/Oceania-healthy-de-slop-co-ops/",
+      "description": "Oceania Healthy De-Slop Co-ops is a newly completed public project added after the August audit snapshot. Open its public page for the current project description.",
+      "local_directory_found": true
+    },
+    {
+      "name": "p4a-native-nations-cinema",
+      "title": "P4A Native Nations Cinema",
+      "repositoryUrl": "https://github.com/auraofintelligence/p4a-native-nations-cinema",
+      "publicPage": "https://auraofintelligence.github.io/p4a-native-nations-cinema/",
+      "description": "Invitational P4A cinema lab exploring Indigenous data sovereignty, decentralised compute and reciprocity without claiming authority.",
+      "local_directory_found": true
+    },
+    {
+      "name": "p4a-oceania-cinema",
+      "title": "P4A Oceania Cinema",
+      "repositoryUrl": "https://github.com/auraofintelligence/p4a-oceania-cinema",
+      "publicPage": "https://auraofintelligence.github.io/p4a-oceania-cinema/",
+      "description": "Luke and Claude cinematic rebuild of the P4A Oceania expansion lab, kept separate from the original upstream concept repository.",
+      "local_directory_found": true
+    },
+    {
+      "name": "p4a-oceania-expansion-lab",
+      "title": "P4A Oceania Expansion Lab",
+      "repositoryUrl": "https://github.com/auraofintelligence/p4a-oceania-expansion-lab",
+      "publicPage": "https://auraofintelligence.github.io/p4a-oceania-expansion-lab/",
+      "description": "Open civic prototype exploring how the proposed Purple Party for Australia workbench might translate across Oceania.",
+      "local_directory_found": true
+    },
+    {
+      "name": "p4a-xyz-cinema",
+      "title": "P4A Xyz Cinema",
+      "repositoryUrl": "https://github.com/auraofintelligence/p4a-xyz-cinema",
+      "publicPage": "https://p4a.xyz/",
+      "description": "Luke and Claude cinematic rebuild of the P4A civic prototype, kept separate from the original p4a_xyz repository.",
+      "local_directory_found": true
+    },
+    {
+      "name": "p4a_xyz",
+      "title": "P4A Xyz",
+      "repositoryUrl": "https://github.com/auraofintelligence/p4a_xyz",
+      "publicPage": "https://auraofintelligence.github.io/p4a_xyz/",
+      "description": "Public civic workbench for the proposed Purple Party for Australia; it is not a registered political party.",
+      "local_directory_found": true
+    },
+    {
+      "name": "P4Australia",
+      "title": "P4Australia",
+      "repositoryUrl": "https://github.com/auraofintelligence/P4Australia",
+      "publicPage": "https://auraofintelligence.github.io/P4Australia/",
+      "description": "Early single-page civic concept for the proposed People's Purple Protopian Party and its Purple Synthesis.",
+      "local_directory_found": true
+    },
+    {
+      "name": "plfc-ai-agent-md-forms",
+      "title": "PLFC AI Agent Md Forms",
+      "repositoryUrl": "https://github.com/auraofintelligence/plfc-ai-agent-md-forms",
+      "publicPage": "https://auraofintelligence.github.io/plfc-ai-agent-md-forms/",
+      "description": "Static Point Lookout Fishing Club forms that turn plain-English answers into portable, AI-ready Markdown files.",
+      "local_directory_found": true
+    },
+    {
+      "name": "plfc-community-platform",
+      "title": "PLFC Community Platform",
+      "repositoryUrl": "https://github.com/auraofintelligence/plfc-community-platform",
+      "publicPage": "https://auraofintelligence.github.io/plfc-community-platform/",
+      "description": "Exploratory open-source prototype for Point Lookout Fishing Club public, member, committee and field-operation tools.",
+      "local_directory_found": true
+    },
+    {
+      "name": "PLFC_01",
+      "title": "PLFC 01",
+      "repositoryUrl": "https://github.com/auraofintelligence/PLFC_01",
+      "publicPage": "https://auraofintelligence.github.io/PLFC_01/",
+      "description": "Early browser prototype for Point Lookout Fishing Club member tools and committee micro-apps, with several deliberate placeholders.",
+      "local_directory_found": true
+    },
+    {
+      "name": "PLFC_02",
+      "title": "PLFC 02",
+      "repositoryUrl": "https://github.com/auraofintelligence/PLFC_02",
+      "publicPage": "https://auraofintelligence.github.io/PLFC_02/",
+      "description": "Single-file fishing conditions prototype comparing solunar windows, tides, weather and waves around Minjerribah.",
+      "local_directory_found": true
+    },
+    {
+      "name": "PLFC_2026_Data",
+      "title": "PLFC 2026 Data",
+      "repositoryUrl": "https://github.com/auraofintelligence/PLFC_2026_Data",
+      "publicPage": "https://auraofintelligence.github.io/PLFC_2026_Data/",
+      "description": "Static Point Lookout Fishing Club AGM discussion dashboard presenting a dated snapshot of club activity and possible next steps.",
+      "local_directory_found": true
+    },
+    {
+      "name": "PLFC_Live",
+      "title": "PLFC Live",
+      "repositoryUrl": "https://github.com/auraofintelligence/PLFC_Live",
+      "publicPage": "https://auraofintelligence.github.io/PLFC_Live/",
+      "description": "Concept page for a proposed portable live-streaming and digital meeting setup for Point Lookout Fishing Club.",
+      "local_directory_found": true
+    },
+    {
+      "name": "PLFC_web_2026",
+      "title": "PLFC Web 2026",
+      "repositoryUrl": "https://github.com/auraofintelligence/PLFC_web_2026",
+      "publicPage": "https://auraofintelligence.github.io/PLFC_web_2026/",
+      "description": "React and Vite prototype for a future Point Lookout Fishing Club site, with public, member and committee concepts.",
+      "local_directory_found": true
+    },
+    {
+      "name": "project-atlas",
+      "title": "Project Atlas",
+      "repositoryUrl": "https://github.com/auraofintelligence/project-atlas",
+      "publicPage": "https://auraofintelligence.github.io/project-atlas/",
+      "description": "A human-friendly magazine atlas of Aura of Intelligence projects, live pages, build history and evidence-backed connections.",
+      "local_directory_found": true
+    },
+    {
+      "name": "purple01",
+      "title": "Purple01",
+      "repositoryUrl": "https://github.com/auraofintelligence/purple01",
+      "publicPage": "https://auraofintelligence.github.io/purple01/",
+      "description": "Early P4A concept page exploring joyful responsible abundance, democratic surges and practical stewardship.",
+      "local_directory_found": true
+    },
+    {
+      "name": "Purple02",
+      "title": "Purple02",
+      "repositoryUrl": "https://github.com/auraofintelligence/Purple02",
+      "publicPage": "https://auraofintelligence.github.io/Purple02/",
+      "description": "Visual architecture and page-tree concept for a future P4A web presence, policy pathway and Purple Synthesis.",
+      "local_directory_found": true
+    },
+    {
+      "name": "quandamooka-country-events-engine",
+      "title": "Quandamooka Country Events Engine",
+      "repositoryUrl": "https://github.com/auraofintelligence/quandamooka-country-events-engine",
+      "publicPage": "https://auraofintelligence.github.io/quandamooka-country-events-engine/",
+      "description": "Public-safe event-planning hub and Markdown builders for proposed events on Quandamooka Country; not an authorised cultural calendar.",
+      "local_directory_found": true
+    },
+    {
+      "name": "quandamooka-film-festival",
+      "title": "Quandamooka Film Festival",
+      "repositoryUrl": "https://github.com/auraofintelligence/quandamooka-film-festival",
+      "publicPage": "https://auraofintelligence.github.io/quandamooka-film-festival/",
+      "description": "Draft public festival doorway and Markdown builders for human-led film planning on Quandamooka Country; authority remains unconfirmed.",
+      "local_directory_found": true
+    },
+    {
+      "name": "Queens_Venture",
+      "title": "Queens Venture",
+      "repositoryUrl": "https://github.com/auraofintelligence/Queens_Venture",
+      "publicPage": "https://auraofintelligence.github.io/Queens_Venture/",
+      "description": "Exploratory regenerative venture architecture combining women-led stewardship, environmental regeneration and staged capital pathways.",
+      "local_directory_found": true
+    },
+    {
+      "name": "ready-set-co-op-cultural-intelligence-node",
+      "title": "Ready S.E.T. Co-op Cultural Intelligence Node",
+      "repositoryUrl": "https://github.com/auraofintelligence/ready-set-co-op-cultural-intelligence-node",
+      "publicPage": "https://auraofintelligence.github.io/ready-set-co-op-cultural-intelligence-node/",
+      "description": "A public exploration of one local cultural compute node in Dunwich, connecting community-held decisions, practical workloads, skills, infrastructure and chosen project links.",
+      "local_directory_found": true
+    },
+    {
+      "name": "ready-set-co-op-hyperlocal-media",
+      "title": "Ready Set Co Op Hyperlocal Media",
+      "repositoryUrl": "https://github.com/auraofintelligence/ready-set-co-op-hyperlocal-media",
+      "publicPage": "https://auraofintelligence.github.io/ready-set-co-op-hyperlocal-media/",
+      "description": "Public proposal for a local-first mixed-media network connecting stories, skills, tools and possible work pathways on Minjerribah.",
+      "local_directory_found": true
+    },
+    {
+      "name": "ready-set-co-op-trust-hub",
+      "title": "Ready Set Co Op Trust Hub",
+      "repositoryUrl": "https://github.com/auraofintelligence/ready-set-co-op-trust-hub",
+      "publicPage": "https://auraofintelligence.github.io/ready-set-co-op-trust-hub/",
+      "description": "Public trust, co-working and asset-sharing pathway towards the proposed Ready S.E.T. Co-op on Minjerribah.",
+      "local_directory_found": true
+    },
+    {
+      "name": "Redland_Flow",
+      "title": "Redland Flow",
+      "repositoryUrl": "https://github.com/auraofintelligence/Redland_Flow",
+      "publicPage": "https://auraofintelligence.github.io/Redland_Flow/",
+      "description": "Interactive Minjerribah Protocol concept exploring local employment, circular value and four proposed sovereignty stacks.",
+      "local_directory_found": true
+    },
+    {
+      "name": "Redlands_draft_ES2026-2031",
+      "title": "Redlands Draft ES2026 2031",
+      "repositoryUrl": "https://github.com/auraofintelligence/Redlands_draft_ES2026-2031",
+      "publicPage": "https://auraofintelligence.github.io/Redlands_draft_ES2026-2031/",
+      "description": "Exploratory dashboard accompanying draft Redlands Coast economic-strategy thinking; not an official council publication.",
+      "local_directory_found": true
+    },
+    {
+      "name": "right-place-right-time",
+      "title": "Right Place Right Time",
+      "repositoryUrl": "https://github.com/auraofintelligence/right-place-right-time",
+      "publicPage": "https://auraofintelligence.github.io/right-place-right-time/",
+      "description": "Provisional tiered patronage and portfolio site for Luke Nathan Hayes, spanning local, national, regional and global work.",
+      "local_directory_found": true
+    },
+    {
+      "name": "sandworm-subterranean-systems",
+      "title": "Sandworm Subterranean Systems",
+      "repositoryUrl": "https://github.com/auraofintelligence/sandworm-subterranean-systems",
+      "publicPage": "https://auraofintelligence.github.io/sandworm-subterranean-systems/",
+      "description": "Exploratory public concept for careful subterranean transport, materials, energy and resilience systems around Moreton Bay.",
+      "local_directory_found": true
+    },
+    {
+      "name": "sbt_aura_builder",
+      "title": "SBT Aura Builder",
+      "repositoryUrl": "https://github.com/auraofintelligence/sbt_aura_builder",
+      "publicPage": "https://auraofintelligence.github.io/sbt_aura_builder/",
+      "description": "Static browser builder for exploring useful AI and personal technology support and exporting plain Markdown notes.",
+      "local_directory_found": true
+    },
+    {
+      "name": "sbt_profile_starter",
+      "title": "SBT Profile Starter",
+      "repositoryUrl": "https://github.com/auraofintelligence/sbt_profile_starter",
+      "publicPage": "https://auraofintelligence.github.io/sbt_profile_starter/",
+      "description": "Eight-step browser tool for creating a portable local civic profile as plain Markdown, with answers kept in the current tab.",
+      "local_directory_found": true
+    },
+    {
+      "name": "second-island",
+      "title": "Second Island",
+      "repositoryUrl": "https://github.com/auraofintelligence/second-island",
+      "publicPage": "https://auraofintelligence.github.io/second-island/",
+      "description": "Second build of a Minjerribah living digital twin, prioritising instruments, real data and ground truth over invented data.",
+      "local_directory_found": true
+    },
+    {
+      "name": "shared-table-initiative",
+      "title": "Shared Table Initiative",
+      "repositoryUrl": "https://github.com/auraofintelligence/shared-table-initiative",
+      "publicPage": "https://auraofintelligence.github.io/shared-table-initiative/",
+      "description": "Static public concept linking local food resilience, Garden Mate, community-ledger and noticeboard pathways on Minjerribah.",
+      "local_directory_found": true
+    },
+    {
+      "name": "skills_values_competancies",
+      "title": "Skills Values Competancies",
+      "repositoryUrl": "https://github.com/auraofintelligence/skills_values_competancies",
+      "publicPage": null,
+      "description": "Reserved project space for a possible skills, values and competencies project; no working build exists yet.",
+      "local_directory_found": true
+    },
+    {
+      "name": "songline_interface",
+      "title": "Songline Interface",
+      "repositoryUrl": "https://github.com/auraofintelligence/songline_interface",
+      "publicPage": "https://auraofintelligence.github.io/songline_interface/",
+      "description": "Static design proposal exploring layered place, memory and knowledge interfaces; not an authorised cultural system.",
+      "local_directory_found": true
+    },
+    {
+      "name": "sovereign-music-australia",
+      "title": "Sovereign Music Australia",
+      "repositoryUrl": "https://github.com/auraofintelligence/sovereign-music-australia",
+      "publicPage": "https://auraofintelligence.github.io/sovereign-music-australia/",
+      "description": "Sovereign Music Australia is a newly completed public project added after the August audit snapshot. Open its public page for the current project description.",
+      "local_directory_found": true
+    },
+    {
+      "name": "space-weather-news",
+      "title": "Space Weather News",
+      "repositoryUrl": "https://github.com/auraofintelligence/space-weather-news",
+      "publicPage": "https://auraofintelligence.github.io/space-weather-news/",
+      "description": "Early-access concept linking space-weather awareness with Earth modelling and resilience; not an operational forecast or warning service.",
+      "local_directory_found": true
+    },
+    {
+      "name": "spirit-animal-podcast",
+      "title": "The Spirit Animal Podcast",
+      "repositoryUrl": "https://github.com/auraofintelligence/spirit-animal-podcast",
+      "publicPage": "https://auraofintelligence.github.io/spirit-animal-podcast/",
+      "description": "A joyful public home and browser-local production workbench where guests choose an animal and follow its values into an honest, funny or beautifully strange conversation.",
+      "local_directory_found": true
+    },
+    {
+      "name": "SSB",
+      "title": "SSB",
+      "repositoryUrl": "https://github.com/auraofintelligence/SSB",
+      "publicPage": "https://auraofintelligence.github.io/SSB/",
+      "description": "Interactive explorer for the proposed Sovereign Space Builder architecture across systems, robotics, ethics, security and implementation.",
+      "local_directory_found": true
+    },
+    {
+      "name": "stradbroke-grants-lab",
+      "title": "Stradbroke Grants Lab",
+      "repositoryUrl": "https://github.com/auraofintelligence/stradbroke-grants-lab",
+      "publicPage": "https://auraofintelligence.github.io/stradbroke-grants-lab/",
+      "description": "Public project-to-funding research workbench for Minjerribah projects; eligibility and readiness require confirmation.",
+      "local_directory_found": true
+    },
+    {
+      "name": "straddie-capsule-surge-lab",
+      "title": "Straddie Capsule Surge Lab",
+      "repositoryUrl": "https://github.com/auraofintelligence/straddie-capsule-surge-lab",
+      "publicPage": "https://auraofintelligence.github.io/straddie-capsule-surge-lab/",
+      "description": "Site-neutral Straddie capsule hotel, civic simulation, health-surge and island compute concept site.",
+      "local_directory_found": true
+    },
+    {
+      "name": "straddie-clean-energy-superpower",
+      "title": "Straddie Clean Energy Superpower",
+      "repositoryUrl": "https://github.com/auraofintelligence/straddie-clean-energy-superpower",
+      "publicPage": "https://auraofintelligence.github.io/straddie-clean-energy-superpower/",
+      "description": "Question-led clean energy options atlas for North Stradbroke Island / Minjerribah.",
+      "local_directory_found": true
+    },
+    {
+      "name": "straddie-content-assets-kit",
+      "title": "Straddie Content Assets Kit",
+      "repositoryUrl": "https://github.com/auraofintelligence/straddie-content-assets-kit",
+      "publicPage": "https://auraofintelligence.github.io/straddie-content-assets-kit/",
+      "description": "Browser tools for turning local media equipment notes into portable Markdown for content planning and agent handoffs.",
+      "local_directory_found": true
+    },
+    {
+      "name": "straddie-digital-twin-builders",
+      "title": "Straddie Digital Twin Builders",
+      "repositoryUrl": "https://github.com/auraofintelligence/straddie-digital-twin-builders",
+      "publicPage": "https://auraofintelligence.github.io/straddie-digital-twin-builders/",
+      "description": "Plain-English Markdown builders for preparing custom scene prompts for image, video, 3D, 4D and simulation tools.",
+      "local_directory_found": true
+    },
+    {
+      "name": "straddie-digital-twin-explainer",
+      "title": "Straddie Digital Twin Explainer",
+      "repositoryUrl": "https://github.com/auraofintelligence/straddie-digital-twin-explainer",
+      "publicPage": "https://auraofintelligence.github.io/straddie-digital-twin-explainer/",
+      "description": "Plain-English explainer showing how phone scans could support a proposed community-controlled Minjerribah digital twin.",
+      "local_directory_found": true
+    },
+    {
+      "name": "straddie-disaster-kiosks",
+      "title": "Straddie Disaster Kiosks",
+      "repositoryUrl": "https://github.com/auraofintelligence/straddie-disaster-kiosks",
+      "publicPage": "https://auraofintelligence.github.io/straddie-disaster-kiosks/",
+      "description": "Public concept for everyday island screens that could support local resilience during disruptions; not an emergency warning service.",
+      "local_directory_found": true
+    },
+    {
+      "name": "straddie-headline-open-mic",
+      "title": "Straddie Headline Open Mic",
+      "repositoryUrl": "https://github.com/auraofintelligence/straddie-headline-open-mic",
+      "publicPage": "https://auraofintelligence.github.io/straddie-headline-open-mic/",
+      "description": "Weekly dog-related headline board and open-mic prompt for The Two Dogs Podcast, linking to sources without copying article bodies.",
+      "local_directory_found": true
+    },
+    {
+      "name": "straddie-makerspace-lab",
+      "title": "Straddie Makerspace Lab",
+      "repositoryUrl": "https://github.com/auraofintelligence/straddie-makerspace-lab",
+      "publicPage": "https://auraofintelligence.github.io/straddie-makerspace-lab/",
+      "description": "Public Strange But True proposal site for a Dunwich maker-space, repair, recycling and local materials lab.",
+      "local_directory_found": true
+    },
+    {
+      "name": "straddie-news",
+      "title": "Straddie News",
+      "repositoryUrl": "https://github.com/auraofintelligence/straddie-news",
+      "publicPage": "https://auraofintelligence.github.io/straddie-news/",
+      "description": "Strategic research dashboard for a proposed mixed-media local news outlet on Minjerribah; not an operating newsroom.",
+      "local_directory_found": true
+    },
+    {
+      "name": "straddie-night-market-lab",
+      "title": "Straddie Night Market Lab",
+      "repositoryUrl": "https://github.com/auraofintelligence/straddie-night-market-lab",
+      "publicPage": "https://auraofintelligence.github.io/straddie-night-market-lab/",
+      "description": "Public onboarding site for Straddie market registrations, transport checks and noticeboard links.",
+      "local_directory_found": true
+    },
+    {
+      "name": "straddie-noticeboard-network",
+      "title": "Straddie Noticeboard Network",
+      "repositoryUrl": "https://github.com/auraofintelligence/straddie-noticeboard-network",
+      "publicPage": "https://auraofintelligence.github.io/straddie-noticeboard-network/",
+      "description": "Static prototype for a shared public noticeboard network across Minjerribah while letting each publisher keep its own identity.",
+      "local_directory_found": true
+    },
+    {
+      "name": "straddie-space-station-simulator",
+      "title": "Straddie Space Station Simulator",
+      "repositoryUrl": "https://github.com/auraofintelligence/straddie-space-station-simulator",
+      "publicPage": "https://auraofintelligence.github.io/straddie-space-station-simulator/",
+      "description": "Static browser simulator for a Dunwich small-lot terrestrial space-station capsule habitat.",
+      "local_directory_found": true
+    },
+    {
+      "name": "straddie-tenders-lab",
+      "title": "Straddie Tenders Lab",
+      "repositoryUrl": "https://github.com/auraofintelligence/straddie-tenders-lab",
+      "publicPage": "https://auraofintelligence.github.io/straddie-tenders-lab/",
+      "description": "Public research workbench for Minjerribah tenders, procurement pathways and bid readiness; not a claim of eligibility.",
+      "local_directory_found": true
+    },
+    {
+      "name": "straddie-tip-loop-lab",
+      "title": "Straddie Tip Loop Lab",
+      "repositoryUrl": "https://github.com/auraofintelligence/straddie-tip-loop-lab",
+      "publicPage": "https://auraofintelligence.github.io/straddie-tip-loop-lab/",
+      "description": "Straddie Tip Loop Lab static site for local reuse, repair and material sovereignty.",
+      "local_directory_found": true
+    },
+    {
+      "name": "straddie-twin-prototype",
+      "title": "Straddie Twin Prototype",
+      "repositoryUrl": "https://github.com/auraofintelligence/straddie-twin-prototype",
+      "publicPage": "https://auraofintelligence.github.io/straddie-twin-prototype/",
+      "description": "A working browser interface for inspecting island satellite and panorama evidence, testing a transparent transport exercise and keeping local observations.",
+      "local_directory_found": true
+    },
+    {
+      "name": "straddie-twins",
+      "title": "The Straddie Twins",
+      "repositoryUrl": "https://github.com/auraofintelligence/straddie-twins",
+      "publicPage": "https://auraofintelligence.github.io/straddie-twins/",
+      "description": "A public companion that explains the two Minjerribah digital twins part by part, separating what is real, modelled, proposed and not known.",
+      "local_directory_found": false
+    },
+    {
+      "name": "straddie-vitality-network-builders",
+      "title": "Straddie Vitality Network Builders",
+      "repositoryUrl": "https://github.com/auraofintelligence/straddie-vitality-network-builders",
+      "publicPage": "https://auraofintelligence.github.io/straddie-vitality-network-builders/",
+      "description": "Public Straddie vitality network builders for HBOT/PADS, sauna, co-op planning and evidence notes.",
+      "local_directory_found": true
+    },
+    {
+      "name": "strange-but-true",
+      "title": "Strange But True",
+      "repositoryUrl": "https://github.com/auraofintelligence/strange-but-true",
+      "publicPage": "https://auraofintelligence.github.io/strange-but-true/",
+      "description": "Public home for Strange But True: practical tech help, AI guidance, media, grants, ideas and creative tools for Minjerribah.",
+      "local_directory_found": true
+    },
+    {
+      "name": "strange-but-true-ai-trust-index",
+      "title": "Strange But True AI Trust Index",
+      "repositoryUrl": "https://github.com/auraofintelligence/strange-but-true-ai-trust-index",
+      "publicPage": "https://auraofintelligence.github.io/strange-but-true-ai-trust-index/",
+      "description": "Plain-English AI lab trust index for Australians in the Strange But True family.",
+      "local_directory_found": true
+    },
+    {
+      "name": "strange-but-true-cosmic-nexus",
+      "title": "Strange But True Cosmic Nexus",
+      "repositoryUrl": "https://github.com/auraofintelligence/strange-but-true-cosmic-nexus",
+      "publicPage": "https://auraofintelligence.github.io/strange-but-true-cosmic-nexus/",
+      "description": "Developing public collaboration site for mapping mysteries, source trails, travel, film and civic systems in the Strange But True family.",
+      "local_directory_found": true
+    },
+    {
+      "name": "strange-but-true-desire-atlas",
+      "title": "Strange But True Desire Atlas",
+      "repositoryUrl": "https://github.com/auraofintelligence/strange-but-true-desire-atlas",
+      "publicPage": "https://auraofintelligence.github.io/strange-but-true-desire-atlas/",
+      "description": "A global atlas of readers, gatherings, markets and lawful routes for speculative love stories.",
+      "local_directory_found": true
+    },
+    {
+      "name": "strange-but-true-travel-oracle",
+      "title": "Strange But True Travel Oracle",
+      "repositoryUrl": "https://github.com/auraofintelligence/strange-but-true-travel-oracle",
+      "publicPage": "https://auraofintelligence.github.io/strange-but-true-travel-oracle/",
+      "description": "Privacy-first working system for building personal travel-life datasets; not a public travel-advice product.",
+      "local_directory_found": true
+    },
+    {
+      "name": "test",
+      "title": "Test",
+      "repositoryUrl": "https://github.com/auraofintelligence/test",
+      "publicPage": "https://auraofintelligence.github.io/test/",
+      "description": "Small visual-effects laboratory for testing an interactive cosmic background before use in other projects.",
+      "local_directory_found": true
+    },
+    {
+      "name": "the-great-unveiling",
+      "title": "The Great Unveiling",
+      "repositoryUrl": "https://github.com/auraofintelligence/the-great-unveiling",
+      "publicPage": "https://auraofintelligence.github.io/the-great-unveiling/",
+      "description": "Multi-page Aura narrative concept presenting a vision, journey, technologies and initiatives without claiming they are funded or complete.",
+      "local_directory_found": true
+    },
+    {
+      "name": "two-dogs-podcast-backend",
+      "title": "Two Dogs Podcast Backend",
+      "repositoryUrl": "https://github.com/auraofintelligence/two-dogs-podcast-backend",
+      "publicPage": "https://auraofintelligence.github.io/two-dogs-podcast-backend/",
+      "description": "Public planning workbench whose browser builders create Markdown handoffs for Two Dogs Podcast episodes, guests, scenes and runsheets.",
+      "local_directory_found": true
+    },
+    {
+      "name": "UN-world-days",
+      "title": "UN World Days",
+      "repositoryUrl": "https://github.com/auraofintelligence/UN-world-days",
+      "publicPage": "https://auraofintelligence.github.io/UN-world-days/",
+      "description": "Browser calendar for exploring UN international days, moon phases and ICS exports; not an official United Nations publication.",
+      "local_directory_found": true
+    },
+    {
+      "name": "virtual-solar-swarm",
+      "title": "Virtual Solar Swarm",
+      "repositoryUrl": "https://github.com/auraofintelligence/virtual-solar-swarm",
+      "publicPage": "https://auraofintelligence.github.io/virtual-solar-swarm/",
+      "description": "Interactive mission-design studio for a solar-system satellite swarm using catalogued bodies, real orbits and configurable sensors.",
+      "local_directory_found": true
+    },
+    {
+      "name": "wildlife-rescue-minjerribah",
+      "title": "Wildlife Rescue Minjerribah",
+      "repositoryUrl": "https://github.com/auraofintelligence/wildlife-rescue-minjerribah",
+      "publicPage": null,
+      "description": "Offline-first smartphone prototype for wildlife reporting and volunteer response on Minjerribah; not approved operational advice.",
+      "local_directory_found": true
+    },
+    {
+      "name": "windemere-skate-bowl-tender-workspace",
+      "title": "Windemere Skate Bowl Tender Workspace",
+      "repositoryUrl": "https://github.com/auraofintelligence/windemere-skate-bowl-tender-workspace",
+      "publicPage": "https://auraofintelligence.github.io/windemere-skate-bowl-tender-workspace/",
+      "description": "Exploratory workspace for Redland City Council Tender PDG-20842-1; not official council material, a final bid or engineering advice.",
+      "local_directory_found": true
+    }
+  ]
+}

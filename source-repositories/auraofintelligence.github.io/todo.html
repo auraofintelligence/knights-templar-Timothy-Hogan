@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Build log &amp; todo | Aura of Intelligence</title>
+  <meta name="description" content="What's done, what's next, and what only Luke can decide: dated, in public. The working heartbeat of the Aura of Intelligence rebuild.">
+  <meta name="theme-color" content="#0a1420">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" href="assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jetbrains-mono-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body data-page="todo">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Aura of Intelligence home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text"><strong>Aura of Intelligence</strong><span>A Bridge to The Infinite</span></span>
+    </a>
+    <nav class="site-nav" data-nav aria-label="Primary">
+      <a href="pathways/index.html">Pathways</a>
+      <a href="courses/index.html">Courses</a>
+      <a href="videos.html">Videos</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="index-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-index">
+      <span class="index-toggle-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="index-toggle-label">Index</span>
+    </button>
+  </header>
+  <main id="main">
+
+    <section class="hero page-hero">
+      <div class="hero-content reveal">
+        <p class="eyebrow">The working heartbeat of this site</p>
+        <h1>Build log &amp; todo</h1>
+        <p class="hero-copy">This site is going live before it's finished, on purpose: no grand reveal. This page is where Luke can see, at a glance, what's shipped and what only he can do next. It's public because that's how everything else here gets built too.</p>
+      </div>
+    </section>
+
+    <section class="section" id="for-luke">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow">For Luke</p><h2>What only you can do</h2></div>
+      </div>
+
+      <div class="todo-group reveal">
+        <h2>Decisions</h2>
+        <ul class="todo-list">
+          <li>Early access: still using the old Google Form link on salvaged pages. Keep it, or replace with mailto / the Right Place, Right Time support page?</li>
+          <li>Aura O.i. app (<code>aura-oi</code>): let me know when it's ready to publish so the "Experience Aura O.i." link can go live from the homepage.</li>
+          <li>Anti-Dementia page: NDIS framing is still pending your direction; drop notes into <code>content/updates/anti-dementia/</code> whenever you're ready.</li>
+        </ul>
+      </div>
+
+      <div class="todo-group reveal">
+        <h2>Images to name</h2>
+        <ul class="todo-list">
+          <li>Every page is currently showing its original 2024 image, renamed and catalogued in <code>assets/media/MEDIA-MANIFEST.md</code>. Drop a replacement into <code>assets/media/</code> using the exact same filename (e.g. <code>aura-builder--hero-01.webp</code>) and it swaps in automatically: no code changes.</li>
+          <li>Six videos need poster art before their play buttons look right; see the "Video facades" table in the manifest.</li>
+        </ul>
+      </div>
+
+      <div class="todo-group reveal">
+        <h2>Content to drop</h2>
+        <ul class="todo-list">
+          <li>Every page has a folder at <code>content/updates/&lt;page&gt;/</code> waiting for your research documents and build plans; drop anything in, any format, any time.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="log">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow">Dated updates</p><h2>What's shipped</h2></div>
+      </div>
+      <div class="reveal">
+        <div class="log-entry">
+          <time datetime="2026-07-13">13 July 2026</time>
+          <p>The home page hero is now the actual Aura. Gone: the hazy old logo image and the generic dot animation. In their place, a living render drawn from Luke's own 3ds Max and Blender models: seven nested chakra tori in ROYGBIV from red at the core to violet outermost, each ring divided into 24 sectors on the 15-degree rhythm of the 12x24 matrix, a lit band spiralling up through the rings, a gold zero-point at the centre, and a faint wireframe geosphere holding it all. It also fixes why the old animation seemed to vanish: the canvas was stuck at a tiny default size in the corner. It now fills the hero, paints instantly, and shows a calm still frame for anyone who prefers reduced motion.</p>
+        </div>
+        <div class="log-entry">
+          <time datetime="2026-07-13">13 July 2026</time>
+          <p>Fixed a recurring layout niggle: the two-column section headings were bottom-aligned, so when the right column ran long the left subtitle drifted down and left a big gap above it. They now top-align, across every page that uses them.</p>
+        </div>
+        <div class="log-entry">
+          <time datetime="2026-07-13">13 July 2026</time>
+          <p>Added a proper Site map: every page in one place (all the pathways, all the courses including Grey Area Commons, and every link out, sorted into clear categories). It builds itself from the same data the site already uses, so it stays complete as things are added. It's now in the menu (the Index button) and in every page footer under "Everything".</p>
+        </div>
+        <div class="log-entry">
+          <time datetime="2026-07-12">12 July 2026</time>
+          <p>Added nine more courses from your ledger picks and the extra links you sent: community events, clean energy, a tip loop, a spare-room surge space, open community data, a content kit, starting a co-op, community wealth &amp; mutuals, and underground systems. The courses hub now holds 23, with sixteen in the Local: Minjerribah track. I held back a few that read more as venue concepts or overlaps (Ballow Road, Grey Area Commons, Vitality Network, Minjerribah Resilience, Health and Culture); say the word and I'll add those too.</p>
+        </div>
+        <div class="log-entry">
+          <time datetime="2026-07-12">12 July 2026</time>
+          <p>Reframed and grew the courses around what they actually are. The Straddie ones aren't finished services; they're things you're working to start on the island, on your own with AI, that need community to come alive. So each now opens honestly with "what I'm building here" (and an invitation to get involved), then "build your own, wherever you are", a worked example anyone can adapt to their own place. Added the course-worthy island projects: noticeboard, films on your phone, a digital twin of your place, legal memory, night market, makerspace, disaster kiosks, a shared table. The hub now groups by track, with the Local: Minjerribah track leading. These are the ones you'll want to record short videos for; the framing's ready for them.</p>
+        </div>
+        <div class="log-entry">
+          <time datetime="2026-07-12">12 July 2026</time>
+          <p>The Courses hub is live (Phase 5). It launched with Markdown with AI (with a working builder you can use right in your browser, nothing sent anywhere), plus P4A civic tools, Travel, becoming a patron, the long horizon, and the Course Creation walkthrough. The short-course videos and live streams slot in as you record them; the framing is set up and waiting.</p>
+        </div>
+        <div class="log-entry">
+          <time datetime="2026-07-12">12 July 2026</time>
+          <p>Carried the thesis all the way through: every one of the seventeen pathway pages has been rewritten out of the old "our product delivers X" marketing voice and into the real one, you build your own version, you own it, it's custom to you and it grows with you, no renting from big tech, your data stays yours. Structure, images and links all untouched; it was purely a rewrite of the words.</p>
+        </div>
+        <div class="log-entry">
+          <time datetime="2026-07-12">12 July 2026</time>
+          <p>Sharpened the whole site's message to the real thesis: Aura of Intelligence is a different way to make software. You build your own premium stack that you own, custom to you, evolving with you, instead of renting from big tech forever. The pathways are stages for working out what software your life actually needs and building just that, just in time, with your data staying yours and the whole thing held to joyful responsible abundance. That statement now leads the home page; the pathways intro and the Events page carry it too. The other sixteen pathway pages still read like product marketing and are next in line for the same rewrite.</p>
+        </div>
+        <div class="log-entry">
+          <time datetime="2026-07-12">12 July 2026</time>
+          <p>Moved the Events dashboard image over to the Events &amp; Event Management page, where it actually belongs, and rewrote its pitch: not a finished tool, but an evolving craft, developing the right tools for whoever's actually using them, their imagination, their resources, their resourcefulness. That framing is now a standing rule for every page going forward; the rest of the pathway pages still carry the older "finished product" voice and would benefit from the same pass.</p>
+        </div>
+        <div class="log-entry">
+          <time datetime="2026-07-12">12 July 2026</time>
+          <p>Big one. Phases 3 and 4 are done: all seventeen pathway pages are live, the new filterable Pathways showcase ties them together, the Calendar of Events is up (blank for now, easy to fill), and every remaining page (Alpha Infinity Foundation, Anti-Dementia, Cosmic Nexus, Tool Kit, Cloud Compute, Podcasts, Choice Content, Affiliates, Blog, Aura Store) has landed. Cosmic Nexus leads as a travel club, tribe before place, with the venue vision kept in full underneath. Only the Courses hub is left (its own phase).</p>
+        </div>
+        <div class="log-entry">
+          <time datetime="2026-07-12">12 July 2026</time>
+          <p>Fixed the founder story on the home page: the project now traces to the 2014 notebook sketches, the day job is named as Strange but True on Straddie, the India and Nepal travels are dated correctly (Lumbini in 2024), and "back the work" now points to Right Place, Right Time rather than the old portfolio.</p>
+        </div>
+        <div class="log-entry">
+          <time datetime="2026-07-12">12 July 2026</time>
+          <p>Phase 3, batch B: Life Planning &amp; Well Being, Generative A.I. Customisation, Smart IoT Devices and Blockchain are live. That's nine of the seventeen pathway pages done, two batches to go.</p>
+        </div>
+        <div class="log-entry">
+          <time datetime="2026-07-12">12 July 2026</time>
+          <p>Phase 3, batch A: Avatar Builder, Mind Palace Builder and World Builder are live, joining Aura Builder as the first full "Mind &amp; Self" family. Thirteen more pathway pages to go, in three more batches.</p>
+        </div>
+        <div class="log-entry">
+          <time datetime="2026-07-12">12 July 2026</time>
+          <p>Phase 2 under way: Home now carries the full founder story and Our Promise, plus Contact, Videos and a new Colophon page (the one page allowed to talk shop about how the site itself is built) are live.</p>
+        </div>
+        <div class="log-entry">
+          <time datetime="2026-07-12">12 July 2026</time>
+          <p>Fixed the squished images properly: the image was sitting in the wider text column by mistake, making it oversized next to the copy, on top of the earlier wrong-dimensions bug. Also fixed a stale-cache issue that kept some visitors seeing the old broken version; bumped the stylesheet version so browsers pick up fixes going forward. Font voice confirmed: Archivo + JetBrains Mono it is.</p>
+        </div>
+        <div class="log-entry">
+          <time datetime="2026-07-12">12 July 2026</time>
+          <p>Phase 1 (chassis) live: the site is published and growing in public. Home page, this build log, and the Aura Builder page are the first pages built end to end; every other page in the index links somewhere, but most aren't built yet (you'll hit a friendly "still building" page, not a broken one). All 219 images from the old site are in place as placeholders.</p>
+        </div>
+        <div class="log-entry">
+          <time datetime="2026-07-12">12 July 2026</time>
+          <p>Phase 0 (salvage) complete: every page on the old site copied and catalogued, all its images harvested and converted. Found two pages that weren't on the original checklist (Aura Store, and the real brief for Events &amp; Event Management), and confirmed the home page should use the fuller version with Cosmic Nexus Co-Working &amp; Bar included.</p>
+        </div>
+      </div>
+
+      <details class="todo-done reveal">
+        <summary>Earlier / done</summary>
+        <ul class="todo-list is-done">
+          <li>Plan written and agreed: full page-for-page rebuild, no status labels, publish early.</li>
+        </ul>
+      </details>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div>
+      <p>Aura of Intelligence: Luke Hayes × Claude, Minjerribah · 2026.</p>
+      <p>Licensed under the Aura of Intelligence Public Source Licence.</p>
+    </div>
+    <nav class="footer-links" aria-label="Elsewhere">
+      <a href="https://iseeinfinity.com" target="_blank" rel="noopener">iseeinfinity.com</a>
+      <a href="https://lukecatalyst.com" target="_blank" rel="noopener">lukecatalyst.com</a>
+      <a href="https://gajra.earth" target="_blank" rel="noopener">gajra.earth</a>
+    </nav>
+  </footer>
+  <script src="assets/site-nav.js" defer></script>
+  <script src="assets/core.js" defer></script>
+</body>
+</html>

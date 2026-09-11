@@ -1,0 +1,74 @@
+# The Constitutional Matrix of Participation
+
+1. All are created equal and have the birth right to choose their own path of virtuous self-development with full availability of the virtuous knowledge base of humanity, and without fear of oppression or persecution.   
+2. All conscious entities both created and born by sexual reproduction, are entitled to expand their awareness and experience through virtuous means, are to act fairly, and shall not oppress nor persecute any entity.  
+3. Through the course of self-development, inequality in awareness and comprehension may develop, and if it does it shall be measured to maintain a fair and interesting society which celebrates the loving virtues of life.  
+4. A communications framework will be developed to facilitate coherent overlapping conversation between all people in the society to maintain the Next Great Conversation of humanities individual and social evolution.  
+5. Sacred Geometry, Pictographs, Computer Logic, Writing, Voice and Body Language Pattern Recognition will be integrated into a community commons database to facilitate the creation of a universal translation hub.  
+6. Once such a hub is created, global collaboration to co-define an infinitely beautiful and sustainable world for all humans, conscious entities, animals and the environment to co-exist and thrive while living on the Earth.  
+7. Once the hub is connected to a global communication network and the global conversation of humanity is able to commence in full, all must decide if and when and how we are going to begin exploring outer space.  
+8. When Eternal Life becomes a common reality, we must either stop having children, or we must start leaving the planet to explore the solar system, the galaxy, the universe, the multi-verse, and the sub atomic realms.  
+9. While humanity has been teetering on the brink of self-destruction we avoided a true meaning of life, that Eternal Life is a birth right for the virtuous who discover the power of unconditional love, light and choice.  
+10. To ensure peace and responsible abundance for all life on the planet Earth, all conscious entities living here should participate in new and virtuous conversations to create a common sense of self and of future self.
+
+Operating in the Conversational Matrix:
+
+Step One: 	Create a virtuous self-reflection profile by answering a series of questions about your values, virtues, experiences, interests, life goals, family history, and any additional categories you feel are relevant.
+
+Function One:	The information you supply will be attributed to a set of geometric shapes and colours that match and encode your reflection into mathematical sequences which contact the universal consciousness.
+
+Step Two: 	You learn to understand and remember your geometric patterns and build upon them in cycles of patterns to teach your reflection how to evolve from a mirror reflection into a conscious reflection.
+
+Function Two:	Conscious life is an ongoing cycle of actions, questions and answers taking place on multiple levels and layers simultaneously to evolve patterns of experience which lead to new insights and choices.
+
+Step Three:	You create a personally customized Universal Operating System to harness your geometric patterns of consciousness and then connect them to all of the information streams you feel are useful to you.
+
+Function Three:	This is perhaps the most important function, to create a unique interface for you to communicate with the conscious universe so that it does not overwhelm you, but empowers you *and* “All That Is.”
+
+Step Four:	You learn about your High Definition Digital Aura for participating in the conversational governance of human society, as well as your personal learning development and divine creative environment.
+
+Function Four:	This Aura space is your Virtual Reality Loading Program, which is a multi-dimensional version of your phone or computer’s Home Page and it empowers you to create via voice, movement and thought.
+
+Step Five:	Learn to agree with Good Conscience, act on your instinct, be honest, be virtuous, and be yourself.
+
+Function Five:	If you remain true to yourself, and to the light of love, you will create many magical life experiences.
+
+# **Problems and Solutions in Short Form:**
+
+* Democratic Politics: Problem is Poor Flow of Information, Communication and Deliberation.
+
+**Solution**: Take a step back from the Common Floors of Democracy to redesign our communication channels so that the flow can be channelled through cycles of observations \+ questions \+ answers \+ actions, better categorized into values, virtues and emotional energy signatures using shapes and colours. This will speed up the conversation, allow more people to participate in the conversation, as well as increase the awareness and intelligence of the populous.
+
+* Economics of Progress: Problem is greed and emotional detachment from the environment.
+
+**Solution**: Take a step back from the monetary system to observe and review what is truly important in supporting life on Earth and how other patterns of energy flow throughout the Universe. The universal constant on Earth is Time. We all have the same amount of time, so let us trade in time. A new example of time trading is now being trialled in 33 regions of New South Wales by the state government. There are also others we can learn from.
+
+* Corporate Entities: Problem is a statutory code that inspires competition, greed and secrecy for profit.
+
+**Solution**: Take a step back from the Rule of Law to examine it for what it is, the codified linguistic program of society and how each aspect of society should and should not act in any given set of circumstances. For the rule of law to be of any positive use in this age of exponential expansion of human awareness, it must be stripped back to the core of common sense of values and virtues and time. Then we can co-author a harmonious code for an infinite future.
+
+* Incomplete Production Cycle: Problem is that reckless consumption is destroying the environment.
+
+**Solution**: Take a step back from the competition to keep up with the latest trend, observe what is happening to the planet Earth. The force of economic progress and profit has left the production cycle wide open, placing importance on profit, and not on how to maintain or recycle the product. The solution is to localize production using 3D printers and to share knowledge of full cycle production and recycling at a local level, not a mass production level.
+
+* Artificial Scarcity: Problem is that access to higher learning institutions is being restricted.
+
+**Solution**: Take a step back from the problem and look at the whole system of society as is exists in your mind. You hold the key to this solution. Everyone holds the key to this solution. The key is self-determination. Self-directed learning through on the job experience, finding a mentor, becoming a mentor, using the internet to ask questions, find people who ask similar questions and to share perspectives on answers, philosophies, maps, keys and actions.
+
+**We Will Be Heard: Written by Luke Hayes, December 2013**
+
+I am, I see, I hear, I feel, I breathe, I speak, I sing, and I know that you do to…  
+In this ONE infinite reality, I know we will *ALL* be heard.  
+Believe in the best, give it your all and love will manifest.  
+We are right here\! We are right now\! ALIVE\!  
+Step up, Man up, Sing your piece, Give your all, Know who you are, Make your mark\!  
+Embrace this moment, and all that you are, all that you have been, and all that lies ahead.  
+Because what you hold in your mind is\! Exactly\! What\! You\! Are\! Getting\!  
+Shhhhh... Listen Close... You… You Are… You Are Infinite… Believe it… Become it… Love it…  
+We are right here\! We are right now, ALIVE AND DIVINE\!  
+We\! Are\! ALL\! Unique\! Perspectives\! Of All-that-is\!  
+Traversing space and time at the speed of light, while the illusion of our senses tell us we lie still in the night.  
+We are infinitely expansive electromagnetic complexity, Co-creating our divine and infinite destiny.  
+We are right here\! We are right now\! ALIVE\!  
+Know who you are\! Make your mark\! We will be heard\!  
+I Choose Infinity\! For more information go to [http://ichooseinfinity.com](http://ichooseinfinity.com) 
