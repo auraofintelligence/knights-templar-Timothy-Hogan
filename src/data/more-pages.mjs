@@ -451,7 +451,7 @@ export const morePages = [
       {
         "title": "Read the work in its own words",
         "paragraphs": [
-          "The 61 source files include presentations, PDFs, Markdown documents, images and the supplied interview transcript. Separate versions stay separate, including identical files under different original names.",
+          "The library brings together presentations, PDFs, documents, images and the supplied interview transcript. Each work has one reading entry, using the original document where available. Duplicate files, converted copies and screenshots of complete documents remain in the preserved archive rather than becoming extra pages. Genuinely different works remain distinct.",
           "These are dated records. Older wording, AI-generated passages, statistics and proposed arrangements remain part of their original context, alongside the new invitation written for this site."
         ]
       }
@@ -474,7 +474,7 @@ export const morePages = [
       {
         "title": "The original visual language",
         "paragraphs": [
-          "The six PowerPoint presentations contain 97 slides. The collection also includes the 2023 Aura presentation as a PDF and 27 supplied slide images, plus poems, collages and the ecosystem infographic.",
+          "The six PowerPoint presentations contain 97 slides. The collection also includes the complete 2023 Aura presentation as a PDF, plus poems, collages and the ecosystem infographic. Slide previews belong to their presentation, not separate library entries.",
           "Original images remain available in the library. The ecosystem infographic’s 4,002 address label is a typo; the source calculation is 4,032. The horn torus is shown through its source geometry, never through the rejected generated ring-torus image."
         ]
       }

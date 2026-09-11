@@ -9,15 +9,21 @@ ROOT=Path(__file__).resolve().parents[1]
 BASE='https://github.com/auraofintelligence/knights-templar-Timothy-Hogan'
 def github(p): return BASE+'/blob/main/'+quote(p,safe='/')
 sources=[]
+selection=json.loads((ROOT/'src/data/source-selection.json').read_text(encoding='utf-8'))
+omitted={sid for group in selection['consolidations'] for sid in group['omit']}
 for i, record in enumerate(json.loads((ROOT/'analysis/source-inventory.json').read_text(encoding='utf-8')),1):
     p=ROOT/record['path']; sid=f'source-{i:02}'
     if hashlib.sha256(p.read_bytes()).hexdigest()!=record['sha256']: raise ValueError('Changed original: '+str(p))
-    destination=ROOT/'public/downloads'/sid/p.name
-    destination.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,destination)
     text=(ROOT/record['extraction']).read_text(encoding='utf-8') if record.get('extraction') else ''
     item={**record,'id':sid,'title':p.stem.replace('_',' '),'filename':p.name,'group':Path(record['path']).parts[1],
           'format':p.suffix[1:].upper(),'url':github(record['path']),'download':'downloads/'+sid+'/'+quote(p.name),
           'text':text,'previews':[]}
+    if sid in omitted:
+        sources.append(item)
+        continue
+    item.update(selection['overrides'].get(sid,{}))
+    destination=ROOT/'public/downloads'/sid/item['filename']
+    destination.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,destination)
     out=ROOT/'public/media/documents'/sid;out.mkdir(parents=True,exist_ok=True)
     pdf=p if p.suffix.lower()=='.pdf' else ROOT/'analysis/rendered'/(p.stem+'.pdf')
     if p.suffix.lower() in ('.png','.jpg','.jpeg'):

@@ -1,7 +1,12 @@
 import { pages } from './pages.mjs';
 import { morePages } from './more-pages.mjs';
-import catalogue from './catalogue.json';
-export { catalogue };
+import archiveCatalogue from './catalogue.json';
+import selection from './source-selection.json';
+const omittedSources=new Set(selection.consolidations.flatMap(group=>group.omit));
+// The archive preserves every supplied file; readers see one entry per work.
+export const catalogue={...archiveCatalogue,sources:archiveCatalogue.sources
+ .filter(source=>!omittedSources.has(source.id))
+ .map(source=>({...source,...selection.overrides[source.id]}))};
 export const editorial=[...pages,...morePages];
 export const repoURL='https://github.com/auraofintelligence/knights-templar-Timothy-Hogan';
 export const repositoryCopy=(name)=>`${repoURL}/tree/main/source-repositories/${encodeURIComponent(name)}`;

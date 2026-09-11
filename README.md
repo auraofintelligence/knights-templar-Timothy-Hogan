@@ -18,20 +18,22 @@ Five minutes later, after laughing about the synchronicity with friends, he sent
 
 ## The first connected edition
 
-This edition contains 134 content pages, plus a recovery page for unknown addresses:
+This edition contains 101 content pages, plus a recovery page for unknown addresses:
 
 - 37 main pages, including the homepage, the 11:11 story, research questions, Aura, Queens Venture, network plans, creative work, horizons, glossary and source credits.
 - 12 interview chapter pages, retaining the supplied wording and linking timestamps to the original video.
-- 61 source-file pages with original downloads, file records, extracted text where available and visual previews.
+- 28 source pages with original downloads, file records, extracted text where available and visual previews.
 - 24 repository detail pages with original GitHub links and preserved source-copy links.
 
 The project directory includes 152 entries from the supplied Project Atlas snapshot of 10 September 2026, plus the separately collected Aura Matrix Studio repository. It distinguishes the 24 copied repositories from the wider directory. The reference register records which local directories were found.
 
-The six PowerPoint presentations contain 97 slides. Their original files and slide previews are included. The 2023 Aura PDF, its 27 supplied slide images, other PDFs, poems, collages and the ecosystem infographic remain separate source records.
+The six PowerPoint presentations contain 97 slides. Their original files and slide previews are included. The complete 2023 Aura PDF, other documents, poems, collages and the ecosystem infographic appear as distinct works. Screenshots, duplicate PDFs and converted copies do not become extra reading pages.
+
+All 61 collected files remain unchanged in the repository archive. The reading collection consolidates 33 repeated entries under 28 sources using `src/data/source-selection.json`. This shared selection controls references, library, gallery, search, sitemap, downloads and the reading sequence. See [the source selection audit](docs/SOURCE_SELECTION_AUDIT.md) for the decisions and distinct works retained.
 
 The site includes page search, project and library filters, chapter text search, slide navigation, print and copy-link controls, reduced-motion support and an interactive view of the source-defined horn torus. Deeper connections and visual refinement remain part of the continuing design work.
 
-Every content page has a numbered Previous/Next footer sequence. It starts at the homepage, keeps chapters, source records and project details beside their sections, and reaches all 134 content pages once without looping. A floating Top control appears after scrolling and respects reduced-motion preferences. The 404 recovery page is outside the reading sequence.
+Every content page has a numbered Previous/Next footer sequence. It starts at the homepage, keeps chapters, source records and project details beside their sections, and reaches all 101 content pages once without looping. A floating Top control appears after scrolling and respects reduced-motion preferences. The 404 recovery page is outside the reading sequence.
 
 ## A window into a much larger archive
 

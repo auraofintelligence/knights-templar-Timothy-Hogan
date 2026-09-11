@@ -1,0 +1,17 @@
+{
+  "consolidations": [
+    {"keep": "source-05", "omit": ["source-03", "source-04"], "reason": "One original Constitutional Matrix PDF; identical PDF and converted Markdown remain in the archive."},
+    {"keep": "source-33", "omit": ["source-06", "source-07", "source-08", "source-09", "source-10", "source-11", "source-12", "source-13", "source-14", "source-15", "source-16", "source-17", "source-18", "source-19", "source-20", "source-21", "source-22", "source-23", "source-24", "source-25", "source-26", "source-27", "source-28", "source-29", "source-30", "source-31", "source-32", "source-34"], "reason": "The complete Aura PDF replaces individual slide screenshots and the Markdown conversion."},
+    {"keep": "source-39", "omit": ["source-40"], "reason": "One reading entry for Eggs in One Basket, using the supplied Word document. The near-identical Markdown version has minor wording differences and remains unchanged in the archive."},
+    {"keep": "source-43", "omit": ["source-44"], "reason": "The original Space Weather PDF replaces its Markdown conversion."},
+    {"keep": "source-49", "omit": ["source-48"], "reason": "The complete poetry collage replaces a cropped screenshot of the same poems."}
+  ],
+  "overrides": {
+    "source-05": {"title": "Constitutional Matrix of Participation"},
+    "source-33": {"title": "Aura of Intelligence, July 2023"},
+    "source-39": {"title": "Do Not Put All Our Eggs in One Basket"},
+    "source-43": {"title": "Space Weather Data Use (IFTTT)"},
+    "source-49": {"title": "Deeper Meaning and We Will Be Heard"},
+    "source-61": {"title": "Transcript", "filename": "Transcript.md", "download": "downloads/source-61/Transcript.md"}
+  }
+}

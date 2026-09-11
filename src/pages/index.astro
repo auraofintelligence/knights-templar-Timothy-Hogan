@@ -1,5 +1,6 @@
 ---
 import Site from '../layouts/Site.astro';
+import {catalogue} from '../data/content.mjs';
 const b=import.meta.env.BASE_URL.replace(/\/$/,'');
 const l=(p)=>`${b}/${p}/`;
 ---
@@ -17,6 +18,6 @@ const l=(p)=>`${b}/${p}/`;
     ['An open research horizon','Arks, materials, resonance and the pleasure of asking better questions.','research','matter']
   ].map(([title,desc,path,img])=><a class="doorway" href={l(path)}><img src={`${b}/media/heroes/${img}.webp`} width="1200" height="800" loading="lazy" alt=""/><div><h3>{title}</h3><p>{desc}</p><span aria-hidden="true">↗</span></div></a>)}</div></section>
   <section class="feature-split"><img src={`${b}/media/heroes/meeting.webp`} width="1672" height="941" loading="lazy" alt="An imagined archive opening towards a luminous coast"/><div><p class="section-number">02 / A thread through time</p><h2>One Aura.<br/><em>Many doorways.</em></h2><p>From handwritten reflections and pre-AI presentations to today's AI-assisted explorations, I keep returning to a question: how might we understand ourselves, care for one another and grow something worth sharing?</p><p>The collection here is a window into that journey. Hundreds more documents, presentations and personal handwritten journals sit beyond it.</p><a class="button" href={l('timeline')}>Explore the unfolding story ↗</a></div></section>
-  <section class="section"><div class="section-heading"><h2>Keep the originals<br/><em>close to the story.</em></h2><p>Read the interview. Turn through the slides. Wander into the repositories. Follow a connection and see what it opens.</p></div><div class="archive-links"><a href={l('library')}><strong>61</strong><span>source files<br/>and their many versions</span><b aria-hidden="true">↗</b></a><a href={l('gallery')}><strong>97</strong><span>slides across<br/>six original presentations</span><b aria-hidden="true">↗</b></a><a href={l('projects')}><strong>152</strong><span>projects in the supplied<br/>Project Atlas snapshot</span><b aria-hidden="true">↗</b></a></div></section>
+  <section class="section"><div class="section-heading"><h2>Keep the originals<br/><em>close to the story.</em></h2><p>Read the interview. Turn through the slides. Wander into the repositories. Follow a connection and see what it opens.</p></div><div class="archive-links"><a href={l('library')}><strong>{catalogue.sources.length}</strong><span>documents and images<br/>in the reading collection</span><b aria-hidden="true">↗</b></a><a href={l('gallery')}><strong>97</strong><span>slides across<br/>six original presentations</span><b aria-hidden="true">↗</b></a><a href={l('projects')}><strong>152</strong><span>projects in the supplied<br/>Project Atlas snapshot</span><b aria-hidden="true">↗</b></a></div></section>
   <section class="closing-note"><p>Bold in imagination.<br/>Humble in exploration.<br/><em>Joyful in the possibilities.</em></p><a href={l('culture')}>Joyful Responsible Abundance ↗</a></section>
 </Site>
