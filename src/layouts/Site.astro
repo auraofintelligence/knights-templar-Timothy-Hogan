@@ -1,6 +1,8 @@
 ---
 import '../styles/site.css';
 import '../styles/interior.css';
+import '../styles/navigation.css';
+import PageSequence from '../components/PageSequence.astro';
 const { title = 'A curious meeting of worlds', description = 'An invitation to explore the work, questions and synchronicities of Luke Nathan Hayes, inspired by a conversation with Timothy Hogan.', image = 'meeting', section = '' } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/,'');
 const link = (p='') => `${base}/${p ? p.replace(/^\/|\/$/g,'')+'/' : ''}`;
@@ -17,7 +19,7 @@ const canonical = new URL(Astro.url.pathname, 'https://auraofintelligence.github
   <meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:type" content="website"/><meta property="og:url" content={canonical}/>
   <meta property="og:image" content={`https://auraofintelligence.github.io${base}/media/heroes/${image}.webp`}/><meta name="twitter:card" content="summary_large_image"/>
 </head>
-<body data-base={base}>
+<body data-base={base} id="page-top" tabindex="-1">
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <a class="identity" href={link()} aria-label="11:11, home"><span class="clockmark">11:11</span><span>A meeting<br/>of worlds</span></a>
@@ -26,11 +28,13 @@ const canonical = new URL(Astro.url.pathname, 'https://auraofintelligence.github
   </header>
   <main id="main"><slot/></main>
   <footer class="site-footer">
+    <PageSequence/>
     <div class="footer-invite"><p class="display">There is so much<br/><em>more to explore.</em></p><a class="button" href={link('continue')}>Continue the conversation <span aria-hidden="true">↗</span></a></div>
     <div class="footer-columns"><p>Luke Nathan Hayes<br/>Strange But True / Aura of Intelligence<br/>Minjerribah, Australia</p><p>An invitation into my work and its synchronicities.<br/>Joyful Responsible Abundance.<br/>A window into a much larger archive.</p><div><a href={link('site-map')}>All pages</a><a href={link('sources')}>Sources and image credits</a><a href={link('licence')}>Strange But True licence</a><a href="https://github.com/auraofintelligence/knights-templar-Timothy-Hogan">Explore the GitHub archive ↗</a></div></div>
     <div class="footer-bottom"><span>© 2026 Luke Nathan Hayes</span><button data-motion aria-pressed="false">Motion: on</button><button data-share>Copy page link</button><a href="#main">Back to top ↑</a></div>
     <p class="relationship-note">A personal invitation from Luke. Timothy Hogan's work is linked in his own words and through his own website.</p>
   </footer>
+  <a class="floating-top" href="#page-top" data-back-to-top aria-label="Back to top of page"><span aria-hidden="true">↑</span><span>Top</span></a>
   <dialog id="site-index"><div class="dialog-top"><h2>Follow your curiosity</h2><button data-close-index aria-label="Close index">Close ×</button></div><label for="site-search">Search pages, sources, projects and interview chapters</label><input id="site-search" type="search" placeholder="Aura, Queens, resonance, 11:11…" autocomplete="off"/><div class="index-quick">{nav.map(([label,path])=><a href={link(path)}>{label}</a>)}</div><p id="search-status" aria-live="polite"></p><div id="search-results"></div><a href={link('site-map')}>Read the complete site map</a></dialog>
   <div class="toast" role="status" aria-live="polite"></div>
   <script src="../scripts/site.js"></script>

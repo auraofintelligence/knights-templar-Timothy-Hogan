@@ -11,3 +11,16 @@ export const allPages=[...editorial,
  ...catalogue.projects.filter(project=>project.snapshot).map(project=>({slug:`projects/${project.name}`,title:project.title,description:project.description,image:'network',section:'network',sections:[],related:['projects','network','library'],sources:[],kind:'project',project}))
 ];
 export const findPage=(slug)=>allPages.find(p=>p.slug===slug);
+
+// One complete, deterministic route. Detail pages sit beside their index.
+// Do not wrap the final page back to the beginning.
+const detailGroups={ 'interview/transcript':'chapter', projects:'project', library:'source' };
+export const readingOrder=[{slug:'',title:'A curious meeting of worlds'},
+ ...editorial.flatMap(page=>[
+  page,
+  ...allPages.filter(detail=>detail.kind===detailGroups[page.slug])
+ ])
+];
+if(new Set(readingOrder.map(page=>page.slug)).size!==allPages.length+1 || readingOrder.length!==allPages.length+1){
+ throw new Error('The reading sequence must contain each content page exactly once.');
+}

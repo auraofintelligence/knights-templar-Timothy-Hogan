@@ -1,0 +1,16 @@
+---
+import {readingOrder} from '../data/content.mjs';
+const base=import.meta.env.BASE_URL.replace(/\/$/,'');
+const slug=decodeURIComponent(Astro.url.pathname.slice(base.length)).replace(/^\/|\/$/g,'');
+const position=readingOrder.findIndex(page=>page.slug===slug);
+const previous=readingOrder[position-1],next=readingOrder[position+1];
+const link=(p)=>`${base}/${p.slug?p.slug+'/':''}`;
+---
+{position>=0&&<nav class="page-sequence" aria-label="Read every page in order" data-page-sequence data-position={position+1} data-total={readingOrder.length}>
+ <div class="sequence-heading"><h2>Explore the whole collection</h2><p>Follow Next for a path through every page, once.</p></div>
+ <div class="sequence-links">
+  {previous?<a class="sequence-link sequence-previous" href={link(previous)} rel="prev" data-sequence-previous><span>← Previous page</span><strong>{previous.title}</strong></a>:<div class="sequence-end"><span>First page</span><p>The journey begins here.</p></div>}
+  <p class="sequence-position">Page <strong>{position+1}</strong> of {readingOrder.length}</p>
+  {next?<a class="sequence-link sequence-next" href={link(next)} rel="next" data-sequence-next><span>Next page →</span><strong>{next.title}</strong></a>:<div class="sequence-end sequence-complete"><span>Final page</span><p>You’ve reached the end of the collection.</p></div>}
+ </div>
+</nav>}

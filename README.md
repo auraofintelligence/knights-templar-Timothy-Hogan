@@ -31,6 +31,8 @@ The six PowerPoint presentations contain 97 slides. Their original files and sli
 
 The site includes page search, project and library filters, chapter text search, slide navigation, print and copy-link controls, reduced-motion support and an interactive view of the source-defined horn torus. Deeper connections and visual refinement remain part of the continuing design work.
 
+Every content page has a numbered Previous/Next footer sequence. It starts at the homepage, keeps chapters, source records and project details beside their sections, and reaches all 134 content pages once without looping. A floating Top control appears after scrolling and respects reduced-motion preferences. The 404 recovery page is outside the reading sequence.
+
 ## A window into a much larger archive
 
 This is the tip of the iceberg. Luke describes many hundreds more AI-assisted documents, pre-AI documents and presentations, and personal handwritten journals from before AI. They have not all been gathered into this edition.

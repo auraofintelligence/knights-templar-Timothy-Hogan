@@ -12,6 +12,13 @@ let reduced=get('meeting-motion')==='off'||systemReduced;
 const motionButton=document.querySelector('[data-motion]');
 function applyMotion(){document.body.classList.toggle('reduce-motion',reduced);motionButton.textContent=`Motion: ${reduced?'off':'on'}`;motionButton.setAttribute('aria-pressed',String(reduced))}
 applyMotion();motionButton.addEventListener('click',()=>{reduced=!reduced;set('meeting-motion',reduced?'off':'on');applyMotion()});
+const topLink=document.querySelector('[data-back-to-top]');
+if(topLink){
+ const updateTopLink=()=>{topLink.hidden=window.scrollY<400};
+ window.addEventListener('scroll',updateTopLink,{passive:true});
+ window.addEventListener('pageshow',updateTopLink);updateTopLink();
+ topLink.addEventListener('click',event=>{event.preventDefault();document.body.focus({preventScroll:true});window.scrollTo({top:0,behavior:reduced?'instant':'smooth'})});
+}
 document.querySelectorAll('[data-share]').forEach(el=>el.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);toast('Page link copied')}catch{toast('Copy this page address from your browser')}}));
 let searchData=null;
 async function loadSearch(){if(searchData)return;try{const r=await fetch(`${base}/data/search.json`);if(!r.ok)throw Error();searchData=await r.json();renderSearch()}catch{document.querySelector('#search-status').textContent='The search index is unavailable. Explore the page links or complete site map.'}}
