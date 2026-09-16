@@ -124,6 +124,8 @@ assert.ok(projectsHTML.includes('data-project-sort')&&projectsHTML.includes('Fea
 const firstProject=projectsHTML.match(/<div class="project-grid"[^>]*>[\s\S]*?<section id="([^"]+)"/)?.[1];
 assert.equal(firstProject,'strange-but-true-cosmic-nexus','Cosmic Nexus must lead the relevance-first project directory');
 for(const project of ['micronova-and-excursions','virtual-solar-swarm','extreme-matter-atlas','aura-horn-torus','aura-matrix-studio'])assert.ok(projectsHTML.indexOf(`id="${project}"`)>projectsHTML.indexOf('id="strange-but-true-cosmic-nexus"'),'Core meeting projects must follow Cosmic Nexus: '+project);
+for(const [before,after] of [['GAJRA-earth-infinity','gajra-earth-claude-build'],['gajra-earth-claude-build','p4a-xyz-cinema'],['p4a-xyz-cinema','p4a-oceania-cinema'],['p4a-oceania-cinema','p4a-native-nations-cinema']])assert.ok(projectsHTML.indexOf(`id="${before}"`)<projectsHTML.indexOf(`id="${after}"`),`${before} must appear before ${after}`);
+assert.ok(projectsHTML.includes('https://p4a.xyz/')&&projectsHTML.includes('https://auraofintelligence.github.io/p4a-xyz-cinema/'),'P4A foundation card must retain both public addresses');
 for(const id of omitted)if(search.includes('library/'+id)||sitemap.includes('library/'+id))errors.push('Excluded source in search or sitemap: '+id);
 const sourceRoutes=html.filter(file=>/[/\\]library[/\\]source-\d+[/\\]index.html$/.test(file));
 assert.equal(sourceRoutes.length,selected.length,'Library routes must match selected works');

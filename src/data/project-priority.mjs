@@ -14,6 +14,8 @@ export const featuredProjects=[
  ['multi-site-Minjerribah-network','Local network plans'],
  ['Queens_Venture','Women founders and venture'],
  ['GAJRA-earth-infinity','Joyful Responsible Abundance'],
+ ['gajra-earth-claude-build','GAJRA Earth concept build'],
+ ['p4a-xyz-cinema','P4A foundation for Oceania and Native Nations'],
  ['p4a-oceania-cinema','Oceania cooperation'],
  ['p4a-native-nations-cinema','Native Nations futures'],
  ['global-founder-atlas','Global founder pathways'],
@@ -27,5 +29,8 @@ export function prioritiseProjects(projects){return projects.map(project=>{
  const priority=featured.get(project.name);
  const publicPage=project.name==='aura-matrix-studio'?'https://auraofintelligence.github.io/aura-matrix-studio/':project.publicPage;
  const title=project.name==='aura-matrix-studio'?'Aura Matrix Studio':project.title;
- return {...project,title,publicPage,featuredRank:priority?.rank??999,featuredLabel:priority?.label??''};
+ const description=project.name==='p4a-xyz-cinema'?'The foundation website for the connected P4A Oceania and P4A Native Nations work, bringing the wider civic vision and its regional pathways into one public doorway.':project.description;
+ const publicPageLabel=project.name==='p4a-xyz-cinema'?'Foundation website': 'Website';
+ const additionalPublicPages=project.name==='p4a-xyz-cinema'?[{label:'GitHub Pages',url:'https://auraofintelligence.github.io/p4a-xyz-cinema/'}]:[];
+ return {...project,title,description,publicPage,publicPageLabel,additionalPublicPages,featuredRank:priority?.rank??999,featuredLabel:priority?.label??''};
 }).sort((a,b)=>a.featuredRank-b.featuredRank||(b.firstBuilt||'').localeCompare(a.firstBuilt||'')||a.title.localeCompare(b.title,'en-AU'))}
