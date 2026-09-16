@@ -119,6 +119,9 @@ const transcriptHTML=fs.readFileSync(path.join(root,'interview/index.html'),'utf
 assert.equal((transcriptHTML.match(/class="transcript-cue"/g)||[]).length,originalCatalogue.chapters.reduce((n,ch)=>n+ch.cues.filter(c=>c.text).length,0),'Every transcript cue retained once');
 for(const ch of originalCatalogue.chapters)assert.ok(transcriptHTML.includes(`id="${ch.id}"`),'Chapter anchor missing');
 const projectsHTML=fs.readFileSync(path.join(root,'projects/index.html'),'utf8');
+const networkHTML=fs.readFileSync(path.join(root,'network/index.html'),'utf8');
+assert.ok(networkHTML.includes('Independent AUKUS Public Inquiry')&&networkHTML.includes('aukus-public-inquiry-submission.pdf'),'Network page must include the AUKUS submission and its independent inquiry context');
+assert.ok(networkHTML.includes('https://p4a.xyz/')&&networkHTML.includes('P4A foundation'),'Network page must include p4a.xyz as the P4A foundation doorway');
 for(const project of originalCatalogue.projects){assert.ok(projectsHTML.includes(`id="${project.name}"`),'Project anchor missing');assert.ok(projectsHTML.includes(project.repositoryUrl),'Original repository link missing');}
 assert.ok(projectsHTML.includes('data-project-sort')&&projectsHTML.includes('Featured for this meeting'),'Project directory needs an explicit relevance-first sort');
 const firstProject=projectsHTML.match(/<div class="project-grid"[^>]*>[\s\S]*?<section id="([^"]+)"/)?.[1];
