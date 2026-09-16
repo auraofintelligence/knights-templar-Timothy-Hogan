@@ -1,0 +1,13 @@
+---
+const b=import.meta.env.BASE_URL.replace(/\/$/,'');
+---
+<div class="about-portraits" aria-label="Photographs of Luke Nathan Hayes">
+ <figure class="about-portrait about-portrait-formal">
+  <img src={`${b}/media/about/luke-formal.jpeg`} width="1080" height="1350" alt="Luke Nathan Hayes wearing a blue collared shirt and glasses" loading="lazy"/>
+  <figcaption>Luke Nathan Hayes</figcaption>
+ </figure>
+ <figure class="about-portrait about-portrait-work">
+  <img src={`${b}/media/about/luke-at-work.jpeg`} width="1152" height="2048" alt="Luke Nathan Hayes with long hair and glasses at his computer workstation" loading="lazy"/>
+  <figcaption>At the desk where much of this work takes shape.</figcaption>
+ </figure>
+</div>

@@ -4,6 +4,7 @@ import SlideViewer from '../components/SlideViewer.astro';
 import Matrix from '../components/Matrix.astro';
 import InterviewEmbed from '../components/InterviewEmbed.astro';
 import AuraWorldbuildingSlide from '../components/AuraWorldbuildingSlide.astro';
+import AboutPortraits from '../components/AboutPortraits.astro';
 import {allPages,readingOrder,catalogue,redirects,repoURL,repositoryCopy} from '../data/content.mjs';
 import {prioritiseProjects} from '../data/project-priority.mjs';
 import licence from '../../LICENCE.md?raw';
@@ -26,7 +27,7 @@ const optional=allPages.filter(p=>p.kind!=='source'&&!readingOrder.some(stop=>st
  <div class:list={['article-shell',{'wide-content':['directory','library','gallery','sitemap'].includes(page.kind)}]}>
   {page.sections.length>2&&<aside class="contents"><p>On this page</p><nav aria-label="On this page">{page.sections.map(s=><a href={`#${s.id}`}>{s.title}</a>)}</nav></aside>}
   <article class="article-body">
-   {page.sections.map((section,i)=><section id={section.id} class="essay-section"><h2>{section.title}</h2>{section.paragraphs.map(text=><p>{text}</p>)}{section.links.length>0&&<div class="source-links">{section.links.map(link=><a href={link.href}>{link.label} ↗</a>)}</div>}{page.slug==='start'&&i===0&&<InterviewEmbed/>}{page.kind==='aura'&&section.id==='origins'&&<AuraWorldbuildingSlide/>}{page.kind==='aura'&&section.id==='matrix'&&<Matrix/>}</section>)}
+   {page.sections.map((section,i)=><section id={section.id} class="essay-section"><h2>{section.title}</h2>{section.paragraphs.map(text=><p>{text}</p>)}{section.links.length>0&&<div class="source-links">{section.links.map(link=><a href={link.href}>{link.label} ↗</a>)}</div>}{page.slug==='start'&&i===0&&<InterviewEmbed/>}{page.slug==='about'&&section.id==='background'&&<AboutPortraits/>}{page.kind==='aura'&&section.id==='origins'&&<AuraWorldbuildingSlide/>}{page.kind==='aura'&&section.id==='matrix'&&<Matrix/>}</section>)}
    {page.kind==='transcript'&&<section>
     <p class="source-note">Supplied transcript. Transcription errors and unclear speaker changes remain in the original wording.</p>
     <div class="action-row"><a href="https://www.youtube.com/watch?v=K7Dy7MUw-G0">Watch on YouTube ↗</a><a href={`${b}/downloads/source-61/Transcript.md`} download>Download Transcript.md</a></div>

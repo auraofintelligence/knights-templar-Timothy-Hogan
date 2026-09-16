@@ -120,6 +120,9 @@ assert.equal((transcriptHTML.match(/class="transcript-cue"/g)||[]).length,origin
 for(const ch of originalCatalogue.chapters)assert.ok(transcriptHTML.includes(`id="${ch.id}"`),'Chapter anchor missing');
 const projectsHTML=fs.readFileSync(path.join(root,'projects/index.html'),'utf8');
 const networkHTML=fs.readFileSync(path.join(root,'network/index.html'),'utf8');
+const aboutHTML=fs.readFileSync(path.join(root,'about/index.html'),'utf8');
+for(const portrait of ['luke-formal.jpeg','luke-at-work.jpeg'])assert.ok(aboutHTML.includes(`/media/about/${portrait}`),'About page must include supplied portrait: '+portrait);
+assert.equal((aboutHTML.match(/class="about-portrait /g)||[]).length,2,'About page must show both supplied personal photographs once');
 assert.ok(networkHTML.includes('Independent AUKUS Public Inquiry')&&networkHTML.includes('aukus-public-inquiry-submission.pdf'),'Network page must include the AUKUS submission and its independent inquiry context');
 assert.ok(networkHTML.includes('https://p4a.xyz/')&&networkHTML.includes('P4A foundation'),'Network page must include p4a.xyz as the P4A foundation doorway');
 assert.ok(networkHTML.includes('I live on Minjerribah')&&networkHTML.includes('9 Ballow Road in Dunwich')&&networkHTML.includes('ready-set-co-op-trust-hub/ballow-road.html'),'Network page must ground, explain and link the Ballow Road pilot');
