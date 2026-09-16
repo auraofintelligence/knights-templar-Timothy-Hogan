@@ -64,7 +64,7 @@ The rejected AI-generated ring-torus image is excluded from publication, with a 
 |---|---|
 | `src/` | Page text, layouts, catalogue and browser interactions |
 | `public/` | Website images, document previews, original downloads and font |
-| `reference-files/` | The 62 unchanged standalone source files |
+| `reference-files/` | The 63 unchanged standalone source files |
 | `source-repositories/` | 24 local snapshots, without Git histories or installed dependencies |
 | `media-originals/` | Accepted original generated images |
 | `analysis/` | Earlier analysis, inventories and planning work |

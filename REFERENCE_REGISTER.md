@@ -15,7 +15,7 @@ The paths below are the original local paths. Copies are in the matching folder 
 | T01 | `C:\Users\lukec\.codex\attachments\57cefd84-7d7f-412a-be51-500117b09646\pasted-text.txt` (supplied transcript, 8,639 lines) | `reference-files/T01-tim-hogan-interview/Pasted markdown(1).md` |
 | D01 | `C:\Users\lukec\Downloads\03 The Constitutional Matrix of Participation.pdf`; `C:\Users\lukec\Downloads\03 The Constitutional Matrix of Participation 2.pdf`; `C:\Users\lukec\Downloads\Aura Oi V7 Pitch Deck App Screenshots and Spreadsheets\03 The Constitutional Matrix of Participation.docx.md` | `reference-files/D01-constitutional-matrix/` |
 | D02 | `C:\Users\lukec\Downloads\Version7 Aura of Intelligence 2023 July.pdf`; `C:\Users\lukec\Documents\GitHubLocal\markdown-to-ai-skills\work\cleaning-full-310-reframed\markdown\image fail md\Version7_Aura_of_Intelligence_2023_July.md`; 27 local slide-render PNGs beginning `Version7 Aura of Intelligence 2023 July.pptx (` | `reference-files/D02-aura-deck/` |
-| D03 | `C:\Users\lukec\Downloads\Luke Work and Education.pdf` | `reference-files/D03-work-and-education/` |
+| D03 | `C:\Users\lukec\Downloads\Luke Work and Education.pdf`; `C:\Users\lukec\Downloads\Lukes 2024 CV after returning home to Australia from India.pdf` | `reference-files/D03-work-and-education/` |
 | D04 | `C:\Users\lukec\Documents\GitHubLocal\markdown-to-ai-skills\work\cleaning-full-310-reframed\markdown\AURA_GEODE_to_MACRO.md` (local counterpart to the report's suffixed filename) | `reference-files/D04-aura-geode-to-macro/` |
 | D05 | `C:\Users\lukec\Downloads\A Fair Go for the AI Age_ Federated Sovereign Compute for Australian Communities.docx`; `C:\Users\lukec\Downloads\A Fair Go for the AI Age_ Postcode-Level Sovereign Compute as Shared National Infrastructure.docx` | `reference-files/D05-fair-go-ai-age/` |
 | D06 | `C:\Users\lukec\Downloads\Do Not Put All Our Eggs in One Basket.docx`; `C:\Users\lukec\Downloads\Do Not Put All Our Eggs in One Basket.md` | `reference-files/D06-eggs-in-one-basket/` |
@@ -40,9 +40,11 @@ The supplied report also names two images outside I01-I03. Both were found in Do
 - `WhatsApp Image 2026-09-06 at 11.00.39 AM (2).jpeg`: GAJRA invitation collage.
 - `WhatsApp Image 2026-09-06 at 11.00.41 AM (2).jpeg`: personal name-meaning graphics.
 
-The standalone reference collection now contains 62 files, 88,971,336 bytes. `analysis/source-inventory.json` records their SHA-256 checksums, sizes and extracted-text paths.
+The standalone reference collection now contains 63 files, 89,274,048 bytes. `analysis/source-inventory.json` records their SHA-256 checksums, sizes and extracted-text paths.
 
 Added 15 September: `C:\Users\lukec\Downloads\Blend Aura to Unity.docx`, copied unchanged to `reference-files/D02-aura-deck/Blend Aura to Unity.docx` as source-62. SHA-256: `dc7827060f94616bb805108666fb8f4b5fad94a4194445f1562b65392743ddb0`. This is a distinct design conversation, not a conversion of the presentation. The re-supplied Aura PDF and screenshot (26) match existing source-33 and source-25 respectively. The worldbuilding slide is page 28 of source-33; no duplicate source was added for it.
+
+Added 16 September: `C:\Users\lukec\Downloads\Lukes 2024 CV after returning home to Australia from India.pdf`, copied unchanged to `reference-files/D03-work-and-education/Lukes 2024 CV after returning home to Australia from India.pdf` as source-63. SHA-256: `ae862d3544f215b9dc99ea8e91d8ef9dadbf51ea05c8113701523a516c53e4c2`. The original one-page landscape PDF is preserved as supplied, with a generated image preview for the public library page.
 
 The image supplied in the user's request was copied even though it is an additional reference outside the report's I01-I03 list.
 

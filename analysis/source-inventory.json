@@ -397,5 +397,10 @@
     "sha256": "dc7827060f94616bb805108666fb8f4b5fad94a4194445f1562b65392743ddb0",
     "embedded_media": 31,
     "extraction": "analysis/extracted/D02-aura-deck__Blend Aura to Unity.docx.txt"
+  },
+  {
+    "path": "reference-files/D03-work-and-education/Lukes 2024 CV after returning home to Australia from India.pdf",
+    "bytes": 302712,
+    "sha256": "ae862d3544f215b9dc99ea8e91d8ef9dadbf51ea05c8113701523a516c53e4c2"
   }
 ]

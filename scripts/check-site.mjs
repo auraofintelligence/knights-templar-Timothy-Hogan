@@ -123,6 +123,9 @@ const networkHTML=fs.readFileSync(path.join(root,'network/index.html'),'utf8');
 const aboutHTML=fs.readFileSync(path.join(root,'about/index.html'),'utf8');
 for(const portrait of ['luke-formal.jpeg','luke-at-work.jpeg'])assert.ok(aboutHTML.includes(`/media/about/${portrait}`),'About page must include supplied portrait: '+portrait);
 assert.equal((aboutHTML.match(/class="about-portrait /g)||[]).length,2,'About page must show both supplied personal photographs once');
+assert.ok(aboutHTML.includes('current sole-trader small business')&&aboutHTML.includes('Strange but True: Tech, art and ideas that&#39;ll help')&&aboutHTML.includes('href="https://auraofintelligence.github.io/strange-but-true/index.html"'),'About page must identify and link the current Strange but True business');
+assert.ok(aboutHTML.includes('earlier portfolio')&&aboutHTML.includes('href="https://lukecatalyst.com/"'),'About page must identify and link the earlier Luke Catalyst portfolio');
+assert.ok(aboutHTML.includes(`${base}/library/source-63/`),'About page must link the most recent supplied CV');
 for(const phrase of ['personal higher mind of one&#39;s infinite selves','clothing rather than skin','seven-layered horn-torus data space','Global Association for Joyful Responsible Abundance'])assert.ok(aboutHTML.includes(phrase),'About page must retain the substantive Aura framing: '+phrase);
 for(const href of ['https://auraofintelligence.github.io/','/library/source-33/','/library/source-62/','https://auraofintelligence.github.io/GAJRA-earth-infinity/','https://auraofintelligence.github.io/gajra-earth-claude-build/'])assert.ok(aboutHTML.includes(`href="${href.startsWith('/')?base+href:href}"`),'About page must link the Aura and GAJRA source: '+href);
 assert.ok(networkHTML.includes('Independent AUKUS Public Inquiry')&&networkHTML.includes('aukus-public-inquiry-submission.pdf'),'Network page must include the AUKUS submission and its independent inquiry context');
@@ -142,6 +145,10 @@ const sourceRoutes=html.filter(file=>/[/\\]library[/\\]source-\d+[/\\]index.html
 assert.equal(sourceRoutes.length,selected.length,'Library routes must match selected works');
 const transcript=originalCatalogue.sources.find(source=>source.id==='source-61');
 assert.equal(createHash('sha256').update(fs.readFileSync(path.join(root,'downloads/source-61/Transcript.md'))).digest('hex'),transcript.sha256,'Renamed transcript must preserve the original bytes');
+const cv=originalCatalogue.sources.find(source=>source.id==='source-63');
+assert.equal(cv.title,'Luke Hayes CV, 2024','Latest supplied CV needs a clear public title');
+assert.equal(cv.previews.length,1,'Latest supplied CV needs its one-page visual preview');
+assert.equal(createHash('sha256').update(fs.readFileSync(path.join(root,decodeURIComponent(cv.download)))).digest('hex'),cv.sha256,'CV download must preserve the original bytes');
 assert.equal(ADDRESS_COUNT,7*2*12*24);
 for(let i=0;i<24;i++){const p=hornPoint(i*Math.PI/12,Math.PI);assert.ok(Math.hypot(p.x,p.y,p.z)<1e-12,'Infinity point must meet at the origin')}
 if(built.some(f=>f.endsWith('.svg')))errors.push('SVG file in published output');
