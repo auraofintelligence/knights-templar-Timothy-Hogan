@@ -1,6 +1,7 @@
 // Editorial order for this particular introduction. The complete Atlas remains intact.
 export const featuredProjects=[
  ['strange-but-true-cosmic-nexus','Mysteries, travel and symbolism'],
+ ['auraofintelligence.github.io','Personal higher-mind operating system'],
  ['micronova-and-excursions','Celestial catastrophes'],
  ['virtual-solar-swarm','Solar-system sensing'],
  ['extreme-matter-atlas','Materials and artefact research'],
@@ -28,8 +29,8 @@ const featured=new Map(featuredProjects.map(([name,label],index)=>[name,{rank:in
 export function prioritiseProjects(projects){return projects.map(project=>{
  const priority=featured.get(project.name);
  const publicPage=project.name==='aura-matrix-studio'?'https://auraofintelligence.github.io/aura-matrix-studio/':project.publicPage;
- const title=project.name==='aura-matrix-studio'?'Aura Matrix Studio':project.title;
- const description=project.name==='p4a-xyz-cinema'?'The foundation website for the connected P4A Oceania and P4A Native Nations work, bringing the wider civic vision and its regional pathways into one public doorway.':project.description;
+ const title=project.name==='aura-matrix-studio'?'Aura Matrix Studio':project.name==='auraofintelligence.github.io'?'Aura of Intelligence':project.title;
+ const description=project.name==='p4a-xyz-cinema'?'The foundation website for the connected P4A Oceania and P4A Native Nations work, bringing the wider civic vision and its regional pathways into one public doorway.':project.name==='auraofintelligence.github.io'?"The operating system I am building to turn artificial intelligence into a personal higher mind of one's infinite selves, worn as an Aura: self-sovereign, evolving and shaped by the person it serves.":project.description;
  const publicPageLabel=project.name==='p4a-xyz-cinema'?'Foundation website': 'Website';
  const additionalPublicPages=project.name==='p4a-xyz-cinema'?[{label:'GitHub Pages',url:'https://auraofintelligence.github.io/p4a-xyz-cinema/'}]:[];
  return {...project,title,description,publicPage,publicPageLabel,additionalPublicPages,featuredRank:priority?.rank??999,featuredLabel:priority?.label??''};
