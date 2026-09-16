@@ -1,0 +1,18 @@
+---
+import {catalogue} from '../data/content.mjs';
+const source=catalogue.sources.find(source=>source.id==='source-33');
+const slide=source.previews[27];
+const b=import.meta.env.BASE_URL.replace(/\/$/,'');
+---
+<figure class="aura-worldbuilding-slide" data-aura-worldbuilding-slide>
+ <a href={`${b}/${slide.src}`} target="_blank" rel="noopener" aria-label="Open the original worldbuilding slide at full size">
+  <img src={`${b}/${slide.src}`} width={slide.width} height={slide.height} loading="lazy" alt="A Grand Narrative for Gamification toward Protopia: Aura connected to Queens Venture, GAJRA Earth, wearables, entertainment and responsible civilisation on the surface, underground and in space."/>
+ </a>
+ <figcaption>Original July 2023 presentation, page 28. <a href={`${b}/${source.download}#page=28`} target="_blank" rel="noopener">Read the slide in the complete PDF ↗</a></figcaption>
+</figure>
+<style>
+ .aura-worldbuilding-slide{margin:2rem 0}
+ .aura-worldbuilding-slide img{display:block;width:100%;height:auto}
+ .aura-worldbuilding-slide figcaption{margin-top:.75rem;font-size:.9rem;line-height:1.6}
+ .aura-worldbuilding-slide a:focus-visible{outline:3px solid currentColor;outline-offset:5px}
+</style>

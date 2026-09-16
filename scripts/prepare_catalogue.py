@@ -14,7 +14,21 @@ omitted={sid for group in selection['consolidations'] for sid in group['omit']}
 for i, record in enumerate(json.loads((ROOT/'analysis/source-inventory.json').read_text(encoding='utf-8')),1):
     p=ROOT/record['path']; sid=f'source-{i:02}'
     if hashlib.sha256(p.read_bytes()).hexdigest()!=record['sha256']: raise ValueError('Changed original: '+str(p))
-    text=(ROOT/record['extraction']).read_text(encoding='utf-8') if record.get('extraction') else ''
+    extraction=ROOT/record['extraction'] if record.get('extraction') else None
+    if extraction and not extraction.exists() and p.suffix.lower()=='.docx':
+        # Read source conversations as text, never execute their code or prompts.
+        from docx import Document
+        from docx.table import Table
+        from docx.text.paragraph import Paragraph
+        document=Document(p)
+        blocks=[]
+        for block in document.iter_inner_content():
+            if isinstance(block, Paragraph): blocks.append(block.text)
+            elif isinstance(block, Table):
+                blocks.extend('\t'.join(cell.text for cell in row.cells) for row in block.rows)
+        extraction.parent.mkdir(parents=True,exist_ok=True)
+        extraction.write_text('\n'.join(blocks),encoding='utf-8')
+    text=extraction.read_text(encoding='utf-8') if extraction else ''
     item={**record,'id':sid,'title':p.stem.replace('_',' '),'filename':p.name,'group':Path(record['path']).parts[1],
           'format':p.suffix[1:].upper(),'url':github(record['path']),'download':'downloads/'+sid+'/'+quote(p.name),
           'text':text,'previews':[]}

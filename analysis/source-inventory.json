@@ -390,5 +390,12 @@
     "extraction": "analysis/extracted/T01-tim-hogan-interview__Pasted markdown(1).md.txt",
     "sections": 1,
     "text_chars": 135129
+  },
+  {
+    "path": "reference-files/D02-aura-deck/Blend Aura to Unity.docx",
+    "bytes": 6768631,
+    "sha256": "dc7827060f94616bb805108666fb8f4b5fad94a4194445f1562b65392743ddb0",
+    "embedded_media": 31,
+    "extraction": "analysis/extracted/D02-aura-deck__Blend Aura to Unity.docx.txt"
   }
 ]

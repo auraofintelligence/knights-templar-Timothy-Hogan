@@ -2,7 +2,7 @@
 
 Reviewed 11 September 2026 after Luke identified duplicate reading entries.
 
-The supplied archive has 61 files, not 61 distinct works. All originals remain unchanged in `reference-files/`. The website presents 28 source records. Repository snapshots are preserved as historical copies, not independently expanded into more library entries.
+The supplied archive has 62 files, not 62 distinct works. All originals remain unchanged in `reference-files/`. The website presents 29 source records, including Blend Aura to Unity added on 15 September. Repository snapshots are preserved as historical copies, not independently expanded into more library entries.
 
 ## Consolidated entries
 
@@ -26,6 +26,10 @@ The source audit compared all extracted-text pairs using five-word overlap to id
 
 ## Build safeguards
 
-`src/data/source-selection.json` is the shared selection policy. The site consumes only its selected records; catalogue preparation skips the excluded web downloads and previews while leaving archival originals untouched. Checks reject excluded reading routes, links, search results and deployed source assets, verify the three Start references, verify unique selected file hashes, and verify every selected page occurs exactly once in the Previous/Next sequence.
+`src/data/source-selection.json` is the shared selection policy. The site consumes only its selected records; catalogue preparation skips the excluded web downloads and previews while leaving archival originals untouched. Checks reject excluded reading routes, links, search results and deployed source assets, and verify unique selected file hashes.
+
+The 15 September journey consolidation retained the initial 28 source readers as optional references. Adding the distinct Blend Aura to Unity conversation brings that to 29. They do not appear in the numbered main journey. The repeated Start footnote list has been removed; specific documents are linked from the section that discusses them. Main navigation checks cover eight stops, with return links on reference pages.
+
+The later-supplied Aura PDF and screenshot (26) were verified against the archive by SHA-256. They match source-33 and excluded source-25. The Aura page displays the existing page-028 PDF preview inline and links to the complete PDF. It does not restore the screenshot's reader, download or separate image asset. Blend Aura to Unity is source-62; its original remains unchanged and its extracted conversation is a reading aid. Historical AI prompts and code inside it are not builder instructions or evidence of completed software.
 
 When adding sources, compare content as well as filenames. Prefer the original complete document. Keep converted text as a reading aid, not another work. Preserve genuinely different editions in the archive and explain meaningful differences before giving them separate reading entries.

@@ -16,24 +16,27 @@ Five minutes later, after laughing about the synchronicity with friends, he sent
 
 [The interview that sparked the conversation](https://www.youtube.com/watch?v=K7Dy7MUw-G0) remains close through a chapter reader and timestamp links.
 
-## The first connected edition
+## The shorter reading journey
 
-This edition contains 101 content pages, plus a recovery page for unknown addresses:
+The main journey has eight stops: Home, Start, Research, Aura, Network, About, Projects and Library. Each subject has one place; Previous and Next do not force readers through archive records.
 
-- 37 main pages, including the homepage, the 11:11 story, research questions, Aura, Queens Venture, network plans, creative work, horizons, glossary and source credits.
-- 12 interview chapter pages, retaining the supplied wording and linking timestamps to the original video.
-- 28 source pages with original downloads, file records, extracted text where available and visual previews.
-- 24 repository detail pages with original GitHub links and preserved source-copy links.
+- Eight main pages, with the 11:11 story on Start, beliefs and ambitions on Research, and focused pages for Aura, the network and Luke's background.
+- Five optional reference pages: the complete transcript, presentation viewer, source credits, licence and site index.
+- Twenty-nine document readers with original downloads and available previews, outside the main journey.
+
+The site has 42 content pages in total, reduced from 101. Sixty old addresses forward directly to consolidated pages or section anchors; they are excluded from navigation, search and the sitemap. The transcript keeps all twelve chapters on one searchable page. The 24 repository wrappers have been replaced by direct original, website and collected-copy links in the directory.
+
+The initial 15 September editorial pass reduced introductory and explanatory prose from 5,529 to 1,078 words, and 112 sections to 23, before subsequent source-led refinements. It removed the repeated related-card blocks, source-footnote lists and footer invitation. It retained the supplied personal voice, original interview, documents, slides, geometry viewer and project links. [Consolidation decisions](docs/READING_JOURNEY.md).
 
 The project directory includes 152 entries from the supplied Project Atlas snapshot of 10 September 2026, plus the separately collected Aura Matrix Studio repository. It distinguishes the 24 copied repositories from the wider directory. The reference register records which local directories were found.
 
 The six PowerPoint presentations contain 97 slides. Their original files and slide previews are included. The complete 2023 Aura PDF, other documents, poems, collages and the ecosystem infographic appear as distinct works. Screenshots, duplicate PDFs and converted copies do not become extra reading pages.
 
-All 61 collected files remain unchanged in the repository archive. The reading collection consolidates 33 repeated entries under 28 sources using `src/data/source-selection.json`. This shared selection controls references, library, gallery, search, sitemap, downloads and the reading sequence. See [the source selection audit](docs/SOURCE_SELECTION_AUDIT.md) for the decisions and distinct works retained.
+All 62 collected files remain unchanged in the repository archive, including the later-supplied Blend Aura to Unity document. The reading collection consolidates 33 repeated entries under 29 sources using `src/data/source-selection.json`. This shared selection controls the library, gallery, search, sitemap and downloads. See [the source selection audit](docs/SOURCE_SELECTION_AUDIT.md) for the decisions and distinct works retained.
 
 The site includes page search, project and library filters, chapter text search, slide navigation, print and copy-link controls, reduced-motion support and an interactive view of the source-defined horn torus. Deeper connections and visual refinement remain part of the continuing design work.
 
-Every content page has a numbered Previous/Next footer sequence. It starts at the homepage, keeps chapters, source records and project details beside their sections, and reaches all 101 content pages once without looping. A floating Top control appears after scrolling and respects reduced-motion preferences. The 404 recovery page is outside the reading sequence.
+The eight main pages have a numbered Previous/Next sequence, without looping. Optional references have a compact return link. The floating Top control remains available and respects reduced-motion preferences.
 
 ## A window into a much larger archive
 
@@ -47,7 +50,9 @@ Original sources retain their own dates, wording and context. Earlier proposals 
 
 Aura uses a **horn torus with equal major and minor radii**, meeting at the shared central infinity point. The model follows the formula in the supplied `luke-nathan-hayes-man-and-mind/scripts/horn-torus.js` source.
 
-The matrix calculation is 12 × 24 × 7 × 2 = **4,032 face addresses**. The supplied ecosystem infographic contains a 4,002 typo; the original is retained and the calculation explained on the site.
+The matrix calculation is 12 × 24 × 7 × 2 = **4,032 face addresses**. The supplied ecosystem infographic contains a 4,002 typo; the original is retained and the correct calculation appears on the site.
+
+The Aura page links directly to [Aura Horn Torus](https://auraofintelligence.github.io/aura-horn-torus/) and [Aura Matrix Studio](https://auraofintelligence.github.io/aura-matrix-studio/). Its worldbuilding slide reuses page 28 of the complete July 2023 PDF, without creating a separate screenshot record. Blend Aura to Unity is preserved as one additional source, linking the symbolic memory architecture to Luke's Blender, Unity and VR design conversations.
 
 New editorial heroes are labelled imagined concept artwork. They do not depict a documented vault, recovered artefact, actual facility, partner team or research result. Prompts and original files appear in [image provenance](docs/image-provenance.json).
 
@@ -59,7 +64,7 @@ The rejected AI-generated ring-torus image is excluded from publication, with a 
 |---|---|
 | `src/` | Page text, layouts, catalogue and browser interactions |
 | `public/` | Website images, document previews, original downloads and font |
-| `reference-files/` | The 61 unchanged standalone source files |
+| `reference-files/` | The 62 unchanged standalone source files |
 | `source-repositories/` | 24 local snapshots, without Git histories or installed dependencies |
 | `media-originals/` | Accepted original generated images |
 | `analysis/` | Earlier analysis, inventories and planning work |

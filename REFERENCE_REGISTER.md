@@ -40,7 +40,9 @@ The supplied report also names two images outside I01-I03. Both were found in Do
 - `WhatsApp Image 2026-09-06 at 11.00.39 AM (2).jpeg`: GAJRA invitation collage.
 - `WhatsApp Image 2026-09-06 at 11.00.41 AM (2).jpeg`: personal name-meaning graphics.
 
-The standalone reference collection now contains 61 files, 82,202,705 bytes. `analysis/source-inventory.json` records their SHA-256 checksums, sizes and extracted-text paths.
+The standalone reference collection now contains 62 files, 88,971,336 bytes. `analysis/source-inventory.json` records their SHA-256 checksums, sizes and extracted-text paths.
+
+Added 15 September: `C:\Users\lukec\Downloads\Blend Aura to Unity.docx`, copied unchanged to `reference-files/D02-aura-deck/Blend Aura to Unity.docx` as source-62. SHA-256: `dc7827060f94616bb805108666fb8f4b5fad94a4194445f1562b65392743ddb0`. This is a distinct design conversation, not a conversion of the presentation. The re-supplied Aura PDF and screenshot (26) match existing source-33 and source-25 respectively. The worldbuilding slide is page 28 of source-33; no duplicate source was added for it.
 
 The image supplied in the user's request was copied even though it is an additional reference outside the report's I01-I03 list.
 
