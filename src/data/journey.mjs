@@ -93,7 +93,7 @@ export const pages=[
  ]),
  page('projects','Project directory','The collected repositories and the wider Project Atlas snapshot.','network',[
   section('directory','Browse the work',[
-   "This directory contains the 152 entries in the Project Atlas snapshot of 10 September 2026, plus Aura Matrix Studio. The 24 collected repositories link directly to their preserved copies. Website links follow that snapshot."
+   "This directory contains the 152 entries in the Project Atlas snapshot of 10 September 2026, plus Aura Matrix Studio. It opens with projects most relevant to this meeting rather than allowing the alphabet to decide what matters. Visitors can reorder the complete collection by date or title. The 24 collected repositories link directly to their preserved copies."
   ])
  ],'directory'),
  page('library','Document library','Original documents, presentations, images and transcript.','library',[

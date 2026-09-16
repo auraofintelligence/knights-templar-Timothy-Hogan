@@ -120,6 +120,10 @@ assert.equal((transcriptHTML.match(/class="transcript-cue"/g)||[]).length,origin
 for(const ch of originalCatalogue.chapters)assert.ok(transcriptHTML.includes(`id="${ch.id}"`),'Chapter anchor missing');
 const projectsHTML=fs.readFileSync(path.join(root,'projects/index.html'),'utf8');
 for(const project of originalCatalogue.projects){assert.ok(projectsHTML.includes(`id="${project.name}"`),'Project anchor missing');assert.ok(projectsHTML.includes(project.repositoryUrl),'Original repository link missing');}
+assert.ok(projectsHTML.includes('data-project-sort')&&projectsHTML.includes('Featured for this meeting'),'Project directory needs an explicit relevance-first sort');
+const firstProject=projectsHTML.match(/<div class="project-grid"[^>]*>[\s\S]*?<section id="([^"]+)"/)?.[1];
+assert.equal(firstProject,'strange-but-true-cosmic-nexus','Cosmic Nexus must lead the relevance-first project directory');
+for(const project of ['micronova-and-excursions','virtual-solar-swarm','extreme-matter-atlas','aura-horn-torus','aura-matrix-studio'])assert.ok(projectsHTML.indexOf(`id="${project}"`)>projectsHTML.indexOf('id="strange-but-true-cosmic-nexus"'),'Core meeting projects must follow Cosmic Nexus: '+project);
 for(const id of omitted)if(search.includes('library/'+id)||sitemap.includes('library/'+id))errors.push('Excluded source in search or sitemap: '+id);
 const sourceRoutes=html.filter(file=>/[/\\]library[/\\]source-\d+[/\\]index.html$/.test(file));
 assert.equal(sourceRoutes.length,selected.length,'Library routes must match selected works');
